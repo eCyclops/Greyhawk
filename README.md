@@ -2,6 +2,8 @@
 MapTool macro framework for working with Oerth/Flanaess/Greyhawk and AD&amp;D
 
 ## Changelog 2022-01-28
+- The "start" date is now set to the earliest possible date and time, starting with the Greyhawk Gold Box (World of Greyhawk box set). 12:00am 1 Fireseek 576.
+- I realize that this is technically a week after the earliest date, since the year begins with Needfest. However, because of the way I programmed the month/date calculations, this implementation starts with Fireseek. The moon phases should still be correct with the official material.
 - Fixed bugs caused by having multiple copies of the macros that I was editing. Now, all of the "Campaign" macro buttons simply call macros from the library, so that they are only edited in one place.
 - Fixed bug with display of the calendar. It now displays, using HTML 5. Styling is minimal, but contributions are welcome.
 - Fixed display width of "Time and Temperature" frame, and changed to HTML 5. Load time is longer, but I think it looks nicer.
