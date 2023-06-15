@@ -3,10 +3,10 @@
     "filename": "public/yearDateFromDate.mts",
     "autoExecute": true
   }, {
-    "filename": "public/macro_6.mts",
+    "filename": "public/incrementRound.mts",
     "autoExecute": true
   }, {
-    "filename": "public/macro_5.mts",
+    "filename": "public/getTime.mts",
     "autoExecute": true
   }, {
     "filename": "public/+Date.mts",
@@ -24,10 +24,10 @@
     "filename": "public/+Turn.mts",
     "autoExecute": true
   }, {
-    "filename": "public/macro_36.mts",
+    "filename": "public/showCalendar.mts",
     "autoExecute": true
   }, {
-    "filename": "public/macro_4.mts",
+    "filename": "public/today.mts",
     "autoExecute": true
   }, {
     "filename": "public/Birthdays.mts",
@@ -48,19 +48,19 @@
     "filename": "public/onCampaignLoad.mts",
     "autoExecute": true
   }, {
-    "filename": "public/macro_7.mts",
+    "filename": "public/incrementTurn.mts",
     "autoExecute": true
   }, {
     "filename": "public/half-orc_birth.mts",
     "autoExecute": true
   }, {
-    "filename": "public/macro_8.mts",
+    "filename": "public/incrementYear.mts",
     "autoExecute": true
   }, {
     "filename": "public/human_birth.mts",
     "autoExecute": true
   }, {
-    "filename": "public/macro_37.mts",
+    "filename": "public/+1 Turn.mts",
     "autoExecute": true
   }, {
     "filename": "public/incrementMinute.mts",
@@ -102,7 +102,7 @@
     "filename": "public/set_age.mts",
     "autoExecute": true
   }, {
-    "filename": "public/macro_9.mts",
+    "filename": "public/incrementYearDate.mts",
     "autoExecute": true
   }, {
     "filename": "public/dwarf_birth.mts",
