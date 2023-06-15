@@ -1,0 +1,3 @@
+[getAllPropertyNames()]
+
+[r: "onFirstInit ran."]
