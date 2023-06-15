@@ -2,7 +2,5 @@
   "events": [
     { "name": "onFirstInit", "mts": "onFirstInit" },
     { "name": "onInit", "mts": "onInit" },
-    { "name": "onCampaignLoad" },
-    { "name": "onCampaignLoad", "mts": "onCampaignLoad" }
   ]
 }
