@@ -1,0 +1,3 @@
+prop_38.txt => DisplayHP 
+prop_39.txt => currentSegment
+prop_40.txt => temporaryLinkTimeout

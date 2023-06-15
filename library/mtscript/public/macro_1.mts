@@ -1,0 +1,25 @@
+[h: theEnteredDate = json.toStrProp(macro.args)]
+
+[h: varsFromStrProp(theEnteredDate)]
+
+[h:"The month is "+theMonth]
+[h:"The date is "+theDate]
+
+[h, if(theMonth=="Fireseek")  : newYearDate = theDate]
+[h, if(theMonth=="Readying")  : newYearDate = theDate + 28]
+[h, if(theMonth=="Coldeven")  : newYearDate = theDate + 56]
+[h, if(theMonth=="Growfest")  : newYearDate = theDate + 84]
+[h, if(theMonth=="Planting")  : newYearDate = theDate + 91]
+[h, if(theMonth=="Flocktime") : newYearDate = theDate + 119]
+[h, if(theMonth=="Wealsun")   : newYearDate = theDate + 147]
+[h, if(theMonth=="Richfest")  : newYearDate = theDate + 175]
+[h, if(theMonth=="Reaping")   : newYearDate = theDate + 182]
+[h, if(theMonth=="Goodmonth") : newYearDate = theDate + 210]
+[h, if(theMonth=="Harvester") : newYearDate = theDate + 238]
+[h, if(theMonth=="Brewfest")  : newYearDate = theDate + 266]
+[h, if(theMonth=="Patchwall") : newYearDate = theDate + 273]
+[h, if(theMonth=="Ready'reat"): newYearDate = theDate + 301]
+[h, if(theMonth=="Sunsebb")   : newYearDate = theDate + 329]
+[h, if(theMonth=="Needfest")  : newYearDate = theDate + 357]
+
+[return(0,newYearDate)]
