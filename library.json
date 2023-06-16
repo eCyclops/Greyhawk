@@ -5,7 +5,7 @@
   "gitUrl": "github.com/eCyclops/Greyhawk",
   "authors": ["eCyclops"],
   "license": "GPL 3",
-  "namespace": "Greyhawk:Macros",
+  "namespace": "Lib:Greyhawk:Macros",
   "description": "Library of macros for a Greyhawk campaign",
   "shortDescription": "Greyhawk Library",
   "allowsUriAccess": true,
