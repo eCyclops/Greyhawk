@@ -1,6 +1,6 @@
 [h: myArgs = macro.args]
 
-[h: theDate = getLibProperty("currentYearDate", "Lib:Calendar")]
+[h: theDate = data.getData("addon:", "com.ecyclops.Greyhawk", "currentYearDate")]
 
 [h: lunaMode = math.mod(ceiling((theDate)/3.5),8)]
 

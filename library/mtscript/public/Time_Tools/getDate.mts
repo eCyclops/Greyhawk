@@ -1,6 +1,6 @@
 [h: yearDate = arg(0)]
 
-[h, if(argCount()==0): yearDate=getLibProperty("currentYearDate", "Lib:Calendar")]
+[h, if(argCount()==0): yearDate=data.getData("addon:", "com.ecyclops.Greyhawk", "currentYearDate")]
 
 [h: yearDate = number(yearDate)]
 
@@ -15,7 +15,7 @@
 
 [h: thisMonth = qMonth + (4 * (thisQuarter-1))]
 
-[h: months = getLibProperty("months", "Lib:Calendar")]
+[h: months = data.getData("addon:", "com.ecyclops.Greyhawk", "months")]
 
 [h: monthStuff = listGet(months, thisMonth-1)]
 [h: month = getStrProp(monthStuff, "name")]

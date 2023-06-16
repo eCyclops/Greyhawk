@@ -1,13 +1,13 @@
 [h: yearDate = macro.args]
-[h, if(argCount() == 0): yearDate = getLibProperty("currentYearDate", "Lib:Calendar")]
+[h, if(argCount() == 0): yearDate = data.getData("addon:", "com.ecyclops.Greyhawk", "currentYearDate")]
 
-[h: year = getLibProperty("currentYear", "Lib:Calendar")]
+[h: year = data.getData("addon:", "com.ecyclops.Greyhawk", "currentYear")]
 [h: todaysDate = getDate(yearDate)]
 
 [h: varsFromStrProp(todaysDate)]
 	[h: 'weekDay, theDate, month']
 
-[h: time = getLibProperty("currentMinute", "Lib:Calendar")]
+[h: time = data.getData("addon:", "com.ecyclops.Greyhawk", "currentMinute")]
 
 [h: varsFromStrProp(getTime())]
 
@@ -42,7 +42,7 @@
 				<td style="text-align: center">[r:celenePhase]</td></tr>
 				<tr><td style="text-align: center"><img src='[r:lunaPhasePic]' width=70></td>
 				<td style="text-align: center"><img src='[r:celenePhasePic]' width=50></td></tr>
-				<tr><td colspan=2 style="text-align: center">[r:getLibProperty("currentWeather", "Lib:Calendar")]</td></tr>
+				<tr><td colspan=2 style="text-align: center">[r:data.getData("addon:", "com.ecyclops.Greyhawk", "currentWeather")]</td></tr>
 				<tr><td colspan=2 style="text-align: center">[r: birthdays()]
 			</table>
 			[r:macroLink("Refresh", "Time_and_Temperature@com.ecyclops.Greyhawk")]

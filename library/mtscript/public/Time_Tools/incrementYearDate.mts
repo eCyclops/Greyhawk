@@ -2,7 +2,7 @@
 [h: timeAdvance=arg(0)]
 [h, if(argCount() == 0): timeAdvance = 0]
 
-[h: currentDate = getLibProperty("currentYearDate", "Lib:Calendar")]
+[h: currentDate = data.getData("addon:", "com.ecyclops.Greyhawk", "currentYearDate")]
 [h: maxDays = 364]
 
 [h: newDate = currentDate + timeAdvance]

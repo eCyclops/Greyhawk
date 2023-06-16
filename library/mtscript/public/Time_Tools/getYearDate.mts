@@ -1,1 +1,1 @@
-[r:getLibProperty("currentYearDate", "Lib:Calendar")]
+[r:data.getData("addon:", "com.ecyclops.Greyhawk", "currentYearDate")]

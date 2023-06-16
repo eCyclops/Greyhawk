@@ -1,6 +1,6 @@
 [h: assert(isGM(),"This is a DM command.",0)]
 [h: timeAdvance=arg(0)]
-[h: currentSegment = getLibProperty("currentSegment", "Lib:Calendar")]
+[h: currentSegment = data.getData("addon:", "com.ecyclops.Greyhawk", "currentSegment")]
 
 [h, if(listCount(timeAdvance) == 0): timeAdvance = 0]
 

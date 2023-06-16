@@ -1,5 +1,5 @@
 [h: ids = getPC()]
-[h: today = getLibProperty("currentYearDate", "Lib:Calendar")]
+[h: today = data.getData("addon:", "com.ecyclops.Greyhawk", "currentYearDate")]
 [h: noBirthdays = 1]
 [foreach(id, ids,""), code: {
 	[if(getProperty("birthdate", id)==today), code: {

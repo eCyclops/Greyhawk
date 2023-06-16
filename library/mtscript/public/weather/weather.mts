@@ -1,15 +1,15 @@
 [h: update = arg(0)]
 [h, if(argCount()==0): update = 0]
-[h: day = getLibProperty("currentYearDate", "Lib:Calendar")]
+[h: day = data.getData("addon:", "com.ecyclops.Greyhawk", "currentYearDate")]
 
 [h: thisQuarter = ceiling(day/91)]
 [h: qDay        = day - 91 * (thisQuarter-1)]
 [h: qMonth      = ceiling((qDay - 28)/28)+1]
 [h: thisMonth   = qMonth + (4 * (thisQuarter - 1))]
 
-[h: months = getLibProperty("months", "Lib:Calendar")]
+[h: months = data.getData("addon:", "com.ecyclops.Greyhawk", "months")]
 
-[h: varsFromStrProp(listGet(getLibProperty("months", "Lib:Calendar"), thisMonth-1))]
+[h: varsFromStrProp(listGet(data.getData("addon:", "com.ecyclops.Greyhawk", "months"), thisMonth-1))]
 	[h: 'name, baseTemp, highTemp, lowTemp, clearSkies, partlySkies, cloudySkies, precip, sunrise, sunset']
 
 [h: high = baseTemp + eval(highTemp)]

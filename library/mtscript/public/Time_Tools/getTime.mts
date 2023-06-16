@@ -1,5 +1,5 @@
 [h: minute = arg(0)]
-[h, if(argCount()==0): minute = number(getLibProperty("currentMinute", "Lib:Calendar"))]
+[h, if(argCount()==0): minute = number(data.getData("addon:", "com.ecyclops.Greyhawk", "currentMinute"))]
 
 [h: am_pm = ""]
 
