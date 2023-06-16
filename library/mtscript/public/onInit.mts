@@ -1,1 +1,1 @@
-"hello, world"
+[e: These, "are the times"]
