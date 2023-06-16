@@ -1,5 +1,5 @@
 {
-    [
+    "properties": [
         {
             "filename": "public/onInit.mts",
             "autoExecute": true
