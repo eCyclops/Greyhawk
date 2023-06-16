@@ -1,0 +1,14 @@
+{
+  "name": "Lib:Greyhawk:Macros",
+  "version": "unknown",
+  "website": "ecyclops.com",
+  "gitUrl": "github.com/eCyclops/Greyhawk-lib",
+  "authors": ["eCyclops"],
+  "license": "",
+  "namespace": "Greyhawk:Macros",
+  "description": "Library of macros for a Greyhawk campaign",
+  "shortDescription": "Greyhawk Library",
+  "allowsUriAccess": true,
+  "licenseFile": "license.txt",
+  "readMeFile": "README.md"
+}
