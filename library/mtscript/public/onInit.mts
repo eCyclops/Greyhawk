@@ -1,1 +1,2 @@
-[r: "Testing, one, two, three..."]
+[h: defineFunction("setFacing", "setFacing@Lib:Facing")]
+[macro("facingPanel@Lib:Facing"): ""]
