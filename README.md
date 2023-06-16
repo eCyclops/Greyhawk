@@ -1,6 +1,11 @@
 # Greyhawk
 MapTool macro framework for working with Oerth/Flanaess/Greyhawk and AD&amp;D
 
+## Changelog 2023-06-16
+I removed all of the assets, since they were technically "Releases". You can now find them under releases (to the right, on Github, or [https://github.com/eCyclops/Greyhawk/releases](https://github.com/eCyclops/Greyhawk/releases) ).
+
+The next release will be from a new reworking of the Library. It will be an **Addon Library** as supported by MapTool 1.11 and later. As such, it will have version-controlled individual script files, etc. In short, what I've been dreaming of. This is a large undertaking, but my [Facing](https://github.com/eCyclops/Facing) library worked, so I'm encouraged that it can be done.
+
 ## Changelog 2022-01-28
 - The "start" date is now set to the earliest possible date and time, starting with the Greyhawk Gold Box (World of Greyhawk box set). 12:00am 1 Fireseek 576.
 - I realize that this is technically a week after the earliest date, since the year begins with Needfest. However, because of the way I programmed the month/date calculations, this implementation starts with Fireseek. The moon phases should still be correct with the official material.
