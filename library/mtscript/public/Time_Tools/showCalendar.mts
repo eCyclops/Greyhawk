@@ -1,7 +1,7 @@
 [frame5("Calendar","width=600;temporary=1"):{
 <html>
 <head>
-<link rel='stylesheet' type='text/css' href='calendarStyle@Lib:Greyhawk:Macros'></link>
+<link rel='stylesheet' type='text/css' href='calendarStyle@com.ecyclops.Greyhawk'></link>
 </head>
 <body>
 <h1>Greyhawk Calendar</h1>

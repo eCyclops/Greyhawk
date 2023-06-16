@@ -30,7 +30,7 @@
 	<html>
 		<head>
 			<title>[r: titleTxt]</title>
-			<link rel="stylesheet" type="text/css" href="Greyhawk_CSS@Lib:Greyhawk:Macros">
+			<link rel="stylesheet" type="text/css" href="Greyhawk_CSS@com.ecyclops.Greyhawk">
 		</head>
 		<body>
 			<h2 style="text-align: center">
@@ -45,7 +45,7 @@
 				<tr><td colspan=2 style="text-align: center">[r:getLibProperty("currentWeather", "Lib:Calendar")]</td></tr>
 				<tr><td colspan=2 style="text-align: center">[r: birthdays()]
 			</table>
-			[r:macroLink("Refresh", "Time_and_Temperature@Lib:Greyhawk:Macros")]
+			[r:macroLink("Refresh", "Time_and_Temperature@com.ecyclops.Greyhawk")]
 		</body>
 	</html>
 }]

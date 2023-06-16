@@ -43,7 +43,7 @@
   <vblColorSensitivity>0</vblColorSensitivity>
   <alwaysVisibleTolerance>2</alwaysVisibleTolerance>
   <isAlwaysVisible>false</isAlwaysVisible>
-  <name>Lib:Greyhawk:Macros</name>
+  <name>com.ecyclops.Greyhawk</name>
   <ownerList/>
   <ownerType>0</ownerType>
   <tokenShape>SQUARE</tokenShape>
@@ -169,33 +169,33 @@
         <index>1</index>
         <colorKey>aqua</colorKey>
         <hotKey>None</hotKey>
-        <command>[h: defineFunction(&quot;incrementSegment&quot;, &quot;incrementSegment@Lib:Greyhawk:Macros&quot;)]
-[h: defineFunction(&quot;incrementMinute&quot;, &quot;incrementMinute@Lib:Greyhawk:Macros&quot;)]
-[h: defineFunction(&quot;incrementRound&quot;, &quot;incrementRound@Lib:Greyhawk:Macros&quot;)]
-[h: defineFunction(&quot;incrementTurn&quot;, &quot;incrementTurn@Lib:Greyhawk:Macros&quot;)]
-[h: defineFunction(&quot;incrementYearDate&quot;, &quot;incrementYearDate@Lib:Greyhawk:Macros&quot;)]
-[h: defineFunction(&quot;incrementYear&quot;, &quot;incrementYear@Lib:Greyhawk:Macros&quot;)]
+        <command>[h: defineFunction(&quot;incrementSegment&quot;, &quot;incrementSegment@com.ecyclops.Greyhawk&quot;)]
+[h: defineFunction(&quot;incrementMinute&quot;, &quot;incrementMinute@com.ecyclops.Greyhawk&quot;)]
+[h: defineFunction(&quot;incrementRound&quot;, &quot;incrementRound@com.ecyclops.Greyhawk&quot;)]
+[h: defineFunction(&quot;incrementTurn&quot;, &quot;incrementTurn@com.ecyclops.Greyhawk&quot;)]
+[h: defineFunction(&quot;incrementYearDate&quot;, &quot;incrementYearDate@com.ecyclops.Greyhawk&quot;)]
+[h: defineFunction(&quot;incrementYear&quot;, &quot;incrementYear@com.ecyclops.Greyhawk&quot;)]
 
-[h: defineFunction(&quot;moons&quot;, &quot;moons@Lib:Greyhawk:Macros&quot;)]
+[h: defineFunction(&quot;moons&quot;, &quot;moons@com.ecyclops.Greyhawk&quot;)]
 
-[h: defineFunction(&quot;weather&quot;, &quot;weather@Lib:Greyhawk:Macros&quot;)]
+[h: defineFunction(&quot;weather&quot;, &quot;weather@com.ecyclops.Greyhawk&quot;)]
 
-[h: defineFunction(&quot;getDate&quot;, &quot;getDate@Lib:Greyhawk:Macros&quot;)]
-[h: defineFunction(&quot;getTime&quot;, &quot;getTime@Lib:Greyhawk:Macros&quot;)]
-[h: defineFunction(&quot;getYear&quot;, &quot;getYear@Lib:Greyhawk:Macros&quot;)]
-[h: defineFunction(&quot;getYearDate&quot;, &quot;getYearDate@Lib:Greyhawk:Macros&quot;)]
-[h: defineFunction(&quot;stardate&quot;, &quot;yearDateFromDate@Lib:Greyhawk:Macros&quot;)]
-[h: defineFunction(&quot;today&quot;, &quot;today@Lib:Greyhawk:Macros&quot;)]
+[h: defineFunction(&quot;getDate&quot;, &quot;getDate@com.ecyclops.Greyhawk&quot;)]
+[h: defineFunction(&quot;getTime&quot;, &quot;getTime@com.ecyclops.Greyhawk&quot;)]
+[h: defineFunction(&quot;getYear&quot;, &quot;getYear@com.ecyclops.Greyhawk&quot;)]
+[h: defineFunction(&quot;getYearDate&quot;, &quot;getYearDate@com.ecyclops.Greyhawk&quot;)]
+[h: defineFunction(&quot;stardate&quot;, &quot;yearDateFromDate@com.ecyclops.Greyhawk&quot;)]
+[h: defineFunction(&quot;today&quot;, &quot;today@com.ecyclops.Greyhawk&quot;)]
 
-[h: defineFunction(&quot;timeandtemp&quot;, &quot;Time_and_Temperature@Lib:Greyhawk:Macros&quot;)]
+[h: defineFunction(&quot;timeandtemp&quot;, &quot;Time_and_Temperature@com.ecyclops.Greyhawk&quot;)]
 
-[h: defineFunction(&quot;birthdays&quot;, &quot;Birthdays@Lib:Greyhawk:Macros&quot;)]
-[h: defineFunction(&quot;age&quot;, &quot;age@Lib:Greyhawk:Macros&quot;)]
-[h: defineFunction(&quot;setAge&quot;, &quot;set_age@Lib:Greyhawk:Macros&quot;)]
+[h: defineFunction(&quot;birthdays&quot;, &quot;Birthdays@com.ecyclops.Greyhawk&quot;)]
+[h: defineFunction(&quot;age&quot;, &quot;age@com.ecyclops.Greyhawk&quot;)]
+[h: defineFunction(&quot;setAge&quot;, &quot;set_age@com.ecyclops.Greyhawk&quot;)]
 
-[h: defineFunction(&quot;pob&quot;, &quot;place_of_birth@Lib:Greyhawk:Macros&quot;)]
+[h: defineFunction(&quot;pob&quot;, &quot;place_of_birth@com.ecyclops.Greyhawk&quot;)]
 
-[h: defineFunction(&quot;calendar&quot;, &quot;showCalendar@Lib:Greyhawk:Macros&quot;)]
+[h: defineFunction(&quot;calendar&quot;, &quot;showCalendar@com.ecyclops.Greyhawk&quot;)]
 
 [r: &quot;Greyhawk campaign macros initialized&quot;]</command>
         <label>onCampaignLoad</label>
@@ -968,7 +968,7 @@ body: {
 	&lt;html&gt;
 		&lt;head&gt;
 			&lt;title&gt;[r: titleTxt]&lt;/title&gt;
-			&lt;link rel=&quot;stylesheet&quot; type=&quot;text/css&quot; href=&quot;Greyhawk_CSS@Lib:Greyhawk:Macros&quot;&gt;
+			&lt;link rel=&quot;stylesheet&quot; type=&quot;text/css&quot; href=&quot;Greyhawk_CSS@com.ecyclops.Greyhawk&quot;&gt;
 		&lt;/head&gt;
 		&lt;body&gt;
 			&lt;h2 style=&quot;text-align: center&quot;&gt;
@@ -983,7 +983,7 @@ body: {
 				&lt;tr&gt;&lt;td colspan=2 style=&quot;text-align: center&quot;&gt;[r:getLibProperty(&quot;currentWeather&quot;, &quot;Lib:Calendar&quot;)]&lt;/td&gt;&lt;/tr&gt;
 				&lt;tr&gt;&lt;td colspan=2 style=&quot;text-align: center&quot;&gt;[r: birthdays()]
 			&lt;/table&gt;
-			[r:macroLink(&quot;Refresh&quot;, &quot;Time_and_Temperature@Lib:Greyhawk:Macros&quot;)]
+			[r:macroLink(&quot;Refresh&quot;, &quot;Time_and_Temperature@com.ecyclops.Greyhawk&quot;)]
 		&lt;/body&gt;
 	&lt;/html&gt;
 }]
@@ -3133,7 +3133,7 @@ body: {
         <command>[frame5(&quot;Calendar&quot;,&quot;width=600;temporary=1&quot;):{
 &lt;html&gt;
 &lt;head&gt;
-&lt;link rel=&apos;stylesheet&apos; type=&apos;text/css&apos; href=&apos;calendarStyle@Lib:Greyhawk:Macros&apos;&gt;&lt;/link&gt;
+&lt;link rel=&apos;stylesheet&apos; type=&apos;text/css&apos; href=&apos;calendarStyle@com.ecyclops.Greyhawk&apos;&gt;&lt;/link&gt;
 &lt;/head&gt;
 &lt;body&gt;
 &lt;h1&gt;Greyhawk Calendar&lt;/h1&gt;
