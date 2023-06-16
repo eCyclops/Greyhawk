@@ -1,0 +1,3480 @@
+<net.rptools.maptool.model.Token>
+  <id>
+    <baGUID>lISPti1lSl+Xvys0XgVP4g==</baGUID>
+  </id>
+  <beingImpersonated>false</beingImpersonated>
+  <exposedAreaGUID>
+    <baGUID>AlduanVgQJ2p/1xLR3+Iqw==</baGUID>
+  </exposedAreaGUID>
+  <imageAssetMap>
+    <entry>
+      <null/>
+      <net.rptools.lib.MD5Key>
+        <id>478df66931a3860ce7568e6c638bcfd1</id>
+      </net.rptools.lib.MD5Key>
+    </entry>
+  </imageAssetMap>
+  <x>300</x>
+  <y>250</y>
+  <z>106</z>
+  <anchorX>0</anchorX>
+  <anchorY>0</anchorY>
+  <sizeScale>1.0</sizeScale>
+  <lastX>0</lastX>
+  <lastY>0</lastY>
+  <snapToScale>true</snapToScale>
+  <width>140</width>
+  <height>187</height>
+  <isoWidth>140</isoWidth>
+  <isoHeight>187</isoHeight>
+  <scaleX>1.0</scaleX>
+  <scaleY>1.0</scaleY>
+  <sizeMap>
+    <entry>
+      <string>net.rptools.maptool.model.SquareGrid</string>
+      <net.rptools.maptool.model.GUID>
+        <baGUID>fwABAdFlFSoIAAAAKgABAQ==</baGUID>
+      </net.rptools.maptool.model.GUID>
+    </entry>
+  </sizeMap>
+  <snapToGrid>true</snapToGrid>
+  <isVisible>true</isVisible>
+  <visibleOnlyToOwner>false</visibleOnlyToOwner>
+  <vblColorSensitivity>0</vblColorSensitivity>
+  <alwaysVisibleTolerance>2</alwaysVisibleTolerance>
+  <isAlwaysVisible>false</isAlwaysVisible>
+  <name>Lib:Greyhawk:Macros</name>
+  <ownerList/>
+  <ownerType>0</ownerType>
+  <tokenShape>SQUARE</tokenShape>
+  <tokenType>NPC</tokenType>
+  <layer>TOKEN</layer>
+  <propertyType></propertyType>
+  <tokenOpacity>1.0</tokenOpacity>
+  <speechName></speechName>
+  <terrainModifier>0.0</terrainModifier>
+  <terrainModifierOperation>NONE</terrainModifierOperation>
+  <terrainModifiersIgnored>
+    <net.rptools.maptool.model.Token_-TerrainModifierOperation>NONE</net.rptools.maptool.model.Token_-TerrainModifierOperation>
+  </terrainModifiersIgnored>
+  <isFlippedX>false</isFlippedX>
+  <isFlippedY>false</isFlippedY>
+  <isFlippedIso>false</isFlippedIso>
+  <lightSourceList/>
+  <sightType>Normal</sightType>
+  <hasSight>false</hasSight>
+  <hasImageTable>false</hasImageTable>
+  <notes></notes>
+  <notesType>text/plain</notesType>
+  <gmNotes></gmNotes>
+  <gmNotesType>text/plain</gmNotesType>
+  <gmName></gmName>
+  <state/>
+  <propertyMapCI>
+    <store>
+      <entry>
+        <string>currentsegment</string>
+        <net.rptools.CaseInsensitiveHashMap_-KeyValue>
+          <key>currentSegment</key>
+          <value class="string">Lib:Calendar</value>
+          <outer-class reference="../../../.."/>
+        </net.rptools.CaseInsensitiveHashMap_-KeyValue>
+      </entry>
+      <entry>
+        <string>displayhp </string>
+        <net.rptools.CaseInsensitiveHashMap_-KeyValue>
+          <key>DisplayHP </key>
+          <outer-class reference="../../../.."/>
+        </net.rptools.CaseInsensitiveHashMap_-KeyValue>
+      </entry>
+      <entry>
+        <string>temporarylinktimeout</string>
+        <net.rptools.CaseInsensitiveHashMap_-KeyValue>
+          <key>temporaryLinkTimeout</key>
+          <outer-class reference="../../../.."/>
+        </net.rptools.CaseInsensitiveHashMap_-KeyValue>
+      </entry>
+    </store>
+  </propertyMapCI>
+  <macroPropertiesMap>
+    <entry>
+      <int>64</int>
+      <net.rptools.maptool.model.MacroButtonProperties>
+        <macroUUID>22943ce9-ac51-4a41-b549-1ebdf3e4007d</macroUUID>
+        <saveLocation>Token</saveLocation>
+        <index>64</index>
+        <colorKey>default</colorKey>
+        <hotKey>None</hotKey>
+        <command>[h:assert(isGM(),&quot;This is a DM command.&quot;,0)]
+[h: assert(getSelected()!=&apos;&apos;,&quot;You must select token(s) to use this command.&quot;,0)]
+
+[h: myIDs = getSelected()]
+
+[foreach(myID,myIDs,&quot;&lt;br&gt;&quot;), code: {
+
+[h: myName = getName(myID)]
+
+[h: assert(hasProperty(&quot;birthdate&quot;,myID),&quot;I don&apos;t know &quot;+myName+&quot;&apos;s birth date.&quot;)]
+[h: myBirthday = getProperty(&quot;birthdate&quot;, myID)]
+[h: myBirthYear = getProperty(&quot;birthyear&quot;, myID)]
+[h: myGender = getProperty(&quot;sex&quot;, myID)]
+[h, if(myGender == &quot;m&quot;): pronoun = &quot;his&quot;; pronoun = &quot;her&quot;]
+[h: varsFromStrProp(getDate(myBirthday))]
+
+[h: thisDay = getLibProperty(&quot;currentYearDate&quot;, &quot;Lib:Calendar&quot;)]
+
+[h: myAge = getYear() - myBirthYear]
+[h, if(myBirthday &lt; thisDay): myAge = myAge +1]
+
+[h: charDetails = getProperty(&quot;Character_Details&quot;, myID)]
+[h: charDetails = setStrProp(charDetails, &quot;Age&quot;, myAge)]
+[h: setProperty(&quot;Character_Details&quot;, charDetails, myID)]
+
+[h: dayShift = myBirthday - thisDay]
+
+[h: since=&quot;&quot;]
+[h, if(dayShift &gt; 0):since=dayShift+&quot; days until &quot;]
+[h, if(dayShift &lt; 0):since=(-1)*dayShift+&quot; days since &quot;]
+
+[r: strformat(&quot;%{myName} is %{myAge} years old, and it&apos;s %{since} %{pronoun} birthday.&quot;)]
+}]
+[r: strformat(&quot;%s birthday is on %{theDate} %{month} %{myBirthYear}&quot;, capitalize(pronoun))]</command>
+        <label>age</label>
+        <group>Character Details</group>
+        <sortby></sortby>
+        <autoExecute>true</autoExecute>
+        <includeLabel>false</includeLabel>
+        <applyToTokens>false</applyToTokens>
+        <fontColorKey>black</fontColorKey>
+        <fontSize>1.00em</fontSize>
+        <minWidth></minWidth>
+        <maxWidth></maxWidth>
+        <allowPlayerEdits>true</allowPlayerEdits>
+        <toolTip></toolTip>
+        <displayHotKey>true</displayHotKey>
+        <commonMacro>false</commonMacro>
+        <compareGroup>true</compareGroup>
+        <compareSortPrefix>true</compareSortPrefix>
+        <compareCommand>true</compareCommand>
+        <compareIncludeLabel>true</compareIncludeLabel>
+        <compareAutoExecute>true</compareAutoExecute>
+        <compareApplyToSelectedTokens>true</compareApplyToSelectedTokens>
+      </net.rptools.maptool.model.MacroButtonProperties>
+    </entry>
+    <entry>
+      <int>1</int>
+      <net.rptools.maptool.model.MacroButtonProperties>
+        <macroUUID>cd991c1f-8664-4e84-808f-382c0847aa46</macroUUID>
+        <saveLocation>Token</saveLocation>
+        <index>1</index>
+        <colorKey>aqua</colorKey>
+        <hotKey>None</hotKey>
+        <command>[h: defineFunction(&quot;incrementSegment&quot;, &quot;incrementSegment@Lib:Greyhawk:Macros&quot;)]
+[h: defineFunction(&quot;incrementMinute&quot;, &quot;incrementMinute@Lib:Greyhawk:Macros&quot;)]
+[h: defineFunction(&quot;incrementRound&quot;, &quot;incrementRound@Lib:Greyhawk:Macros&quot;)]
+[h: defineFunction(&quot;incrementTurn&quot;, &quot;incrementTurn@Lib:Greyhawk:Macros&quot;)]
+[h: defineFunction(&quot;incrementYearDate&quot;, &quot;incrementYearDate@Lib:Greyhawk:Macros&quot;)]
+[h: defineFunction(&quot;incrementYear&quot;, &quot;incrementYear@Lib:Greyhawk:Macros&quot;)]
+
+[h: defineFunction(&quot;moons&quot;, &quot;moons@Lib:Greyhawk:Macros&quot;)]
+
+[h: defineFunction(&quot;weather&quot;, &quot;weather@Lib:Greyhawk:Macros&quot;)]
+
+[h: defineFunction(&quot;getDate&quot;, &quot;getDate@Lib:Greyhawk:Macros&quot;)]
+[h: defineFunction(&quot;getTime&quot;, &quot;getTime@Lib:Greyhawk:Macros&quot;)]
+[h: defineFunction(&quot;getYear&quot;, &quot;getYear@Lib:Greyhawk:Macros&quot;)]
+[h: defineFunction(&quot;getYearDate&quot;, &quot;getYearDate@Lib:Greyhawk:Macros&quot;)]
+[h: defineFunction(&quot;stardate&quot;, &quot;yearDateFromDate@Lib:Greyhawk:Macros&quot;)]
+[h: defineFunction(&quot;today&quot;, &quot;today@Lib:Greyhawk:Macros&quot;)]
+
+[h: defineFunction(&quot;timeandtemp&quot;, &quot;Time_and_Temperature@Lib:Greyhawk:Macros&quot;)]
+
+[h: defineFunction(&quot;birthdays&quot;, &quot;Birthdays@Lib:Greyhawk:Macros&quot;)]
+[h: defineFunction(&quot;age&quot;, &quot;age@Lib:Greyhawk:Macros&quot;)]
+[h: defineFunction(&quot;setAge&quot;, &quot;set_age@Lib:Greyhawk:Macros&quot;)]
+
+[h: defineFunction(&quot;pob&quot;, &quot;place_of_birth@Lib:Greyhawk:Macros&quot;)]
+
+[h: defineFunction(&quot;calendar&quot;, &quot;showCalendar@Lib:Greyhawk:Macros&quot;)]
+
+[r: &quot;Greyhawk campaign macros initialized&quot;]</command>
+        <label>onCampaignLoad</label>
+        <group></group>
+        <sortby>0</sortby>
+        <autoExecute>true</autoExecute>
+        <includeLabel>false</includeLabel>
+        <applyToTokens>false</applyToTokens>
+        <fontColorKey>black</fontColorKey>
+        <fontSize>1.00em</fontSize>
+        <minWidth></minWidth>
+        <maxWidth></maxWidth>
+        <allowPlayerEdits>false</allowPlayerEdits>
+        <toolTip></toolTip>
+        <displayHotKey>true</displayHotKey>
+        <commonMacro>false</commonMacro>
+        <compareGroup>true</compareGroup>
+        <compareSortPrefix>true</compareSortPrefix>
+        <compareCommand>true</compareCommand>
+        <compareIncludeLabel>true</compareIncludeLabel>
+        <compareAutoExecute>true</compareAutoExecute>
+        <compareApplyToSelectedTokens>true</compareApplyToSelectedTokens>
+      </net.rptools.maptool.model.MacroButtonProperties>
+    </entry>
+    <entry>
+      <int>65</int>
+      <net.rptools.maptool.model.MacroButtonProperties>
+        <macroUUID>e929981d-13dc-43ab-ae6f-fb5111e97445</macroUUID>
+        <saveLocation>Token</saveLocation>
+        <index>65</index>
+        <colorKey>default</colorKey>
+        <hotKey>None</hotKey>
+        <command>[h: theEnteredDate = json.toStrProp(macro.args)]
+
+[h: varsFromStrProp(theEnteredDate)]
+
+[h:&quot;The month is &quot;+theMonth]
+[h:&quot;The date is &quot;+theDate]
+
+[h, if(theMonth==&quot;Fireseek&quot;)  : newYearDate = theDate]
+[h, if(theMonth==&quot;Readying&quot;)  : newYearDate = theDate + 28]
+[h, if(theMonth==&quot;Coldeven&quot;)  : newYearDate = theDate + 56]
+[h, if(theMonth==&quot;Growfest&quot;)  : newYearDate = theDate + 84]
+[h, if(theMonth==&quot;Planting&quot;)  : newYearDate = theDate + 91]
+[h, if(theMonth==&quot;Flocktime&quot;) : newYearDate = theDate + 119]
+[h, if(theMonth==&quot;Wealsun&quot;)   : newYearDate = theDate + 147]
+[h, if(theMonth==&quot;Richfest&quot;)  : newYearDate = theDate + 175]
+[h, if(theMonth==&quot;Reaping&quot;)   : newYearDate = theDate + 182]
+[h, if(theMonth==&quot;Goodmonth&quot;) : newYearDate = theDate + 210]
+[h, if(theMonth==&quot;Harvester&quot;) : newYearDate = theDate + 238]
+[h, if(theMonth==&quot;Brewfest&quot;)  : newYearDate = theDate + 266]
+[h, if(theMonth==&quot;Patchwall&quot;) : newYearDate = theDate + 273]
+[h, if(theMonth==&quot;Ready&apos;reat&quot;): newYearDate = theDate + 301]
+[h, if(theMonth==&quot;Sunsebb&quot;)   : newYearDate = theDate + 329]
+[h, if(theMonth==&quot;Needfest&quot;)  : newYearDate = theDate + 357]
+
+[return(0,newYearDate)]</command>
+        <label>yearDateFromDate</label>
+        <group>Time_Tools</group>
+        <sortby></sortby>
+        <autoExecute>true</autoExecute>
+        <includeLabel>false</includeLabel>
+        <applyToTokens>false</applyToTokens>
+        <fontColorKey>black</fontColorKey>
+        <fontSize>1.00em</fontSize>
+        <minWidth></minWidth>
+        <maxWidth></maxWidth>
+        <allowPlayerEdits>true</allowPlayerEdits>
+        <toolTip></toolTip>
+        <displayHotKey>true</displayHotKey>
+        <commonMacro>false</commonMacro>
+        <compareGroup>true</compareGroup>
+        <compareSortPrefix>true</compareSortPrefix>
+        <compareCommand>true</compareCommand>
+        <compareIncludeLabel>true</compareIncludeLabel>
+        <compareAutoExecute>true</compareAutoExecute>
+        <compareApplyToSelectedTokens>true</compareApplyToSelectedTokens>
+      </net.rptools.maptool.model.MacroButtonProperties>
+    </entry>
+    <entry>
+      <int>66</int>
+      <net.rptools.maptool.model.MacroButtonProperties>
+        <macroUUID>d289734a-4b95-4eba-81d0-47651b5773b7</macroUUID>
+        <saveLocation>Token</saveLocation>
+        <index>66</index>
+        <colorKey>lime</colorKey>
+        <hotKey>None</hotKey>
+        <command>[age()]</command>
+        <label>Show Age</label>
+        <group>Time (To be Copied to Campaign)</group>
+        <sortby></sortby>
+        <autoExecute>true</autoExecute>
+        <includeLabel>false</includeLabel>
+        <applyToTokens>false</applyToTokens>
+        <fontColorKey>black</fontColorKey>
+        <fontSize>1.00em</fontSize>
+        <minWidth></minWidth>
+        <maxWidth></maxWidth>
+        <allowPlayerEdits>true</allowPlayerEdits>
+        <toolTip></toolTip>
+        <displayHotKey>true</displayHotKey>
+        <commonMacro>false</commonMacro>
+        <compareGroup>true</compareGroup>
+        <compareSortPrefix>true</compareSortPrefix>
+        <compareCommand>true</compareCommand>
+        <compareIncludeLabel>true</compareIncludeLabel>
+        <compareAutoExecute>true</compareAutoExecute>
+        <compareApplyToSelectedTokens>true</compareApplyToSelectedTokens>
+      </net.rptools.maptool.model.MacroButtonProperties>
+    </entry>
+    <entry>
+      <int>67</int>
+      <net.rptools.maptool.model.MacroButtonProperties>
+        <macroUUID>1f6800d9-6065-4a84-bca7-d7ddb570ea8c</macroUUID>
+        <saveLocation>Token</saveLocation>
+        <index>67</index>
+        <colorKey>lime</colorKey>
+        <hotKey>None</hotKey>
+        <command>[h: setAge()]</command>
+        <label>Set Age</label>
+        <group>Time (To be Copied to Campaign)</group>
+        <sortby></sortby>
+        <autoExecute>true</autoExecute>
+        <includeLabel>false</includeLabel>
+        <applyToTokens>false</applyToTokens>
+        <fontColorKey>black</fontColorKey>
+        <fontSize>1.00em</fontSize>
+        <minWidth></minWidth>
+        <maxWidth></maxWidth>
+        <allowPlayerEdits>true</allowPlayerEdits>
+        <toolTip></toolTip>
+        <displayHotKey>true</displayHotKey>
+        <commonMacro>false</commonMacro>
+        <compareGroup>true</compareGroup>
+        <compareSortPrefix>true</compareSortPrefix>
+        <compareCommand>true</compareCommand>
+        <compareIncludeLabel>true</compareIncludeLabel>
+        <compareAutoExecute>true</compareAutoExecute>
+        <compareApplyToSelectedTokens>true</compareApplyToSelectedTokens>
+      </net.rptools.maptool.model.MacroButtonProperties>
+    </entry>
+    <entry>
+      <int>68</int>
+      <net.rptools.maptool.model.MacroButtonProperties>
+        <macroUUID>ed4a928c-ba22-44e9-a66f-0fc510461dcc</macroUUID>
+        <saveLocation>Token</saveLocation>
+        <index>68</index>
+        <colorKey>lime</colorKey>
+        <hotKey>None</hotKey>
+        <command>[h: returnData = getDate()]
+[h: thisYear = getYear()]
+
+[h: varsFromStrProp(returnData)]
+
+Today is [r: weekDay], [r:theDate] [r: month] [r: thisYear]</command>
+        <label>today</label>
+        <group>Time_Tools</group>
+        <sortby></sortby>
+        <autoExecute>true</autoExecute>
+        <includeLabel>false</includeLabel>
+        <applyToTokens>false</applyToTokens>
+        <fontColorKey>default</fontColorKey>
+        <fontSize>1.00em</fontSize>
+        <minWidth></minWidth>
+        <maxWidth></maxWidth>
+        <allowPlayerEdits>true</allowPlayerEdits>
+        <toolTip></toolTip>
+        <displayHotKey>true</displayHotKey>
+        <commonMacro>false</commonMacro>
+        <compareGroup>true</compareGroup>
+        <compareSortPrefix>true</compareSortPrefix>
+        <compareCommand>true</compareCommand>
+        <compareIncludeLabel>true</compareIncludeLabel>
+        <compareAutoExecute>true</compareAutoExecute>
+        <compareApplyToSelectedTokens>true</compareApplyToSelectedTokens>
+      </net.rptools.maptool.model.MacroButtonProperties>
+    </entry>
+    <entry>
+      <int>8</int>
+      <net.rptools.maptool.model.MacroButtonProperties>
+        <macroUUID>c6642912-16c2-40d4-bed7-6994f5e3f124</macroUUID>
+        <saveLocation>Token</saveLocation>
+        <index>8</index>
+        <colorKey>orange</colorKey>
+        <hotKey>None</hotKey>
+        <command>[h: minute = arg(0)]
+[h, if(argCount()==0): minute = number(getLibProperty(&quot;currentMinute&quot;, &quot;Lib:Calendar&quot;))]
+
+[h: am_pm = &quot;&quot;]
+
+[h: hour = floor(minute / 60)]
+
+[h: newHour = math.mod(hour, 24)]
+
+[h, if(newHour &lt; 12): am_pm = &quot;am&quot;; am_pm = &quot;pm&quot;]
+[h: newHour = math.mod(newHour, 12)]
+[h: minute = math.mod(minute, 60)]
+[h, if(newHour == 0): hour = 12; hour = newHour]
+
+[h: formattedTime = strformat(&quot;%d:%02d %s&quot;, hour, minute, am_pm)]
+
+[h: returnTime = strPropFromVars(&quot;hour, minute, am_pm, formattedTime&quot;)]
+
+[h: macro.return = returnTime]</command>
+        <label>getTime</label>
+        <group>Time_Tools</group>
+        <sortby></sortby>
+        <autoExecute>true</autoExecute>
+        <includeLabel>false</includeLabel>
+        <applyToTokens>false</applyToTokens>
+        <fontColorKey>black</fontColorKey>
+        <fontSize>1.00em</fontSize>
+        <minWidth></minWidth>
+        <maxWidth></maxWidth>
+        <allowPlayerEdits>true</allowPlayerEdits>
+        <toolTip></toolTip>
+        <displayHotKey>true</displayHotKey>
+        <commonMacro>false</commonMacro>
+        <compareGroup>true</compareGroup>
+        <compareSortPrefix>true</compareSortPrefix>
+        <compareCommand>true</compareCommand>
+        <compareIncludeLabel>true</compareIncludeLabel>
+        <compareAutoExecute>true</compareAutoExecute>
+        <compareApplyToSelectedTokens>true</compareApplyToSelectedTokens>
+      </net.rptools.maptool.model.MacroButtonProperties>
+    </entry>
+    <entry>
+      <int>15</int>
+      <net.rptools.maptool.model.MacroButtonProperties>
+        <macroUUID>61424edf-8366-4130-9090-658b1ab5d423</macroUUID>
+        <saveLocation>Token</saveLocation>
+        <index>15</index>
+        <colorKey>default</colorKey>
+        <hotKey>None</hotKey>
+        <command>[h: assert(isGM(),&quot;This is a DM command.&quot;,0)]
+[h: timeAdvance=arg(0)]
+[h, if (listCount(timeAdvance) == 0): timeAdvance = 0]
+[h: incrementMinute(timeAdvance)]
+</command>
+        <label>incrementRound</label>
+        <group>Time</group>
+        <sortby></sortby>
+        <autoExecute>true</autoExecute>
+        <includeLabel>false</includeLabel>
+        <applyToTokens>false</applyToTokens>
+        <fontColorKey>black</fontColorKey>
+        <fontSize>1.00em</fontSize>
+        <minWidth></minWidth>
+        <maxWidth></maxWidth>
+        <allowPlayerEdits>true</allowPlayerEdits>
+        <toolTip></toolTip>
+        <displayHotKey>true</displayHotKey>
+        <commonMacro>false</commonMacro>
+        <compareGroup>true</compareGroup>
+        <compareSortPrefix>true</compareSortPrefix>
+        <compareCommand>true</compareCommand>
+        <compareIncludeLabel>true</compareIncludeLabel>
+        <compareAutoExecute>true</compareAutoExecute>
+        <compareApplyToSelectedTokens>true</compareApplyToSelectedTokens>
+      </net.rptools.maptool.model.MacroButtonProperties>
+    </entry>
+    <entry>
+      <int>16</int>
+      <net.rptools.maptool.model.MacroButtonProperties>
+        <macroUUID>35ffe872-7142-428b-8b61-f16cf2b060fb</macroUUID>
+        <saveLocation>Token</saveLocation>
+        <index>16</index>
+        <colorKey>default</colorKey>
+        <hotKey>None</hotKey>
+        <command>[h: assert(isGM(),&quot;This is a DM command.&quot;,0)]
+[h: timeAdvance=arg(0)]
+[h, if(listCount(timeAdvance) == 0): timeAdvance = 0]
+[h: incrementMinute(timeAdvance*10)]
+</command>
+        <label>incrementTurn</label>
+        <group>Time</group>
+        <sortby></sortby>
+        <autoExecute>true</autoExecute>
+        <includeLabel>false</includeLabel>
+        <applyToTokens>false</applyToTokens>
+        <fontColorKey>black</fontColorKey>
+        <fontSize>1.00em</fontSize>
+        <minWidth></minWidth>
+        <maxWidth></maxWidth>
+        <allowPlayerEdits>true</allowPlayerEdits>
+        <toolTip></toolTip>
+        <displayHotKey>true</displayHotKey>
+        <commonMacro>false</commonMacro>
+        <compareGroup>true</compareGroup>
+        <compareSortPrefix>true</compareSortPrefix>
+        <compareCommand>true</compareCommand>
+        <compareIncludeLabel>true</compareIncludeLabel>
+        <compareAutoExecute>true</compareAutoExecute>
+        <compareApplyToSelectedTokens>true</compareApplyToSelectedTokens>
+      </net.rptools.maptool.model.MacroButtonProperties>
+    </entry>
+    <entry>
+      <int>18</int>
+      <net.rptools.maptool.model.MacroButtonProperties>
+        <macroUUID>465b35b6-a8e1-4dde-bc6f-cd41c3820c31</macroUUID>
+        <saveLocation>Token</saveLocation>
+        <index>18</index>
+        <colorKey>orange</colorKey>
+        <hotKey>None</hotKey>
+        <command>[h: assert(isGM(),&quot;This is a DM command.&quot;,0)]
+[h: timeAdvance=arg(0)]
+[h: currentYear = getYear()]
+
+[h, if(listCount(timeAdvance) == 0): timeAdvance = 0]
+
+[h: newYear = currentYear + timeAdvance]
+
+[h, if(currentYear != newYear): setLibProperty(&quot;currentYear&quot;,newYear, &quot;Lib:Calendar&quot;)]
+[h, if(isFrameVisible(&quot;Time and Temperature&quot;)): timeandtemp()]
+
+[r: newYear]</command>
+        <label>incrementYear</label>
+        <group>Time_Tools</group>
+        <sortby>1</sortby>
+        <autoExecute>true</autoExecute>
+        <includeLabel>false</includeLabel>
+        <applyToTokens>false</applyToTokens>
+        <fontColorKey>black</fontColorKey>
+        <fontSize>1.00em</fontSize>
+        <minWidth></minWidth>
+        <maxWidth></maxWidth>
+        <allowPlayerEdits>true</allowPlayerEdits>
+        <toolTip></toolTip>
+        <displayHotKey>true</displayHotKey>
+        <commonMacro>false</commonMacro>
+        <compareGroup>true</compareGroup>
+        <compareSortPrefix>true</compareSortPrefix>
+        <compareCommand>true</compareCommand>
+        <compareIncludeLabel>true</compareIncludeLabel>
+        <compareAutoExecute>true</compareAutoExecute>
+        <compareApplyToSelectedTokens>true</compareApplyToSelectedTokens>
+      </net.rptools.maptool.model.MacroButtonProperties>
+    </entry>
+    <entry>
+      <int>22</int>
+      <net.rptools.maptool.model.MacroButtonProperties>
+        <macroUUID>5f231867-7711-4201-9b74-87eea26b3ade</macroUUID>
+        <saveLocation>Token</saveLocation>
+        <index>22</index>
+        <colorKey>orange</colorKey>
+        <hotKey>None</hotKey>
+        <command>[h: assert(isGM(),&quot;This is a DM command.&quot;,0)]
+[h: timeAdvance=arg(0)]
+[h, if(argCount() == 0): timeAdvance = 0]
+
+[h: currentDate = getLibProperty(&quot;currentYearDate&quot;, &quot;Lib:Calendar&quot;)]
+[h: maxDays = 364]
+
+[h: newDate = currentDate + timeAdvance]
+
+[h, if(newDate == 0), code: {
+	[newDate = maxDays]
+	[incrementYear(-1)]
+}]
+
+[h, while(newDate &lt; 0), code: {
+	[newDate = newDate + maxDays]
+	[incrementYear(-1)]
+}]
+
+[h, while(newDate &gt; maxDays), code: {
+	[newDate = newDate - maxDays]
+	[incrementYear(1)]
+}]
+[h, if(currentDate != newDate), code: {
+	[setLibProperty(&quot;currentYearDate&quot;,newDate, &quot;Lib:Calendar&quot;)]
+	[moons(newDate)]
+	[weather(1)]
+}]
+[h, if(isFrameVisible(&quot;Time and Temperature&quot;)): timeandtemp()]
+
+[r: newDate]</command>
+        <label>incrementYearDate</label>
+        <group>Time_Tools</group>
+        <sortby>3</sortby>
+        <autoExecute>true</autoExecute>
+        <includeLabel>false</includeLabel>
+        <applyToTokens>false</applyToTokens>
+        <fontColorKey>black</fontColorKey>
+        <fontSize>1.00em</fontSize>
+        <minWidth></minWidth>
+        <maxWidth></maxWidth>
+        <allowPlayerEdits>false</allowPlayerEdits>
+        <toolTip></toolTip>
+        <displayHotKey>true</displayHotKey>
+        <commonMacro>false</commonMacro>
+        <compareGroup>true</compareGroup>
+        <compareSortPrefix>true</compareSortPrefix>
+        <compareCommand>true</compareCommand>
+        <compareIncludeLabel>true</compareIncludeLabel>
+        <compareAutoExecute>true</compareAutoExecute>
+        <compareApplyToSelectedTokens>true</compareApplyToSelectedTokens>
+      </net.rptools.maptool.model.MacroButtonProperties>
+    </entry>
+    <entry>
+      <int>24</int>
+      <net.rptools.maptool.model.MacroButtonProperties>
+        <macroUUID>a5712922-e6e3-4a9d-9a29-e9d4a145e4e7</macroUUID>
+        <saveLocation>Token</saveLocation>
+        <index>24</index>
+        <colorKey>orange</colorKey>
+        <hotKey>None</hotKey>
+        <command>[h: assert(isGM(),&quot;This is a DM command.&quot;,0)]
+[h: timeAdvance=arg(0)]
+[h: currentMinute = getLibProperty(&quot;currentMinute&quot;, &quot;Lib:Calendar&quot;)]
+
+[h, if(listCount(timeAdvance) == 0): timeAdvance = 0]
+
+[h: newMinute = currentMinute + timeAdvance]
+[h: updateStates(timeAdvance)]
+
+[h, while(newMinute &lt; 0), code: {
+	[newMinute = newMinute + 1440]
+	[incrementYearDate(-1)]
+}]
+
+[h, while(newMinute &gt; 1439), code: {
+	[newMinute = newMinute - 1440]
+	[incrementYearDate(1)]
+	[today()]
+	[birthdays()]
+}]
+[h, if(currentMinute != newMinute): setLibProperty(&quot;currentMinute&quot;,newMinute, &quot;Lib:Calendar&quot;)]
+[h, if(isFrameVisible(&quot;Time and Temperature&quot;)): timeandtemp()]
+[r: newMinute]</command>
+        <label>incrementMinute</label>
+        <group>Time_Tools</group>
+        <sortby>5</sortby>
+        <autoExecute>true</autoExecute>
+        <includeLabel>false</includeLabel>
+        <applyToTokens>false</applyToTokens>
+        <fontColorKey>black</fontColorKey>
+        <fontSize>1.00em</fontSize>
+        <minWidth></minWidth>
+        <maxWidth></maxWidth>
+        <allowPlayerEdits>true</allowPlayerEdits>
+        <toolTip></toolTip>
+        <displayHotKey>true</displayHotKey>
+        <commonMacro>false</commonMacro>
+        <compareGroup>true</compareGroup>
+        <compareSortPrefix>true</compareSortPrefix>
+        <compareCommand>true</compareCommand>
+        <compareIncludeLabel>true</compareIncludeLabel>
+        <compareAutoExecute>true</compareAutoExecute>
+        <compareApplyToSelectedTokens>true</compareApplyToSelectedTokens>
+      </net.rptools.maptool.model.MacroButtonProperties>
+    </entry>
+    <entry>
+      <int>25</int>
+      <net.rptools.maptool.model.MacroButtonProperties>
+        <macroUUID>18912707-a2d3-4f4f-9c97-e6372b03dda2</macroUUID>
+        <saveLocation>Token</saveLocation>
+        <index>25</index>
+        <colorKey>orange</colorKey>
+        <hotKey>None</hotKey>
+        <command>[h: assert(isGM(),&quot;This is a DM command.&quot;,0)]
+[h: timeAdvance=arg(0)]
+[h: currentSegment = getLibProperty(&quot;currentSegment&quot;, &quot;Lib:Calendar&quot;)]
+
+[h, if(listCount(timeAdvance) == 0): timeAdvance = 0]
+
+[h: newSegment = currentSegment + timeAdvance]
+
+[h, while(newSegment &lt; 0), code: {
+	[newSegment = newSegment + 10]
+	[incrementMinute(-1)]
+}]
+
+[h, while(newSegment &gt; 9), code: {
+	[newSegment = newSegment - 10]
+	[incrementMinute(1)]
+}]
+[h, if(currentSegment != newSegment): setLibProperty(&quot;currentSegment&quot;,newSegment, &quot;Lib:Calendar&quot;)]
+
+[h, if(isFrameVisible(&quot;Time and Temperature&quot;)): timeandtemp()]
+
+[r: currentSegment]</command>
+        <label>incrementSegment</label>
+        <group>Time_Tools</group>
+        <sortby>6</sortby>
+        <autoExecute>true</autoExecute>
+        <includeLabel>false</includeLabel>
+        <applyToTokens>false</applyToTokens>
+        <fontColorKey>black</fontColorKey>
+        <fontSize>1.00em</fontSize>
+        <minWidth></minWidth>
+        <maxWidth></maxWidth>
+        <allowPlayerEdits>true</allowPlayerEdits>
+        <toolTip></toolTip>
+        <displayHotKey>true</displayHotKey>
+        <commonMacro>false</commonMacro>
+        <compareGroup>true</compareGroup>
+        <compareSortPrefix>true</compareSortPrefix>
+        <compareCommand>true</compareCommand>
+        <compareIncludeLabel>true</compareIncludeLabel>
+        <compareAutoExecute>true</compareAutoExecute>
+        <compareApplyToSelectedTokens>true</compareApplyToSelectedTokens>
+      </net.rptools.maptool.model.MacroButtonProperties>
+    </entry>
+    <entry>
+      <int>27</int>
+      <net.rptools.maptool.model.MacroButtonProperties>
+        <macroUUID>b05ca92d-acb7-46aa-bccc-d8dc131ae4a3</macroUUID>
+        <saveLocation>Token</saveLocation>
+        <index>27</index>
+        <colorKey>default</colorKey>
+        <hotKey>None</hotKey>
+        <command>h1 {
+	font-size: 250%;
+}
+
+p: {
+	font-size:medium;
+}
+
+body: {
+	font-size: x-small;
+}
+
+.oddRow {
+	background-color: #ffffff;
+}
+
+.evenRow {
+	background-color: #f0f0f0;
+}</command>
+        <label>Greyhawk_CSS</label>
+        <group>test</group>
+        <sortby></sortby>
+        <autoExecute>true</autoExecute>
+        <includeLabel>false</includeLabel>
+        <applyToTokens>false</applyToTokens>
+        <fontColorKey>black</fontColorKey>
+        <fontSize>1.00em</fontSize>
+        <minWidth></minWidth>
+        <maxWidth></maxWidth>
+        <allowPlayerEdits>true</allowPlayerEdits>
+        <toolTip></toolTip>
+        <displayHotKey>true</displayHotKey>
+        <commonMacro>false</commonMacro>
+        <compareGroup>true</compareGroup>
+        <compareSortPrefix>true</compareSortPrefix>
+        <compareCommand>true</compareCommand>
+        <compareIncludeLabel>true</compareIncludeLabel>
+        <compareAutoExecute>true</compareAutoExecute>
+        <compareApplyToSelectedTokens>true</compareApplyToSelectedTokens>
+      </net.rptools.maptool.model.MacroButtonProperties>
+    </entry>
+    <entry>
+      <int>31</int>
+      <net.rptools.maptool.model.MacroButtonProperties>
+        <macroUUID>0c4ebe58-8163-4f6b-89d6-62cc8dae88cf</macroUUID>
+        <saveLocation>Token</saveLocation>
+        <index>31</index>
+        <colorKey>pink</colorKey>
+        <hotKey>None</hotKey>
+        <command>[h: incrementRound(number_of_Days*1440)]</command>
+        <label>+Date</label>
+        <group>Time (To be Copied to Campaign)</group>
+        <sortby>1</sortby>
+        <autoExecute>true</autoExecute>
+        <includeLabel>false</includeLabel>
+        <applyToTokens>false</applyToTokens>
+        <fontColorKey>black</fontColorKey>
+        <fontSize>1.00em</fontSize>
+        <minWidth></minWidth>
+        <maxWidth></maxWidth>
+        <allowPlayerEdits>true</allowPlayerEdits>
+        <toolTip></toolTip>
+        <displayHotKey>true</displayHotKey>
+        <commonMacro>false</commonMacro>
+        <compareGroup>true</compareGroup>
+        <compareSortPrefix>true</compareSortPrefix>
+        <compareCommand>true</compareCommand>
+        <compareIncludeLabel>true</compareIncludeLabel>
+        <compareAutoExecute>true</compareAutoExecute>
+        <compareApplyToSelectedTokens>true</compareApplyToSelectedTokens>
+      </net.rptools.maptool.model.MacroButtonProperties>
+    </entry>
+    <entry>
+      <int>32</int>
+      <net.rptools.maptool.model.MacroButtonProperties>
+        <macroUUID>056428f8-05cc-427b-bff7-8890f3696f5e</macroUUID>
+        <saveLocation>Token</saveLocation>
+        <index>32</index>
+        <colorKey>pink</colorKey>
+        <hotKey>None</hotKey>
+        <command>[h: incrementTurn(number_of_Hours*6)]</command>
+        <label>+Hour</label>
+        <group>Time (To be Copied to Campaign)</group>
+        <sortby>2</sortby>
+        <autoExecute>true</autoExecute>
+        <includeLabel>false</includeLabel>
+        <applyToTokens>false</applyToTokens>
+        <fontColorKey>black</fontColorKey>
+        <fontSize>1.00em</fontSize>
+        <minWidth></minWidth>
+        <maxWidth></maxWidth>
+        <allowPlayerEdits>true</allowPlayerEdits>
+        <toolTip></toolTip>
+        <displayHotKey>true</displayHotKey>
+        <commonMacro>false</commonMacro>
+        <compareGroup>true</compareGroup>
+        <compareSortPrefix>true</compareSortPrefix>
+        <compareCommand>true</compareCommand>
+        <compareIncludeLabel>true</compareIncludeLabel>
+        <compareAutoExecute>true</compareAutoExecute>
+        <compareApplyToSelectedTokens>true</compareApplyToSelectedTokens>
+      </net.rptools.maptool.model.MacroButtonProperties>
+    </entry>
+    <entry>
+      <int>33</int>
+      <net.rptools.maptool.model.MacroButtonProperties>
+        <macroUUID>2a822855-0ef9-4a59-834c-e3b6d08eb5d6</macroUUID>
+        <saveLocation>Token</saveLocation>
+        <index>33</index>
+        <colorKey>pink</colorKey>
+        <hotKey>None</hotKey>
+        <command>[h: incrementTurn(number_of_Turns)]</command>
+        <label>+Turn</label>
+        <group>Time (To be Copied to Campaign)</group>
+        <sortby>3</sortby>
+        <autoExecute>true</autoExecute>
+        <includeLabel>false</includeLabel>
+        <applyToTokens>false</applyToTokens>
+        <fontColorKey>black</fontColorKey>
+        <fontSize>1.00em</fontSize>
+        <minWidth></minWidth>
+        <maxWidth></maxWidth>
+        <allowPlayerEdits>true</allowPlayerEdits>
+        <toolTip></toolTip>
+        <displayHotKey>true</displayHotKey>
+        <commonMacro>false</commonMacro>
+        <compareGroup>true</compareGroup>
+        <compareSortPrefix>true</compareSortPrefix>
+        <compareCommand>true</compareCommand>
+        <compareIncludeLabel>true</compareIncludeLabel>
+        <compareAutoExecute>true</compareAutoExecute>
+        <compareApplyToSelectedTokens>true</compareApplyToSelectedTokens>
+      </net.rptools.maptool.model.MacroButtonProperties>
+    </entry>
+    <entry>
+      <int>34</int>
+      <net.rptools.maptool.model.MacroButtonProperties>
+        <macroUUID>efe7cb07-586d-4eb1-9325-f4774f4b82f4</macroUUID>
+        <saveLocation>Token</saveLocation>
+        <index>34</index>
+        <colorKey>pink</colorKey>
+        <hotKey>None</hotKey>
+        <command>[h: incrementRound(number_of_Rounds)]</command>
+        <label>+Round</label>
+        <group>Time (To be Copied to Campaign)</group>
+        <sortby>4</sortby>
+        <autoExecute>true</autoExecute>
+        <includeLabel>false</includeLabel>
+        <applyToTokens>false</applyToTokens>
+        <fontColorKey>black</fontColorKey>
+        <fontSize>1.00em</fontSize>
+        <minWidth></minWidth>
+        <maxWidth></maxWidth>
+        <allowPlayerEdits>true</allowPlayerEdits>
+        <toolTip></toolTip>
+        <displayHotKey>true</displayHotKey>
+        <commonMacro>false</commonMacro>
+        <compareGroup>true</compareGroup>
+        <compareSortPrefix>true</compareSortPrefix>
+        <compareCommand>true</compareCommand>
+        <compareIncludeLabel>true</compareIncludeLabel>
+        <compareAutoExecute>true</compareAutoExecute>
+        <compareApplyToSelectedTokens>true</compareApplyToSelectedTokens>
+      </net.rptools.maptool.model.MacroButtonProperties>
+    </entry>
+    <entry>
+      <int>40</int>
+      <net.rptools.maptool.model.MacroButtonProperties>
+        <macroUUID>d6c90c9c-b306-48b6-9ba1-af00a3da08ad</macroUUID>
+        <saveLocation>Token</saveLocation>
+        <index>40</index>
+        <colorKey>orange</colorKey>
+        <hotKey>None</hotKey>
+        <command>[h: yearDate = arg(0)]
+
+[h, if(argCount()==0): yearDate=getLibProperty(&quot;currentYearDate&quot;, &quot;Lib:Calendar&quot;)]
+
+[h: yearDate = number(yearDate)]
+
+[h: thisQuarter = ceiling(yearDate/91)]
+[h: qDay = yearDate - (91*(thisQuarter-1))]
+[h: qMonth = ceiling((qDay-28)/28)+1]
+
+[h: theDate = qDay - (28 * (qMonth -1))]
+
+[h: weekDay = math.mod(yearDate, 7)]
+[h: weekDay = listGet(&quot;Freeday, Starday, Sunday, Moonday, Godsday, Waterday, Earthday&quot;, weekDay)]
+
+[h: thisMonth = qMonth + (4 * (thisQuarter-1))]
+
+[h: months = getLibProperty(&quot;months&quot;, &quot;Lib:Calendar&quot;)]
+
+[h: monthStuff = listGet(months, thisMonth-1)]
+[h: month = getStrProp(monthStuff, &quot;name&quot;)]
+
+[h: returnDate = strPropFromVars(&quot;weekDay, theDate, month&quot;)]
+
+[h: macro.return = returnDate]</command>
+        <label>getDate</label>
+        <group>Time_Tools</group>
+        <sortby></sortby>
+        <autoExecute>true</autoExecute>
+        <includeLabel>false</includeLabel>
+        <applyToTokens>false</applyToTokens>
+        <fontColorKey>black</fontColorKey>
+        <fontSize>1.00em</fontSize>
+        <minWidth></minWidth>
+        <maxWidth></maxWidth>
+        <allowPlayerEdits>true</allowPlayerEdits>
+        <toolTip></toolTip>
+        <displayHotKey>true</displayHotKey>
+        <commonMacro>false</commonMacro>
+        <compareGroup>true</compareGroup>
+        <compareSortPrefix>true</compareSortPrefix>
+        <compareCommand>true</compareCommand>
+        <compareIncludeLabel>true</compareIncludeLabel>
+        <compareAutoExecute>true</compareAutoExecute>
+        <compareApplyToSelectedTokens>true</compareApplyToSelectedTokens>
+      </net.rptools.maptool.model.MacroButtonProperties>
+    </entry>
+    <entry>
+      <int>42</int>
+      <net.rptools.maptool.model.MacroButtonProperties>
+        <macroUUID>52163fb0-bfe2-4e2f-a26b-3321562d9526</macroUUID>
+        <saveLocation>Token</saveLocation>
+        <index>42</index>
+        <colorKey>orange</colorKey>
+        <hotKey>None</hotKey>
+        <command>[h: yearDate = macro.args]
+[h, if(argCount() == 0): yearDate = getLibProperty(&quot;currentYearDate&quot;, &quot;Lib:Calendar&quot;)]
+
+[h: year = getLibProperty(&quot;currentYear&quot;, &quot;Lib:Calendar&quot;)]
+[h: todaysDate = getDate(yearDate)]
+
+[h: varsFromStrProp(todaysDate)]
+	[h: &apos;weekDay, theDate, month&apos;]
+
+[h: time = getLibProperty(&quot;currentMinute&quot;, &quot;Lib:Calendar&quot;)]
+
+[h: varsFromStrProp(getTime())]
+
+[h: frameSize=&quot;width=400; height=400&quot;]
+
+[h: titleTxt=&quot;Does Anyone Really Know What Time it Is?&quot;]
+
+[h: varsFromStrProp(moons(yearDate))]
+	[h: &apos;celeneMode, lunaMode&apos;]
+
+[h: phases = &quot;New Moon, Waxing Crescent, First Quarter, Waxing Gibbous, Full Moon, Waning Gibbous, Third Quarter, Waning Crescent&quot;]
+
+[h: celenePhase = listGet(phases, celeneMode)]
+[h: lunaPhase   = listGet(phases, lunaMode)]
+
+[h: celenePhasePic = getImage(&quot;Celene - &quot; + celenePhase)]
+[h: lunaPhasePic   = getImage(&quot;Luna - &quot; + lunaPhase)]
+
+[frame5 (&quot;Time and Temperature&quot;, frameSize): {
+	&lt;html&gt;
+		&lt;head&gt;
+			&lt;title&gt;[r: titleTxt]&lt;/title&gt;
+			&lt;link rel=&quot;stylesheet&quot; type=&quot;text/css&quot; href=&quot;Greyhawk_CSS@Lib:Greyhawk:Macros&quot;&gt;
+		&lt;/head&gt;
+		&lt;body&gt;
+			&lt;h2 style=&quot;text-align: center&quot;&gt;
+			[r:strformat(&quot;%d:%02d %s %s, %d %s %d&quot;, hour, minute, am_pm, weekDay, theDate, month, year)]
+			&lt;/h2&gt;
+			&lt;table&gt;
+				&lt;tr&gt;&lt;th&gt;Luna&lt;/th&gt;&lt;th&gt;Celene&lt;/th&gt;&lt;/tr&gt;
+				&lt;tr&gt;&lt;td style=&quot;text-align: center&quot;&gt;[r:lunaPhase]&lt;/td&gt;
+				&lt;td style=&quot;text-align: center&quot;&gt;[r:celenePhase]&lt;/td&gt;&lt;/tr&gt;
+				&lt;tr&gt;&lt;td style=&quot;text-align: center&quot;&gt;&lt;img src=&apos;[r:lunaPhasePic]&apos; width=70&gt;&lt;/td&gt;
+				&lt;td style=&quot;text-align: center&quot;&gt;&lt;img src=&apos;[r:celenePhasePic]&apos; width=50&gt;&lt;/td&gt;&lt;/tr&gt;
+				&lt;tr&gt;&lt;td colspan=2 style=&quot;text-align: center&quot;&gt;[r:getLibProperty(&quot;currentWeather&quot;, &quot;Lib:Calendar&quot;)]&lt;/td&gt;&lt;/tr&gt;
+				&lt;tr&gt;&lt;td colspan=2 style=&quot;text-align: center&quot;&gt;[r: birthdays()]
+			&lt;/table&gt;
+			[r:macroLink(&quot;Refresh&quot;, &quot;Time_and_Temperature@Lib:Greyhawk:Macros&quot;)]
+		&lt;/body&gt;
+	&lt;/html&gt;
+}]
+</command>
+        <label>Time_and_Temperature</label>
+        <group>Time_Tools</group>
+        <sortby></sortby>
+        <autoExecute>true</autoExecute>
+        <includeLabel>false</includeLabel>
+        <applyToTokens>false</applyToTokens>
+        <fontColorKey>black</fontColorKey>
+        <fontSize>1.00em</fontSize>
+        <minWidth></minWidth>
+        <maxWidth></maxWidth>
+        <allowPlayerEdits>true</allowPlayerEdits>
+        <toolTip></toolTip>
+        <displayHotKey>true</displayHotKey>
+        <commonMacro>false</commonMacro>
+        <compareGroup>true</compareGroup>
+        <compareSortPrefix>true</compareSortPrefix>
+        <compareCommand>true</compareCommand>
+        <compareIncludeLabel>true</compareIncludeLabel>
+        <compareAutoExecute>true</compareAutoExecute>
+        <compareApplyToSelectedTokens>true</compareApplyToSelectedTokens>
+      </net.rptools.maptool.model.MacroButtonProperties>
+    </entry>
+    <entry>
+      <int>43</int>
+      <net.rptools.maptool.model.MacroButtonProperties>
+        <macroUUID>d8e94fa6-5130-4881-bfd5-7e48d1be02d6</macroUUID>
+        <saveLocation>Token</saveLocation>
+        <index>43</index>
+        <colorKey>default</colorKey>
+        <hotKey>None</hotKey>
+        <command>[h: update = arg(0)]
+[h, if(argCount()==0): update = 0]
+[h: day = getLibProperty(&quot;currentYearDate&quot;, &quot;Lib:Calendar&quot;)]
+
+[h: thisQuarter = ceiling(day/91)]
+[h: qDay        = day - 91 * (thisQuarter-1)]
+[h: qMonth      = ceiling((qDay - 28)/28)+1]
+[h: thisMonth   = qMonth + (4 * (thisQuarter - 1))]
+
+[h: months = getLibProperty(&quot;months&quot;, &quot;Lib:Calendar&quot;)]
+
+[h: varsFromStrProp(listGet(getLibProperty(&quot;months&quot;, &quot;Lib:Calendar&quot;), thisMonth-1))]
+	[h: &apos;name, baseTemp, highTemp, lowTemp, clearSkies, partlySkies, cloudySkies, precip, sunrise, sunset&apos;]
+
+[h: high = baseTemp + eval(highTemp)]
+[h: low  = baseTemp + eval( lowTemp)]
+[h: cloudyRoll = d100]
+[h, if(cloudyRoll &lt;= clearSkies) : clouds = &quot;clear&quot;]
+[h, if(cloudyRoll &lt;= partlySkies): clouds = &quot;partly cloudy&quot;; clouds = &quot;cloudy&quot;]
+[h: raining = d100]
+[h, if(raining &lt;= precip), code: {
+	[itsRaining = strformat(&quot;a %d&amp;#37; chance of precipitation today&quot;, precip)]
+};
+{
+	[itsRaining = &quot;no precipitation today&quot;]
+}]
+
+[h: sunUp   = getStrProp(getTime(sunrise),&quot;formattedTime&quot;)]
+[h: sunDown = getStrProp(getTime( sunset),&quot;formattedTime&quot;)]
+
+[h: outPut = strformat(&quot;The sun will rise around %s, and set around %s.&lt;br&gt;The high temperature today will be %d&amp;deg;, with a low of %d&amp;deg;. The skies are %s, and there is %s.&quot;, sunUp, sunDown, high, low, clouds, itsRaining)]
+[h, if(update): setLibProperty(&quot;currentWeather&quot;, outPut, &quot;Lib:Calendar&quot;)]
+[r: outPut]</command>
+        <label>weather</label>
+        <group>Weather</group>
+        <sortby></sortby>
+        <autoExecute>true</autoExecute>
+        <includeLabel>false</includeLabel>
+        <applyToTokens>false</applyToTokens>
+        <fontColorKey>black</fontColorKey>
+        <fontSize>1.00em</fontSize>
+        <minWidth></minWidth>
+        <maxWidth></maxWidth>
+        <allowPlayerEdits>true</allowPlayerEdits>
+        <toolTip></toolTip>
+        <displayHotKey>true</displayHotKey>
+        <commonMacro>false</commonMacro>
+        <compareGroup>true</compareGroup>
+        <compareSortPrefix>true</compareSortPrefix>
+        <compareCommand>true</compareCommand>
+        <compareIncludeLabel>true</compareIncludeLabel>
+        <compareAutoExecute>true</compareAutoExecute>
+        <compareApplyToSelectedTokens>true</compareApplyToSelectedTokens>
+      </net.rptools.maptool.model.MacroButtonProperties>
+    </entry>
+    <entry>
+      <int>44</int>
+      <net.rptools.maptool.model.MacroButtonProperties>
+        <macroUUID>a817f8f6-fb68-44ec-9cc8-cc2860712b10</macroUUID>
+        <saveLocation>Token</saveLocation>
+        <index>44</index>
+        <colorKey>orange</colorKey>
+        <hotKey>None</hotKey>
+        <command>[h: myArgs = macro.args]
+
+[h: theDate = getLibProperty(&quot;currentYearDate&quot;, &quot;Lib:Calendar&quot;)]
+
+[h: lunaMode = math.mod(ceiling((theDate)/3.5),8)]
+
+[h: celeneMode = math.mod(ceiling((theDate +  37) / (11.375)), 8)]
+
+[h: macro.return=strPropFromVars(&quot;lunaMode, celeneMode&quot;)]</command>
+        <label>moons</label>
+        <group>Time_Tools</group>
+        <sortby></sortby>
+        <autoExecute>true</autoExecute>
+        <includeLabel>false</includeLabel>
+        <applyToTokens>false</applyToTokens>
+        <fontColorKey>black</fontColorKey>
+        <fontSize>1.00em</fontSize>
+        <minWidth></minWidth>
+        <maxWidth></maxWidth>
+        <allowPlayerEdits>false</allowPlayerEdits>
+        <toolTip></toolTip>
+        <displayHotKey>true</displayHotKey>
+        <commonMacro>false</commonMacro>
+        <compareGroup>true</compareGroup>
+        <compareSortPrefix>true</compareSortPrefix>
+        <compareCommand>true</compareCommand>
+        <compareIncludeLabel>true</compareIncludeLabel>
+        <compareAutoExecute>true</compareAutoExecute>
+        <compareApplyToSelectedTokens>true</compareApplyToSelectedTokens>
+      </net.rptools.maptool.model.MacroButtonProperties>
+    </entry>
+    <entry>
+      <int>45</int>
+      <net.rptools.maptool.model.MacroButtonProperties>
+        <macroUUID>058966b4-d793-4976-a38a-99a19cba0e54</macroUUID>
+        <saveLocation>Token</saveLocation>
+        <index>45</index>
+        <colorKey>default</colorKey>
+        <hotKey>None</hotKey>
+        <command>[h: birthRoll = arg(0)]
+[h: numArgs = listCount(birthRoll)]
+
+[h, if (numArgs == 0): birthRoll = d100]
+
+[h, if(birthRoll &lt;= 3), code: {
+	[birthPlace = &quot;Prelacy of Almor&quot;]
+	[alignments = &quot;LN, LG&quot;]
+	[languages = &quot;Common&quot;]
+}]
+
+[h, if(birthRoll &gt;= 4 &amp;&amp; birthRoll &lt;= 5), code: {
+	[birthPlace = &quot;Bissel&quot;]
+	[alignments = &quot;NG, N, LG, LN&quot;]
+	[languages = &quot;Common&quot;]
+}]
+
+[h, if(birthRoll &gt;= 6 &amp;&amp; birthRoll &lt;= 7), code: {
+	[birthPlace = &quot;Ekbir&quot;]
+	[alignments = &quot;LN, N&quot;]
+	[languages = &quot;Baklunish&quot;]
+}]
+
+[h, if(birthRoll == 8), code: {
+	[birthPlace = &quot;Frost Barbarians, Ice Barbarians, Snow Barbarians&quot;]
+	[alignments = &quot;CN&quot;]
+	[languages = &quot;Fruz (Cold Tongue)&quot;]
+}]
+
+[h, if(birthRoll &gt;= 9 &amp;&amp; birthRoll &lt;= 18), code: {
+	[birthPlace = &quot;Furyondy&quot;]
+	[alignments = &quot;LG, NG, LN&quot;]
+	[languages = &quot;Common, 5% Velondi&quot;]
+}]
+
+[h, if(birthRoll &gt;= 19 &amp;&amp; birthRoll &lt;= 20), code: {
+	[birthPlace = &quot;Geoff&quot;]
+	[alignments = &quot;CG, CN, NG&quot;]
+	[languages = &quot;Flan, Common&quot;]
+}]
+
+[h, if(birthRoll == 21), code: {
+	[birthPlace = &quot;Gran March&quot;]
+	[alignments = &quot;LN&quot;]
+	[languages = &quot;Common, 10% Keolandish&quot;]
+}]
+
+[h, if(birthRoll &gt;= 22 &amp;&amp; birthRoll &lt;= 29), code: {
+	[birthPlace = &quot;Great Kingdom&quot;]
+	[alignments = &quot;LG, NG, CG, LN, N, CN, LE, NE, CE&quot;]
+	[languages = &quot;Common, Oeridian&quot;]
+}]
+
+[h, if(birthRoll &gt;= 30 &amp;&amp; birthRoll &lt;= 32), code: {
+	[birthPlace = &quot;Greyhawk&quot;]
+	[alignments = &quot;LG, NG, CG, LN, N, CN, LE, NE, CE&quot;]
+	[languages = &quot;Common&quot;]
+}]
+
+[h, if(birthRoll == 33), code: {
+	[birthPlace = &quot;Idee&quot;]
+	[alignments = &quot;N, CN&quot;]
+	[languages = &quot;Common&quot;]
+}]
+
+[h, if(birthRoll == 34), code: {
+	[birthPlace = &quot;Irongate&quot;]
+	[alignments = &quot;LN&quot;]
+	[languages = &quot;Common&quot;]
+}]
+
+[h, if(birthRoll &gt;= 35 &amp;&amp; birthRoll &lt;= 37), code: {
+	[birthPlace = &quot;Keoland&quot;]
+	[alignments = &quot;LN, NG, CG, CN, N&quot;]
+	[languages = &quot;Common, 15% Keolandish&quot;]
+}]
+
+[h, if(birthRoll == 38), code: {
+	[birthPlace = &quot;Ket&quot;]
+	[alignments = &quot;CN, N&quot;]
+	[languages = &quot;Baklunish, Common&quot;]
+}]
+
+[h, if(birthRoll &gt;= 39 &amp;&amp; birthRoll &lt;= 40), code: {
+	[birthPlace = &quot;Lordship of the Isles&quot;]
+	[alignments = &quot;LN&quot;]
+	[languages = &quot;Common&quot;]
+}]
+
+[h, if(birthRoll &gt;= 41 &amp;&amp; birthRoll &lt;= 50), code: {
+	[birthPlace = &quot;Nyrond&quot;]
+	[alignments = &quot;LN, LG, NG, CG&quot;]
+	[languages = &quot;Common, 15% Nyrondese&quot;]
+}]
+
+[h, if(birthRoll &gt;= 51 &amp;&amp; birthRoll &lt;= 52), code: {
+	[birthPlace = &quot;Onnwal&quot;]
+	[alignments = &quot;LN&quot;]
+	[languages = &quot;Common&quot;]
+}]
+
+[h, if(birthRoll &gt;= 53 &amp;&amp; birthRoll &lt;= 54), code: {
+	[birthPlace = &quot;Theocracy of the Pale&quot;]
+	[alignments = &quot;LN, LG&quot;]
+	[languages = &quot;Common&quot;]
+}]
+
+[h, if(birthRoll &gt;= 55 &amp;&amp; birthRoll &lt;= 57), code: {
+	[birthPlace = &quot;Perrenland&quot;]
+	[alignments = &quot;LN, LG, N&quot;]
+	[languages = &quot;Common&quot;]
+}]
+
+[h, if(birthRoll &gt;= 58 &amp;&amp; birthRoll &lt;= 59), code: {
+	[birthPlace = &quot;Plains of the Paynims&quot;]
+	[alignments = &quot;CN, N&quot;]
+	[languages = &quot;Baklunish&quot;]
+}]
+
+[h, if(birthRoll == 60), code: {
+	[birthPlace = &quot;Ratik&quot;]
+	[alignments = &quot;N, CN, CE&quot;]
+	[languages = &quot;Common, Oeridian&quot;]
+}]
+
+[h, if(birthRoll &gt;= 61), code: {
+	[birthPlace = &quot;Rovers of the Barrens&quot;]
+	[alignments = &quot;CN, N&quot;]
+	[languages = &quot;Flan&quot;]
+}]
+
+[h, if(birthRoll == 62), code: {
+	[birthPlace = &quot;Sea Barons&quot;]
+	[alignments = &quot;CN&quot;]
+	[languages = &quot;Common&quot;]
+}]
+
+[h, if(birthRoll &gt;= 63 &amp;&amp; birthRoll &lt;= 64), code: {
+	[birthPlace = &quot;Shield Lands&quot;]
+	[alignments = &quot;LG, NG, N&quot;]
+	[languages = &quot;Common&quot;]
+}]
+
+[h, if(birthRoll &gt;= 65 &amp;&amp; birthRoll &lt;= 66), code: {
+	[birthPlace = &quot;Sterich&quot;]
+	[alignments = &quot;CN&quot;]
+	[languages = &quot;Common&quot;]
+}]
+
+[h, if(birthRoll &gt;= 67 &amp;&amp; birthRoll &lt;= 68), code: {
+	[birthPlace = &quot;Sunndi&quot;]
+	[alignments = &quot;LN, CG, N&quot;]
+	[languages = &quot;Common&quot;]
+}]
+
+[h, if(birthRoll == 69), code: {
+	[birthPlace = &quot;Duchy of Tenh&quot;]
+	[alignments = &quot;LN, N&quot;]
+	[languages = &quot;Flan, Common&quot;]
+}]
+
+[h, if(birthRoll == 70), code: {
+	[birthPlace = &quot;Tiger Nomads, Wolf Nomads&quot;]
+	[alignments = &quot;N, CN&quot;]
+	[languages = &quot;Baklunish&quot;]
+}]
+
+[h, if(birthRoll == 71), code: {
+	[birthPlace = &quot;Tusmit&quot;]
+	[alignments = &quot;N&quot;]
+	[languages = &quot;Baklunish&quot;]
+}]
+
+[h, if(birthRoll == 72), code: {
+	[birthPlace = &quot;Ulek County, Ulek Duchy, Ulek Principality&quot;]
+	[alignments = &quot;LN, LG, CG, CN, N&quot;]
+	[languages = &quot;Common&quot;]
+}]
+
+[h, if(birthRoll == 73), code: {
+	[birthPlace = &quot;Ull&quot;]
+	[alignments = &quot;CN, N, CE&quot;]
+	[languages = &quot;Baklunish&quot;]
+}]
+
+[h, if(birthRoll &gt;= 74 &amp;&amp; birthRoll &lt;= 78), code: {
+	[birthPlace = &quot;Urnst County, Urnst Duchy&quot;]
+	[alignments = &quot;N, NG&quot;]
+	[languages = &quot;Common&quot;]
+}]
+
+[h, if(birthRoll &gt;= 79 &amp;&amp; birthRoll &lt;= 88), code: {
+	[birthPlace = &quot;Veluna&quot;]
+	[alignments = &quot;LG, NG&quot;]
+	[languages = &quot;Common, 10% Velondi&quot;]
+}]
+
+[h, if(birthRoll &gt;= 89 &amp;&amp; birthRoll &lt;= 94), code: {
+	[birthPlace = &quot;Wild Coast&quot;]
+	[alignments = &quot;LG, NG, CG, LN, N, CN, LE, NE, CE&quot;]
+	[languages = &quot;Common&quot;]
+}]
+
+[h, if(birthRoll &gt;= 95 &amp;&amp; birthRoll &lt;= 96), code: {
+	[birthPlace = &quot;Yeomanry&quot;]
+	[alignments = &quot;LG, LN&quot;]
+	[languages = &quot;Common, 5% Keolandish&quot;]
+}]
+
+[h, if(birthRoll &gt;= 97 &amp;&amp; birthRoll &lt;= 98), code: {
+	[birthPlace = &quot;Zeif&quot;]
+	[alignments = &quot;LN, N&quot;]
+	[languages = &quot;Baklunish&quot;]
+}]
+
+[h, if(birthRoll &gt;= 99 &amp;&amp; birthRoll &lt;= 100), code: {
+	[birthPlace = &quot;Elsewhere, or choose&quot;]
+	[alignments = &quot;LG, NG, CG, LN, N, CN, LE, NE, CE&quot;]
+	[languages = &quot;Common, Baklunish, Oeridian, Fruz (Cold Tongue), Flan, Velondi, Keolandish, Nyrondese&quot;]
+}]
+
+[r: macro.return = strPropFromVars(&quot;birthPlace, alignments, languages&quot;)]</command>
+        <label>elf_birth</label>
+        <group>Character Details</group>
+        <sortby></sortby>
+        <autoExecute>true</autoExecute>
+        <includeLabel>false</includeLabel>
+        <applyToTokens>false</applyToTokens>
+        <fontColorKey>black</fontColorKey>
+        <fontSize>1.00em</fontSize>
+        <minWidth></minWidth>
+        <maxWidth></maxWidth>
+        <allowPlayerEdits>true</allowPlayerEdits>
+        <toolTip></toolTip>
+        <displayHotKey>true</displayHotKey>
+        <commonMacro>false</commonMacro>
+        <compareGroup>true</compareGroup>
+        <compareSortPrefix>true</compareSortPrefix>
+        <compareCommand>true</compareCommand>
+        <compareIncludeLabel>true</compareIncludeLabel>
+        <compareAutoExecute>true</compareAutoExecute>
+        <compareApplyToSelectedTokens>true</compareApplyToSelectedTokens>
+      </net.rptools.maptool.model.MacroButtonProperties>
+    </entry>
+    <entry>
+      <int>47</int>
+      <net.rptools.maptool.model.MacroButtonProperties>
+        <macroUUID>a45953bf-d282-4823-b15e-62e6cf6011c8</macroUUID>
+        <saveLocation>Token</saveLocation>
+        <index>47</index>
+        <colorKey>default</colorKey>
+        <hotKey>None</hotKey>
+        <command>[h: birthRoll = arg(0)]
+[h: numArgs = listCount(birthRoll)]
+
+[h, if (numArgs == 0): birthRoll = d100]
+
+[h, if(birthRoll &lt;= 3), code: {
+	[birthPlace = &quot;Prelacy of Almor&quot;]
+	[alignments = &quot;LN, LG&quot;]
+	[languages = &quot;Common&quot;]
+}]
+
+[h, if(birthRoll &gt;= 4 &amp;&amp; birthRoll &lt;= 5), code: {
+	[birthPlace = &quot;Bissel&quot;]
+	[alignments = &quot;NG, N, LG, LN&quot;]
+	[languages = &quot;Common&quot;]
+}]
+
+[h, if(birthRoll &gt;= 6 &amp;&amp; birthRoll &lt;= 7), code: {
+	[birthPlace = &quot;Ekbir&quot;]
+	[alignments = &quot;LN, N&quot;]
+	[languages = &quot;Baklunish&quot;]
+}]
+
+[h, if(birthRoll == 8), code: {
+	[birthPlace = &quot;Frost Barbarians, Ice Barbarians, Snow Barbarians&quot;]
+	[alignments = &quot;CN&quot;]
+	[languages = &quot;Fruz (Cold Tongue)&quot;]
+}]
+
+[h, if(birthRoll &gt;= 9 &amp;&amp; birthRoll &lt;= 18), code: {
+	[birthPlace = &quot;Furyondy&quot;]
+	[alignments = &quot;LG, NG, LN&quot;]
+	[languages = &quot;Common, 5% Velondi&quot;]
+}]
+
+[h, if(birthRoll &gt;= 19 &amp;&amp; birthRoll &lt;= 20), code: {
+	[birthPlace = &quot;Geoff&quot;]
+	[alignments = &quot;CG, CN, NG&quot;]
+	[languages = &quot;Flan, Common&quot;]
+}]
+
+[h, if(birthRoll == 21), code: {
+	[birthPlace = &quot;Gran March&quot;]
+	[alignments = &quot;LN&quot;]
+	[languages = &quot;Common, 10% Keolandish&quot;]
+}]
+
+[h, if(birthRoll &gt;= 22 &amp;&amp; birthRoll &lt;= 29), code: {
+	[birthPlace = &quot;Great Kingdom&quot;]
+	[alignments = &quot;LG, NG, CG, LN, N, CN, LE, NE, CE&quot;]
+	[languages = &quot;Common, Oeridian&quot;]
+}]
+
+[h, if(birthRoll &gt;= 30 &amp;&amp; birthRoll &lt;= 32), code: {
+	[birthPlace = &quot;Greyhawk&quot;]
+	[alignments = &quot;LG, NG, CG, LN, N, CN, LE, NE, CE&quot;]
+	[languages = &quot;Common&quot;]
+}]
+
+[h, if(birthRoll == 33), code: {
+	[birthPlace = &quot;Idee&quot;]
+	[alignments = &quot;N, CN&quot;]
+	[languages = &quot;Common&quot;]
+}]
+
+[h, if(birthRoll == 34), code: {
+	[birthPlace = &quot;Irongate&quot;]
+	[alignments = &quot;LN&quot;]
+	[languages = &quot;Common&quot;]
+}]
+
+[h, if(birthRoll &gt;= 35 &amp;&amp; birthRoll &lt;= 37), code: {
+	[birthPlace = &quot;Keoland&quot;]
+	[alignments = &quot;LN, NG, CG, CN, N&quot;]
+	[languages = &quot;Common, 15% Keolandish&quot;]
+}]
+
+[h, if(birthRoll == 38), code: {
+	[birthPlace = &quot;Ket&quot;]
+	[alignments = &quot;CN, N&quot;]
+	[languages = &quot;Baklunish, Common&quot;]
+}]
+
+[h, if(birthRoll &gt;= 39 &amp;&amp; birthRoll &lt;= 40), code: {
+	[birthPlace = &quot;Lordship of the Isles&quot;]
+	[alignments = &quot;LN&quot;]
+	[languages = &quot;Common&quot;]
+}]
+
+[h, if(birthRoll &gt;= 41 &amp;&amp; birthRoll &lt;= 50), code: {
+	[birthPlace = &quot;Nyrond&quot;]
+	[alignments = &quot;LN, LG, NG, CG&quot;]
+	[languages = &quot;Common, 15% Nyrondese&quot;]
+}]
+
+[h, if(birthRoll &gt;= 51 &amp;&amp; birthRoll &lt;= 52), code: {
+	[birthPlace = &quot;Onnwal&quot;]
+	[alignments = &quot;LN&quot;]
+	[languages = &quot;Common&quot;]
+}]
+
+[h, if(birthRoll &gt;= 53 &amp;&amp; birthRoll &lt;= 54), code: {
+	[birthPlace = &quot;Theocracy of the Pale&quot;]
+	[alignments = &quot;LN, LG&quot;]
+	[languages = &quot;Common&quot;]
+}]
+
+[h, if(birthRoll &gt;= 55 &amp;&amp; birthRoll &lt;= 57), code: {
+	[birthPlace = &quot;Perrenland&quot;]
+	[alignments = &quot;LN, LG, N&quot;]
+	[languages = &quot;Common&quot;]
+}]
+
+[h, if(birthRoll &gt;= 58 &amp;&amp; birthRoll &lt;= 59), code: {
+	[birthPlace = &quot;Plains of the Paynims&quot;]
+	[alignments = &quot;CN, N&quot;]
+	[languages = &quot;Baklunish&quot;]
+}]
+
+[h, if(birthRoll == 60), code: {
+	[birthPlace = &quot;Ratik&quot;]
+	[alignments = &quot;N, CN, CE&quot;]
+	[languages = &quot;Common, Oeridian&quot;]
+}]
+
+[h, if(birthRoll &gt;= 61), code: {
+	[birthPlace = &quot;Rovers of the Barrens&quot;]
+	[alignments = &quot;CN, N&quot;]
+	[languages = &quot;Flan&quot;]
+}]
+
+[h, if(birthRoll == 62), code: {
+	[birthPlace = &quot;Sea Barons&quot;]
+	[alignments = &quot;CN&quot;]
+	[languages = &quot;Common&quot;]
+}]
+
+[h, if(birthRoll &gt;= 63 &amp;&amp; birthRoll &lt;= 64), code: {
+	[birthPlace = &quot;Shield Lands&quot;]
+	[alignments = &quot;LG, NG, N&quot;]
+	[languages = &quot;Common&quot;]
+}]
+
+[h, if(birthRoll &gt;= 65 &amp;&amp; birthRoll &lt;= 66), code: {
+	[birthPlace = &quot;Sterich&quot;]
+	[alignments = &quot;CN&quot;]
+	[languages = &quot;Common&quot;]
+}]
+
+[h, if(birthRoll &gt;= 67 &amp;&amp; birthRoll &lt;= 68), code: {
+	[birthPlace = &quot;Sunndi&quot;]
+	[alignments = &quot;LN, CG, N&quot;]
+	[languages = &quot;Common&quot;]
+}]
+
+[h, if(birthRoll == 69), code: {
+	[birthPlace = &quot;Duchy of Tenh&quot;]
+	[alignments = &quot;LN, N&quot;]
+	[languages = &quot;Flan, Common&quot;]
+}]
+
+[h, if(birthRoll == 70), code: {
+	[birthPlace = &quot;Tiger Nomads, Wolf Nomads&quot;]
+	[alignments = &quot;N, CN&quot;]
+	[languages = &quot;Baklunish&quot;]
+}]
+
+[h, if(birthRoll == 71), code: {
+	[birthPlace = &quot;Tusmit&quot;]
+	[alignments = &quot;N&quot;]
+	[languages = &quot;Baklunish&quot;]
+}]
+
+[h, if(birthRoll == 72), code: {
+	[birthPlace = &quot;Ulek County, Ulek Duchy, Ulek Principality&quot;]
+	[alignments = &quot;LN, LG, CG, CN, N&quot;]
+	[languages = &quot;Common&quot;]
+}]
+
+[h, if(birthRoll == 73), code: {
+	[birthPlace = &quot;Ull&quot;]
+	[alignments = &quot;CN, N, CE&quot;]
+	[languages = &quot;Baklunish&quot;]
+}]
+
+[h, if(birthRoll &gt;= 74 &amp;&amp; birthRoll &lt;= 78), code: {
+	[birthPlace = &quot;Urnst County, Urnst Duchy&quot;]
+	[alignments = &quot;N, NG&quot;]
+	[languages = &quot;Common&quot;]
+}]
+
+[h, if(birthRoll &gt;= 79 &amp;&amp; birthRoll &lt;= 88), code: {
+	[birthPlace = &quot;Veluna&quot;]
+	[alignments = &quot;LG, NG&quot;]
+	[languages = &quot;Common, 10% Velondi&quot;]
+}]
+
+[h, if(birthRoll &gt;= 89 &amp;&amp; birthRoll &lt;= 94), code: {
+	[birthPlace = &quot;Wild Coast&quot;]
+	[alignments = &quot;LG, NG, CG, LN, N, CN, LE, NE, CE&quot;]
+	[languages = &quot;Common&quot;]
+}]
+
+[h, if(birthRoll &gt;= 95 &amp;&amp; birthRoll &lt;= 96), code: {
+	[birthPlace = &quot;Yeomanry&quot;]
+	[alignments = &quot;LG, LN&quot;]
+	[languages = &quot;Common, 5% Keolandish&quot;]
+}]
+
+[h, if(birthRoll &gt;= 97 &amp;&amp; birthRoll &lt;= 98), code: {
+	[birthPlace = &quot;Zeif&quot;]
+	[alignments = &quot;LN, N&quot;]
+	[languages = &quot;Baklunish&quot;]
+}]
+
+[h, if(birthRoll &gt;= 99 &amp;&amp; birthRoll &lt;= 100), code: {
+	[birthPlace = &quot;Elsewhere, or choose&quot;]
+	[alignments = &quot;LG, NG, CG, LN, N, CN, LE, NE, CE&quot;]
+	[languages = &quot;Common, Baklunish, Oeridian, Fruz (Cold Tongue), Flan, Velondi, Keolandish, Nyrondese&quot;]
+}]
+
+[r: macro.return = strPropFromVars(&quot;birthPlace, alignments, languages&quot;)]</command>
+        <label>human_birthGH</label>
+        <group>X_Canon Tables</group>
+        <sortby></sortby>
+        <autoExecute>true</autoExecute>
+        <includeLabel>false</includeLabel>
+        <applyToTokens>false</applyToTokens>
+        <fontColorKey>black</fontColorKey>
+        <fontSize>1.00em</fontSize>
+        <minWidth></minWidth>
+        <maxWidth></maxWidth>
+        <allowPlayerEdits>true</allowPlayerEdits>
+        <toolTip></toolTip>
+        <displayHotKey>true</displayHotKey>
+        <commonMacro>false</commonMacro>
+        <compareGroup>true</compareGroup>
+        <compareSortPrefix>true</compareSortPrefix>
+        <compareCommand>true</compareCommand>
+        <compareIncludeLabel>true</compareIncludeLabel>
+        <compareAutoExecute>true</compareAutoExecute>
+        <compareApplyToSelectedTokens>true</compareApplyToSelectedTokens>
+      </net.rptools.maptool.model.MacroButtonProperties>
+    </entry>
+    <entry>
+      <int>48</int>
+      <net.rptools.maptool.model.MacroButtonProperties>
+        <macroUUID>5d29793a-9550-4d16-80ce-b7324da9351a</macroUUID>
+        <saveLocation>Token</saveLocation>
+        <index>48</index>
+        <colorKey>default</colorKey>
+        <hotKey>None</hotKey>
+        <command></command>
+        <label>place_of_birth</label>
+        <group>Character Details</group>
+        <sortby></sortby>
+        <autoExecute>true</autoExecute>
+        <includeLabel>false</includeLabel>
+        <applyToTokens>false</applyToTokens>
+        <fontColorKey>black</fontColorKey>
+        <fontSize>1.00em</fontSize>
+        <minWidth></minWidth>
+        <maxWidth></maxWidth>
+        <allowPlayerEdits>true</allowPlayerEdits>
+        <toolTip></toolTip>
+        <displayHotKey>true</displayHotKey>
+        <commonMacro>false</commonMacro>
+        <compareGroup>true</compareGroup>
+        <compareSortPrefix>true</compareSortPrefix>
+        <compareCommand>true</compareCommand>
+        <compareIncludeLabel>true</compareIncludeLabel>
+        <compareAutoExecute>true</compareAutoExecute>
+        <compareApplyToSelectedTokens>true</compareApplyToSelectedTokens>
+      </net.rptools.maptool.model.MacroButtonProperties>
+    </entry>
+    <entry>
+      <int>49</int>
+      <net.rptools.maptool.model.MacroButtonProperties>
+        <macroUUID>216c8c4d-0d71-45b5-ab90-9143ec2af992</macroUUID>
+        <saveLocation>Token</saveLocation>
+        <index>49</index>
+        <colorKey>default</colorKey>
+        <hotKey>None</hotKey>
+        <command>[h: birthRoll = arg(0)]
+[h: numArgs = listCount(birthRoll)]
+
+[h, if (numArgs == 0): birthRoll = d100]
+
+[h, if(birthRoll &lt;= 3), code: {
+	[birthPlace = &quot;Prelacy of Almor&quot;]
+	[alignments = &quot;LN, LG&quot;]
+	[languages = &quot;Common&quot;]
+}]
+
+[h, if(birthRoll &gt;= 4 &amp;&amp; birthRoll &lt;= 5), code: {
+	[birthPlace = &quot;Bissel&quot;]
+	[alignments = &quot;NG, N, LG, LN&quot;]
+	[languages = &quot;Common&quot;]
+}]
+
+[h, if(birthRoll &gt;= 6 &amp;&amp; birthRoll &lt;= 7), code: {
+	[birthPlace = &quot;Ekbir&quot;]
+	[alignments = &quot;LN, N&quot;]
+	[languages = &quot;Baklunish&quot;]
+}]
+
+[h, if(birthRoll == 8), code: {
+	[birthPlace = &quot;Frost Barbarians, Ice Barbarians, Snow Barbarians&quot;]
+	[alignments = &quot;CN&quot;]
+	[languages = &quot;Fruz (Cold Tongue)&quot;]
+}]
+
+[h, if(birthRoll &gt;= 9 &amp;&amp; birthRoll &lt;= 18), code: {
+	[birthPlace = &quot;Furyondy&quot;]
+	[alignments = &quot;LG, NG, LN&quot;]
+	[languages = &quot;Common, 5% Velondi&quot;]
+}]
+
+[h, if(birthRoll &gt;= 19 &amp;&amp; birthRoll &lt;= 20), code: {
+	[birthPlace = &quot;Geoff&quot;]
+	[alignments = &quot;CG, CN, NG&quot;]
+	[languages = &quot;Flan, Common&quot;]
+}]
+
+[h, if(birthRoll == 21), code: {
+	[birthPlace = &quot;Gran March&quot;]
+	[alignments = &quot;LN&quot;]
+	[languages = &quot;Common, 10% Keolandish&quot;]
+}]
+
+[h, if(birthRoll &gt;= 22 &amp;&amp; birthRoll &lt;= 29), code: {
+	[birthPlace = &quot;Great Kingdom&quot;]
+	[alignments = &quot;LG, NG, CG, LN, N, CN, LE, NE, CE&quot;]
+	[languages = &quot;Common, Oeridian&quot;]
+}]
+
+[h, if(birthRoll &gt;= 30 &amp;&amp; birthRoll &lt;= 32), code: {
+	[birthPlace = &quot;Greyhawk&quot;]
+	[alignments = &quot;LG, NG, CG, LN, N, CN, LE, NE, CE&quot;]
+	[languages = &quot;Common&quot;]
+}]
+
+[h, if(birthRoll == 33), code: {
+	[birthPlace = &quot;Idee&quot;]
+	[alignments = &quot;N, CN&quot;]
+	[languages = &quot;Common&quot;]
+}]
+
+[h, if(birthRoll == 34), code: {
+	[birthPlace = &quot;Irongate&quot;]
+	[alignments = &quot;LN&quot;]
+	[languages = &quot;Common&quot;]
+}]
+
+[h, if(birthRoll &gt;= 35 &amp;&amp; birthRoll &lt;= 37), code: {
+	[birthPlace = &quot;Keoland&quot;]
+	[alignments = &quot;LN, NG, CG, CN, N&quot;]
+	[languages = &quot;Common, 15% Keolandish&quot;]
+}]
+
+[h, if(birthRoll == 38), code: {
+	[birthPlace = &quot;Ket&quot;]
+	[alignments = &quot;CN, N&quot;]
+	[languages = &quot;Baklunish, Common&quot;]
+}]
+
+[h, if(birthRoll &gt;= 39 &amp;&amp; birthRoll &lt;= 40), code: {
+	[birthPlace = &quot;Lordship of the Isles&quot;]
+	[alignments = &quot;LN&quot;]
+	[languages = &quot;Common&quot;]
+}]
+
+[h, if(birthRoll &gt;= 41 &amp;&amp; birthRoll &lt;= 50), code: {
+	[birthPlace = &quot;Nyrond&quot;]
+	[alignments = &quot;LN, LG, NG, CG&quot;]
+	[languages = &quot;Common, 15% Nyrondese&quot;]
+}]
+
+[h, if(birthRoll &gt;= 51 &amp;&amp; birthRoll &lt;= 52), code: {
+	[birthPlace = &quot;Onnwal&quot;]
+	[alignments = &quot;LN&quot;]
+	[languages = &quot;Common&quot;]
+}]
+
+[h, if(birthRoll &gt;= 53 &amp;&amp; birthRoll &lt;= 54), code: {
+	[birthPlace = &quot;Theocracy of the Pale&quot;]
+	[alignments = &quot;LN, LG&quot;]
+	[languages = &quot;Common&quot;]
+}]
+
+[h, if(birthRoll &gt;= 55 &amp;&amp; birthRoll &lt;= 57), code: {
+	[birthPlace = &quot;Perrenland&quot;]
+	[alignments = &quot;LN, LG, N&quot;]
+	[languages = &quot;Common&quot;]
+}]
+
+[h, if(birthRoll &gt;= 58 &amp;&amp; birthRoll &lt;= 59), code: {
+	[birthPlace = &quot;Plains of the Paynims&quot;]
+	[alignments = &quot;CN, N&quot;]
+	[languages = &quot;Baklunish&quot;]
+}]
+
+[h, if(birthRoll == 60), code: {
+	[birthPlace = &quot;Ratik&quot;]
+	[alignments = &quot;N, CN, CE&quot;]
+	[languages = &quot;Common, Oeridian&quot;]
+}]
+
+[h, if(birthRoll &gt;= 61), code: {
+	[birthPlace = &quot;Rovers of the Barrens&quot;]
+	[alignments = &quot;CN, N&quot;]
+	[languages = &quot;Flan&quot;]
+}]
+
+[h, if(birthRoll == 62), code: {
+	[birthPlace = &quot;Sea Barons&quot;]
+	[alignments = &quot;CN&quot;]
+	[languages = &quot;Common&quot;]
+}]
+
+[h, if(birthRoll &gt;= 63 &amp;&amp; birthRoll &lt;= 64), code: {
+	[birthPlace = &quot;Shield Lands&quot;]
+	[alignments = &quot;LG, NG, N&quot;]
+	[languages = &quot;Common&quot;]
+}]
+
+[h, if(birthRoll &gt;= 65 &amp;&amp; birthRoll &lt;= 66), code: {
+	[birthPlace = &quot;Sterich&quot;]
+	[alignments = &quot;CN&quot;]
+	[languages = &quot;Common&quot;]
+}]
+
+[h, if(birthRoll &gt;= 67 &amp;&amp; birthRoll &lt;= 68), code: {
+	[birthPlace = &quot;Sunndi&quot;]
+	[alignments = &quot;LN, CG, N&quot;]
+	[languages = &quot;Common&quot;]
+}]
+
+[h, if(birthRoll == 69), code: {
+	[birthPlace = &quot;Duchy of Tenh&quot;]
+	[alignments = &quot;LN, N&quot;]
+	[languages = &quot;Flan, Common&quot;]
+}]
+
+[h, if(birthRoll == 70), code: {
+	[birthPlace = &quot;Tiger Nomads, Wolf Nomads&quot;]
+	[alignments = &quot;N, CN&quot;]
+	[languages = &quot;Baklunish&quot;]
+}]
+
+[h, if(birthRoll == 71), code: {
+	[birthPlace = &quot;Tusmit&quot;]
+	[alignments = &quot;N&quot;]
+	[languages = &quot;Baklunish&quot;]
+}]
+
+[h, if(birthRoll == 72), code: {
+	[birthPlace = &quot;Ulek County, Ulek Duchy, Ulek Principality&quot;]
+	[alignments = &quot;LN, LG, CG, CN, N&quot;]
+	[languages = &quot;Common&quot;]
+}]
+
+[h, if(birthRoll == 73), code: {
+	[birthPlace = &quot;Ull&quot;]
+	[alignments = &quot;CN, N, CE&quot;]
+	[languages = &quot;Baklunish&quot;]
+}]
+
+[h, if(birthRoll &gt;= 74 &amp;&amp; birthRoll &lt;= 78), code: {
+	[birthPlace = &quot;Urnst County, Urnst Duchy&quot;]
+	[alignments = &quot;N, NG&quot;]
+	[languages = &quot;Common&quot;]
+}]
+
+[h, if(birthRoll &gt;= 79 &amp;&amp; birthRoll &lt;= 88), code: {
+	[birthPlace = &quot;Veluna&quot;]
+	[alignments = &quot;LG, NG&quot;]
+	[languages = &quot;Common, 10% Velondi&quot;]
+}]
+
+[h, if(birthRoll &gt;= 89 &amp;&amp; birthRoll &lt;= 94), code: {
+	[birthPlace = &quot;Wild Coast&quot;]
+	[alignments = &quot;LG, NG, CG, LN, N, CN, LE, NE, CE&quot;]
+	[languages = &quot;Common&quot;]
+}]
+
+[h, if(birthRoll &gt;= 95 &amp;&amp; birthRoll &lt;= 96), code: {
+	[birthPlace = &quot;Yeomanry&quot;]
+	[alignments = &quot;LG, LN&quot;]
+	[languages = &quot;Common, 5% Keolandish&quot;]
+}]
+
+[h, if(birthRoll &gt;= 97 &amp;&amp; birthRoll &lt;= 98), code: {
+	[birthPlace = &quot;Zeif&quot;]
+	[alignments = &quot;LN, N&quot;]
+	[languages = &quot;Baklunish&quot;]
+}]
+
+[h, if(birthRoll &gt;= 99 &amp;&amp; birthRoll &lt;= 100), code: {
+	[birthPlace = &quot;Elsewhere, or choose&quot;]
+	[alignments = &quot;LG, NG, CG, LN, N, CN, LE, NE, CE&quot;]
+	[languages = &quot;Common, Baklunish, Oeridian, Fruz (Cold Tongue), Flan, Velondi, Keolandish, Nyrondese&quot;]
+}]
+
+[r: macro.return = strPropFromVars(&quot;birthPlace, alignments, languages&quot;)]</command>
+        <label>halfling_birth</label>
+        <group>Character Details</group>
+        <sortby></sortby>
+        <autoExecute>true</autoExecute>
+        <includeLabel>false</includeLabel>
+        <applyToTokens>false</applyToTokens>
+        <fontColorKey>black</fontColorKey>
+        <fontSize>1.00em</fontSize>
+        <minWidth></minWidth>
+        <maxWidth></maxWidth>
+        <allowPlayerEdits>true</allowPlayerEdits>
+        <toolTip></toolTip>
+        <displayHotKey>true</displayHotKey>
+        <commonMacro>false</commonMacro>
+        <compareGroup>true</compareGroup>
+        <compareSortPrefix>true</compareSortPrefix>
+        <compareCommand>true</compareCommand>
+        <compareIncludeLabel>true</compareIncludeLabel>
+        <compareAutoExecute>true</compareAutoExecute>
+        <compareApplyToSelectedTokens>true</compareApplyToSelectedTokens>
+      </net.rptools.maptool.model.MacroButtonProperties>
+    </entry>
+    <entry>
+      <int>50</int>
+      <net.rptools.maptool.model.MacroButtonProperties>
+        <macroUUID>f80ea237-a5a1-4dbd-867e-6cbfb4fd5a5c</macroUUID>
+        <saveLocation>Token</saveLocation>
+        <index>50</index>
+        <colorKey>default</colorKey>
+        <hotKey>None</hotKey>
+        <command>[h: birthRoll = arg(0)]
+[h: numArgs = listCount(birthRoll)]
+
+[h, if (numArgs == 0): birthRoll = d100]
+
+[h, if(birthRoll &lt;= 3), code: {
+	[birthPlace = &quot;Prelacy of Almor&quot;]
+	[alignments = &quot;LN, LG&quot;]
+	[languages = &quot;Common&quot;]
+}]
+
+[h, if(birthRoll &gt;= 4 &amp;&amp; birthRoll &lt;= 5), code: {
+	[birthPlace = &quot;Bissel&quot;]
+	[alignments = &quot;NG, N, LG, LN&quot;]
+	[languages = &quot;Common&quot;]
+}]
+
+[h, if(birthRoll &gt;= 6 &amp;&amp; birthRoll &lt;= 7), code: {
+	[birthPlace = &quot;Ekbir&quot;]
+	[alignments = &quot;LN, N&quot;]
+	[languages = &quot;Baklunish&quot;]
+}]
+
+[h, if(birthRoll == 8), code: {
+	[birthPlace = &quot;Frost Barbarians, Ice Barbarians, Snow Barbarians&quot;]
+	[alignments = &quot;CN&quot;]
+	[languages = &quot;Fruz (Cold Tongue)&quot;]
+}]
+
+[h, if(birthRoll &gt;= 9 &amp;&amp; birthRoll &lt;= 18), code: {
+	[birthPlace = &quot;Furyondy&quot;]
+	[alignments = &quot;LG, NG, LN&quot;]
+	[languages = &quot;Common, 5% Velondi&quot;]
+}]
+
+[h, if(birthRoll &gt;= 19 &amp;&amp; birthRoll &lt;= 20), code: {
+	[birthPlace = &quot;Geoff&quot;]
+	[alignments = &quot;CG, CN, NG&quot;]
+	[languages = &quot;Flan, Common&quot;]
+}]
+
+[h, if(birthRoll == 21), code: {
+	[birthPlace = &quot;Gran March&quot;]
+	[alignments = &quot;LN&quot;]
+	[languages = &quot;Common, 10% Keolandish&quot;]
+}]
+
+[h, if(birthRoll &gt;= 22 &amp;&amp; birthRoll &lt;= 29), code: {
+	[birthPlace = &quot;Great Kingdom&quot;]
+	[alignments = &quot;LG, NG, CG, LN, N, CN, LE, NE, CE&quot;]
+	[languages = &quot;Common, Oeridian&quot;]
+}]
+
+[h, if(birthRoll &gt;= 30 &amp;&amp; birthRoll &lt;= 32), code: {
+	[birthPlace = &quot;Greyhawk&quot;]
+	[alignments = &quot;LG, NG, CG, LN, N, CN, LE, NE, CE&quot;]
+	[languages = &quot;Common&quot;]
+}]
+
+[h, if(birthRoll == 33), code: {
+	[birthPlace = &quot;Idee&quot;]
+	[alignments = &quot;N, CN&quot;]
+	[languages = &quot;Common&quot;]
+}]
+
+[h, if(birthRoll == 34), code: {
+	[birthPlace = &quot;Irongate&quot;]
+	[alignments = &quot;LN&quot;]
+	[languages = &quot;Common&quot;]
+}]
+
+[h, if(birthRoll &gt;= 35 &amp;&amp; birthRoll &lt;= 37), code: {
+	[birthPlace = &quot;Keoland&quot;]
+	[alignments = &quot;LN, NG, CG, CN, N&quot;]
+	[languages = &quot;Common, 15% Keolandish&quot;]
+}]
+
+[h, if(birthRoll == 38), code: {
+	[birthPlace = &quot;Ket&quot;]
+	[alignments = &quot;CN, N&quot;]
+	[languages = &quot;Baklunish, Common&quot;]
+}]
+
+[h, if(birthRoll &gt;= 39 &amp;&amp; birthRoll &lt;= 40), code: {
+	[birthPlace = &quot;Lordship of the Isles&quot;]
+	[alignments = &quot;LN&quot;]
+	[languages = &quot;Common&quot;]
+}]
+
+[h, if(birthRoll &gt;= 41 &amp;&amp; birthRoll &lt;= 50), code: {
+	[birthPlace = &quot;Nyrond&quot;]
+	[alignments = &quot;LN, LG, NG, CG&quot;]
+	[languages = &quot;Common, 15% Nyrondese&quot;]
+}]
+
+[h, if(birthRoll &gt;= 51 &amp;&amp; birthRoll &lt;= 52), code: {
+	[birthPlace = &quot;Onnwal&quot;]
+	[alignments = &quot;LN&quot;]
+	[languages = &quot;Common&quot;]
+}]
+
+[h, if(birthRoll &gt;= 53 &amp;&amp; birthRoll &lt;= 54), code: {
+	[birthPlace = &quot;Theocracy of the Pale&quot;]
+	[alignments = &quot;LN, LG&quot;]
+	[languages = &quot;Common&quot;]
+}]
+
+[h, if(birthRoll &gt;= 55 &amp;&amp; birthRoll &lt;= 57), code: {
+	[birthPlace = &quot;Perrenland&quot;]
+	[alignments = &quot;LN, LG, N&quot;]
+	[languages = &quot;Common&quot;]
+}]
+
+[h, if(birthRoll &gt;= 58 &amp;&amp; birthRoll &lt;= 59), code: {
+	[birthPlace = &quot;Plains of the Paynims&quot;]
+	[alignments = &quot;CN, N&quot;]
+	[languages = &quot;Baklunish&quot;]
+}]
+
+[h, if(birthRoll == 60), code: {
+	[birthPlace = &quot;Ratik&quot;]
+	[alignments = &quot;N, CN, CE&quot;]
+	[languages = &quot;Common, Oeridian&quot;]
+}]
+
+[h, if(birthRoll &gt;= 61), code: {
+	[birthPlace = &quot;Rovers of the Barrens&quot;]
+	[alignments = &quot;CN, N&quot;]
+	[languages = &quot;Flan&quot;]
+}]
+
+[h, if(birthRoll == 62), code: {
+	[birthPlace = &quot;Sea Barons&quot;]
+	[alignments = &quot;CN&quot;]
+	[languages = &quot;Common&quot;]
+}]
+
+[h, if(birthRoll &gt;= 63 &amp;&amp; birthRoll &lt;= 64), code: {
+	[birthPlace = &quot;Shield Lands&quot;]
+	[alignments = &quot;LG, NG, N&quot;]
+	[languages = &quot;Common&quot;]
+}]
+
+[h, if(birthRoll &gt;= 65 &amp;&amp; birthRoll &lt;= 66), code: {
+	[birthPlace = &quot;Sterich&quot;]
+	[alignments = &quot;CN&quot;]
+	[languages = &quot;Common&quot;]
+}]
+
+[h, if(birthRoll &gt;= 67 &amp;&amp; birthRoll &lt;= 68), code: {
+	[birthPlace = &quot;Sunndi&quot;]
+	[alignments = &quot;LN, CG, N&quot;]
+	[languages = &quot;Common&quot;]
+}]
+
+[h, if(birthRoll == 69), code: {
+	[birthPlace = &quot;Duchy of Tenh&quot;]
+	[alignments = &quot;LN, N&quot;]
+	[languages = &quot;Flan, Common&quot;]
+}]
+
+[h, if(birthRoll == 70), code: {
+	[birthPlace = &quot;Tiger Nomads, Wolf Nomads&quot;]
+	[alignments = &quot;N, CN&quot;]
+	[languages = &quot;Baklunish&quot;]
+}]
+
+[h, if(birthRoll == 71), code: {
+	[birthPlace = &quot;Tusmit&quot;]
+	[alignments = &quot;N&quot;]
+	[languages = &quot;Baklunish&quot;]
+}]
+
+[h, if(birthRoll == 72), code: {
+	[birthPlace = &quot;Ulek County, Ulek Duchy, Ulek Principality&quot;]
+	[alignments = &quot;LN, LG, CG, CN, N&quot;]
+	[languages = &quot;Common&quot;]
+}]
+
+[h, if(birthRoll == 73), code: {
+	[birthPlace = &quot;Ull&quot;]
+	[alignments = &quot;CN, N, CE&quot;]
+	[languages = &quot;Baklunish&quot;]
+}]
+
+[h, if(birthRoll &gt;= 74 &amp;&amp; birthRoll &lt;= 78), code: {
+	[birthPlace = &quot;Urnst County, Urnst Duchy&quot;]
+	[alignments = &quot;N, NG&quot;]
+	[languages = &quot;Common&quot;]
+}]
+
+[h, if(birthRoll &gt;= 79 &amp;&amp; birthRoll &lt;= 88), code: {
+	[birthPlace = &quot;Veluna&quot;]
+	[alignments = &quot;LG, NG&quot;]
+	[languages = &quot;Common, 10% Velondi&quot;]
+}]
+
+[h, if(birthRoll &gt;= 89 &amp;&amp; birthRoll &lt;= 94), code: {
+	[birthPlace = &quot;Wild Coast&quot;]
+	[alignments = &quot;LG, NG, CG, LN, N, CN, LE, NE, CE&quot;]
+	[languages = &quot;Common&quot;]
+}]
+
+[h, if(birthRoll &gt;= 95 &amp;&amp; birthRoll &lt;= 96), code: {
+	[birthPlace = &quot;Yeomanry&quot;]
+	[alignments = &quot;LG, LN&quot;]
+	[languages = &quot;Common, 5% Keolandish&quot;]
+}]
+
+[h, if(birthRoll &gt;= 97 &amp;&amp; birthRoll &lt;= 98), code: {
+	[birthPlace = &quot;Zeif&quot;]
+	[alignments = &quot;LN, N&quot;]
+	[languages = &quot;Baklunish&quot;]
+}]
+
+[h, if(birthRoll &gt;= 99 &amp;&amp; birthRoll &lt;= 100), code: {
+	[birthPlace = &quot;Elsewhere, or choose&quot;]
+	[alignments = &quot;LG, NG, CG, LN, N, CN, LE, NE, CE&quot;]
+	[languages = &quot;Common, Baklunish, Oeridian, Fruz (Cold Tongue), Flan, Velondi, Keolandish, Nyrondese&quot;]
+}]
+
+[r: macro.return = strPropFromVars(&quot;birthPlace, alignments, languages&quot;)]</command>
+        <label>gnome_birth</label>
+        <group>Character Details</group>
+        <sortby></sortby>
+        <autoExecute>true</autoExecute>
+        <includeLabel>false</includeLabel>
+        <applyToTokens>false</applyToTokens>
+        <fontColorKey>black</fontColorKey>
+        <fontSize>1.00em</fontSize>
+        <minWidth></minWidth>
+        <maxWidth></maxWidth>
+        <allowPlayerEdits>true</allowPlayerEdits>
+        <toolTip></toolTip>
+        <displayHotKey>true</displayHotKey>
+        <commonMacro>false</commonMacro>
+        <compareGroup>true</compareGroup>
+        <compareSortPrefix>true</compareSortPrefix>
+        <compareCommand>true</compareCommand>
+        <compareIncludeLabel>true</compareIncludeLabel>
+        <compareAutoExecute>true</compareAutoExecute>
+        <compareApplyToSelectedTokens>true</compareApplyToSelectedTokens>
+      </net.rptools.maptool.model.MacroButtonProperties>
+    </entry>
+    <entry>
+      <int>51</int>
+      <net.rptools.maptool.model.MacroButtonProperties>
+        <macroUUID>46f7a204-c32c-4ae9-87bb-8af9fce9d489</macroUUID>
+        <saveLocation>Token</saveLocation>
+        <index>51</index>
+        <colorKey>default</colorKey>
+        <hotKey>None</hotKey>
+        <command>[h: birthRoll = arg(0)]
+[h: numArgs = listCount(birthRoll)]
+
+[h, if (numArgs == 0): birthRoll = d100]
+
+[h, if(birthRoll &lt;= 3), code: {
+	[birthPlace = &quot;Prelacy of Almor&quot;]
+	[alignments = &quot;LN, LG&quot;]
+	[languages = &quot;Common&quot;]
+}]
+
+[h, if(birthRoll &gt;= 4 &amp;&amp; birthRoll &lt;= 5), code: {
+	[birthPlace = &quot;Bissel&quot;]
+	[alignments = &quot;NG, N, LG, LN&quot;]
+	[languages = &quot;Common&quot;]
+}]
+
+[h, if(birthRoll &gt;= 6 &amp;&amp; birthRoll &lt;= 7), code: {
+	[birthPlace = &quot;Ekbir&quot;]
+	[alignments = &quot;LN, N&quot;]
+	[languages = &quot;Baklunish&quot;]
+}]
+
+[h, if(birthRoll == 8), code: {
+	[birthPlace = &quot;Frost Barbarians, Ice Barbarians, Snow Barbarians&quot;]
+	[alignments = &quot;CN&quot;]
+	[languages = &quot;Fruz (Cold Tongue)&quot;]
+}]
+
+[h, if(birthRoll &gt;= 9 &amp;&amp; birthRoll &lt;= 18), code: {
+	[birthPlace = &quot;Furyondy&quot;]
+	[alignments = &quot;LG, NG, LN&quot;]
+	[languages = &quot;Common, 5% Velondi&quot;]
+}]
+
+[h, if(birthRoll &gt;= 19 &amp;&amp; birthRoll &lt;= 20), code: {
+	[birthPlace = &quot;Geoff&quot;]
+	[alignments = &quot;CG, CN, NG&quot;]
+	[languages = &quot;Flan, Common&quot;]
+}]
+
+[h, if(birthRoll == 21), code: {
+	[birthPlace = &quot;Gran March&quot;]
+	[alignments = &quot;LN&quot;]
+	[languages = &quot;Common, 10% Keolandish&quot;]
+}]
+
+[h, if(birthRoll &gt;= 22 &amp;&amp; birthRoll &lt;= 29), code: {
+	[birthPlace = &quot;Great Kingdom&quot;]
+	[alignments = &quot;LG, NG, CG, LN, N, CN, LE, NE, CE&quot;]
+	[languages = &quot;Common, Oeridian&quot;]
+}]
+
+[h, if(birthRoll &gt;= 30 &amp;&amp; birthRoll &lt;= 32), code: {
+	[birthPlace = &quot;Greyhawk&quot;]
+	[alignments = &quot;LG, NG, CG, LN, N, CN, LE, NE, CE&quot;]
+	[languages = &quot;Common&quot;]
+}]
+
+[h, if(birthRoll == 33), code: {
+	[birthPlace = &quot;Idee&quot;]
+	[alignments = &quot;N, CN&quot;]
+	[languages = &quot;Common&quot;]
+}]
+
+[h, if(birthRoll == 34), code: {
+	[birthPlace = &quot;Irongate&quot;]
+	[alignments = &quot;LN&quot;]
+	[languages = &quot;Common&quot;]
+}]
+
+[h, if(birthRoll &gt;= 35 &amp;&amp; birthRoll &lt;= 37), code: {
+	[birthPlace = &quot;Keoland&quot;]
+	[alignments = &quot;LN, NG, CG, CN, N&quot;]
+	[languages = &quot;Common, 15% Keolandish&quot;]
+}]
+
+[h, if(birthRoll == 38), code: {
+	[birthPlace = &quot;Ket&quot;]
+	[alignments = &quot;CN, N&quot;]
+	[languages = &quot;Baklunish, Common&quot;]
+}]
+
+[h, if(birthRoll &gt;= 39 &amp;&amp; birthRoll &lt;= 40), code: {
+	[birthPlace = &quot;Lordship of the Isles&quot;]
+	[alignments = &quot;LN&quot;]
+	[languages = &quot;Common&quot;]
+}]
+
+[h, if(birthRoll &gt;= 41 &amp;&amp; birthRoll &lt;= 50), code: {
+	[birthPlace = &quot;Nyrond&quot;]
+	[alignments = &quot;LN, LG, NG, CG&quot;]
+	[languages = &quot;Common, 15% Nyrondese&quot;]
+}]
+
+[h, if(birthRoll &gt;= 51 &amp;&amp; birthRoll &lt;= 52), code: {
+	[birthPlace = &quot;Onnwal&quot;]
+	[alignments = &quot;LN&quot;]
+	[languages = &quot;Common&quot;]
+}]
+
+[h, if(birthRoll &gt;= 53 &amp;&amp; birthRoll &lt;= 54), code: {
+	[birthPlace = &quot;Theocracy of the Pale&quot;]
+	[alignments = &quot;LN, LG&quot;]
+	[languages = &quot;Common&quot;]
+}]
+
+[h, if(birthRoll &gt;= 55 &amp;&amp; birthRoll &lt;= 57), code: {
+	[birthPlace = &quot;Perrenland&quot;]
+	[alignments = &quot;LN, LG, N&quot;]
+	[languages = &quot;Common&quot;]
+}]
+
+[h, if(birthRoll &gt;= 58 &amp;&amp; birthRoll &lt;= 59), code: {
+	[birthPlace = &quot;Plains of the Paynims&quot;]
+	[alignments = &quot;CN, N&quot;]
+	[languages = &quot;Baklunish&quot;]
+}]
+
+[h, if(birthRoll == 60), code: {
+	[birthPlace = &quot;Ratik&quot;]
+	[alignments = &quot;N, CN, CE&quot;]
+	[languages = &quot;Common, Oeridian&quot;]
+}]
+
+[h, if(birthRoll &gt;= 61), code: {
+	[birthPlace = &quot;Rovers of the Barrens&quot;]
+	[alignments = &quot;CN, N&quot;]
+	[languages = &quot;Flan&quot;]
+}]
+
+[h, if(birthRoll == 62), code: {
+	[birthPlace = &quot;Sea Barons&quot;]
+	[alignments = &quot;CN&quot;]
+	[languages = &quot;Common&quot;]
+}]
+
+[h, if(birthRoll &gt;= 63 &amp;&amp; birthRoll &lt;= 64), code: {
+	[birthPlace = &quot;Shield Lands&quot;]
+	[alignments = &quot;LG, NG, N&quot;]
+	[languages = &quot;Common&quot;]
+}]
+
+[h, if(birthRoll &gt;= 65 &amp;&amp; birthRoll &lt;= 66), code: {
+	[birthPlace = &quot;Sterich&quot;]
+	[alignments = &quot;CN&quot;]
+	[languages = &quot;Common&quot;]
+}]
+
+[h, if(birthRoll &gt;= 67 &amp;&amp; birthRoll &lt;= 68), code: {
+	[birthPlace = &quot;Sunndi&quot;]
+	[alignments = &quot;LN, CG, N&quot;]
+	[languages = &quot;Common&quot;]
+}]
+
+[h, if(birthRoll == 69), code: {
+	[birthPlace = &quot;Duchy of Tenh&quot;]
+	[alignments = &quot;LN, N&quot;]
+	[languages = &quot;Flan, Common&quot;]
+}]
+
+[h, if(birthRoll == 70), code: {
+	[birthPlace = &quot;Tiger Nomads, Wolf Nomads&quot;]
+	[alignments = &quot;N, CN&quot;]
+	[languages = &quot;Baklunish&quot;]
+}]
+
+[h, if(birthRoll == 71), code: {
+	[birthPlace = &quot;Tusmit&quot;]
+	[alignments = &quot;N&quot;]
+	[languages = &quot;Baklunish&quot;]
+}]
+
+[h, if(birthRoll == 72), code: {
+	[birthPlace = &quot;Ulek County, Ulek Duchy, Ulek Principality&quot;]
+	[alignments = &quot;LN, LG, CG, CN, N&quot;]
+	[languages = &quot;Common&quot;]
+}]
+
+[h, if(birthRoll == 73), code: {
+	[birthPlace = &quot;Ull&quot;]
+	[alignments = &quot;CN, N, CE&quot;]
+	[languages = &quot;Baklunish&quot;]
+}]
+
+[h, if(birthRoll &gt;= 74 &amp;&amp; birthRoll &lt;= 78), code: {
+	[birthPlace = &quot;Urnst County, Urnst Duchy&quot;]
+	[alignments = &quot;N, NG&quot;]
+	[languages = &quot;Common&quot;]
+}]
+
+[h, if(birthRoll &gt;= 79 &amp;&amp; birthRoll &lt;= 88), code: {
+	[birthPlace = &quot;Veluna&quot;]
+	[alignments = &quot;LG, NG&quot;]
+	[languages = &quot;Common, 10% Velondi&quot;]
+}]
+
+[h, if(birthRoll &gt;= 89 &amp;&amp; birthRoll &lt;= 94), code: {
+	[birthPlace = &quot;Wild Coast&quot;]
+	[alignments = &quot;LG, NG, CG, LN, N, CN, LE, NE, CE&quot;]
+	[languages = &quot;Common&quot;]
+}]
+
+[h, if(birthRoll &gt;= 95 &amp;&amp; birthRoll &lt;= 96), code: {
+	[birthPlace = &quot;Yeomanry&quot;]
+	[alignments = &quot;LG, LN&quot;]
+	[languages = &quot;Common, 5% Keolandish&quot;]
+}]
+
+[h, if(birthRoll &gt;= 97 &amp;&amp; birthRoll &lt;= 98), code: {
+	[birthPlace = &quot;Zeif&quot;]
+	[alignments = &quot;LN, N&quot;]
+	[languages = &quot;Baklunish&quot;]
+}]
+
+[h, if(birthRoll &gt;= 99 &amp;&amp; birthRoll &lt;= 100), code: {
+	[birthPlace = &quot;Elsewhere, or choose&quot;]
+	[alignments = &quot;LG, NG, CG, LN, N, CN, LE, NE, CE&quot;]
+	[languages = &quot;Common, Baklunish, Oeridian, Fruz (Cold Tongue), Flan, Velondi, Keolandish, Nyrondese&quot;]
+}]
+
+[r: macro.return = strPropFromVars(&quot;birthPlace, alignments, languages&quot;)]</command>
+        <label>half-orc_birth</label>
+        <group>Character Details</group>
+        <sortby></sortby>
+        <autoExecute>true</autoExecute>
+        <includeLabel>false</includeLabel>
+        <applyToTokens>false</applyToTokens>
+        <fontColorKey>black</fontColorKey>
+        <fontSize>1.00em</fontSize>
+        <minWidth></minWidth>
+        <maxWidth></maxWidth>
+        <allowPlayerEdits>true</allowPlayerEdits>
+        <toolTip></toolTip>
+        <displayHotKey>true</displayHotKey>
+        <commonMacro>false</commonMacro>
+        <compareGroup>true</compareGroup>
+        <compareSortPrefix>true</compareSortPrefix>
+        <compareCommand>true</compareCommand>
+        <compareIncludeLabel>true</compareIncludeLabel>
+        <compareAutoExecute>true</compareAutoExecute>
+        <compareApplyToSelectedTokens>true</compareApplyToSelectedTokens>
+      </net.rptools.maptool.model.MacroButtonProperties>
+    </entry>
+    <entry>
+      <int>52</int>
+      <net.rptools.maptool.model.MacroButtonProperties>
+        <macroUUID>207f0c7c-ea3d-4aca-be68-a4fc6b922f84</macroUUID>
+        <saveLocation>Token</saveLocation>
+        <index>52</index>
+        <colorKey>default</colorKey>
+        <hotKey>None</hotKey>
+        <command>[h: birthRoll = arg(0)]
+[h: numArgs = listCount(birthRoll)]
+
+[h, if (numArgs == 0): birthRoll = d100]
+
+[h, if(birthRoll &gt;= 1 &amp;&amp; birthRoll &lt;= 4), code: {
+	[birthPlace = &quot;Bissel&quot;]
+	[alignments = &quot;NG, N, LG, LN&quot;]
+	[languages = &quot;Common&quot;]
+}]
+
+[h, if(birthRoll &gt;= 5 &amp;&amp; birthRoll &lt;= 6), code: {
+	[birthPlace = &quot;Dyvers&quot;]
+	[alignments = &quot;LN, N&quot;]
+	[languages = &quot;Baklunish&quot;]
+}]
+
+[h, if(birthRoll &gt;= 7 &amp;&amp; birthRoll &lt;= 8), code: {
+	[birthPlace = &quot;Furyondy&quot;]
+	[alignments = &quot;LG, NG, LN&quot;]
+	[languages = &quot;Common, 5% Velondi&quot;]
+}]
+
+[h, if(birthRoll &gt;= 9 &amp;&amp; birthRoll &lt;= 12), code: {
+	[birthPlace = &quot;Geoff&quot;]
+	[alignments = &quot;CG, CN, NG&quot;]
+	[languages = &quot;Flan, Common&quot;]
+}]
+
+[h, if(birthRoll &gt;= 13 &amp;&amp; birthRoll &lt;= 16), code: {
+	[birthPlace = &quot;Gran March&quot;]
+	[alignments = &quot;LN&quot;]
+	[languages = &quot;Common, 10% Keolandish&quot;]
+}]
+
+[h, if(birthRoll &gt;= 17 &amp;&amp; birthRoll &lt;= 18), code: {
+	[birthPlace = &quot;Great Kingdom&quot;]
+	[alignments = &quot;LG, NG, CG, LN, N, CN, LE, NE, CE&quot;]
+	[languages = &quot;Common, Oeridian&quot;]
+}]
+
+[h, if(birthRoll &gt;= 19 &amp;&amp; birthRoll &lt;= 20), code: {
+	[birthPlace = &quot;Greyhawk&quot;]
+	[alignments = &quot;LG, NG, CG, LN, N, CN, LE, NE, CE&quot;]
+	[languages = &quot;Common&quot;]
+}]
+
+[h, if(birthRoll &gt;= 21 &amp;&amp; birthRoll &lt;= 24), code: {
+	[birthPlace = &quot;Highfolk&quot;]
+	[alignments = &quot;NG, N, CN&quot;]
+	[languages = &quot;Elven, Common, Sylvan&quot;]
+}]
+
+[h, if(birthRoll &gt;= 25 &amp;&amp; birthRoll &lt;= 26), code: {
+	[birthPlace = &quot;Idee&quot;]
+	[alignments = &quot;N, CN&quot;]
+	[languages = &quot;Common&quot;]
+}]
+
+[h, if(birthRoll &gt;= 27 &amp;&amp; birthRoll &lt;= 28), code: {
+	[birthPlace = &quot;Irongate&quot;]
+	[alignments = &quot;LN&quot;]
+	[languages = &quot;Common&quot;]
+}]
+
+[h, if(birthRoll &gt;= 29 &amp;&amp; birthRoll &lt;= 34), code: {
+	[birthPlace = &quot;Onnwal&quot;]
+	[alignments = &quot;LN&quot;]
+	[languages = &quot;Common&quot;]
+}]
+
+[h, if(birthRoll &gt;= 35 &amp;&amp; birthRoll &lt;= 38), code: {
+	[birthPlace = &quot;Theocracy of the Pale&quot;]
+	[alignments = &quot;LN, LG&quot;]
+	[languages = &quot;Common&quot;]
+}]
+
+[h, if(birthRoll &gt;= 39 &amp;&amp; birthRoll &lt;= 42), code: {
+	[birthPlace = &quot;Perrenland&quot;]
+	[alignments = &quot;LN, LG, N&quot;]
+	[languages = &quot;Common&quot;]
+}]
+
+[h, if(birthRoll &gt;= 43 &amp;&amp; birthRoll &lt;= 46), code: {
+	[birthPlace = &quot;Ratik&quot;]
+	[alignments = &quot;N, CN, CE&quot;]
+	[languages = &quot;Common, Oeridian&quot;]
+}]
+
+
+[h, if(birthRoll &gt;= 47 &amp;&amp; birthRoll &lt;= 48), code: {
+	[birthPlace = &quot;Spindrift Isles&quot;]
+	[alignments = &quot;NG, N, CN&quot;]
+	[languages = &quot;Common, Lendorian&quot;]
+}]
+
+[h, if(birthRoll &gt;= 49 &amp;&amp; birthRoll &lt;= 54), code: {
+	[birthPlace = &quot;Sterich&quot;]
+	[alignments = &quot;CN&quot;]
+	[languages = &quot;Common&quot;]
+}]
+
+[h, if(birthRoll &gt;= 55 &amp;&amp; birthRoll &lt;= 59), code: {
+	[birthPlace = &quot;Sunndi&quot;]
+	[alignments = &quot;LN, CG, N&quot;]
+	[languages = &quot;Common&quot;]
+}]
+
+[h, if(birthRoll &gt;= 60 &amp;&amp; birthRoll &lt;= 63), code: {
+	[birthPlace = &quot;Duchy of Tenh&quot;]
+	[alignments = &quot;LN, N&quot;]
+	[languages = &quot;Flan, Common&quot;]
+}]
+
+[h, if(birthRoll &gt;= 64 &amp;&amp; birthRoll &lt;= 66), code: {
+	[birthPlace = &quot;Ulek County&quot;]
+	[alignments = &quot;LN, N&quot;]
+	[languages = &quot;Flan, Common&quot;]
+}]
+
+[h, if(birthRoll == 72), code: {
+	[birthPlace = &quot;Ulek County, Ulek Duchy, Ulek Principality&quot;]
+	[alignments = &quot;LN, LG, CG, CN, N&quot;]
+	[languages = &quot;Common&quot;]
+}]
+
+[h, if(birthRoll == 73), code: {
+	[birthPlace = &quot;Ull&quot;]
+	[alignments = &quot;CN, N, CE&quot;]
+	[languages = &quot;Baklunish&quot;]
+}]
+
+[h, if(birthRoll &gt;= 74 &amp;&amp; birthRoll &lt;= 78), code: {
+	[birthPlace = &quot;Urnst County, Urnst Duchy&quot;]
+	[alignments = &quot;N, NG&quot;]
+	[languages = &quot;Common&quot;]
+}]
+
+[h, if(birthRoll &gt;= 79 &amp;&amp; birthRoll &lt;= 88), code: {
+	[birthPlace = &quot;Veluna&quot;]
+	[alignments = &quot;LG, NG&quot;]
+	[languages = &quot;Common, 10% Velondi&quot;]
+}]
+
+[h, if(birthRoll &gt;= 89 &amp;&amp; birthRoll &lt;= 94), code: {
+	[birthPlace = &quot;Wild Coast&quot;]
+	[alignments = &quot;LG, NG, CG, LN, N, CN, LE, NE, CE&quot;]
+	[languages = &quot;Common&quot;]
+}]
+
+[h, if(birthRoll &gt;= 95 &amp;&amp; birthRoll &lt;= 96), code: {
+	[birthPlace = &quot;Yeomanry&quot;]
+	[alignments = &quot;LG, LN&quot;]
+	[languages = &quot;Common, 5% Keolandish&quot;]
+}]
+
+[h, if(birthRoll &gt;= 97 &amp;&amp; birthRoll &lt;= 98), code: {
+	[birthPlace = &quot;Zeif&quot;]
+	[alignments = &quot;LN, N&quot;]
+	[languages = &quot;Baklunish&quot;]
+}]
+
+[h, if(birthRoll &gt;= 99 &amp;&amp; birthRoll &lt;= 100), code: {
+	[birthPlace = &quot;Elsewhere, or choose&quot;]
+	[alignments = &quot;LG, NG, CG, LN, N, CN, LE, NE, CE&quot;]
+	[languages = &quot;Common, Baklunish, Oeridian, Fruz (Cold Tongue), Flan, Velondi, Keolandish, Nyrondese&quot;]
+}]
+
+[r: macro.return = strPropFromVars(&quot;birthPlace, alignments, languages&quot;)]</command>
+        <label>dwarf_birth</label>
+        <group>Character Details</group>
+        <sortby></sortby>
+        <autoExecute>true</autoExecute>
+        <includeLabel>false</includeLabel>
+        <applyToTokens>false</applyToTokens>
+        <fontColorKey>black</fontColorKey>
+        <fontSize>1.00em</fontSize>
+        <minWidth></minWidth>
+        <maxWidth></maxWidth>
+        <allowPlayerEdits>true</allowPlayerEdits>
+        <toolTip></toolTip>
+        <displayHotKey>true</displayHotKey>
+        <commonMacro>false</commonMacro>
+        <compareGroup>true</compareGroup>
+        <compareSortPrefix>true</compareSortPrefix>
+        <compareCommand>true</compareCommand>
+        <compareIncludeLabel>true</compareIncludeLabel>
+        <compareAutoExecute>true</compareAutoExecute>
+        <compareApplyToSelectedTokens>true</compareApplyToSelectedTokens>
+      </net.rptools.maptool.model.MacroButtonProperties>
+    </entry>
+    <entry>
+      <int>53</int>
+      <net.rptools.maptool.model.MacroButtonProperties>
+        <macroUUID>5bd75f46-9703-40ee-addc-b1e3c40a3066</macroUUID>
+        <saveLocation>Token</saveLocation>
+        <index>53</index>
+        <colorKey>black</colorKey>
+        <hotKey>None</hotKey>
+        <command>[h: birthRoll = arg(0)]
+[h: numArgs = listCount(birthRoll)]
+
+[h, if (numArgs == 0): birthRoll = d100]
+
+[h, if(birthRoll &lt;= 3), code: {
+	[birthPlace = &quot;Prelacy of Almor&quot;]
+	[alignments = &quot;LN, LG&quot;]
+	[languages = &quot;Common&quot;]
+}]
+
+[h, if(birthRoll &gt;= 4 &amp;&amp; birthRoll &lt;= 5), code: {
+	[birthPlace = &quot;Bissel&quot;]
+	[alignments = &quot;NG, N, LG, LN&quot;]
+	[languages = &quot;Common&quot;]
+}]
+
+[h, if(birthRoll &gt;= 6 &amp;&amp; birthRoll &lt;= 7), code: {
+	[birthPlace = &quot;Ekbir&quot;]
+	[alignments = &quot;LN, N&quot;]
+	[languages = &quot;Baklunish&quot;]
+}]
+
+[h, if(birthRoll == 8), code: {
+	[birthPlace = &quot;Frost Barbarians, Ice Barbarians, Snow Barbarians&quot;]
+	[alignments = &quot;CN&quot;]
+	[languages = &quot;Fruz (Cold Tongue)&quot;]
+}]
+
+[h, if(birthRoll &gt;= 9 &amp;&amp; birthRoll &lt;= 18), code: {
+	[birthPlace = &quot;Furyondy&quot;]
+	[alignments = &quot;LG, NG, LN&quot;]
+	[languages = &quot;Common, 5% Velondi&quot;]
+}]
+
+[h, if(birthRoll &gt;= 19 &amp;&amp; birthRoll &lt;= 20), code: {
+	[birthPlace = &quot;Geoff&quot;]
+	[alignments = &quot;CG, CN, NG&quot;]
+	[languages = &quot;Flan, Common&quot;]
+}]
+
+[h, if(birthRoll == 21), code: {
+	[birthPlace = &quot;Gran March&quot;]
+	[alignments = &quot;LN&quot;]
+	[languages = &quot;Common, 10% Keolandish&quot;]
+}]
+
+[h, if(birthRoll &gt;= 22 &amp;&amp; birthRoll &lt;= 29), code: {
+	[birthPlace = &quot;Great Kingdom&quot;]
+	[alignments = &quot;LG, NG, CG, LN, N, CN, LE, NE, CE&quot;]
+	[languages = &quot;Common, Oeridian&quot;]
+}]
+
+[h, if(birthRoll &gt;= 30 &amp;&amp; birthRoll &lt;= 32), code: {
+	[birthPlace = &quot;Greyhawk&quot;]
+	[alignments = &quot;LG, NG, CG, LN, N, CN, LE, NE, CE&quot;]
+	[languages = &quot;Common&quot;]
+}]
+
+[h, if(birthRoll == 33), code: {
+	[birthPlace = &quot;Idee&quot;]
+	[alignments = &quot;N, CN&quot;]
+	[languages = &quot;Common&quot;]
+}]
+
+[h, if(birthRoll == 34), code: {
+	[birthPlace = &quot;Irongate&quot;]
+	[alignments = &quot;LN&quot;]
+	[languages = &quot;Common&quot;]
+}]
+
+[h, if(birthRoll &gt;= 35 &amp;&amp; birthRoll &lt;= 37), code: {
+	[birthPlace = &quot;Keoland&quot;]
+	[alignments = &quot;LN, NG, CG, CN, N&quot;]
+	[languages = &quot;Common, 15% Keolandish&quot;]
+}]
+
+[h, if(birthRoll == 38), code: {
+	[birthPlace = &quot;Ket&quot;]
+	[alignments = &quot;CN, N&quot;]
+	[languages = &quot;Baklunish, Common&quot;]
+}]
+
+[h, if(birthRoll &gt;= 39 &amp;&amp; birthRoll &lt;= 40), code: {
+	[birthPlace = &quot;Lordship of the Isles&quot;]
+	[alignments = &quot;LN&quot;]
+	[languages = &quot;Common&quot;]
+}]
+
+[h, if(birthRoll &gt;= 41 &amp;&amp; birthRoll &lt;= 50), code: {
+	[birthPlace = &quot;Nyrond&quot;]
+	[alignments = &quot;LN, LG, NG, CG&quot;]
+	[languages = &quot;Common, 15% Nyrondese&quot;]
+}]
+
+[h, if(birthRoll &gt;= 51 &amp;&amp; birthRoll &lt;= 52), code: {
+	[birthPlace = &quot;Onnwal&quot;]
+	[alignments = &quot;LN&quot;]
+	[languages = &quot;Common&quot;]
+}]
+
+[h, if(birthRoll &gt;= 53 &amp;&amp; birthRoll &lt;= 54), code: {
+	[birthPlace = &quot;Theocracy of the Pale&quot;]
+	[alignments = &quot;LN, LG&quot;]
+	[languages = &quot;Common&quot;]
+}]
+
+[h, if(birthRoll &gt;= 55 &amp;&amp; birthRoll &lt;= 57), code: {
+	[birthPlace = &quot;Perrenland&quot;]
+	[alignments = &quot;LN, LG, N&quot;]
+	[languages = &quot;Common&quot;]
+}]
+
+[h, if(birthRoll &gt;= 58 &amp;&amp; birthRoll &lt;= 59), code: {
+	[birthPlace = &quot;Plains of the Paynims&quot;]
+	[alignments = &quot;CN, N&quot;]
+	[languages = &quot;Baklunish&quot;]
+}]
+
+[h, if(birthRoll == 60), code: {
+	[birthPlace = &quot;Ratik&quot;]
+	[alignments = &quot;N, CN, CE&quot;]
+	[languages = &quot;Common, Oeridian&quot;]
+}]
+
+[h, if(birthRoll &gt;= 61), code: {
+	[birthPlace = &quot;Rovers of the Barrens&quot;]
+	[alignments = &quot;CN, N&quot;]
+	[languages = &quot;Flan&quot;]
+}]
+
+[h, if(birthRoll == 62), code: {
+	[birthPlace = &quot;Sea Barons&quot;]
+	[alignments = &quot;CN&quot;]
+	[languages = &quot;Common&quot;]
+}]
+
+[h, if(birthRoll &gt;= 63 &amp;&amp; birthRoll &lt;= 64), code: {
+	[birthPlace = &quot;Shield Lands&quot;]
+	[alignments = &quot;LG, NG, N&quot;]
+	[languages = &quot;Common&quot;]
+}]
+
+[h, if(birthRoll &gt;= 65 &amp;&amp; birthRoll &lt;= 66), code: {
+	[birthPlace = &quot;Sterich&quot;]
+	[alignments = &quot;CN&quot;]
+	[languages = &quot;Common&quot;]
+}]
+
+[h, if(birthRoll &gt;= 67 &amp;&amp; birthRoll &lt;= 68), code: {
+	[birthPlace = &quot;Sunndi&quot;]
+	[alignments = &quot;LN, CG, N&quot;]
+	[languages = &quot;Common&quot;]
+}]
+
+[h, if(birthRoll == 69), code: {
+	[birthPlace = &quot;Duchy of Tenh&quot;]
+	[alignments = &quot;LN, N&quot;]
+	[languages = &quot;Flan, Common&quot;]
+}]
+
+[h, if(birthRoll == 70), code: {
+	[birthPlace = &quot;Tiger Nomads, Wolf Nomads&quot;]
+	[alignments = &quot;N, CN&quot;]
+	[languages = &quot;Baklunish&quot;]
+}]
+
+[h, if(birthRoll == 71), code: {
+	[birthPlace = &quot;Tusmit&quot;]
+	[alignments = &quot;N&quot;]
+	[languages = &quot;Baklunish&quot;]
+}]
+
+[h, if(birthRoll == 72), code: {
+	[birthPlace = &quot;Ulek County, Ulek Duchy, Ulek Principality&quot;]
+	[alignments = &quot;LN, LG, CG, CN, N&quot;]
+	[languages = &quot;Common&quot;]
+}]
+
+[h, if(birthRoll == 73), code: {
+	[birthPlace = &quot;Ull&quot;]
+	[alignments = &quot;CN, N, CE&quot;]
+	[languages = &quot;Baklunish&quot;]
+}]
+
+[h, if(birthRoll &gt;= 74 &amp;&amp; birthRoll &lt;= 78), code: {
+	[birthPlace = &quot;Urnst County, Urnst Duchy&quot;]
+	[alignments = &quot;N, NG&quot;]
+	[languages = &quot;Common&quot;]
+}]
+
+[h, if(birthRoll &gt;= 79 &amp;&amp; birthRoll &lt;= 88), code: {
+	[birthPlace = &quot;Veluna&quot;]
+	[alignments = &quot;LG, NG&quot;]
+	[languages = &quot;Common, 10% Velondi&quot;]
+}]
+
+[h, if(birthRoll &gt;= 89 &amp;&amp; birthRoll &lt;= 94), code: {
+	[birthPlace = &quot;Wild Coast&quot;]
+	[alignments = &quot;LG, NG, CG, LN, N, CN, LE, NE, CE&quot;]
+	[languages = &quot;Common&quot;]
+}]
+
+[h, if(birthRoll &gt;= 95 &amp;&amp; birthRoll &lt;= 96), code: {
+	[birthPlace = &quot;Yeomanry&quot;]
+	[alignments = &quot;LG, LN&quot;]
+	[languages = &quot;Common, 5% Keolandish&quot;]
+}]
+
+[h, if(birthRoll &gt;= 97 &amp;&amp; birthRoll &lt;= 98), code: {
+	[birthPlace = &quot;Zeif&quot;]
+	[alignments = &quot;LN, N&quot;]
+	[languages = &quot;Baklunish&quot;]
+}]
+
+[h, if(birthRoll &gt;= 99 &amp;&amp; birthRoll &lt;= 100), code: {
+	[birthPlace = &quot;Elsewhere, or choose&quot;]
+	[alignments = &quot;LG, NG, CG, LN, N, CN, LE, NE, CE&quot;]
+	[languages = &quot;Common, Baklunish, Oeridian, Fruz (Cold Tongue), Flan, Velondi, Keolandish, Nyrondese&quot;]
+}]
+
+[r: macro.return = strPropFromVars(&quot;birthPlace, alignments, languages&quot;)]</command>
+        <label>human_birth</label>
+        <group>Character Details</group>
+        <sortby></sortby>
+        <autoExecute>true</autoExecute>
+        <includeLabel>false</includeLabel>
+        <applyToTokens>false</applyToTokens>
+        <fontColorKey>cyan</fontColorKey>
+        <fontSize>1.00em</fontSize>
+        <minWidth></minWidth>
+        <maxWidth></maxWidth>
+        <allowPlayerEdits>true</allowPlayerEdits>
+        <toolTip></toolTip>
+        <displayHotKey>true</displayHotKey>
+        <commonMacro>false</commonMacro>
+        <compareGroup>true</compareGroup>
+        <compareSortPrefix>true</compareSortPrefix>
+        <compareCommand>true</compareCommand>
+        <compareIncludeLabel>true</compareIncludeLabel>
+        <compareAutoExecute>true</compareAutoExecute>
+        <compareApplyToSelectedTokens>true</compareApplyToSelectedTokens>
+      </net.rptools.maptool.model.MacroButtonProperties>
+    </entry>
+    <entry>
+      <int>54</int>
+      <net.rptools.maptool.model.MacroButtonProperties>
+        <macroUUID>881946c1-fcf6-456b-aec9-b5f06bdd17a2</macroUUID>
+        <saveLocation>Token</saveLocation>
+        <index>54</index>
+        <colorKey>orange</colorKey>
+        <hotKey>None</hotKey>
+        <command>[h:macro.return = getLibProperty(&quot;currentYear&quot;, &quot;Lib:Calendar&quot;)]</command>
+        <label>getYear</label>
+        <group>Time_Tools</group>
+        <sortby></sortby>
+        <autoExecute>true</autoExecute>
+        <includeLabel>false</includeLabel>
+        <applyToTokens>false</applyToTokens>
+        <fontColorKey>black</fontColorKey>
+        <fontSize>1.00em</fontSize>
+        <minWidth></minWidth>
+        <maxWidth></maxWidth>
+        <allowPlayerEdits>true</allowPlayerEdits>
+        <toolTip></toolTip>
+        <displayHotKey>true</displayHotKey>
+        <commonMacro>false</commonMacro>
+        <compareGroup>true</compareGroup>
+        <compareSortPrefix>true</compareSortPrefix>
+        <compareCommand>true</compareCommand>
+        <compareIncludeLabel>true</compareIncludeLabel>
+        <compareAutoExecute>true</compareAutoExecute>
+        <compareApplyToSelectedTokens>true</compareApplyToSelectedTokens>
+      </net.rptools.maptool.model.MacroButtonProperties>
+    </entry>
+    <entry>
+      <int>55</int>
+      <net.rptools.maptool.model.MacroButtonProperties>
+        <macroUUID>66b096ce-68fe-4d3b-85a7-9d9bb20ec642</macroUUID>
+        <saveLocation>Token</saveLocation>
+        <index>55</index>
+        <colorKey>default</colorKey>
+        <hotKey>None</hotKey>
+        <command>[h: timeandtemp()]</command>
+        <label>Time and Temperature</label>
+        <group>Time (To be Copied to Campaign)</group>
+        <sortby></sortby>
+        <autoExecute>true</autoExecute>
+        <includeLabel>false</includeLabel>
+        <applyToTokens>false</applyToTokens>
+        <fontColorKey>black</fontColorKey>
+        <fontSize>1.00em</fontSize>
+        <minWidth></minWidth>
+        <maxWidth></maxWidth>
+        <allowPlayerEdits>true</allowPlayerEdits>
+        <toolTip></toolTip>
+        <displayHotKey>true</displayHotKey>
+        <commonMacro>false</commonMacro>
+        <compareGroup>true</compareGroup>
+        <compareSortPrefix>true</compareSortPrefix>
+        <compareCommand>true</compareCommand>
+        <compareIncludeLabel>true</compareIncludeLabel>
+        <compareAutoExecute>true</compareAutoExecute>
+        <compareApplyToSelectedTokens>true</compareApplyToSelectedTokens>
+      </net.rptools.maptool.model.MacroButtonProperties>
+    </entry>
+    <entry>
+      <int>56</int>
+      <net.rptools.maptool.model.MacroButtonProperties>
+        <macroUUID>38a64f98-85cd-40f5-a73c-3370d94712ae</macroUUID>
+        <saveLocation>Token</saveLocation>
+        <index>56</index>
+        <colorKey>black</colorKey>
+        <hotKey>None</hotKey>
+        <command>[h:assert(isGM(),&quot;This is a DM command.&quot;,0)]
+[h: assert(getSelected()!=&apos;&apos;,&quot;You must select token(s) to use this command.&quot;,0)]
+
+[h: myIDs = getSelected()]
+
+[foreach(myID,myIDs,&quot;&lt;br&gt;&quot;), code: {
+
+	[h: myName = getName(myID)]
+
+	[h: birthdayExists = hasProperty(&quot;birthdate&quot;,myID)]
+
+	[h, if(birthdayExists), code : {
+		[currBirthdate=getProperty(&quot;birthdate&quot;,myID)]
+		[currYear = getProperty(&quot;birthyear&quot;,myID)]
+		[currBirth=getDate(currBirthdate)]
+		[currBirthday = getStrProp(currBirth, &quot;theDate&quot;)]
+		[currBirthmonth = getStrProp(currBirth, &quot;month&quot;)]
+		[birthdayText = strformat(&quot;Current birthday is %s %s %s&quot;,currBirthday, currBirthmonth, currYear)]
+	};
+	{
+		[birthdayText = &quot;Character doesn&apos;t have a birthday&quot;]
+	}]
+	[h: header=&quot;junkVar|&lt;html&gt;&lt;h3&gt;&quot;+birthdayText+&quot;&lt;/h3&gt;&lt;h3&gt;The World of Greyhawk Gazeteer was finished in CY 576.&lt;/h3&gt;&quot;+
+		&quot;&lt;h3&gt;The Greyhawk Wars were from CY 582 to the end of 584.&lt;/h3&gt;&quot;+
+		&quot;&lt;h4&gt;Each of the months has 28 days, and the festivals have 7 each.&lt;/h4&gt;&lt;/html&gt;|&lt;html&gt;&amp;nbsp;&lt;/html&gt;|LABEL&quot;]
+	[h: newBirthday = input(
+		header,
+		&quot;newBirthdate|1|New Birth Date&quot;,	&quot;newBirthmonth|Fireseek,Readying,Coldeven,Growfest,Planting,Flocktime,Wealsun,Richfest,Reaping,Goodmonth,Harvester,Brewfest,Patchwall,Ready&apos;reat,Sunsebb,Needfest|New Birth Month|LIST|SELECT=0 VALUE=STRING&quot;,
+	&quot;newBirthyear|556|New Birth Year&quot;)]
+
+	[h: abort(newBirthday)]
+	
+	[r: newBirthYeardate = stardate(&quot;[];theDate=&quot;+newBirthdate+&quot;;theMonth=&quot;+newBirthmonth)]
+	[r: setProperty(&quot;birthdate&quot;,newBirthYearDate,myID)]
+	[r: setProperty(&quot;birthyear&quot;,newBirthyear,myID)]
+	[age()]
+}
+]</command>
+        <label>set_age</label>
+        <group>Character Details</group>
+        <sortby></sortby>
+        <autoExecute>true</autoExecute>
+        <includeLabel>false</includeLabel>
+        <applyToTokens>false</applyToTokens>
+        <fontColorKey>lime</fontColorKey>
+        <fontSize>1.00em</fontSize>
+        <minWidth></minWidth>
+        <maxWidth></maxWidth>
+        <allowPlayerEdits>true</allowPlayerEdits>
+        <toolTip></toolTip>
+        <displayHotKey>true</displayHotKey>
+        <commonMacro>false</commonMacro>
+        <compareGroup>true</compareGroup>
+        <compareSortPrefix>true</compareSortPrefix>
+        <compareCommand>true</compareCommand>
+        <compareIncludeLabel>true</compareIncludeLabel>
+        <compareAutoExecute>true</compareAutoExecute>
+        <compareApplyToSelectedTokens>true</compareApplyToSelectedTokens>
+      </net.rptools.maptool.model.MacroButtonProperties>
+    </entry>
+    <entry>
+      <int>57</int>
+      <net.rptools.maptool.model.MacroButtonProperties>
+        <macroUUID>9e4986c9-d884-4d87-8577-36e86a88c563</macroUUID>
+        <saveLocation>Token</saveLocation>
+        <index>57</index>
+        <colorKey>orange</colorKey>
+        <hotKey>None</hotKey>
+        <command>[r:getLibProperty(&quot;currentYearDate&quot;, &quot;Lib:Calendar&quot;)]</command>
+        <label>getYearDate</label>
+        <group>Time_Tools</group>
+        <sortby></sortby>
+        <autoExecute>true</autoExecute>
+        <includeLabel>false</includeLabel>
+        <applyToTokens>false</applyToTokens>
+        <fontColorKey>black</fontColorKey>
+        <fontSize>1.00em</fontSize>
+        <minWidth></minWidth>
+        <maxWidth></maxWidth>
+        <allowPlayerEdits>true</allowPlayerEdits>
+        <toolTip></toolTip>
+        <displayHotKey>true</displayHotKey>
+        <commonMacro>false</commonMacro>
+        <compareGroup>true</compareGroup>
+        <compareSortPrefix>true</compareSortPrefix>
+        <compareCommand>true</compareCommand>
+        <compareIncludeLabel>true</compareIncludeLabel>
+        <compareAutoExecute>true</compareAutoExecute>
+        <compareApplyToSelectedTokens>true</compareApplyToSelectedTokens>
+      </net.rptools.maptool.model.MacroButtonProperties>
+    </entry>
+    <entry>
+      <int>58</int>
+      <net.rptools.maptool.model.MacroButtonProperties>
+        <macroUUID>83f7ae16-0929-404b-99c2-8979e20c22aa</macroUUID>
+        <saveLocation>Token</saveLocation>
+        <index>58</index>
+        <colorKey>default</colorKey>
+        <hotKey>None</hotKey>
+        <command>[h: ids = getPC()]
+[h: today = getLibProperty(&quot;currentYearDate&quot;, &quot;Lib:Calendar&quot;)]
+[h: noBirthdays = 1]
+[foreach(id, ids,&quot;&quot;), code: {
+	[if(getProperty(&quot;birthdate&quot;, id)==today), code: {
+		[h: noBirthdays = 0]
+		[r:&quot;It&apos;s &quot;+getName(id)+&quot;&apos;s birthday.&lt;br&gt;&quot;]
+	};{}]
+}]
+[r, if(noBirthdays): &quot;No one has a birthday today.&quot;]</command>
+        <label>Birthdays</label>
+        <group>Time_Tools</group>
+        <sortby></sortby>
+        <autoExecute>true</autoExecute>
+        <includeLabel>false</includeLabel>
+        <applyToTokens>false</applyToTokens>
+        <fontColorKey>black</fontColorKey>
+        <fontSize>1.00em</fontSize>
+        <minWidth></minWidth>
+        <maxWidth></maxWidth>
+        <allowPlayerEdits>true</allowPlayerEdits>
+        <toolTip></toolTip>
+        <displayHotKey>true</displayHotKey>
+        <commonMacro>false</commonMacro>
+        <compareGroup>true</compareGroup>
+        <compareSortPrefix>true</compareSortPrefix>
+        <compareCommand>true</compareCommand>
+        <compareIncludeLabel>true</compareIncludeLabel>
+        <compareAutoExecute>true</compareAutoExecute>
+        <compareApplyToSelectedTokens>true</compareApplyToSelectedTokens>
+      </net.rptools.maptool.model.MacroButtonProperties>
+    </entry>
+    <entry>
+      <int>60</int>
+      <net.rptools.maptool.model.MacroButtonProperties>
+        <macroUUID>c21943b5-d7ef-4dcd-b6e4-70dd8f53c7d4</macroUUID>
+        <saveLocation>Token</saveLocation>
+        <index>60</index>
+        <colorKey>default</colorKey>
+        <hotKey>None</hotKey>
+        <command>&lt;style type=&quot;text/css&quot;&gt;
+	.luna{ color: gold }
+	.celene{ color: DarkCyan}
+	body{margin-right:20px}
+&lt;/style&gt;
+</command>
+        <label>calendarStyle</label>
+        <group>Time_Tools</group>
+        <sortby></sortby>
+        <autoExecute>true</autoExecute>
+        <includeLabel>false</includeLabel>
+        <applyToTokens>false</applyToTokens>
+        <fontColorKey>black</fontColorKey>
+        <fontSize>1.00em</fontSize>
+        <minWidth></minWidth>
+        <maxWidth></maxWidth>
+        <allowPlayerEdits>true</allowPlayerEdits>
+        <toolTip></toolTip>
+        <displayHotKey>true</displayHotKey>
+        <commonMacro>false</commonMacro>
+        <compareGroup>true</compareGroup>
+        <compareSortPrefix>true</compareSortPrefix>
+        <compareCommand>true</compareCommand>
+        <compareIncludeLabel>true</compareIncludeLabel>
+        <compareAutoExecute>true</compareAutoExecute>
+        <compareApplyToSelectedTokens>true</compareApplyToSelectedTokens>
+      </net.rptools.maptool.model.MacroButtonProperties>
+    </entry>
+    <entry>
+      <int>61</int>
+      <net.rptools.maptool.model.MacroButtonProperties>
+        <macroUUID>986671bf-c13b-4fbf-b565-6dcfe15117cd</macroUUID>
+        <saveLocation>Token</saveLocation>
+        <index>61</index>
+        <colorKey>default</colorKey>
+        <hotKey>None</hotKey>
+        <command>[h: calendar()]</command>
+        <label>Calendar</label>
+        <group>Time (To be Copied to Campaign)</group>
+        <sortby></sortby>
+        <autoExecute>true</autoExecute>
+        <includeLabel>false</includeLabel>
+        <applyToTokens>false</applyToTokens>
+        <fontColorKey>black</fontColorKey>
+        <fontSize>1.00em</fontSize>
+        <minWidth></minWidth>
+        <maxWidth></maxWidth>
+        <allowPlayerEdits>true</allowPlayerEdits>
+        <toolTip></toolTip>
+        <displayHotKey>true</displayHotKey>
+        <commonMacro>false</commonMacro>
+        <compareGroup>true</compareGroup>
+        <compareSortPrefix>true</compareSortPrefix>
+        <compareCommand>true</compareCommand>
+        <compareIncludeLabel>true</compareIncludeLabel>
+        <compareAutoExecute>true</compareAutoExecute>
+        <compareApplyToSelectedTokens>true</compareApplyToSelectedTokens>
+      </net.rptools.maptool.model.MacroButtonProperties>
+    </entry>
+    <entry>
+      <int>62</int>
+      <net.rptools.maptool.model.MacroButtonProperties>
+        <macroUUID>7bbdf085-cad2-485f-86c9-00b0f7ae0816</macroUUID>
+        <saveLocation>Token</saveLocation>
+        <index>62</index>
+        <colorKey>default</colorKey>
+        <hotKey>None</hotKey>
+        <command>[frame5(&quot;Calendar&quot;,&quot;width=600;temporary=1&quot;):{
+&lt;html&gt;
+&lt;head&gt;
+&lt;link rel=&apos;stylesheet&apos; type=&apos;text/css&apos; href=&apos;calendarStyle@Lib:Greyhawk:Macros&apos;&gt;&lt;/link&gt;
+&lt;/head&gt;
+&lt;body&gt;
+&lt;h1&gt;Greyhawk Calendar&lt;/h1&gt;
+&lt;/div&gt;&lt;div class=main&gt;
+
+&lt;p&gt;&lt;b&gt;Luna&lt;/b&gt;:
+First Quarter &lt;span class=luna&gt;☽&lt;/span&gt;
+Full Moon &lt;span class=luna&gt;○&lt;/span&gt;
+Last Quarter &lt;span class=luna&gt;☾&lt;/span&gt;
+New Moon &lt;span class=luna&gt;●&lt;/span&gt;
+
+&lt;p&gt;&lt;b&gt;Celene&lt;/b&gt;:
+First Quarter &lt;span class=celene&gt;☽&lt;/span&gt;
+Full Moon &lt;span class=celene&gt;○&lt;/span&gt;
+Last Quarter &lt;span class=celene&gt;☾&lt;/span&gt;
+New Moon &lt;span class=celene&gt;●&lt;/span&gt;
+
+&lt;br clear=right&gt;
+&lt;h2&gt;Fireseek&lt;/h2&gt;
+&lt;table border=1 align=right&gt;
+	&lt;tr&gt;
+		&lt;td&gt;Starday&lt;/td&gt; &lt;td&gt;Sunday&lt;/td&gt; &lt;td&gt;Moonday&lt;/td&gt; &lt;td&gt;Godsday&lt;/td&gt; &lt;td&gt;Waterday&lt;/td&gt; &lt;td&gt;Earthday&lt;/td&gt; &lt;td&gt;Freeday&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr&gt;
+		&lt;td class=special&gt; 1&lt;/td&gt; &lt;td&gt; 2&lt;/td&gt; &lt;td&gt; 3&lt;/td&gt; &lt;td&gt; 4 &lt;span class=luna&gt;☽&lt;/span&gt;&lt;/td&gt; &lt;td&gt; 5&lt;/td&gt; &lt;td&gt; 6&lt;/td&gt; &lt;td&gt; 7&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr&gt;
+		&lt;td&gt; 8&lt;/td&gt; &lt;td&gt; 9&lt;/td&gt; &lt;td&gt;10&lt;/td&gt; &lt;td&gt;11 &lt;span class=luna&gt;○&lt;/span&gt;&lt;/td&gt; &lt;td&gt;12&lt;/td&gt; &lt;td&gt;13&lt;/td&gt; &lt;td&gt;14&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr&gt;
+		&lt;td&gt;15&lt;/td&gt; &lt;td&gt;16&lt;/td&gt; &lt;td&gt;17&lt;/td&gt; &lt;td&gt;18 &lt;span class=luna&gt;☾&lt;/span&gt;&lt;/td&gt; &lt;td&gt;19&lt;/td&gt; &lt;td&gt;20 &lt;span class=celene&gt;☾&lt;/span&gt;&lt;/td&gt; &lt;td&gt;21&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr&gt;
+		&lt;td&gt;22&lt;/td&gt; &lt;td&gt;23&lt;/td&gt; &lt;td&gt;24&lt;/td&gt; &lt;td&gt;25 &lt;span class=luna&gt;●&lt;/span&gt;&lt;/td&gt; &lt;td&gt;26&lt;/td&gt; &lt;td&gt;27&lt;/td&gt; &lt;td&gt;28&lt;/td&gt;
+	&lt;/tr&gt;
+&lt;/table&gt;
+&lt;br clear=right&gt;
+&lt;h2&gt;Readying&lt;/h2&gt;
+&lt;table border=1 align=right&gt;
+	&lt;tr&gt;
+		&lt;td&gt;Starday&lt;/td&gt; &lt;td&gt;Sunday&lt;/td&gt; &lt;td&gt;Moonday&lt;/td&gt; &lt;td&gt;Godsday&lt;/td&gt; &lt;td&gt;Waterday&lt;/td&gt; &lt;td&gt;Earthday&lt;/td&gt; &lt;td&gt;Freeday&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr&gt;
+		&lt;td class=special&gt; 1&lt;/td&gt; &lt;td&gt; 2&lt;/td&gt; &lt;td&gt; 3&lt;/td&gt; &lt;td&gt; 4 &lt;span class=luna&gt;☽&lt;/span&gt;&lt;/td&gt; &lt;td&gt; 5&lt;/td&gt; &lt;td&gt; 6&lt;/td&gt; &lt;td&gt; 7&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr&gt;
+		&lt;td&gt; 8&lt;/td&gt; &lt;td&gt; 9&lt;/td&gt; &lt;td class=special&gt;10&lt;/td&gt; &lt;td&gt;11 &lt;span class=luna&gt;○&lt;/span&gt;&lt;/td&gt; &lt;td&gt;12&lt;/td&gt; &lt;td&gt;13&lt;/td&gt; &lt;td class=special&gt;14&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr&gt;
+		&lt;td&gt;15&lt;span class=celene&gt;●&lt;/span&gt;&lt;/td&gt; &lt;td&gt;16&lt;/td&gt; &lt;td&gt;17&lt;/td&gt; &lt;td&gt;18 &lt;span class=luna&gt;☾&lt;/span&gt;&lt;/td&gt; &lt;td&gt;19&lt;/td&gt; &lt;td&gt;20&lt;/td&gt; &lt;td&gt;21&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr&gt;
+		&lt;td&gt;22&lt;/td&gt; &lt;td&gt;23&lt;/td&gt; &lt;td&gt;24&lt;/td&gt; &lt;td&gt;25 &lt;span class=luna&gt;●&lt;/span&gt;&lt;/td&gt; &lt;td&gt;26&lt;/td&gt; &lt;td&gt;27&lt;/td&gt; &lt;td&gt;28&lt;/td&gt;
+	&lt;/tr&gt;
+&lt;/table&gt;
+&lt;br clear=right&gt;
+&lt;h2&gt;Coldeven&lt;/h2&gt;
+&lt;table border=1 align=right&gt;
+	&lt;tr&gt;
+		&lt;td&gt;Starday&lt;/td&gt; &lt;td&gt;Sunday&lt;/td&gt; &lt;td&gt;Moonday&lt;/td&gt; &lt;td&gt;Godsday&lt;/td&gt; &lt;td&gt;Waterday&lt;/td&gt; &lt;td&gt;Earthday&lt;/td&gt; &lt;td&gt;Freeday&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr&gt;
+		&lt;td&gt; 1&lt;/td&gt; &lt;td&gt; 2&lt;/td&gt; &lt;td&gt; 3&lt;/td&gt; &lt;td&gt; 4 &lt;span class=luna&gt;☽&lt;/span&gt;&lt;/td&gt; &lt;td&gt; 5&lt;/td&gt; &lt;td&gt; 6&lt;/td&gt; &lt;td&gt; 7&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr&gt;
+		&lt;td&gt; 8&lt;/td&gt; &lt;td&gt; 9&lt;/td&gt; &lt;td&gt;10 &lt;span class=celene&gt;☽&lt;/span&gt;&lt;/td&gt; &lt;td class=special&gt;11 &lt;span class=luna&gt;○&lt;/span&gt;&lt;/td&gt; &lt;td&gt;12&lt;/td&gt; &lt;td&gt;13&lt;/td&gt; &lt;td&gt;14&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr&gt;
+		&lt;td&gt;15&lt;/td&gt; &lt;td&gt;16&lt;/td&gt; &lt;td&gt;17&lt;/td&gt; &lt;td&gt;18 &lt;span class=luna&gt;☾&lt;/span&gt;&lt;/td&gt; &lt;td&gt;19&lt;/td&gt; &lt;td&gt;20&lt;/td&gt; &lt;td&gt;21&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr class=special&gt;
+		&lt;td&gt;22&lt;/td&gt; &lt;td&gt;23&lt;/td&gt; &lt;td&gt;24&lt;/td&gt; &lt;td&gt;25 &lt;span class=luna&gt;●&lt;/span&gt;&lt;/td&gt; &lt;td&gt;26&lt;/td&gt; &lt;td&gt;27&lt;/td&gt; &lt;td&gt;28&lt;/td&gt;
+	&lt;/tr&gt;
+&lt;/table&gt;
+&lt;br clear=right&gt;
+&lt;h2&gt;Growfest&lt;/h2&gt;
+&lt;table border=1 align=right&gt;
+	&lt;tr&gt;
+		&lt;td&gt;Starday&lt;/td&gt; &lt;td&gt;Sunday&lt;/td&gt; &lt;td&gt;Moonday&lt;/td&gt; &lt;td&gt;Godsday&lt;/td&gt; &lt;td&gt;Waterday&lt;/td&gt; &lt;td&gt;Earthday&lt;/td&gt; &lt;td&gt;Freeday&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr&gt;
+		&lt;td class=special&gt; 1&lt;/td&gt; &lt;td&gt; 2&lt;/td&gt; &lt;td&gt; 3&lt;/td&gt; &lt;td&gt; 4 &lt;span class=luna&gt;☽&lt;/span&gt;&lt;span class=celene&gt;○&lt;/span&gt;&lt;/td&gt; &lt;td&gt; 5&lt;/td&gt; &lt;td&gt; 6&lt;/td&gt; &lt;td class=special&gt; 7&lt;/td&gt;
+	&lt;/tr&gt;
+&lt;/table&gt;
+&lt;br clear=right&gt;
+&lt;h2&gt;Planting&lt;/h2&gt;
+&lt;table border=1 align=right&gt;
+	&lt;tr&gt;
+		&lt;td&gt;Starday&lt;/td&gt; &lt;td&gt;Sunday&lt;/td&gt; &lt;td&gt;Moonday&lt;/td&gt; &lt;td&gt;Godsday&lt;/td&gt; &lt;td&gt;Waterday&lt;/td&gt; &lt;td&gt;Earthday&lt;/td&gt; &lt;td&gt;Freeday&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr&gt;
+		&lt;td&gt; 1&lt;/td&gt; &lt;td&gt; 2&lt;/td&gt; &lt;td&gt; 3&lt;/td&gt; &lt;td&gt; 4 &lt;span class=luna&gt;○&lt;/span&gt;&lt;/td&gt; &lt;td&gt; 5&lt;/td&gt; &lt;td&gt; 6&lt;/td&gt; &lt;td&gt; 7&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr&gt;
+		&lt;td&gt; 8&lt;/td&gt; &lt;td&gt; 9&lt;/td&gt; &lt;td&gt;10&lt;/td&gt; &lt;td class=special&gt;11 &lt;span class=luna&gt;☾&lt;/span&gt;&lt;/td&gt; &lt;td&gt;12&lt;/td&gt; &lt;td&gt;13&lt;/td&gt; &lt;td&gt;14&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr&gt;
+		&lt;td&gt;15&lt;/td&gt; &lt;td&gt;16&lt;/td&gt; &lt;td&gt;17&lt;/td&gt; &lt;td&gt;18 &lt;span class=luna&gt;●&lt;/span&gt;&lt;/td&gt; &lt;td&gt;19&lt;/td&gt; &lt;td&gt;20 &lt;span class=celene&gt;☾&lt;/span&gt;&lt;/td&gt; &lt;td&gt;21&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr&gt;
+		&lt;td&gt;22&lt;/td&gt; &lt;td&gt;23&lt;/td&gt; &lt;td&gt;24&lt;/td&gt; &lt;td&gt;25 &lt;span class=luna&gt;☽&lt;/span&gt;&lt;/td&gt; &lt;td&gt;26&lt;/td&gt; &lt;td&gt;27&lt;/td&gt; &lt;td&gt;28&lt;/td&gt;
+	&lt;/tr&gt;
+&lt;/table&gt;
+&lt;br clear=right&gt;
+&lt;h2&gt;Flocktime&lt;/h2&gt;
+&lt;table border=1 align=right&gt;
+	&lt;tr&gt;
+		&lt;td&gt;Starday&lt;/td&gt; &lt;td&gt;Sunday&lt;/td&gt; &lt;td&gt;Moonday&lt;/td&gt; &lt;td&gt;Godsday&lt;/td&gt; &lt;td&gt;Waterday&lt;/td&gt; &lt;td&gt;Earthday&lt;/td&gt; &lt;td&gt;Freeday&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr&gt;
+		&lt;td class=special&gt; 1&lt;/td&gt; &lt;td&gt; 2&lt;/td&gt; &lt;td&gt; 3&lt;/td&gt; &lt;td&gt; 4 &lt;span class=luna&gt;○&lt;/span&gt;&lt;/td&gt; &lt;td&gt; 5&lt;/td&gt; &lt;td&gt; 6&lt;/td&gt; &lt;td&gt; 7&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr class=special&gt;
+		&lt;td&gt; 8&lt;/td&gt; &lt;td&gt; 9&lt;/td&gt; &lt;td&gt;10&lt;/td&gt; &lt;td&gt;11 &lt;span class=luna&gt;☾&lt;/span&gt;&lt;/td&gt; &lt;td&gt;12&lt;/td&gt; &lt;td&gt;13&lt;/td&gt; &lt;td&gt;14&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr&gt;
+		&lt;td class=special&gt;15 &lt;span class=celene&gt;●&lt;/span&gt;&lt;/td&gt; &lt;td&gt;16&lt;/td&gt; &lt;td&gt;17&lt;/td&gt; &lt;td class=special&gt;18 &lt;span class=luna&gt;●&lt;/span&gt;&lt;/td&gt; &lt;td&gt;19&lt;/td&gt; &lt;td&gt;20&lt;/td&gt; &lt;td&gt;21&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr&gt;
+		&lt;td&gt;22&lt;/td&gt; &lt;td&gt;23&lt;/td&gt; &lt;td&gt;24&lt;/td&gt; &lt;td&gt;25 &lt;span class=luna&gt;☽&lt;/span&gt;&lt;/td&gt; &lt;td&gt;26&lt;/td&gt; &lt;td&gt;27&lt;/td&gt; &lt;td&gt;28&lt;/td&gt;
+	&lt;/tr&gt;
+&lt;/table&gt;
+&lt;br clear=right&gt;
+&lt;h2&gt;Wealsun&lt;/h2&gt;
+&lt;table border=1 align=right&gt;
+	&lt;tr&gt;
+		&lt;td&gt;Starday&lt;/td&gt; &lt;td&gt;Sunday&lt;/td&gt; &lt;td&gt;Moonday&lt;/td&gt; &lt;td&gt;Godsday&lt;/td&gt; &lt;td&gt;Waterday&lt;/td&gt; &lt;td&gt;Earthday&lt;/td&gt; &lt;td&gt;Freeday&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr&gt;
+		&lt;td class=special&gt; 1&lt;/td&gt; &lt;td class=special&gt; 2&lt;/td&gt; &lt;td class=special&gt; 3&lt;/td&gt; &lt;td class=special&gt; 4 &lt;span class=luna&gt;○&lt;/span&gt;&lt;/td&gt; &lt;td&gt; 5&lt;/td&gt; &lt;td&gt; 6&lt;/td&gt; &lt;td&gt; 7&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr&gt;
+		&lt;td&gt; 8&lt;/td&gt; &lt;td&gt; 9&lt;/td&gt; &lt;td&gt;10 &lt;span class=celene&gt;☽&lt;/span&gt;&lt;/td&gt; &lt;td&gt;11 &lt;span class=luna&gt;☾&lt;/span&gt;&lt;/td&gt; &lt;td&gt;12&lt;/td&gt; &lt;td&gt;13&lt;/td&gt; &lt;td&gt;14&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr&gt;
+		&lt;td&gt;15&lt;/td&gt; &lt;td class=special&gt;16&lt;/td&gt; &lt;td class=special&gt;17&lt;/td&gt; &lt;td&gt;18 &lt;span class=luna&gt;●&lt;/span&gt;&lt;/td&gt; &lt;td&gt;19&lt;/td&gt; &lt;td&gt;20&lt;/td&gt; &lt;td&gt;21&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr&gt;
+		&lt;td&gt;22&lt;/td&gt; &lt;td&gt;23&lt;/td&gt; &lt;td&gt;24&lt;/td&gt; &lt;td&gt;25 &lt;span class=luna&gt;☽&lt;/span&gt;&lt;/td&gt; &lt;td&gt;26&lt;/td&gt; &lt;td&gt;27&lt;/td&gt; &lt;td&gt;28&lt;/td&gt;
+	&lt;/tr&gt;
+&lt;/table&gt;
+&lt;br clear=right&gt;
+&lt;h2&gt;Richfest&lt;/h2&gt;
+&lt;table border=1 align=right&gt;
+	&lt;tr&gt;
+		&lt;td&gt;Starday&lt;/td&gt; &lt;td&gt;Sunday&lt;/td&gt; &lt;td&gt;Moonday&lt;/td&gt; &lt;td&gt;Godsday&lt;/td&gt; &lt;td&gt;Waterday&lt;/td&gt; &lt;td&gt;Earthday&lt;/td&gt; &lt;td&gt;Freeday&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr&gt;
+		&lt;td&gt; 1&lt;/td&gt; &lt;td&gt; 2&lt;/td&gt; &lt;td&gt; 3&lt;/td&gt; &lt;td class=special&gt; 4 &lt;span class=luna&gt;○&lt;/span&gt;&lt;span class=celene&gt;○&lt;/span&gt;&lt;/td&gt; &lt;td&gt; 5&lt;/td&gt; &lt;td&gt; 6&lt;/td&gt; &lt;td&gt; 7&lt;/td&gt;
+	&lt;/tr&gt;
+&lt;/table&gt;
+&lt;h2&gt;Reaping&lt;/h2&gt;
+&lt;table border=1 align=right&gt;
+	&lt;tr&gt;
+		&lt;td&gt;Starday&lt;/td&gt; &lt;td&gt;Sunday&lt;/td&gt; &lt;td&gt;Moonday&lt;/td&gt; &lt;td&gt;Godsday&lt;/td&gt; &lt;td&gt;Waterday&lt;/td&gt; &lt;td&gt;Earthday&lt;/td&gt; &lt;td&gt;Freeday&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr&gt;
+		&lt;td&gt; 1&lt;/td&gt; &lt;td&gt; 2&lt;/td&gt; &lt;td&gt; 3&lt;/td&gt; &lt;td&gt; 4 &lt;span class=luna&gt;☾&lt;/span&gt;&lt;/td&gt; &lt;td&gt; 5&lt;/td&gt; &lt;td&gt; 6&lt;/td&gt; &lt;td&gt; 7&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr&gt;
+		&lt;td&gt; 8&lt;/td&gt; &lt;td&gt; 9&lt;/td&gt; &lt;td&gt;10&lt;/td&gt; &lt;td&gt;11 &lt;span class=luna&gt;●&lt;/span&gt;&lt;/td&gt; &lt;td&gt;12&lt;/td&gt; &lt;td&gt;13&lt;/td&gt; &lt;td&gt;14&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr&gt;
+		&lt;td&gt;15&lt;/td&gt; &lt;td&gt;16&lt;/td&gt; &lt;td&gt;17&lt;/td&gt; &lt;td&gt;18 &lt;span class=luna&gt;☽&lt;/span&gt;&lt;/td&gt; &lt;td&gt;19&lt;/td&gt; &lt;td&gt;20 &lt;span class=celene&gt;☾&lt;/span&gt;&lt;/td&gt; &lt;td&gt;21&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr&gt;
+		&lt;td&gt;22&lt;/td&gt; &lt;td&gt;23&lt;/td&gt; &lt;td&gt;24&lt;/td&gt; &lt;td class=special&gt;25 &lt;span class=luna&gt;○&lt;/span&gt;&lt;/td&gt; &lt;td&gt;26&lt;/td&gt; &lt;td&gt;27&lt;/td&gt; &lt;td&gt;28&lt;/td&gt;
+	&lt;/tr&gt;
+&lt;/table&gt;
+&lt;br clear=right&gt;
+&lt;h2&gt;Goodmonth&lt;/h2&gt;
+&lt;table border=1 align=right&gt;
+	&lt;tr&gt;
+		&lt;td&gt;Starday&lt;/td&gt; &lt;td&gt;Sunday&lt;/td&gt; &lt;td&gt;Moonday&lt;/td&gt; &lt;td&gt;Godsday&lt;/td&gt; &lt;td&gt;Waterday&lt;/td&gt; &lt;td&gt;Earthday&lt;/td&gt; &lt;td&gt;Freeday&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr&gt;
+		&lt;td&gt; 1&lt;/td&gt; &lt;td&gt; 2&lt;/td&gt; &lt;td&gt; 3&lt;/td&gt; &lt;td class=special&gt; 4 &lt;span class=luna&gt;☾&lt;/span&gt;&lt;/td&gt; &lt;td class=special&gt; 5&lt;/td&gt; &lt;td class=special&gt; 6&lt;/td&gt; &lt;td class=special&gt; 7&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr&gt;
+		&lt;td&gt; 8&lt;/td&gt; &lt;td&gt; 9&lt;/td&gt; &lt;td&gt;10&lt;/td&gt; &lt;td&gt;11 &lt;span class=luna&gt;●&lt;/span&gt;&lt;/td&gt; &lt;td&gt;12&lt;/td&gt; &lt;td&gt;13&lt;/td&gt; &lt;td&gt;14&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr&gt;
+		&lt;td&gt;15 &lt;span class=celene&gt;●&lt;/span&gt;&lt;/td&gt; &lt;td&gt;16&lt;/td&gt; &lt;td&gt;17&lt;/td&gt; &lt;td&gt;18 &lt;span class=luna&gt;☽&lt;/span&gt;&lt;/td&gt; &lt;td&gt;19&lt;/td&gt; &lt;td&gt;20&lt;/td&gt; &lt;td&gt;21&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr&gt;
+		&lt;td&gt;22&lt;/td&gt; &lt;td&gt;23&lt;/td&gt; &lt;td&gt;24&lt;/td&gt; &lt;td class=special&gt;25 &lt;span class=luna&gt;○&lt;/span&gt;&lt;/td&gt; &lt;td class=special&gt;26&lt;/td&gt; &lt;td class=special&gt;27&lt;/td&gt; &lt;td class=special&gt;28&lt;/td&gt;
+	&lt;/tr&gt;
+&lt;/table&gt;
+&lt;br clear=right&gt;
+&lt;h2&gt;Harvester&lt;/h2&gt;
+&lt;table border=1 align=right&gt;
+	&lt;tr&gt;
+		&lt;td&gt;Starday&lt;/td&gt; &lt;td&gt;Sunday&lt;/td&gt; &lt;td&gt;Moonday&lt;/td&gt; &lt;td&gt;Godsday&lt;/td&gt; &lt;td&gt;Waterday&lt;/td&gt; &lt;td&gt;Earthday&lt;/td&gt; &lt;td&gt;Freeday&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr&gt;
+		&lt;td&gt; 1&lt;/td&gt; &lt;td&gt; 2&lt;/td&gt; &lt;td&gt; 3&lt;/td&gt; &lt;td&gt; 4 &lt;span class=luna&gt;☾&lt;/span&gt;&lt;/td&gt; &lt;td&gt; 5&lt;/td&gt; &lt;td&gt; 6&lt;/td&gt; &lt;td&gt; 7&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr&gt;
+		&lt;td&gt; 8&lt;/td&gt; &lt;td&gt; 9&lt;/td&gt; &lt;td&gt;10 &lt;span class=celene&gt;☽&lt;/span&gt;&lt;/td&gt; &lt;td&gt;11 &lt;span class=luna&gt;●&lt;/span&gt;&lt;/td&gt; &lt;td&gt;12&lt;/td&gt; &lt;td&gt;13&lt;/td&gt; &lt;td&gt;14&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr&gt;
+		&lt;td&gt;15&lt;/td&gt; &lt;td&gt;16&lt;/td&gt; &lt;td&gt;17&lt;/td&gt; &lt;td&gt;18 &lt;span class=luna&gt;☽&lt;/span&gt;&lt;/td&gt; &lt;td&gt;19&lt;/td&gt; &lt;td class=special&gt;20&lt;/td&gt; &lt;td&gt;21&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr&gt;
+		&lt;td&gt;22&lt;/td&gt; &lt;td&gt;23&lt;/td&gt; &lt;td&gt;24&lt;/td&gt; &lt;td class=special&gt;25 &lt;span class=luna&gt;○&lt;/span&gt;&lt;/td&gt; &lt;td class=special&gt;26&lt;/td&gt; &lt;td class=special&gt;27&lt;/td&gt; &lt;td class=special&gt;28&lt;/td&gt;
+	&lt;/tr&gt;
+&lt;/table&gt;
+&lt;br clear=right&gt;
+&lt;h2&gt;Brewfest&lt;/h2&gt;
+&lt;table border=1 align=right&gt;
+	&lt;tr&gt;
+		&lt;td&gt;Starday&lt;/td&gt; &lt;td&gt;Sunday&lt;/td&gt; &lt;td&gt;Moonday&lt;/td&gt; &lt;td&gt;Godsday&lt;/td&gt; &lt;td&gt;Waterday&lt;/td&gt; &lt;td&gt;Earthday&lt;/td&gt; &lt;td&gt;Freeday&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr&gt;
+		&lt;td&gt; 1&lt;/td&gt; &lt;td&gt; 2&lt;/td&gt; &lt;td&gt; 3&lt;/td&gt; &lt;td class=special&gt; 4 &lt;span class=luna&gt;☾&lt;/span&gt;&lt;span class=celene&gt;○&lt;/span&gt;&lt;/td&gt; &lt;td&gt; 5&lt;/td&gt; &lt;td&gt; 6&lt;/td&gt; &lt;td&gt; 7&lt;/td&gt;
+	&lt;/tr&gt;
+&lt;/table&gt;
+&lt;br clear=right&gt;
+&lt;h2&gt;Patchwall&lt;/h2&gt;
+&lt;table border=1 align=right&gt;
+	&lt;tr&gt;
+		&lt;td&gt;Starday&lt;/td&gt; &lt;td&gt;Sunday&lt;/td&gt; &lt;td&gt;Moonday&lt;/td&gt; &lt;td&gt;Godsday&lt;/td&gt; &lt;td&gt;Waterday&lt;/td&gt; &lt;td&gt;Earthday&lt;/td&gt; &lt;td&gt;Freeday&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr&gt;
+		&lt;td&gt; 1&lt;/td&gt; &lt;td&gt; 2&lt;/td&gt; &lt;td&gt; 3&lt;/td&gt; &lt;td&gt; 4 &lt;span class=luna&gt;●&lt;/span&gt;&lt;/td&gt; &lt;td&gt; 5&lt;/td&gt; &lt;td&gt; 6&lt;/td&gt; &lt;td class=special&gt; 7&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr&gt;
+		&lt;td&gt; 8&lt;/td&gt; &lt;td&gt; 9&lt;/td&gt; &lt;td&gt;10&lt;/td&gt; &lt;td&gt;11 &lt;span class=luna&gt;☽&lt;/span&gt;&lt;/td&gt; &lt;td&gt;12&lt;/td&gt; &lt;td&gt;13&lt;/td&gt; &lt;td class=special&gt;14&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr&gt;
+		&lt;td&gt;15&lt;/td&gt; &lt;td&gt;16&lt;/td&gt; &lt;td&gt;17&lt;/td&gt; &lt;td class=special&gt;18 &lt;span class=luna&gt;○&lt;/span&gt;&lt;/td&gt; &lt;td&gt;19&lt;/td&gt; &lt;td&gt;20 &lt;span class=celene&gt;☾&lt;/span&gt;&lt;/td&gt; &lt;td&gt;21&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr&gt;
+		&lt;td&gt;22&lt;/td&gt; &lt;td&gt;23&lt;/td&gt; &lt;td&gt;24&lt;/td&gt; &lt;td&gt;25 &lt;span class=luna&gt;☾&lt;/span&gt;&lt;/td&gt; &lt;td&gt;26&lt;/td&gt; &lt;td&gt;27&lt;/td&gt; &lt;td&gt;28&lt;/td&gt;
+	&lt;/tr&gt;
+&lt;/table&gt;
+&lt;br clear=right&gt;
+&lt;h2&gt;Ready&amp;apos;reat&lt;/h2&gt;
+&lt;table border=1 align=right&gt;
+	&lt;tr&gt;
+		&lt;td&gt;Starday&lt;/td&gt; &lt;td&gt;Sunday&lt;/td&gt; &lt;td&gt;Moonday&lt;/td&gt; &lt;td&gt;Godsday&lt;/td&gt; &lt;td&gt;Waterday&lt;/td&gt; &lt;td&gt;Earthday&lt;/td&gt; &lt;td&gt;Freeday&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr&gt;
+		&lt;td&gt; 1&lt;/td&gt; &lt;td&gt; 2&lt;/td&gt; &lt;td&gt; 3&lt;/td&gt; &lt;td&gt; 4 &lt;span class=luna&gt;●&lt;/span&gt;&lt;/td&gt; &lt;td class=special&gt; 5&lt;/td&gt; &lt;td&gt; 6&lt;/td&gt; &lt;td class=special&gt; 7&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr&gt;
+		&lt;td&gt; 8&lt;/td&gt; &lt;td&gt; 9&lt;/td&gt; &lt;td&gt;10&lt;/td&gt; &lt;td class=special&gt;11 &lt;span class=luna&gt;☽&lt;/span&gt;&lt;/td&gt; &lt;td class=special&gt;12&lt;/td&gt; &lt;td class=special&gt;13&lt;/td&gt; &lt;td class=special&gt;14&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr&gt;
+		&lt;td&gt;15 &lt;span class=celene&gt;●&lt;/span&gt;&lt;/td&gt; &lt;td&gt;16&lt;/td&gt; &lt;td&gt;17&lt;/td&gt; &lt;td&gt;18 &lt;span class=luna&gt;○&lt;/span&gt;&lt;/td&gt; &lt;td&gt;19&lt;/td&gt; &lt;td&gt;20&lt;/td&gt; &lt;td&gt;21&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr&gt;
+		&lt;td&gt;22&lt;/td&gt; &lt;td&gt;23&lt;/td&gt; &lt;td&gt;24&lt;/td&gt; &lt;td&gt;25 &lt;span class=luna&gt;☾&lt;/span&gt;&lt;/td&gt; &lt;td&gt;26&lt;/td&gt; &lt;td&gt;27&lt;/td&gt; &lt;td&gt;28&lt;/td&gt;
+	&lt;/tr&gt;
+&lt;/table&gt;
+&lt;br clear=right&gt;
+&lt;h2&gt;Sunsebb&lt;/h2&gt;
+&lt;table border=1 align=right&gt;
+	&lt;tr&gt;
+		&lt;td&gt;Starday&lt;/td&gt; &lt;td&gt;Sunday&lt;/td&gt; &lt;td&gt;Moonday&lt;/td&gt; &lt;td&gt;Godsday&lt;/td&gt; &lt;td&gt;Waterday&lt;/td&gt; &lt;td&gt;Earthday&lt;/td&gt; &lt;td&gt;Freeday&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr&gt;
+		&lt;td&gt; 1&lt;/td&gt; &lt;td&gt; 2&lt;/td&gt; &lt;td&gt; 3&lt;/td&gt; &lt;td&gt; 4 &lt;span class=luna&gt;●&lt;/span&gt;&lt;/td&gt; &lt;td&gt; 5&lt;/td&gt; &lt;td&gt; 6&lt;/td&gt; &lt;td&gt; 7&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr&gt;
+		&lt;td&gt; 8&lt;/td&gt; &lt;td&gt; 9&lt;/td&gt; &lt;td&gt;10 &lt;span class=celene&gt;☽&lt;/span&gt;&lt;/td&gt; &lt;td&gt;11 &lt;span class=luna&gt;☽&lt;/span&gt;&lt;/td&gt; &lt;td&gt;12&lt;/td&gt; &lt;td&gt;13&lt;/td&gt; &lt;td&gt;14&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr&gt;
+		&lt;td&gt;15&lt;/td&gt; &lt;td&gt;16&lt;/td&gt; &lt;td&gt;17&lt;/td&gt; &lt;td&gt;18 &lt;span class=luna&gt;○&lt;/span&gt;&lt;/td&gt; &lt;td&gt;19&lt;/td&gt; &lt;td&gt;20&lt;/td&gt; &lt;td&gt;21&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr&gt;
+		&lt;td&gt;22&lt;/td&gt; &lt;td class=special&gt;23&lt;/td&gt; &lt;td&gt;24&lt;/td&gt; &lt;td class=special&gt;25 &lt;span class=luna&gt;☾&lt;/span&gt;&lt;/td&gt; &lt;td class=special&gt;26&lt;/td&gt; &lt;td class=special&gt;27&lt;/td&gt; &lt;td class=special&gt;28&lt;/td&gt;
+	&lt;/tr&gt;
+&lt;/table&gt;
+&lt;br clear=right&gt;
+&lt;h2&gt;Needfest&lt;/h2&gt;
+&lt;table border=1 align=right&gt;
+	&lt;tr&gt;
+		&lt;td&gt;Starday&lt;/td&gt; &lt;td&gt;Sunday&lt;/td&gt; &lt;td&gt;Moonday&lt;/td&gt; &lt;td&gt;Godsday&lt;/td&gt; &lt;td&gt;Waterday&lt;/td&gt; &lt;td&gt;Earthday&lt;/td&gt; &lt;td&gt;Freeday&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr&gt;
+		&lt;td&gt; 1&lt;/td&gt; &lt;td&gt; 2&lt;/td&gt; &lt;td&gt; 3&lt;/td&gt; &lt;td&gt; 4 &lt;span class=luna&gt;●&lt;/span&gt;&lt;span class=celene&gt;○&lt;/span&gt;&lt;/td&gt; &lt;td&gt; 5&lt;/td&gt; &lt;td&gt; 6&lt;/td&gt; &lt;td class=special&gt; 7&lt;/td&gt;
+	&lt;/tr&gt;
+&lt;/table&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+}]</command>
+        <label>showCalendar</label>
+        <group>Time_Tools</group>
+        <sortby></sortby>
+        <autoExecute>true</autoExecute>
+        <includeLabel>false</includeLabel>
+        <applyToTokens>false</applyToTokens>
+        <fontColorKey>black</fontColorKey>
+        <fontSize>1.00em</fontSize>
+        <minWidth></minWidth>
+        <maxWidth></maxWidth>
+        <allowPlayerEdits>true</allowPlayerEdits>
+        <toolTip></toolTip>
+        <displayHotKey>true</displayHotKey>
+        <commonMacro>false</commonMacro>
+        <compareGroup>true</compareGroup>
+        <compareSortPrefix>true</compareSortPrefix>
+        <compareCommand>true</compareCommand>
+        <compareIncludeLabel>true</compareIncludeLabel>
+        <compareAutoExecute>true</compareAutoExecute>
+        <compareApplyToSelectedTokens>true</compareApplyToSelectedTokens>
+      </net.rptools.maptool.model.MacroButtonProperties>
+    </entry>
+    <entry>
+      <int>63</int>
+      <net.rptools.maptool.model.MacroButtonProperties>
+        <macroUUID>71beba5d-caa3-4df2-af4f-01af4168507a</macroUUID>
+        <saveLocation>Token</saveLocation>
+        <index>63</index>
+        <colorKey>orange</colorKey>
+        <hotKey>None</hotKey>
+        <command>[h: incrementTurn(1)]</command>
+        <label>+1 Turn</label>
+        <group>Time (To be Copied to Campaign)</group>
+        <sortby>3</sortby>
+        <autoExecute>true</autoExecute>
+        <includeLabel>false</includeLabel>
+        <applyToTokens>false</applyToTokens>
+        <fontColorKey>black</fontColorKey>
+        <fontSize>1.00em</fontSize>
+        <minWidth></minWidth>
+        <maxWidth></maxWidth>
+        <allowPlayerEdits>true</allowPlayerEdits>
+        <toolTip></toolTip>
+        <displayHotKey>true</displayHotKey>
+        <commonMacro>false</commonMacro>
+        <compareGroup>true</compareGroup>
+        <compareSortPrefix>true</compareSortPrefix>
+        <compareCommand>true</compareCommand>
+        <compareIncludeLabel>true</compareIncludeLabel>
+        <compareAutoExecute>true</compareAutoExecute>
+        <compareApplyToSelectedTokens>true</compareApplyToSelectedTokens>
+      </net.rptools.maptool.model.MacroButtonProperties>
+    </entry>
+  </macroPropertiesMap>
+  <speechMap/>
+  <allowURIAccess>false</allowURIAccess>
+</net.rptools.maptool.model.Token>

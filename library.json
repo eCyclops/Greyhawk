@@ -1,10 +1,10 @@
 {
   "name": "Lib:Greyhawk:Macros",
-  "version": "unknown",
+  "version": "0.1.0",
   "website": "ecyclops.com",
   "gitUrl": "github.com/eCyclops/Greyhawk-lib",
   "authors": ["eCyclops"],
-  "license": "",
+  "license": "GPL 3",
   "namespace": "Greyhawk:Macros",
   "description": "Library of macros for a Greyhawk campaign",
   "shortDescription": "Greyhawk Library",
