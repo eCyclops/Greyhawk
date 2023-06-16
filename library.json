@@ -2,7 +2,7 @@
   "name": "Lib:Greyhawk:Macros",
   "version": "0.1.0",
   "website": "ecyclops.com",
-  "gitUrl": "github.com/eCyclops/Greyhawk-lib",
+  "gitUrl": "github.com/eCyclops/Greyhawk",
   "authors": ["eCyclops"],
   "license": "GPL 3",
   "namespace": "Greyhawk:Macros",
