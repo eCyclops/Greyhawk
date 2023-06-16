@@ -1,0 +1,224 @@
+<net.rptools.maptool.model.Token>
+  <id>
+    <baGUID>Xrx0UK6LSfCCjyjcdWgc2Q==</baGUID>
+  </id>
+  <beingImpersonated>false</beingImpersonated>
+  <exposedAreaGUID>
+    <baGUID>xbBPUVmNSE+y9C0qYPVvHQ==</baGUID>
+  </exposedAreaGUID>
+  <imageAssetMap>
+    <entry>
+      <null/>
+      <net.rptools.lib.MD5Key>
+        <id>70a4cef6a1aa2268b87e27c18a650e83</id>
+      </net.rptools.lib.MD5Key>
+    </entry>
+  </imageAssetMap>
+  <x>250</x>
+  <y>850</y>
+  <z>33</z>
+  <anchorX>0</anchorX>
+  <anchorY>0</anchorY>
+  <sizeScale>1.0</sizeScale>
+  <lastX>0</lastX>
+  <lastY>0</lastY>
+  <snapToScale>true</snapToScale>
+  <width>833</width>
+  <height>833</height>
+  <isoWidth>833</isoWidth>
+  <isoHeight>833</isoHeight>
+  <scaleX>1.0</scaleX>
+  <scaleY>1.0</scaleY>
+  <sizeMap>
+    <entry>
+      <string>net.rptools.maptool.model.SquareGrid</string>
+      <net.rptools.maptool.model.GUID>
+        <baGUID>fwABAdBlFSoGAAAAKgABAA==</baGUID>
+      </net.rptools.maptool.model.GUID>
+    </entry>
+  </sizeMap>
+  <snapToGrid>true</snapToGrid>
+  <isVisible>false</isVisible>
+  <visibleOnlyToOwner>false</visibleOnlyToOwner>
+  <vblColorSensitivity>-1</vblColorSensitivity>
+  <alwaysVisibleTolerance>2</alwaysVisibleTolerance>
+  <isAlwaysVisible>false</isAlwaysVisible>
+  <name>Dyvers</name>
+  <ownerList/>
+  <ownerType>0</ownerType>
+  <tokenShape>TOP_DOWN</tokenShape>
+  <tokenType>NPC</tokenType>
+  <layer>TOKEN</layer>
+  <propertyType>Land</propertyType>
+  <tokenOpacity>1.0</tokenOpacity>
+  <speechName></speechName>
+  <terrainModifier>0.0</terrainModifier>
+  <terrainModifierOperation>NONE</terrainModifierOperation>
+  <terrainModifiersIgnored>
+    <net.rptools.maptool.model.Token_-TerrainModifierOperation>NONE</net.rptools.maptool.model.Token_-TerrainModifierOperation>
+  </terrainModifiersIgnored>
+  <isFlippedX>false</isFlippedX>
+  <isFlippedY>false</isFlippedY>
+  <isFlippedIso>false</isFlippedIso>
+  <lightSourceList/>
+  <sightType>Normal</sightType>
+  <hasSight>false</hasSight>
+  <hasImageTable>false</hasImageTable>
+  <notes></notes>
+  <notesType>text/plain</notesType>
+  <gmNotes></gmNotes>
+  <gmNotesType>text/plain</gmNotesType>
+  <gmName></gmName>
+  <state/>
+  <propertyMapCI>
+    <store>
+      <entry>
+        <string>pp</string>
+        <net.rptools.CaseInsensitiveHashMap_-KeyValue>
+          <key>pp</key>
+          <value class="string">citadel</value>
+          <outer-class reference="../../../.."/>
+        </net.rptools.CaseInsensitiveHashMap_-KeyValue>
+      </entry>
+      <entry>
+        <string>capital</string>
+        <net.rptools.CaseInsensitiveHashMap_-KeyValue>
+          <key>capital</key>
+          <value class="string">Dyvers</value>
+          <outer-class reference="../../../.."/>
+        </net.rptools.CaseInsensitiveHashMap_-KeyValue>
+      </entry>
+      <entry>
+        <string>cappop</string>
+        <net.rptools.CaseInsensitiveHashMap_-KeyValue>
+          <key>capPop</key>
+          <value class="string">42000</value>
+          <outer-class reference="../../../.."/>
+        </net.rptools.CaseInsensitiveHashMap_-KeyValue>
+      </entry>
+      <entry>
+        <string>languages</string>
+        <net.rptools.CaseInsensitiveHashMap_-KeyValue>
+          <key>languages</key>
+          <value class="string">Common, Rhopan, Gnomish, Halfling</value>
+          <outer-class reference="../../../.."/>
+        </net.rptools.CaseInsensitiveHashMap_-KeyValue>
+      </entry>
+      <entry>
+        <string>alignments</string>
+        <net.rptools.CaseInsensitiveHashMap_-KeyValue>
+          <key>alignments</key>
+          <value class="string">N, LG, NG, LN, CN</value>
+          <outer-class reference="../../../.."/>
+        </net.rptools.CaseInsensitiveHashMap_-KeyValue>
+      </entry>
+      <entry>
+        <string>exports</string>
+        <net.rptools.CaseInsensitiveHashMap_-KeyValue>
+          <key>exports</key>
+          <value class="string">shipbuilding supplies</value>
+          <outer-class reference="../../../.."/>
+        </net.rptools.CaseInsensitiveHashMap_-KeyValue>
+      </entry>
+      <entry>
+        <string>gods</string>
+        <net.rptools.CaseInsensitiveHashMap_-KeyValue>
+          <key>gods</key>
+          <value class="string">Zilchus, St. Cuthbert, Pelor, Fharlanghn, Xerbo, Ehlonna, Heironeous, Istus, Olidammara, Rao, Obad-Hai</value>
+          <outer-class reference="../../../.."/>
+        </net.rptools.CaseInsensitiveHashMap_-KeyValue>
+      </entry>
+      <entry>
+        <string>description</string>
+        <net.rptools.CaseInsensitiveHashMap_-KeyValue>
+          <key>description</key>
+          <value class="string">Dyvers’ position at the mouth of the Velverdyva River on the coast of the Lake of Unknown Depths (Nyr Dyv) makes it an important trading center and busy port, with lake and river traffic from as far away as Perrenland, Bissel, Nyrond, Urnst, the Pale, Tenh, and even occasional missions from Iuz. The city was originally a part of the Viceroyalty of Ferrond and contributed heavily in money, goods, and men to the war which saw the institution of the Kingdom of Furyondy. Because of the alliance and close ties with Veluna, whose policies the Gentry of Dyvers see as restrictive, the city declared its independence in 526 CY, King Thrommel II allowing this act to pass unchallenged. Dyvers claims some 2,000 square miles of land, including the islands at the mouth of the Velverdyva, as its sovereign territory – although the Magisters have been careful not to claim any of the land on the north band of the river. The free city boasts a marine force of 1,000 men and an army twice as numerous. These troops are very well armed and equipped.  </value>
+          <outer-class reference="../../../.."/>
+        </net.rptools.CaseInsensitiveHashMap_-KeyValue>
+      </entry>
+      <entry>
+        <string>gp</string>
+        <net.rptools.CaseInsensitiveHashMap_-KeyValue>
+          <key>gp</key>
+          <value class="string">wheatsheaf</value>
+          <outer-class reference="../../../.."/>
+        </net.rptools.CaseInsensitiveHashMap_-KeyValue>
+      </entry>
+      <entry>
+        <string>ep</string>
+        <net.rptools.CaseInsensitiveHashMap_-KeyValue>
+          <key>ep</key>
+          <value class="string">galley</value>
+          <outer-class reference="../../../.."/>
+        </net.rptools.CaseInsensitiveHashMap_-KeyValue>
+      </entry>
+      <entry>
+        <string>ruler</string>
+        <net.rptools.CaseInsensitiveHashMap_-KeyValue>
+          <key>ruler</key>
+          <value class="string">His Excellency Margus, the Magister of Dyvers</value>
+          <outer-class reference="../../../.."/>
+        </net.rptools.CaseInsensitiveHashMap_-KeyValue>
+      </entry>
+      <entry>
+        <string>cp</string>
+        <net.rptools.CaseInsensitiveHashMap_-KeyValue>
+          <key>cp</key>
+          <value class="string">common</value>
+          <outer-class reference="../../../.."/>
+        </net.rptools.CaseInsensitiveHashMap_-KeyValue>
+      </entry>
+      <entry>
+        <string>population</string>
+        <net.rptools.CaseInsensitiveHashMap_-KeyValue>
+          <key>population</key>
+          <value class="string">53000</value>
+          <outer-class reference="../../../.."/>
+        </net.rptools.CaseInsensitiveHashMap_-KeyValue>
+      </entry>
+      <entry>
+        <string>government</string>
+        <net.rptools.CaseInsensitiveHashMap_-KeyValue>
+          <key>government</key>
+          <value class="string">Democratic meritocracy</value>
+          <outer-class reference="../../../.."/>
+        </net.rptools.CaseInsensitiveHashMap_-KeyValue>
+      </entry>
+      <entry>
+        <string>forces</string>
+        <net.rptools.CaseInsensitiveHashMap_-KeyValue>
+          <key>forces</key>
+          <value class="string">sailors 1000, inf 2000</value>
+          <outer-class reference="../../../.."/>
+        </net.rptools.CaseInsensitiveHashMap_-KeyValue>
+      </entry>
+      <entry>
+        <string>fullname</string>
+        <net.rptools.CaseInsensitiveHashMap_-KeyValue>
+          <key>fullName</key>
+          <value class="string">Free and Independent City of Dyvers</value>
+          <outer-class reference="../../../.."/>
+        </net.rptools.CaseInsensitiveHashMap_-KeyValue>
+      </entry>
+      <entry>
+        <string>sp</string>
+        <net.rptools.CaseInsensitiveHashMap_-KeyValue>
+          <key>sp</key>
+          <value class="string">wagon</value>
+          <outer-class reference="../../../.."/>
+        </net.rptools.CaseInsensitiveHashMap_-KeyValue>
+      </entry>
+      <entry>
+        <string>rulerclass</string>
+        <net.rptools.CaseInsensitiveHashMap_-KeyValue>
+          <key>rulerClass</key>
+          <value class="string">thief, 17</value>
+          <outer-class reference="../../../.."/>
+        </net.rptools.CaseInsensitiveHashMap_-KeyValue>
+      </entry>
+    </store>
+  </propertyMapCI>
+  <macroPropertiesMap/>
+  <speechMap/>
+  <allowURIAccess>false</allowURIAccess>
+</net.rptools.maptool.model.Token>

@@ -1,0 +1,8 @@
+<net.rptools.maptool.model.Asset>
+  <id>
+    <id>bf13804e0bc4b1da0361e80f8be9eac5</id>
+  </id>
+  <name>Wormhall</name>
+  <extension>png</extension>
+  <type>IMAGE</type>
+</net.rptools.maptool.model.Asset>

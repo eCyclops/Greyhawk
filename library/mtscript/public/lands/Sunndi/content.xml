@@ -1,0 +1,216 @@
+<net.rptools.maptool.model.Token>
+  <id>
+    <baGUID>LvBA7qFSTreKvQsFqlfzBA==</baGUID>
+  </id>
+  <beingImpersonated>false</beingImpersonated>
+  <exposedAreaGUID>
+    <baGUID>ojHSVDpeRveJPHPxdBd3gQ==</baGUID>
+  </exposedAreaGUID>
+  <imageAssetMap>
+    <entry>
+      <null/>
+      <net.rptools.lib.MD5Key>
+        <id>19db93d7dd8494dcc88d7811d727ed9f</id>
+      </net.rptools.lib.MD5Key>
+    </entry>
+  </imageAssetMap>
+  <x>1050</x>
+  <y>1050</y>
+  <z>85</z>
+  <anchorX>0</anchorX>
+  <anchorY>0</anchorY>
+  <sizeScale>1.0</sizeScale>
+  <lastX>0</lastX>
+  <lastY>0</lastY>
+  <snapToScale>true</snapToScale>
+  <width>865</width>
+  <height>866</height>
+  <isoWidth>865</isoWidth>
+  <isoHeight>866</isoHeight>
+  <scaleX>1.0</scaleX>
+  <scaleY>1.0</scaleY>
+  <sizeMap>
+    <entry>
+      <string>net.rptools.maptool.model.SquareGrid</string>
+      <net.rptools.maptool.model.GUID>
+        <baGUID>fwABAdBlFSoGAAAAKgABAA==</baGUID>
+      </net.rptools.maptool.model.GUID>
+    </entry>
+  </sizeMap>
+  <snapToGrid>true</snapToGrid>
+  <isVisible>false</isVisible>
+  <visibleOnlyToOwner>false</visibleOnlyToOwner>
+  <vblColorSensitivity>-1</vblColorSensitivity>
+  <alwaysVisibleTolerance>2</alwaysVisibleTolerance>
+  <isAlwaysVisible>false</isAlwaysVisible>
+  <name>Sunndi</name>
+  <ownerList/>
+  <ownerType>0</ownerType>
+  <tokenShape>TOP_DOWN</tokenShape>
+  <tokenType>NPC</tokenType>
+  <layer>TOKEN</layer>
+  <propertyType>Land</propertyType>
+  <haloColorValue>-4144960</haloColorValue>
+  <tokenOpacity>1.0</tokenOpacity>
+  <speechName></speechName>
+  <terrainModifier>0.0</terrainModifier>
+  <terrainModifierOperation>NONE</terrainModifierOperation>
+  <terrainModifiersIgnored>
+    <net.rptools.maptool.model.Token_-TerrainModifierOperation>NONE</net.rptools.maptool.model.Token_-TerrainModifierOperation>
+  </terrainModifiersIgnored>
+  <isFlippedX>false</isFlippedX>
+  <isFlippedY>false</isFlippedY>
+  <isFlippedIso>false</isFlippedIso>
+  <lightSourceList/>
+  <sightType>Normal</sightType>
+  <hasSight>false</hasSight>
+  <hasImageTable>false</hasImageTable>
+  <notes></notes>
+  <notesType>text/plain</notesType>
+  <gmNotes></gmNotes>
+  <gmNotesType>text/plain</gmNotesType>
+  <gmName></gmName>
+  <state/>
+  <propertyMapCI>
+    <store>
+      <entry>
+        <string>pp</string>
+        <net.rptools.CaseInsensitiveHashMap_-KeyValue>
+          <key>pp</key>
+          <value class="string">new plate</value>
+          <outer-class reference="../../../.."/>
+        </net.rptools.CaseInsensitiveHashMap_-KeyValue>
+      </entry>
+      <entry>
+        <string>capital</string>
+        <net.rptools.CaseInsensitiveHashMap_-KeyValue>
+          <key>capital</key>
+          <value class="string">Pitchfield</value>
+          <outer-class reference="../../../.."/>
+        </net.rptools.CaseInsensitiveHashMap_-KeyValue>
+      </entry>
+      <entry>
+        <string>languages</string>
+        <net.rptools.CaseInsensitiveHashMap_-KeyValue>
+          <key>languages</key>
+          <value class="string">Common, Elven</value>
+          <outer-class reference="../../../.."/>
+        </net.rptools.CaseInsensitiveHashMap_-KeyValue>
+      </entry>
+      <entry>
+        <string>cappop</string>
+        <net.rptools.CaseInsensitiveHashMap_-KeyValue>
+          <key>capPop</key>
+          <value class="string">60000</value>
+          <outer-class reference="../../../.."/>
+        </net.rptools.CaseInsensitiveHashMap_-KeyValue>
+      </entry>
+      <entry>
+        <string>exports</string>
+        <net.rptools.CaseInsensitiveHashMap_-KeyValue>
+          <key>exports</key>
+          <value class="string">electrum, platinum, gems (II, IV)</value>
+          <outer-class reference="../../../.."/>
+        </net.rptools.CaseInsensitiveHashMap_-KeyValue>
+      </entry>
+      <entry>
+        <string>gods</string>
+        <net.rptools.CaseInsensitiveHashMap_-KeyValue>
+          <key>gods</key>
+          <value class="string">Pelor, Trithereon, Lydia, Oeridian agricultural gods, Seldarine, Dwarvish pantheon, Gnomish pantheon, Ulaa, Fortubo, Jascar, Norebo, Boccob</value>
+          <outer-class reference="../../../.."/>
+        </net.rptools.CaseInsensitiveHashMap_-KeyValue>
+      </entry>
+      <entry>
+        <string>description</string>
+        <net.rptools.CaseInsensitiveHashMap_-KeyValue>
+          <key>description</key>
+          <value class="string">The County of Sunndi was once a fief within a fief, being granted to a loyal peer of the Overking&apos;s Herzog of the South Province of the Great Kingdom. After a long period of oppressive taxation, maltreatment by royal troops and those of the Herzog as well, and harrying of its demi-human inhabitants, the nobles of human and non-human folk in the area joined the general uprising against Aerdian rule, and in 455 CY became a part of the Iron League. The county is well protected by natural barriers which enable it to be defended — the dense Rieuwood and hills to east and west. The neck of the Tilvanot Peninsula below Sunndi is corked with a great, semi-salt swamp. (This is a mixed blessing, as there are numbers of very unpleasant creatures dwelling therein.) The county benefits both from its natural resources (including agriculture) and from trade — overland with Idee, by sea with Duxchan. It is threatened continually, however, from the north by the Herzog&apos;s legions, from the east by the forces of the Holy Censor of Medegia, and by the Sea Barons along its coasts. Sunnd troops are always in arms — human and dwarven contingents in the Glorioles, human and gnome companies guarding the eastern hills, human and elven foresters ranging the northern woodlands. The Sunnd hillmen employ slings and morningstars, while the men of the interior prefer crossbows and bardiches. Except for the nobles and their equerries, Sunnd horse is medium or light, and not numerous in any event for they rely upon their confederates to the west (Idee) to provide cavalry.</value>
+          <outer-class reference="../../../.."/>
+        </net.rptools.CaseInsensitiveHashMap_-KeyValue>
+      </entry>
+      <entry>
+        <string>gp</string>
+        <net.rptools.CaseInsensitiveHashMap_-KeyValue>
+          <key>gp</key>
+          <value class="string">new crown</value>
+          <outer-class reference="../../../.."/>
+        </net.rptools.CaseInsensitiveHashMap_-KeyValue>
+      </entry>
+      <entry>
+        <string>ruler</string>
+        <net.rptools.CaseInsensitiveHashMap_-KeyValue>
+          <key>ruler</key>
+          <value class="string">His Brilliant Lordship, Count Hazendel of Sunndi; Olvensteward of the South</value>
+          <outer-class reference="../../../.."/>
+        </net.rptools.CaseInsensitiveHashMap_-KeyValue>
+      </entry>
+      <entry>
+        <string>ep</string>
+        <net.rptools.CaseInsensitiveHashMap_-KeyValue>
+          <key>ep</key>
+          <value class="string">noble</value>
+          <outer-class reference="../../../.."/>
+        </net.rptools.CaseInsensitiveHashMap_-KeyValue>
+      </entry>
+      <entry>
+        <string>cp</string>
+        <net.rptools.CaseInsensitiveHashMap_-KeyValue>
+          <key>cp</key>
+          <value class="string">common</value>
+          <outer-class reference="../../../.."/>
+        </net.rptools.CaseInsensitiveHashMap_-KeyValue>
+      </entry>
+      <entry>
+        <string>population</string>
+        <net.rptools.CaseInsensitiveHashMap_-KeyValue>
+          <key>population</key>
+          <value class="string">60000</value>
+          <outer-class reference="../../../.."/>
+        </net.rptools.CaseInsensitiveHashMap_-KeyValue>
+      </entry>
+      <entry>
+        <string>government</string>
+        <net.rptools.CaseInsensitiveHashMap_-KeyValue>
+          <key>government</key>
+          <value class="string">Hereditary Feudal Monarchy</value>
+          <outer-class reference="../../../.."/>
+        </net.rptools.CaseInsensitiveHashMap_-KeyValue>
+      </entry>
+      <entry>
+        <string>forces</string>
+        <net.rptools.CaseInsensitiveHashMap_-KeyValue>
+          <key>forces</key>
+          <outer-class reference="../../../.."/>
+        </net.rptools.CaseInsensitiveHashMap_-KeyValue>
+      </entry>
+      <entry>
+        <string>fullname</string>
+        <net.rptools.CaseInsensitiveHashMap_-KeyValue>
+          <key>fullName</key>
+          <value class="string">County of Sunndi</value>
+          <outer-class reference="../../../.."/>
+        </net.rptools.CaseInsensitiveHashMap_-KeyValue>
+      </entry>
+      <entry>
+        <string>sp</string>
+        <net.rptools.CaseInsensitiveHashMap_-KeyValue>
+          <key>sp</key>
+          <value class="string">penny</value>
+          <outer-class reference="../../../.."/>
+        </net.rptools.CaseInsensitiveHashMap_-KeyValue>
+      </entry>
+      <entry>
+        <string>rulerclass</string>
+        <net.rptools.CaseInsensitiveHashMap_-KeyValue>
+          <key>rulerClass</key>
+          <value class="string">cleric/fighter/magic-user, 5/8/8</value>
+          <outer-class reference="../../../.."/>
+        </net.rptools.CaseInsensitiveHashMap_-KeyValue>
+      </entry>
+    </store>
+  </propertyMapCI>
+  <macroPropertiesMap/>
+  <speechMap/>
+  <allowURIAccess>false</allowURIAccess>
+</net.rptools.maptool.model.Token>

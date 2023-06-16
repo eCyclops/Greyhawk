@@ -1,0 +1,235 @@
+<net.rptools.maptool.model.Token>
+  <id>
+    <baGUID>zE6/19BoQMaBdfFctlHyKw==</baGUID>
+  </id>
+  <beingImpersonated>false</beingImpersonated>
+  <exposedAreaGUID>
+    <baGUID>l1Z5sVCCRqe8KL1Hti4dmw==</baGUID>
+  </exposedAreaGUID>
+  <imageAssetMap>
+    <entry>
+      <null/>
+      <net.rptools.lib.MD5Key>
+        <id>d730867324a8b877c7d2a35d4842f2df</id>
+      </net.rptools.lib.MD5Key>
+    </entry>
+  </imageAssetMap>
+  <x>-50</x>
+  <y>950</y>
+  <z>81</z>
+  <anchorX>0</anchorX>
+  <anchorY>0</anchorY>
+  <sizeScale>1.0</sizeScale>
+  <lastX>0</lastX>
+  <lastY>0</lastY>
+  <snapToScale>true</snapToScale>
+  <width>833</width>
+  <height>833</height>
+  <isoWidth>833</isoWidth>
+  <isoHeight>833</isoHeight>
+  <scaleX>1.0</scaleX>
+  <scaleY>1.0</scaleY>
+  <sizeMap>
+    <entry>
+      <string>net.rptools.maptool.model.SquareGrid</string>
+      <net.rptools.maptool.model.GUID>
+        <baGUID>fwABAdBlFSoGAAAAKgABAA==</baGUID>
+      </net.rptools.maptool.model.GUID>
+    </entry>
+  </sizeMap>
+  <snapToGrid>true</snapToGrid>
+  <isVisible>false</isVisible>
+  <visibleOnlyToOwner>false</visibleOnlyToOwner>
+  <vblColorSensitivity>-1</vblColorSensitivity>
+  <alwaysVisibleTolerance>2</alwaysVisibleTolerance>
+  <isAlwaysVisible>false</isAlwaysVisible>
+  <name>Irongate</name>
+  <ownerList/>
+  <ownerType>0</ownerType>
+  <tokenShape>TOP_DOWN</tokenShape>
+  <tokenType>NPC</tokenType>
+  <layer>TOKEN</layer>
+  <propertyType>Land</propertyType>
+  <haloColorValue>-4144960</haloColorValue>
+  <tokenOpacity>1.0</tokenOpacity>
+  <speechName></speechName>
+  <terrainModifier>0.0</terrainModifier>
+  <terrainModifierOperation>NONE</terrainModifierOperation>
+  <terrainModifiersIgnored>
+    <net.rptools.maptool.model.Token_-TerrainModifierOperation>NONE</net.rptools.maptool.model.Token_-TerrainModifierOperation>
+  </terrainModifiersIgnored>
+  <isFlippedX>false</isFlippedX>
+  <isFlippedY>false</isFlippedY>
+  <isFlippedIso>false</isFlippedIso>
+  <lightSourceList/>
+  <sightType>Normal</sightType>
+  <hasSight>false</hasSight>
+  <hasImageTable>false</hasImageTable>
+  <notes>For a man, he&apos;s unusually short (under 5 feet), but is legendarily wily and wise. No one knows his &quot;class&quot;, he has never cast spells in public or revealed a religious affiliation.
+
+He&apos;s also lived a great deal of time, having been elected to the mayoralty of Irongate at least 4 successive 10 year terms (and has just started a fifth in 590 CY).
+
+He has been a member of the inner sanctum of the Iron League for as long as any man in that secret society can remember....only the elves of Sunndi or the Dwarflords of the Iron Hills can remember a time before him....
+
+Here are the prevalent theories, whispered by various circles in the city and its environs:
+
+1) Darg is a human with dwarven heritage (extremely unusual) and that helps explain his appearance and long-livedness. This would also explain his great affinity with the dwarven enclaves bordering Irongate who regard him as a strong ally. His wisdom comes from having lived before the Turmoil Between Crowns, having secretly been a member of the Iron League since its inception, indeed perhaps its founder!
+
+2) Darg is a dragon, one of the last inhabitants of the Dragonshead Peninsula, who lives polymorhped as a man. He cherishes this region so much, that he is willing to engage in this charade to protect its mysteries. Only in secret is his true form ever revealed (which is known only to a handful of people, including perhaps Elayne Mystica, a close confidant.) This would explain why he inhabitants the Lord Mayor&apos;s Tower virtually alone, suffering few visitors, even among the lords of the city.
+
+3) Darg is in fact a human, and is either secretly a wizard, scholar, or sage who has learned some great secret. This has afforded him unnaturally long life and the foresight to protect Irongate and defeat its enemies in ways others could not. This would explain his secret forays into the old caverns in the hills near Irongate and his prohibition against exploring the ruins beneath Dwurtown.
+
+One of these might be the truth, none of them, or some combination. Use whatever works best in your campaign.</notes>
+  <notesType>text/plain</notesType>
+  <gmNotes></gmNotes>
+  <gmNotesType>text/plain</gmNotesType>
+  <gmName></gmName>
+  <state/>
+  <propertyMapCI>
+    <store>
+      <entry>
+        <string>pp</string>
+        <net.rptools.CaseInsensitiveHashMap_-KeyValue>
+          <key>pp</key>
+          <outer-class reference="../../../.."/>
+        </net.rptools.CaseInsensitiveHashMap_-KeyValue>
+      </entry>
+      <entry>
+        <string>capital</string>
+        <net.rptools.CaseInsensitiveHashMap_-KeyValue>
+          <key>capital</key>
+          <value class="string">Irongate</value>
+          <outer-class reference="../../../.."/>
+        </net.rptools.CaseInsensitiveHashMap_-KeyValue>
+      </entry>
+      <entry>
+        <string>cappop</string>
+        <net.rptools.CaseInsensitiveHashMap_-KeyValue>
+          <key>capPop</key>
+          <value class="string">44000</value>
+          <outer-class reference="../../../.."/>
+        </net.rptools.CaseInsensitiveHashMap_-KeyValue>
+      </entry>
+      <entry>
+        <string>languages</string>
+        <net.rptools.CaseInsensitiveHashMap_-KeyValue>
+          <key>languages</key>
+          <value class="string">Common, Dwarven, Ferral</value>
+          <outer-class reference="../../../.."/>
+        </net.rptools.CaseInsensitiveHashMap_-KeyValue>
+      </entry>
+      <entry>
+        <string>alignments</string>
+        <net.rptools.CaseInsensitiveHashMap_-KeyValue>
+          <key>alignments</key>
+          <value class="string">LG, LN, NG</value>
+          <outer-class reference="../../../.."/>
+        </net.rptools.CaseInsensitiveHashMap_-KeyValue>
+      </entry>
+      <entry>
+        <string>exports</string>
+        <net.rptools.CaseInsensitiveHashMap_-KeyValue>
+          <key>exports</key>
+          <value class="string">gems (II, III)</value>
+          <outer-class reference="../../../.."/>
+        </net.rptools.CaseInsensitiveHashMap_-KeyValue>
+      </entry>
+      <entry>
+        <string>gods</string>
+        <net.rptools.CaseInsensitiveHashMap_-KeyValue>
+          <key>gods</key>
+          <value class="string">Heironeous, Zilchus, Procan, dwarf pantheon, Osprem, Xerbo, Norebo, Fortubo, Jascar, Lendor</value>
+          <outer-class reference="../../../.."/>
+        </net.rptools.CaseInsensitiveHashMap_-KeyValue>
+      </entry>
+      <entry>
+        <string>description</string>
+        <net.rptools.CaseInsensitiveHashMap_-KeyValue>
+          <key>description</key>
+          <value class="string">This large and thriving city is based on sea commerce and trade between Onnwal and the East. Irongate developed an independent spirit early in its history due to its mingling of peoples and ideas. As the rule of the Overking grew more despotic, the people of the city began to murmur, and the Lord Mayor headed a deputation bearing grievances to the Herzog. These emissaries were thrown into prison, given a mock trial, and executed by ritual torture for the Overking&apos;s entertainment (446 CY). The following year the whole of the south was in arms against the realm, and after a brief struggle the Iron League was founded, an alliance of mutual support which aided the rebellious states to throw off the yoke of the Aerdi tyrants. Irongate has a strong naval squadron and a large company of armored crossbowmen in League service. She can also raise 2,000 heavy militia infantry of high morale and excellent training. These troops are spetum or glaive-guisarme equipped and can march in a single day after muster.</value>
+          <outer-class reference="../../../.."/>
+        </net.rptools.CaseInsensitiveHashMap_-KeyValue>
+      </entry>
+      <entry>
+        <string>gp</string>
+        <net.rptools.CaseInsensitiveHashMap_-KeyValue>
+          <key>gp</key>
+          <value class="string">dragoneye</value>
+          <outer-class reference="../../../.."/>
+        </net.rptools.CaseInsensitiveHashMap_-KeyValue>
+      </entry>
+      <entry>
+        <string>ep</string>
+        <net.rptools.CaseInsensitiveHashMap_-KeyValue>
+          <key>ep</key>
+          <outer-class reference="../../../.."/>
+        </net.rptools.CaseInsensitiveHashMap_-KeyValue>
+      </entry>
+      <entry>
+        <string>ruler</string>
+        <net.rptools.CaseInsensitiveHashMap_-KeyValue>
+          <key>ruler</key>
+          <value class="string">His Resolute Honor, Cobb Darg, Lord High Mayor of Irongate</value>
+          <outer-class reference="../../../.."/>
+        </net.rptools.CaseInsensitiveHashMap_-KeyValue>
+      </entry>
+      <entry>
+        <string>cp</string>
+        <net.rptools.CaseInsensitiveHashMap_-KeyValue>
+          <key>cp</key>
+          <value class="string">common</value>
+          <outer-class reference="../../../.."/>
+        </net.rptools.CaseInsensitiveHashMap_-KeyValue>
+      </entry>
+      <entry>
+        <string>population</string>
+        <net.rptools.CaseInsensitiveHashMap_-KeyValue>
+          <key>population</key>
+          <value class="string">57000</value>
+          <outer-class reference="../../../.."/>
+        </net.rptools.CaseInsensitiveHashMap_-KeyValue>
+      </entry>
+      <entry>
+        <string>government</string>
+        <net.rptools.CaseInsensitiveHashMap_-KeyValue>
+          <key>government</key>
+          <value class="string">Electoral Oligarchy</value>
+          <outer-class reference="../../../.."/>
+        </net.rptools.CaseInsensitiveHashMap_-KeyValue>
+      </entry>
+      <entry>
+        <string>forces</string>
+        <net.rptools.CaseInsensitiveHashMap_-KeyValue>
+          <key>forces</key>
+          <outer-class reference="../../../.."/>
+        </net.rptools.CaseInsensitiveHashMap_-KeyValue>
+      </entry>
+      <entry>
+        <string>fullname</string>
+        <net.rptools.CaseInsensitiveHashMap_-KeyValue>
+          <key>fullName</key>
+          <value class="string">Free City of Irongate</value>
+          <outer-class reference="../../../.."/>
+        </net.rptools.CaseInsensitiveHashMap_-KeyValue>
+      </entry>
+      <entry>
+        <string>sp</string>
+        <net.rptools.CaseInsensitiveHashMap_-KeyValue>
+          <key>sp</key>
+          <value class="string">starry</value>
+          <outer-class reference="../../../.."/>
+        </net.rptools.CaseInsensitiveHashMap_-KeyValue>
+      </entry>
+      <entry>
+        <string>rulerclass</string>
+        <net.rptools.CaseInsensitiveHashMap_-KeyValue>
+          <key>rulerClass</key>
+          <outer-class reference="../../../.."/>
+        </net.rptools.CaseInsensitiveHashMap_-KeyValue>
+      </entry>
+    </store>
+  </propertyMapCI>
+  <macroPropertiesMap/>
+  <speechMap/>
+  <allowURIAccess>false</allowURIAccess>
+</net.rptools.maptool.model.Token>

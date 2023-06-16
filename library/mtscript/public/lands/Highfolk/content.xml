@@ -1,0 +1,222 @@
+<net.rptools.maptool.model.Token>
+  <id>
+    <baGUID>jh7OLx+AQ8+wWFAeCXDRUQ==</baGUID>
+  </id>
+  <beingImpersonated>false</beingImpersonated>
+  <exposedAreaGUID>
+    <baGUID>2V/8HozfQ3SvUVEpjc5/Kg==</baGUID>
+  </exposedAreaGUID>
+  <imageAssetMap>
+    <entry>
+      <null/>
+      <net.rptools.lib.MD5Key>
+        <id>c48feb0d585a2a6fa7b45d769aa85938</id>
+      </net.rptools.lib.MD5Key>
+    </entry>
+  </imageAssetMap>
+  <x>1050</x>
+  <y>850</y>
+  <z>41</z>
+  <anchorX>0</anchorX>
+  <anchorY>0</anchorY>
+  <sizeScale>1.0</sizeScale>
+  <lastX>0</lastX>
+  <lastY>0</lastY>
+  <snapToScale>true</snapToScale>
+  <width>833</width>
+  <height>833</height>
+  <isoWidth>833</isoWidth>
+  <isoHeight>833</isoHeight>
+  <scaleX>1.0</scaleX>
+  <scaleY>1.0</scaleY>
+  <sizeMap>
+    <entry>
+      <string>net.rptools.maptool.model.SquareGrid</string>
+      <net.rptools.maptool.model.GUID>
+        <baGUID>fwABAdBlFSoGAAAAKgABAA==</baGUID>
+      </net.rptools.maptool.model.GUID>
+    </entry>
+  </sizeMap>
+  <snapToGrid>true</snapToGrid>
+  <isVisible>false</isVisible>
+  <visibleOnlyToOwner>false</visibleOnlyToOwner>
+  <vblColorSensitivity>-1</vblColorSensitivity>
+  <alwaysVisibleTolerance>2</alwaysVisibleTolerance>
+  <isAlwaysVisible>false</isAlwaysVisible>
+  <name>Highfolk</name>
+  <ownerList/>
+  <ownerType>0</ownerType>
+  <tokenShape>TOP_DOWN</tokenShape>
+  <tokenType>NPC</tokenType>
+  <layer>TOKEN</layer>
+  <propertyType>Land</propertyType>
+  <tokenOpacity>1.0</tokenOpacity>
+  <speechName></speechName>
+  <terrainModifier>0.0</terrainModifier>
+  <terrainModifierOperation>NONE</terrainModifierOperation>
+  <terrainModifiersIgnored>
+    <net.rptools.maptool.model.Token_-TerrainModifierOperation>NONE</net.rptools.maptool.model.Token_-TerrainModifierOperation>
+  </terrainModifiersIgnored>
+  <isFlippedX>false</isFlippedX>
+  <isFlippedY>false</isFlippedY>
+  <isFlippedIso>false</isFlippedIso>
+  <lightSourceList/>
+  <sightType>Normal</sightType>
+  <hasSight>false</hasSight>
+  <hasImageTable>false</hasImageTable>
+  <notes></notes>
+  <notesType>text/plain</notesType>
+  <gmNotes></gmNotes>
+  <gmNotesType>text/plain</gmNotesType>
+  <gmName></gmName>
+  <state/>
+  <propertyMapCI>
+    <store>
+      <entry>
+        <string>pp</string>
+        <net.rptools.CaseInsensitiveHashMap_-KeyValue>
+          <key>pp</key>
+          <outer-class reference="../../../.."/>
+        </net.rptools.CaseInsensitiveHashMap_-KeyValue>
+      </entry>
+      <entry>
+        <string>capital</string>
+        <net.rptools.CaseInsensitiveHashMap_-KeyValue>
+          <key>capital</key>
+          <value class="string">Highfolk</value>
+          <outer-class reference="../../../.."/>
+        </net.rptools.CaseInsensitiveHashMap_-KeyValue>
+      </entry>
+      <entry>
+        <string>languages</string>
+        <net.rptools.CaseInsensitiveHashMap_-KeyValue>
+          <key>languages</key>
+          <value class="string">Elven, Common, Sylvan</value>
+          <outer-class reference="../../../.."/>
+        </net.rptools.CaseInsensitiveHashMap_-KeyValue>
+      </entry>
+      <entry>
+        <string>alignments</string>
+        <net.rptools.CaseInsensitiveHashMap_-KeyValue>
+          <key>alignments</key>
+          <value class="string">CG, NG</value>
+          <outer-class reference="../../../.."/>
+        </net.rptools.CaseInsensitiveHashMap_-KeyValue>
+      </entry>
+      <entry>
+        <string>cappop</string>
+        <net.rptools.CaseInsensitiveHashMap_-KeyValue>
+          <key>capPop</key>
+          <value class="string">2500</value>
+          <outer-class reference="../../../.."/>
+        </net.rptools.CaseInsensitiveHashMap_-KeyValue>
+      </entry>
+      <entry>
+        <string>exports</string>
+        <net.rptools.CaseInsensitiveHashMap_-KeyValue>
+          <key>exports</key>
+          <value class="string">gold</value>
+          <outer-class reference="../../../.."/>
+        </net.rptools.CaseInsensitiveHashMap_-KeyValue>
+      </entry>
+      <entry>
+        <string>gods</string>
+        <net.rptools.CaseInsensitiveHashMap_-KeyValue>
+          <key>gods</key>
+          <value class="string">Seldarine, Oeridian agricultural gods, Ehlonna, Phyton, Fharlanghn</value>
+          <outer-class reference="../../../.."/>
+        </net.rptools.CaseInsensitiveHashMap_-KeyValue>
+      </entry>
+      <entry>
+        <string>gp</string>
+        <net.rptools.CaseInsensitiveHashMap_-KeyValue>
+          <key>gp</key>
+          <value class="string">solar</value>
+          <outer-class reference="../../../.."/>
+        </net.rptools.CaseInsensitiveHashMap_-KeyValue>
+      </entry>
+      <entry>
+        <string>description</string>
+        <net.rptools.CaseInsensitiveHashMap_-KeyValue>
+          <key>description</key>
+          <value class="string">Highfolk is independent and of importance simply because it is the southern outpost of the Olvenfolk of the Quagflow Valley (the Fairdells in Olven). The town itself is a trading center and home to some 2,000 humankind. It is well fortified and protects the homeland – the 100-mile stretch of valley above, which lies between the southern arm of the Yatils and the Vesve Forest to the east. There are many thorps set in beautiful dales along the banks of the river, and the Lord of the High Elves dwells in the region, along with some 10,000 of his kin and numerous Sylvan Elves as well (the latter in the fringes of the Vesve on the east bank). The folk of Highfolk and the valley above are at peace with their neighbors to the north and south. The more restless sometimes take service with mercenary bands of Perrenlander soldiery.</value>
+          <outer-class reference="../../../.."/>
+        </net.rptools.CaseInsensitiveHashMap_-KeyValue>
+      </entry>
+      <entry>
+        <string>ep</string>
+        <net.rptools.CaseInsensitiveHashMap_-KeyValue>
+          <key>ep</key>
+          <value class="string">great lunar</value>
+          <outer-class reference="../../../.."/>
+        </net.rptools.CaseInsensitiveHashMap_-KeyValue>
+      </entry>
+      <entry>
+        <string>ruler</string>
+        <net.rptools.CaseInsensitiveHashMap_-KeyValue>
+          <key>ruler</key>
+          <value class="string">The Worthy Sir, Loftin Graystand, Mayor of Highfolk</value>
+          <outer-class reference="../../../.."/>
+        </net.rptools.CaseInsensitiveHashMap_-KeyValue>
+      </entry>
+      <entry>
+        <string>cp</string>
+        <net.rptools.CaseInsensitiveHashMap_-KeyValue>
+          <key>cp</key>
+          <value class="string">wheat</value>
+          <outer-class reference="../../../.."/>
+        </net.rptools.CaseInsensitiveHashMap_-KeyValue>
+      </entry>
+      <entry>
+        <string>population</string>
+        <net.rptools.CaseInsensitiveHashMap_-KeyValue>
+          <key>population</key>
+          <value class="string">7500</value>
+          <outer-class reference="../../../.."/>
+        </net.rptools.CaseInsensitiveHashMap_-KeyValue>
+      </entry>
+      <entry>
+        <string>government</string>
+        <net.rptools.CaseInsensitiveHashMap_-KeyValue>
+          <key>government</key>
+          <value class="string">Free City with elected Mayor for Life</value>
+          <outer-class reference="../../../.."/>
+        </net.rptools.CaseInsensitiveHashMap_-KeyValue>
+      </entry>
+      <entry>
+        <string>forces</string>
+        <net.rptools.CaseInsensitiveHashMap_-KeyValue>
+          <key>forces</key>
+          <outer-class reference="../../../.."/>
+        </net.rptools.CaseInsensitiveHashMap_-KeyValue>
+      </entry>
+      <entry>
+        <string>fullname</string>
+        <net.rptools.CaseInsensitiveHashMap_-KeyValue>
+          <key>fullName</key>
+          <value class="string">Free Town of Highfolk</value>
+          <outer-class reference="../../../.."/>
+        </net.rptools.CaseInsensitiveHashMap_-KeyValue>
+      </entry>
+      <entry>
+        <string>sp</string>
+        <net.rptools.CaseInsensitiveHashMap_-KeyValue>
+          <key>sp</key>
+          <value class="string">small lunar</value>
+          <outer-class reference="../../../.."/>
+        </net.rptools.CaseInsensitiveHashMap_-KeyValue>
+      </entry>
+      <entry>
+        <string>rulerclass</string>
+        <net.rptools.CaseInsensitiveHashMap_-KeyValue>
+          <key>rulerClass</key>
+          <value class="string">druid, 12</value>
+          <outer-class reference="../../../.."/>
+        </net.rptools.CaseInsensitiveHashMap_-KeyValue>
+      </entry>
+    </store>
+  </propertyMapCI>
+  <macroPropertiesMap/>
+  <speechMap/>
+  <allowURIAccess>false</allowURIAccess>
+</net.rptools.maptool.model.Token>

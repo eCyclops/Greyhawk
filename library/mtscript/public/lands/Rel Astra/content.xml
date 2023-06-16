@@ -1,0 +1,215 @@
+<net.rptools.maptool.model.Token>
+  <id>
+    <baGUID>qt0TtDWTQoisKA4pvdA1Rw==</baGUID>
+  </id>
+  <beingImpersonated>false</beingImpersonated>
+  <exposedAreaGUID>
+    <baGUID>EpeaXp1hTyWiQrjZk/r4lA==</baGUID>
+  </exposedAreaGUID>
+  <imageAssetMap>
+    <entry>
+      <null/>
+      <net.rptools.lib.MD5Key>
+        <id>6e0ffe8675e0e7168c2f079d0369647e</id>
+      </net.rptools.lib.MD5Key>
+    </entry>
+  </imageAssetMap>
+  <x>50</x>
+  <y>1059</y>
+  <z>61</z>
+  <anchorX>0</anchorX>
+  <anchorY>0</anchorY>
+  <sizeScale>1.0</sizeScale>
+  <lastX>0</lastX>
+  <lastY>0</lastY>
+  <snapToScale>true</snapToScale>
+  <width>833</width>
+  <height>833</height>
+  <isoWidth>833</isoWidth>
+  <isoHeight>833</isoHeight>
+  <scaleX>1.0</scaleX>
+  <scaleY>1.0</scaleY>
+  <sizeMap>
+    <entry>
+      <string>net.rptools.maptool.model.SquareGrid</string>
+      <net.rptools.maptool.model.GUID>
+        <baGUID>fwABAdBlFSoGAAAAKgABAA==</baGUID>
+      </net.rptools.maptool.model.GUID>
+    </entry>
+  </sizeMap>
+  <snapToGrid>true</snapToGrid>
+  <isVisible>false</isVisible>
+  <visibleOnlyToOwner>false</visibleOnlyToOwner>
+  <vblColorSensitivity>-1</vblColorSensitivity>
+  <alwaysVisibleTolerance>2</alwaysVisibleTolerance>
+  <isAlwaysVisible>false</isAlwaysVisible>
+  <name>Rel Astra</name>
+  <ownerList/>
+  <ownerType>0</ownerType>
+  <tokenShape>TOP_DOWN</tokenShape>
+  <tokenType>NPC</tokenType>
+  <layer>TOKEN</layer>
+  <propertyType>Land</propertyType>
+  <tokenOpacity>1.0</tokenOpacity>
+  <speechName></speechName>
+  <terrainModifier>0.0</terrainModifier>
+  <terrainModifierOperation>NONE</terrainModifierOperation>
+  <terrainModifiersIgnored>
+    <net.rptools.maptool.model.Token_-TerrainModifierOperation>NONE</net.rptools.maptool.model.Token_-TerrainModifierOperation>
+  </terrainModifiersIgnored>
+  <isFlippedX>false</isFlippedX>
+  <isFlippedY>false</isFlippedY>
+  <isFlippedIso>false</isFlippedIso>
+  <lightSourceList/>
+  <sightType>Normal</sightType>
+  <hasSight>false</hasSight>
+  <hasImageTable>false</hasImageTable>
+  <notes></notes>
+  <notesType>text/plain</notesType>
+  <gmNotes></gmNotes>
+  <gmNotesType>text/plain</gmNotesType>
+  <gmName></gmName>
+  <state/>
+  <propertyMapCI>
+    <store>
+      <entry>
+        <string>pp</string>
+        <net.rptools.CaseInsensitiveHashMap_-KeyValue>
+          <key>pp</key>
+          <value class="string">victory</value>
+          <outer-class reference="../../../.."/>
+        </net.rptools.CaseInsensitiveHashMap_-KeyValue>
+      </entry>
+      <entry>
+        <string>capital</string>
+        <net.rptools.CaseInsensitiveHashMap_-KeyValue>
+          <key>capital</key>
+          <value class="string">Re Astra</value>
+          <outer-class reference="../../../.."/>
+        </net.rptools.CaseInsensitiveHashMap_-KeyValue>
+      </entry>
+      <entry>
+        <string>cappop</string>
+        <net.rptools.CaseInsensitiveHashMap_-KeyValue>
+          <key>capPop</key>
+          <value class="string">63900</value>
+          <outer-class reference="../../../.."/>
+        </net.rptools.CaseInsensitiveHashMap_-KeyValue>
+      </entry>
+      <entry>
+        <string>languages</string>
+        <net.rptools.CaseInsensitiveHashMap_-KeyValue>
+          <key>languages</key>
+          <value class="string">Common, Old Oeridian, Lendorian, Halfling</value>
+          <outer-class reference="../../../.."/>
+        </net.rptools.CaseInsensitiveHashMap_-KeyValue>
+      </entry>
+      <entry>
+        <string>exports</string>
+        <net.rptools.CaseInsensitiveHashMap_-KeyValue>
+          <key>exports</key>
+          <value class="string">shipbuilding supplies, timber, fish</value>
+          <outer-class reference="../../../.."/>
+        </net.rptools.CaseInsensitiveHashMap_-KeyValue>
+      </entry>
+      <entry>
+        <string>gods</string>
+        <net.rptools.CaseInsensitiveHashMap_-KeyValue>
+          <key>gods</key>
+          <value class="string">Wee Jas, Xerbo, Procan, Osprem, Syrul, Erythnul, Kurell, Norebo, Zilchus, Hextor</value>
+          <outer-class reference="../../../.."/>
+        </net.rptools.CaseInsensitiveHashMap_-KeyValue>
+      </entry>
+      <entry>
+        <string>gp</string>
+        <net.rptools.CaseInsensitiveHashMap_-KeyValue>
+          <key>gp</key>
+          <value class="string">newgold</value>
+          <outer-class reference="../../../.."/>
+        </net.rptools.CaseInsensitiveHashMap_-KeyValue>
+      </entry>
+      <entry>
+        <string>description</string>
+        <net.rptools.CaseInsensitiveHashMap_-KeyValue>
+          <key>description</key>
+          <value class="string">The city and constabular fief of Rel Astra extends from the precincts of the city northward to the Lone Heath south of the Mikar, including the town of Ountsy, whose mayor is subject to Rel Astra. This trading and mercantile port city is held in hereditary fief by a rival noble house of the Aerdi who are secretly conspiring against the royal house of Naelex, although they are careful to allow no proof of this to fall into their enemies’ hands. They desperately seek close ties with Medegia and the Sea Barons to balance the weight of the Overking’s kinsmen in North and South Province. It is reported that the Overking views these machinations with ill-concealed delight, for they are seen as check and balance, as the monarch fears his own at least as much as he distrusts others. In any case, the lord of Rel Astra at the same time desires to check the growth of the Censor’s lands and holdings, and secret plots with the freefolk of Grandwood Forest and the Herzog of the South Province are rumored. The Constable Mayor fields a strong force of cavalry and foot, as well as a squadron of warships. His horse units have a nucleus of nobles and knights numbering about 100, and their esquires and sergeants add some 400 medium cavalry; light horse contingents round the number to a full 1,000. There are an equal number of men-at-arms, about half of whom are crossbowmen. Levies and militia numbering 1.000 horse and 6,000 foot can be called up from Rd Astra, Ountsy, and the surrounding lands on short notice. Recently the Rel Astrans have employed mixed human and orcish scouting bands as light troops in the Grandwood and similar groups on the Lone Heath.</value>
+          <outer-class reference="../../../.."/>
+        </net.rptools.CaseInsensitiveHashMap_-KeyValue>
+      </entry>
+      <entry>
+        <string>ruler</string>
+        <net.rptools.CaseInsensitiveHashMap_-KeyValue>
+          <key>ruler</key>
+          <value class="string">His Most Lordly Nobility, Drax, the Constable Mayor of Rel Astra</value>
+          <outer-class reference="../../../.."/>
+        </net.rptools.CaseInsensitiveHashMap_-KeyValue>
+      </entry>
+      <entry>
+        <string>ep</string>
+        <net.rptools.CaseInsensitiveHashMap_-KeyValue>
+          <key>ep</key>
+          <value class="string">halfgold</value>
+          <outer-class reference="../../../.."/>
+        </net.rptools.CaseInsensitiveHashMap_-KeyValue>
+      </entry>
+      <entry>
+        <string>cp</string>
+        <net.rptools.CaseInsensitiveHashMap_-KeyValue>
+          <key>cp</key>
+          <value class="string">common</value>
+          <outer-class reference="../../../.."/>
+        </net.rptools.CaseInsensitiveHashMap_-KeyValue>
+      </entry>
+      <entry>
+        <string>population</string>
+        <net.rptools.CaseInsensitiveHashMap_-KeyValue>
+          <key>population</key>
+          <value class="string">90000</value>
+          <outer-class reference="../../../.."/>
+        </net.rptools.CaseInsensitiveHashMap_-KeyValue>
+      </entry>
+      <entry>
+        <string>government</string>
+        <net.rptools.CaseInsensitiveHashMap_-KeyValue>
+          <key>government</key>
+          <value class="string">Hereditary Feudal Monarchy</value>
+          <outer-class reference="../../../.."/>
+        </net.rptools.CaseInsensitiveHashMap_-KeyValue>
+      </entry>
+      <entry>
+        <string>forces</string>
+        <net.rptools.CaseInsensitiveHashMap_-KeyValue>
+          <key>forces</key>
+          <outer-class reference="../../../.."/>
+        </net.rptools.CaseInsensitiveHashMap_-KeyValue>
+      </entry>
+      <entry>
+        <string>fullname</string>
+        <net.rptools.CaseInsensitiveHashMap_-KeyValue>
+          <key>fullName</key>
+          <value class="string">Free and Independent Aerdi City of Rel Astra</value>
+          <outer-class reference="../../../.."/>
+        </net.rptools.CaseInsensitiveHashMap_-KeyValue>
+      </entry>
+      <entry>
+        <string>sp</string>
+        <net.rptools.CaseInsensitiveHashMap_-KeyValue>
+          <key>sp</key>
+          <value class="string">penny</value>
+          <outer-class reference="../../../.."/>
+        </net.rptools.CaseInsensitiveHashMap_-KeyValue>
+      </entry>
+      <entry>
+        <string>rulerclass</string>
+        <net.rptools.CaseInsensitiveHashMap_-KeyValue>
+          <key>rulerClass</key>
+          <value class="string">assassin+magicuser,6+9</value>
+          <outer-class reference="../../../.."/>
+        </net.rptools.CaseInsensitiveHashMap_-KeyValue>
+      </entry>
+    </store>
+  </propertyMapCI>
+  <macroPropertiesMap/>
+  <speechMap/>
+  <allowURIAccess>false</allowURIAccess>
+</net.rptools.maptool.model.Token>

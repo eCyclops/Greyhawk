@@ -1,0 +1,442 @@
+<net.rptools.maptool.model.Token>
+  <id>
+    <baGUID>dH5zUMfoT7KKTpJ3yEuZ1g==</baGUID>
+  </id>
+  <beingImpersonated>false</beingImpersonated>
+  <exposedAreaGUID>
+    <baGUID>W9qx+rbUTXSqNlnj3bRQ3Q==</baGUID>
+  </exposedAreaGUID>
+  <imageAssetMap>
+    <entry>
+      <null/>
+      <net.rptools.lib.MD5Key>
+        <id>2a3ea95d4071f574973febe2f22d9b89</id>
+      </net.rptools.lib.MD5Key>
+    </entry>
+  </imageAssetMap>
+  <x>-250</x>
+  <y>850</y>
+  <z>12</z>
+  <anchorX>0</anchorX>
+  <anchorY>0</anchorY>
+  <sizeScale>1.0</sizeScale>
+  <lastX>0</lastX>
+  <lastY>0</lastY>
+  <snapToScale>true</snapToScale>
+  <width>833</width>
+  <height>833</height>
+  <isoWidth>100</isoWidth>
+  <isoHeight>120</isoHeight>
+  <scaleX>1.0</scaleX>
+  <scaleY>1.0</scaleY>
+  <sizeMap>
+    <entry>
+      <string>net.rptools.maptool.model.SquareGrid</string>
+      <net.rptools.maptool.model.GUID>
+        <baGUID>fwABAdBlFSoGAAAAKgABAA==</baGUID>
+      </net.rptools.maptool.model.GUID>
+    </entry>
+  </sizeMap>
+  <snapToGrid>true</snapToGrid>
+  <isVisible>false</isVisible>
+  <visibleOnlyToOwner>false</visibleOnlyToOwner>
+  <vblColorSensitivity>-1</vblColorSensitivity>
+  <alwaysVisibleTolerance>2</alwaysVisibleTolerance>
+  <isAlwaysVisible>false</isAlwaysVisible>
+  <name>Bandit Kingdoms</name>
+  <ownerList/>
+  <ownerType>0</ownerType>
+  <tokenShape>CIRCLE</tokenShape>
+  <tokenType>NPC</tokenType>
+  <layer>TOKEN</layer>
+  <propertyType>Land</propertyType>
+  <haloColorValue>-23296</haloColorValue>
+  <tokenOpacity>1.0</tokenOpacity>
+  <speechName></speechName>
+  <terrainModifier>0.0</terrainModifier>
+  <terrainModifierOperation>NONE</terrainModifierOperation>
+  <terrainModifiersIgnored>
+    <net.rptools.maptool.model.Token_-TerrainModifierOperation>NONE</net.rptools.maptool.model.Token_-TerrainModifierOperation>
+  </terrainModifiersIgnored>
+  <isFlippedX>false</isFlippedX>
+  <isFlippedY>false</isFlippedY>
+  <isFlippedIso>false</isFlippedIso>
+  <lightSourceList/>
+  <sightType>Normal</sightType>
+  <hasSight>false</hasSight>
+  <hasImageTable>false</hasImageTable>
+  <notes></notes>
+  <notesType>text/plain</notesType>
+  <gmNotes></gmNotes>
+  <gmNotesType>text/plain</gmNotesType>
+  <gmName>Rookroost</gmName>
+  <state/>
+  <propertyMapCI>
+    <store>
+      <entry>
+        <string>pp</string>
+        <net.rptools.CaseInsensitiveHashMap_-KeyValue>
+          <key>pp</key>
+          <value class="string">various</value>
+          <outer-class reference="../../../.."/>
+        </net.rptools.CaseInsensitiveHashMap_-KeyValue>
+      </entry>
+      <entry>
+        <string>capital</string>
+        <net.rptools.CaseInsensitiveHashMap_-KeyValue>
+          <key>capital</key>
+          <value class="string">Rookroost</value>
+          <outer-class reference="../../../.."/>
+        </net.rptools.CaseInsensitiveHashMap_-KeyValue>
+      </entry>
+      <entry>
+        <string>display details</string>
+        <net.rptools.CaseInsensitiveHashMap_-KeyValue>
+          <key>Display Details</key>
+          <outer-class reference="../../../.."/>
+        </net.rptools.CaseInsensitiveHashMap_-KeyValue>
+      </entry>
+      <entry>
+        <string>strength</string>
+        <net.rptools.CaseInsensitiveHashMap_-KeyValue>
+          <key>Strength</key>
+          <outer-class reference="../../../.."/>
+        </net.rptools.CaseInsensitiveHashMap_-KeyValue>
+      </entry>
+      <entry>
+        <string>hp</string>
+        <net.rptools.CaseInsensitiveHashMap_-KeyValue>
+          <key>HP</key>
+          <outer-class reference="../../../.."/>
+        </net.rptools.CaseInsensitiveHashMap_-KeyValue>
+      </entry>
+      <entry>
+        <string>------------basics-------------</string>
+        <net.rptools.CaseInsensitiveHashMap_-KeyValue>
+          <key>------------Basics-------------</key>
+          <outer-class reference="../../../.."/>
+        </net.rptools.CaseInsensitiveHashMap_-KeyValue>
+      </entry>
+      <entry>
+        <string>ruler</string>
+        <net.rptools.CaseInsensitiveHashMap_-KeyValue>
+          <key>ruler</key>
+          <value class="string">Plar Teuod Fent of Rookroost</value>
+          <outer-class reference="../../../.."/>
+        </net.rptools.CaseInsensitiveHashMap_-KeyValue>
+      </entry>
+      <entry>
+        <string>charisma</string>
+        <net.rptools.CaseInsensitiveHashMap_-KeyValue>
+          <key>Charisma</key>
+          <outer-class reference="../../../.."/>
+        </net.rptools.CaseInsensitiveHashMap_-KeyValue>
+      </entry>
+      <entry>
+        <string>------------saves-----------</string>
+        <net.rptools.CaseInsensitiveHashMap_-KeyValue>
+          <key>------------Saves-----------</key>
+          <outer-class reference="../../../.."/>
+        </net.rptools.CaseInsensitiveHashMap_-KeyValue>
+      </entry>
+      <entry>
+        <string>xpneeded</string>
+        <net.rptools.CaseInsensitiveHashMap_-KeyValue>
+          <key>XPNeeded</key>
+          <outer-class reference="../../../.."/>
+        </net.rptools.CaseInsensitiveHashMap_-KeyValue>
+      </entry>
+      <entry>
+        <string>spell</string>
+        <net.rptools.CaseInsensitiveHashMap_-KeyValue>
+          <key>Spell</key>
+          <outer-class reference="../../../.."/>
+        </net.rptools.CaseInsensitiveHashMap_-KeyValue>
+      </entry>
+      <entry>
+        <string>ac</string>
+        <net.rptools.CaseInsensitiveHashMap_-KeyValue>
+          <key>AC</key>
+          <outer-class reference="../../../.."/>
+        </net.rptools.CaseInsensitiveHashMap_-KeyValue>
+      </entry>
+      <entry>
+        <string>ep</string>
+        <net.rptools.CaseInsensitiveHashMap_-KeyValue>
+          <key>ep</key>
+          <value class="string">various</value>
+          <outer-class reference="../../../.."/>
+        </net.rptools.CaseInsensitiveHashMap_-KeyValue>
+      </entry>
+      <entry>
+        <string>intelligence</string>
+        <net.rptools.CaseInsensitiveHashMap_-KeyValue>
+          <key>Intelligence</key>
+          <outer-class reference="../../../.."/>
+        </net.rptools.CaseInsensitiveHashMap_-KeyValue>
+      </entry>
+      <entry>
+        <string>population</string>
+        <net.rptools.CaseInsensitiveHashMap_-KeyValue>
+          <key>population</key>
+          <value class="string">95000</value>
+          <outer-class reference="../../../.."/>
+        </net.rptools.CaseInsensitiveHashMap_-KeyValue>
+      </entry>
+      <entry>
+        <string>magicresistances</string>
+        <net.rptools.CaseInsensitiveHashMap_-KeyValue>
+          <key>MagicResistances</key>
+          <outer-class reference="../../../.."/>
+        </net.rptools.CaseInsensitiveHashMap_-KeyValue>
+      </entry>
+      <entry>
+        <string>wand</string>
+        <net.rptools.CaseInsensitiveHashMap_-KeyValue>
+          <key>Wand</key>
+          <outer-class reference="../../../.."/>
+        </net.rptools.CaseInsensitiveHashMap_-KeyValue>
+      </entry>
+      <entry>
+        <string>forces</string>
+        <net.rptools.CaseInsensitiveHashMap_-KeyValue>
+          <key>forces</key>
+          <value class="string">cav 250, inf 450</value>
+          <outer-class reference="../../../.."/>
+        </net.rptools.CaseInsensitiveHashMap_-KeyValue>
+      </entry>
+      <entry>
+        <string>rulerclass</string>
+        <net.rptools.CaseInsensitiveHashMap_-KeyValue>
+          <key>rulerClass</key>
+          <value class="string">illusionist, 9</value>
+          <outer-class reference="../../../.."/>
+        </net.rptools.CaseInsensitiveHashMap_-KeyValue>
+      </entry>
+      <entry>
+        <string>maxhp</string>
+        <net.rptools.CaseInsensitiveHashMap_-KeyValue>
+          <key>MaxHP</key>
+          <outer-class reference="../../../.."/>
+        </net.rptools.CaseInsensitiveHashMap_-KeyValue>
+      </entry>
+      <entry>
+        <string>constitution</string>
+        <net.rptools.CaseInsensitiveHashMap_-KeyValue>
+          <key>Constitution</key>
+          <outer-class reference="../../../.."/>
+        </net.rptools.CaseInsensitiveHashMap_-KeyValue>
+      </entry>
+      <entry>
+        <string>deathmagic</string>
+        <net.rptools.CaseInsensitiveHashMap_-KeyValue>
+          <key>DeathMagic</key>
+          <outer-class reference="../../../.."/>
+        </net.rptools.CaseInsensitiveHashMap_-KeyValue>
+      </entry>
+      <entry>
+        <string>------------combat-----------</string>
+        <net.rptools.CaseInsensitiveHashMap_-KeyValue>
+          <key>------------Combat-----------</key>
+          <outer-class reference="../../../.."/>
+        </net.rptools.CaseInsensitiveHashMap_-KeyValue>
+      </entry>
+      <entry>
+        <string>cappop</string>
+        <net.rptools.CaseInsensitiveHashMap_-KeyValue>
+          <key>capPop</key>
+          <value class="string">17310</value>
+          <outer-class reference="../../../.."/>
+        </net.rptools.CaseInsensitiveHashMap_-KeyValue>
+      </entry>
+      <entry>
+        <string>critical</string>
+        <net.rptools.CaseInsensitiveHashMap_-KeyValue>
+          <key>Critical</key>
+          <outer-class reference="../../../.."/>
+        </net.rptools.CaseInsensitiveHashMap_-KeyValue>
+      </entry>
+      <entry>
+        <string>rod</string>
+        <net.rptools.CaseInsensitiveHashMap_-KeyValue>
+          <key>Rod</key>
+          <outer-class reference="../../../.."/>
+        </net.rptools.CaseInsensitiveHashMap_-KeyValue>
+      </entry>
+      <entry>
+        <string>exports</string>
+        <net.rptools.CaseInsensitiveHashMap_-KeyValue>
+          <key>exports</key>
+          <value class="string">silver</value>
+          <outer-class reference="../../../.."/>
+        </net.rptools.CaseInsensitiveHashMap_-KeyValue>
+      </entry>
+      <entry>
+        <string>gods</string>
+        <net.rptools.CaseInsensitiveHashMap_-KeyValue>
+          <key>gods</key>
+          <value class="string">Iuz, Olidammara, Erythnul, Norebo, Hextor, Orcish pantheon, Nerull, Ralishaz, Kurell, Fharlanghn, Pholtus, Trithereon, Rudd, Goblin pantheon</value>
+          <outer-class reference="../../../.."/>
+        </net.rptools.CaseInsensitiveHashMap_-KeyValue>
+      </entry>
+      <entry>
+        <string>description</string>
+        <net.rptools.CaseInsensitiveHashMap_-KeyValue>
+          <key>description</key>
+          <value class="string">The Bandit Kingdoms are a collection of petty holdings which were founded sometime around 300 – 330 CY. This collection of small personal territories stretches from the southern Shield Lands to the Bluff Hills and northern verges of the Fellreev Forest, from the Ritensa River to the Artonsamay River in the east. Each little kingdom is ruled by a robber chieftain claiming a title such as Baron, Boss, Plar, General, Tyrant, Prince, Despot, and even King. The territorial boundaries of the holdings of these kinglets are subject to rapid change due to sudden warfare and defeat or victory. In all, there are 17 states within the confines of the area, ruled by four to six powerful lords, with the rest attempting either to become leading rulers or simply to survive. The relationship persists because no single bandit lord is strong enough to conquer the whole territory, and the combined strength of all is often required to defend against neighboring states’ retributive expeditions. So bandit and brigand band together in self interest, and no kinglet, regardless of ambition, has seriously attempted to rule the whole, for fear that threatened lords would turn to neighboring states in spite even at the risk of destruction by the summoned “ally.” Thus the combined kinglets continue to stand more or less together. The total military strength of all territories is quite considerable due to the fact that each ruler maintains a large force with which to raid and pillage. (There probably are some 10,000 regular troops in total, if recent reconnaissance is to be trusted.)</value>
+          <outer-class reference="../../../.."/>
+        </net.rptools.CaseInsensitiveHashMap_-KeyValue>
+      </entry>
+      <entry>
+        <string>thac0</string>
+        <net.rptools.CaseInsensitiveHashMap_-KeyValue>
+          <key>THAC0</key>
+          <outer-class reference="../../../.."/>
+        </net.rptools.CaseInsensitiveHashMap_-KeyValue>
+      </entry>
+      <entry>
+        <string>wisdom</string>
+        <net.rptools.CaseInsensitiveHashMap_-KeyValue>
+          <key>Wisdom</key>
+          <outer-class reference="../../../.."/>
+        </net.rptools.CaseInsensitiveHashMap_-KeyValue>
+      </entry>
+      <entry>
+        <string>government</string>
+        <net.rptools.CaseInsensitiveHashMap_-KeyValue>
+          <key>government</key>
+          <value class="string">four to six powerful lords in competition</value>
+          <outer-class reference="../../../.."/>
+        </net.rptools.CaseInsensitiveHashMap_-KeyValue>
+      </entry>
+      <entry>
+        <string>sp</string>
+        <net.rptools.CaseInsensitiveHashMap_-KeyValue>
+          <key>sp</key>
+          <value class="string">various</value>
+          <outer-class reference="../../../.."/>
+        </net.rptools.CaseInsensitiveHashMap_-KeyValue>
+      </entry>
+      <entry>
+        <string>polymorph</string>
+        <net.rptools.CaseInsensitiveHashMap_-KeyValue>
+          <key>Polymorph</key>
+          <outer-class reference="../../../.."/>
+        </net.rptools.CaseInsensitiveHashMap_-KeyValue>
+      </entry>
+      <entry>
+        <string>breathweapon</string>
+        <net.rptools.CaseInsensitiveHashMap_-KeyValue>
+          <key>BreathWeapon</key>
+          <outer-class reference="../../../.."/>
+        </net.rptools.CaseInsensitiveHashMap_-KeyValue>
+      </entry>
+      <entry>
+        <string>initiative</string>
+        <net.rptools.CaseInsensitiveHashMap_-KeyValue>
+          <key>Initiative</key>
+          <outer-class reference="../../../.."/>
+        </net.rptools.CaseInsensitiveHashMap_-KeyValue>
+      </entry>
+      <entry>
+        <string>languages</string>
+        <net.rptools.CaseInsensitiveHashMap_-KeyValue>
+          <key>languages</key>
+          <value class="string">Common, Orcish, Halfling</value>
+          <outer-class reference="../../../.."/>
+        </net.rptools.CaseInsensitiveHashMap_-KeyValue>
+      </entry>
+      <entry>
+        <string>poison</string>
+        <net.rptools.CaseInsensitiveHashMap_-KeyValue>
+          <key>Poison</key>
+          <outer-class reference="../../../.."/>
+        </net.rptools.CaseInsensitiveHashMap_-KeyValue>
+      </entry>
+      <entry>
+        <string>paralyzation</string>
+        <net.rptools.CaseInsensitiveHashMap_-KeyValue>
+          <key>Paralyzation</key>
+          <outer-class reference="../../../.."/>
+        </net.rptools.CaseInsensitiveHashMap_-KeyValue>
+      </entry>
+      <entry>
+        <string>gp</string>
+        <net.rptools.CaseInsensitiveHashMap_-KeyValue>
+          <key>gp</key>
+          <value class="string">various</value>
+          <outer-class reference="../../../.."/>
+        </net.rptools.CaseInsensitiveHashMap_-KeyValue>
+      </entry>
+      <entry>
+        <string>staff</string>
+        <net.rptools.CaseInsensitiveHashMap_-KeyValue>
+          <key>Staff</key>
+          <outer-class reference="../../../.."/>
+        </net.rptools.CaseInsensitiveHashMap_-KeyValue>
+      </entry>
+      <entry>
+        <string>displayhp </string>
+        <net.rptools.CaseInsensitiveHashMap_-KeyValue>
+          <key>DisplayHP </key>
+          <outer-class reference="../../../.."/>
+        </net.rptools.CaseInsensitiveHashMap_-KeyValue>
+      </entry>
+      <entry>
+        <string>cp</string>
+        <net.rptools.CaseInsensitiveHashMap_-KeyValue>
+          <key>cp</key>
+          <value class="string">various</value>
+          <outer-class reference="../../../.."/>
+        </net.rptools.CaseInsensitiveHashMap_-KeyValue>
+      </entry>
+      <entry>
+        <string>dexterity</string>
+        <net.rptools.CaseInsensitiveHashMap_-KeyValue>
+          <key>Dexterity</key>
+          <outer-class reference="../../../.."/>
+        </net.rptools.CaseInsensitiveHashMap_-KeyValue>
+      </entry>
+      <entry>
+        <string>xp</string>
+        <net.rptools.CaseInsensitiveHashMap_-KeyValue>
+          <key>XP</key>
+          <outer-class reference="../../../.."/>
+        </net.rptools.CaseInsensitiveHashMap_-KeyValue>
+      </entry>
+      <entry>
+        <string>petrification</string>
+        <net.rptools.CaseInsensitiveHashMap_-KeyValue>
+          <key>Petrification</key>
+          <outer-class reference="../../../.."/>
+        </net.rptools.CaseInsensitiveHashMap_-KeyValue>
+      </entry>
+      <entry>
+        <string>fullname</string>
+        <net.rptools.CaseInsensitiveHashMap_-KeyValue>
+          <key>fullName</key>
+          <value class="string">Free City of Rookroost</value>
+          <outer-class reference="../../../.."/>
+        </net.rptools.CaseInsensitiveHashMap_-KeyValue>
+      </entry>
+      <entry>
+        <string>movement</string>
+        <net.rptools.CaseInsensitiveHashMap_-KeyValue>
+          <key>Movement</key>
+          <outer-class reference="../../../.."/>
+        </net.rptools.CaseInsensitiveHashMap_-KeyValue>
+      </entry>
+      <entry>
+        <string>subdivisions</string>
+        <net.rptools.CaseInsensitiveHashMap_-KeyValue>
+          <key>subdivisions</key>
+          <value class="string">Unified bands of the Warfields, Barony of Wormhall, Mighty Freehold, Abbarra, Earldom of the Tangles, Men of the Rift, Great Lands of Reyhu, Principality of Redhand, Duchy of the Artonsamay, Free City-State of Stoink, Grand Theocracy of Dimre, Kingdom of Johrase, Stronghold of the Midlands, Defenders of the Greenkeep, Free City of Rookroost, Fellands, Grand Clans of Groskopf</value>
+          <outer-class reference="../../../.."/>
+        </net.rptools.CaseInsensitiveHashMap_-KeyValue>
+      </entry>
+    </store>
+  </propertyMapCI>
+  <macroPropertiesMap/>
+  <speechMap/>
+  <allowURIAccess>false</allowURIAccess>
+</net.rptools.maptool.model.Token>

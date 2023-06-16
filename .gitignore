@@ -1,6 +1,42 @@
-
+# RELEASES
+################################################################################
 Releases/Greyhawk Library 2020-11-21.rpmap
 Releases/Greyhawk Library 2020-11-22.rpmap
 Releases/Greyhawk Library 2022-01-28.rpmap
 Releases/Greyhawk Library-2020-04-27.rpmap
 Releases/Greyhawk Library-2020-11-20.rpmap
+# OS generated files
+################################################################################
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+Icon?
+ehthumbs.db
+Thumbs.db
+
+
+# Others
+################################################################################
+*.log
+
+
+
+# IDEs
+################################################################################
+*.iml
+.idea/
+.*.sw[p0-9]
+.sw[p0-9]
+.project
+.settings/
+.classpath
+.history
+workbench.xmi
+.theia
+.nb-*
+
+# Generated
+################################################################################
+*.mtlib

@@ -1,0 +1,185 @@
+<net.rptools.maptool.model.Token>
+  <id>
+    <baGUID>EUbOFf2/TL+2vjf+y9VO6A==</baGUID>
+  </id>
+  <beingImpersonated>true</beingImpersonated>
+  <exposedAreaGUID>
+    <baGUID>+lAk5MUlRoGoHjgL+pAqmA==</baGUID>
+  </exposedAreaGUID>
+  <imageAssetMap>
+    <entry>
+      <null/>
+      <net.rptools.lib.MD5Key>
+        <id>2a90bc6482f752e7c01963d53ef169d1</id>
+      </net.rptools.lib.MD5Key>
+    </entry>
+  </imageAssetMap>
+  <x>600</x>
+  <y>250</y>
+  <z>2</z>
+  <anchorX>0</anchorX>
+  <anchorY>0</anchorY>
+  <sizeScale>1.0</sizeScale>
+  <lastX>0</lastX>
+  <lastY>0</lastY>
+  <snapToScale>true</snapToScale>
+  <width>180</width>
+  <height>108</height>
+  <isoWidth>180</isoWidth>
+  <isoHeight>108</isoHeight>
+  <scaleX>1.0</scaleX>
+  <scaleY>1.0</scaleY>
+  <sizeMap>
+    <entry>
+      <string>net.rptools.maptool.model.SquareGrid</string>
+      <net.rptools.maptool.model.GUID>
+        <baGUID>fwABAdFlFSoIAAAAKgABAQ==</baGUID>
+      </net.rptools.maptool.model.GUID>
+    </entry>
+  </sizeMap>
+  <snapToGrid>true</snapToGrid>
+  <isVisible>true</isVisible>
+  <visibleOnlyToOwner>false</visibleOnlyToOwner>
+  <vblColorSensitivity>-1</vblColorSensitivity>
+  <alwaysVisibleTolerance>2</alwaysVisibleTolerance>
+  <isAlwaysVisible>false</isAlwaysVisible>
+  <name>Lib:Calendar</name>
+  <ownerList/>
+  <ownerType>0</ownerType>
+  <tokenShape>CIRCLE</tokenShape>
+  <tokenType>NPC</tokenType>
+  <layer>TOKEN</layer>
+  <propertyType>Calendar</propertyType>
+  <tokenOpacity>1.0</tokenOpacity>
+  <speechName></speechName>
+  <terrainModifier>0.0</terrainModifier>
+  <terrainModifierOperation>NONE</terrainModifierOperation>
+  <terrainModifiersIgnored>
+    <net.rptools.maptool.model.Token_-TerrainModifierOperation>NONE</net.rptools.maptool.model.Token_-TerrainModifierOperation>
+  </terrainModifiersIgnored>
+  <isFlippedX>false</isFlippedX>
+  <isFlippedY>false</isFlippedY>
+  <isFlippedIso>false</isFlippedIso>
+  <lightSourceList/>
+  <sightType>Normal</sightType>
+  <hasSight>false</hasSight>
+  <hasImageTable>false</hasImageTable>
+  <label>1e/2e</label>
+  <notes></notes>
+  <notesType>text/plain</notesType>
+  <gmNotes></gmNotes>
+  <gmNotesType>text/plain</gmNotesType>
+  <gmName>Greyhawk Calendar</gmName>
+  <state/>
+  <propertyMapCI>
+    <store>
+      <entry>
+        <string>date</string>
+        <net.rptools.CaseInsensitiveHashMap_-KeyValue>
+          <key>date</key>
+          <outer-class reference="../../../.."/>
+        </net.rptools.CaseInsensitiveHashMap_-KeyValue>
+      </entry>
+      <entry>
+        <string>currenthour</string>
+        <net.rptools.CaseInsensitiveHashMap_-KeyValue>
+          <key>currentHour</key>
+          <outer-class reference="../../../.."/>
+        </net.rptools.CaseInsensitiveHashMap_-KeyValue>
+      </entry>
+      <entry>
+        <string>currentfeast</string>
+        <net.rptools.CaseInsensitiveHashMap_-KeyValue>
+          <key>currentFeast</key>
+          <outer-class reference="../../../.."/>
+        </net.rptools.CaseInsensitiveHashMap_-KeyValue>
+      </entry>
+      <entry>
+        <string>months</string>
+        <net.rptools.CaseInsensitiveHashMap_-KeyValue>
+          <key>months</key>
+          <value class="string">name=Fireseek ; baseTemp=32 ; highTemp=d10 ; lowTemp=-d20 ; clearSkies=23 ; partlySkies=50 ; cloudySkies=100 ; precip=46 ; sunrise=441 ; sunset=1021, name=Readying ; baseTemp=34 ; highTemp=d6+4 ; lowTemp=-(d10+4) ; clearSkies=25 ; partlySkies=50 ; cloudySkies=100 ; precip=40 ; sunrise=415 ; sunset=1056, name=Coldeven ; baseTemp=42 ; highTemp=d8+4 ; lowTemp=-(d10+4) ; clearSkies=27 ; partlySkies=54 ; cloudySkies=100 ; precip=44 ; sunrise=372 ; sunset=1089, name=Growfest ; baseTemp=52 ; highTemp=d10+6 ; lowTemp=-(d8+4) ; clearSkies=20 ; partlySkies=55 ; cloudySkies=100 ; precip=42 ; sunrise=324 ; sunset=1119, name=Planting ; baseTemp=52 ; highTemp=d10+6 ; lowTemp=-(d8+4) ; clearSkies=20 ; partlySkies=55 ; cloudySkies=100 ; precip=42 ; sunrise=324 ; sunset=1119, name=Flocktime ; baseTemp=63 ; highTemp=d10+6 ; lowTemp=-(d10+6) ; clearSkies=20 ; partlySkies=53 ; cloudySkies=100 ; precip=42 ; sunrise=285 ; sunset=1150, name=Wealsun ; baseTemp=71 ; highTemp=d8+8 ; lowTemp=-(d6+6) ; clearSkies=20 ; partlySkies=60 ; cloudySkies=100 ; precip=36 ; sunrise=272 ; sunset=1172, name=Richfest ; baseTemp=77 ; highTemp=d6+4 ; lowTemp=-(d6+6) ; clearSkies=22 ; partlySkies=62 ; cloudySkies=100 ; precip=33 ; sunrise=285 ; sunset=1169, name=Reaping ; baseTemp=77 ; highTemp=d6+4 ; lowTemp=-(d6+6) ; clearSkies=22 ; partlySkies=62 ; cloudySkies=100 ; precip=33 ; sunrise=285 ; sunset=1169, name=Goodmonth ; baseTemp=75 ; highTemp=d4+6 ; lowTemp=-(d6+6) ; clearSkies=25 ; partlySkies=60 ; cloudySkies=100 ; precip=33 ; sunrise=313 ; sunset=1137, name=Harvester ; baseTemp=68 ; highTemp=d8+6 ; lowTemp=-(d8+6) ; clearSkies=33 ; partlySkies=54 ; cloudySkies=100 ; precip=33 ; sunrise=342 ; sunset=1090, name=Brewfest ; baseTemp=57 ; highTemp=d10+5 ; lowTemp=-(d10+5) ; clearSkies=35 ; partlySkies=60 ; cloudySkies=100 ; precip=36 ; sunrise=372 ; sunset=1041, name=Patchwall ; baseTemp=57 ; highTemp=d10+5 ; lowTemp=-(d10+5) ; clearSkies=35 ; partlySkies=60 ; cloudySkies=100 ; precip=36 ; sunrise=372 ; sunset=1041, name=Ready&apos;reat ; baseTemp=46 ; highTemp=d10+6 ; lowTemp=-(d10+4) ; clearSkies=20 ; partlySkies=50 ; cloudySkies=100 ; precip=40 ; sunrise=406 ; sunset=1005, name=Sunsebb ; baseTemp=33 ; highTemp=d8+5 ; lowTemp=-d20 ; clearSkies=25 ; partlySkies=50 ; cloudySkies=100 ; precip=43 ; sunrise=439 ; sunset=996, name=Needfest ; baseTemp=32 ; highTemp=d10 ; lowTemp=-d20 ; clearSkies=23 ; partlySkies=50 ; cloudySkies=100 ; precip=46 ; sunrise=441 ; sunset=1021</value>
+          <outer-class reference="../../../.."/>
+        </net.rptools.CaseInsensitiveHashMap_-KeyValue>
+      </entry>
+      <entry>
+        <string>currentweather</string>
+        <net.rptools.CaseInsensitiveHashMap_-KeyValue>
+          <key>currentWeather</key>
+          <value class="string">The sun will rise around 4:45 am, and set around 7:29 pm.&lt;br&gt;The high temperature today will be 85&amp;deg;, with a low of 68&amp;deg;. The skies are partly cloudy, and there is no precipitation today.</value>
+          <outer-class reference="../../../.."/>
+        </net.rptools.CaseInsensitiveHashMap_-KeyValue>
+      </entry>
+      <entry>
+        <string>currentphase1</string>
+        <net.rptools.CaseInsensitiveHashMap_-KeyValue>
+          <key>currentPhase1</key>
+          <outer-class reference="../../../.."/>
+        </net.rptools.CaseInsensitiveHashMap_-KeyValue>
+      </entry>
+      <entry>
+        <string>currentyear</string>
+        <net.rptools.CaseInsensitiveHashMap_-KeyValue>
+          <key>currentYear</key>
+          <value class="string">578</value>
+          <outer-class reference="../../../.."/>
+        </net.rptools.CaseInsensitiveHashMap_-KeyValue>
+      </entry>
+      <entry>
+        <string>currentsegment</string>
+        <net.rptools.CaseInsensitiveHashMap_-KeyValue>
+          <key>currentSegment</key>
+          <value class="string">0</value>
+          <outer-class reference="../../../.."/>
+        </net.rptools.CaseInsensitiveHashMap_-KeyValue>
+      </entry>
+      <entry>
+        <string>currentyeardate</string>
+        <net.rptools.CaseInsensitiveHashMap_-KeyValue>
+          <key>currentYearDate</key>
+          <value class="string">198</value>
+          <outer-class reference="../../../.."/>
+        </net.rptools.CaseInsensitiveHashMap_-KeyValue>
+      </entry>
+      <entry>
+        <string>currentphase2</string>
+        <net.rptools.CaseInsensitiveHashMap_-KeyValue>
+          <key>currentPhase2</key>
+          <outer-class reference="../../../.."/>
+        </net.rptools.CaseInsensitiveHashMap_-KeyValue>
+      </entry>
+      <entry>
+        <string>currentmonth</string>
+        <net.rptools.CaseInsensitiveHashMap_-KeyValue>
+          <key>currentMonth</key>
+          <outer-class reference="../../../.."/>
+        </net.rptools.CaseInsensitiveHashMap_-KeyValue>
+      </entry>
+      <entry>
+        <string>dbversion</string>
+        <net.rptools.CaseInsensitiveHashMap_-KeyValue>
+          <key>dbVersion</key>
+          <outer-class reference="../../../.."/>
+        </net.rptools.CaseInsensitiveHashMap_-KeyValue>
+      </entry>
+      <entry>
+        <string>currentdate</string>
+        <net.rptools.CaseInsensitiveHashMap_-KeyValue>
+          <key>currentDate</key>
+          <outer-class reference="../../../.."/>
+        </net.rptools.CaseInsensitiveHashMap_-KeyValue>
+      </entry>
+      <entry>
+        <string>currentminute</string>
+        <net.rptools.CaseInsensitiveHashMap_-KeyValue>
+          <key>currentMinute</key>
+          <value class="string">450</value>
+          <outer-class reference="../../../.."/>
+        </net.rptools.CaseInsensitiveHashMap_-KeyValue>
+      </entry>
+    </store>
+  </propertyMapCI>
+  <macroPropertiesMap/>
+  <speechMap/>
+  <allowURIAccess>false</allowURIAccess>
+</net.rptools.maptool.model.Token>
