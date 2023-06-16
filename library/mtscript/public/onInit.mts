@@ -1,3 +1,5 @@
+[r: "Beginning to run onInit.mts"]
+
 [h: defineFunction("incrementSegment", "incrementSegment@Lib:Greyhawk:Macros")]
 [h: defineFunction("incrementMinute", "incrementMinute@Lib:Greyhawk:Macros")]
 [h: defineFunction("incrementRound", "incrementRound@Lib:Greyhawk:Macros")]

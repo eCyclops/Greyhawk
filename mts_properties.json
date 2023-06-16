@@ -1,5 +1,11 @@
 {
   "properties": [{
+      "filename": "public/onInit.mts",
+      "autoExecute": true
+    }, {
+      "filename": "public/onFirstInit.mts",
+      "autoExecute": true
+    }, {
     "filename": "public/yearDateFromDate.mts",
     "autoExecute": true
   }, {
