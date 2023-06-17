@@ -1,6 +1,13 @@
 # Greyhawk
 MapTool macro framework for working with Oerth/Flanaess/Greyhawk and AD&amp;D
 
+## Changelog 2023-06-17
+Well, after dancing around the thorn bush for way too long, I figured out how to put Needfest at the beginning of the year. tbh, I didn't test fully whether Sunsebb still works, so please report bugs.
+
+This will likely be the last release as a `.rpmap` file — since development is moving into the **Addon Library** space, I won't have a map to export. However, it wasn't terrible to port my changes to the Addon Library back to this, so if you are running an earlier version of MapTool and can't use an Addon Library, I may have mercy on you. Then again, you can just take the changes from the `.mts` files on this repo and put them on the appropriate macros in MapTool if you want.
+
+So, there you go. New release v0.0.6.
+
 ## Changelog 2023-06-16
 I removed all of the assets, since they were technically "Releases". You can now find them under releases (to the right, on Github, or [https://github.com/eCyclops/Greyhawk/releases](https://github.com/eCyclops/Greyhawk/releases) ).
 
