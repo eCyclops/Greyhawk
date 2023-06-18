@@ -3,7 +3,7 @@
 [r: "Setting date to beginning."]
 [e: setLibProperty("currentMinute", 1)]
 [e: setLibProperty("currentSegment", 1)]
-[e: setLibProperty("currentWeather", "")]
+[e: setLibProperty("currentWeather", "please reroll the weather")]
 [e: setLibProperty("currentYear", 576)]
 [e: setLibProperty("currentYearDate", 1)]
 
