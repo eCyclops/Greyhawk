@@ -21,6 +21,8 @@
 
 [h: thisMonth = qMonth + (4 * (thisQuarter-1))]
 
+[r: "This month is "+thisMonth+"<br><br>"]
+
 [h: months = getLibProperty("months")]
 
 [e: monthStuff = listGet(months, thisMonth-1)]
