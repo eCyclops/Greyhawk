@@ -23,7 +23,10 @@
 
 [h: months = getLibProperty("months")]
 
-[h: monthStuff = listGet(months, thisMonth-1)]
+[e: monthStuff = listGet(months, thisMonth-1)]
+
+<hr>
+
 [e: month = getStrProp(monthStuff, "name")]
 
 [h: returnDate = strPropFromVars("weekDay, theDate, month")]
