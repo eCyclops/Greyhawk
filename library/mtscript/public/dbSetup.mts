@@ -1,4 +1,4 @@
-[r: "Beginning to run dbSetup.mts"]
+[r: "<pre>Beginning to run dbSetup.mts"]
 
 [r: "Setting date to beginning."]
 [e: setLibProperty("currentMinute", 1)]
@@ -14,4 +14,4 @@
 )]
 [e: setLibProperty("weekDays", "Freeday, Starday, Sunday, Moonday, Godsday, Waterday, Earthday")]
 
-[r: "Finished running dbSetup.mts"]
+[r: "Finished running dbSetup.mts</pre>"]
