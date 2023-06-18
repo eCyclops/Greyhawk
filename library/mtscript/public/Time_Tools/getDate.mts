@@ -5,16 +5,14 @@
 
 [h: yearDate = number(yearDate)]
 
-[e: thisQuarter = ceiling(yearDate/91)]
-[e: qDay = yearDate - (91*(thisQuarter-1))]
-[e: qMonth = ceiling((qDay-35)/28)+1]
+[h: thisQuarter = ceiling(yearDate/91)]
+[h: qDay = yearDate - (91*(thisQuarter-1))]
+[h: qMonth = ceiling((qDay-35)/28)+1]
 
-[e, if(qMonth > 1):
+[h, if(qMonth > 1):
     theDate = (qDay - 7) - (28*(qMonth-2));
     theDate = qDay
 ]
-
-[h: theDate = qDay - (28 * (qMonth -1))]
 
 [h: weekDay = math.mod(yearDate, 7)]
 [h: weekDay = listGet(weekDaysList, weekDay)]
