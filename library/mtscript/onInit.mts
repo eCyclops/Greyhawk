@@ -7,16 +7,16 @@
 [h: defineFunction("incrementYearDate", "Time_Tools/incrementYearDate@lib:com.ecyclops.greyhawk")]
 [h: defineFunction("incrementYear", "Time_Tools/incrementYear@lib:com.ecyclops.greyhawk")]
 
-[h: defineFunction("moons", "moons@lib:com.ecyclops.greyhawk")]
+[h: defineFunction("moons", "Time_Tools/moons@lib:com.ecyclops.greyhawk")]
 
-[h: defineFunction("weather", "weather@lib:com.ecyclops.greyhawk")]
+[h: defineFunction("weather", "weather/weather@lib:com.ecyclops.greyhawk")]
 
 [h: defineFunction("getDate", "Time_Tools/getDate@lib:com.ecyclops.greyhawk")]
 [h: defineFunction("getTime", "Time_Tools/getTime@lib:com.ecyclops.greyhawk")]
 [h: defineFunction("getYear", "Time_Tools/getYear@lib:com.ecyclops.greyhawk")]
 [h: defineFunction("getYearDate", "Time_Tools/getYearDate@lib:com.ecyclops.greyhawk")]
 [h: defineFunction("stardate", "Time_Tools/yearDateFromDate@lib:com.ecyclops.greyhawk")]
-[h: defineFunction("today", "today@lib:com.ecyclops.greyhawk")]
+[h: defineFunction("today", "Time_Tools/today@lib:com.ecyclops.greyhawk")]
 
 [h: defineFunction("timeandtemp", "Time_Tools/Time_and_Temperature@lib:com.ecyclops.greyhawk")]
 
