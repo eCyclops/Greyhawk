@@ -21,22 +21,10 @@
 
 [h: thisMonth = qMonth + (4 * (thisQuarter-1))]
 
-[r: "<br><br>This month is "+thisMonth+"<br><br>"]
+[h: months = getLibProperty("months", "lib:com.ecyclops.greyhawk")]
 
-<hr>
-The Months are<br><br>
-
-[r: months = getLibProperty("months", "lib:com.ecyclops.greyhawk")]
-
-<hr>
-This month is 
-[r: monthStuff = listGet(months, thisMonth)]
-
-<hr>
-
-The name of the month should be 
-[r: month = getStrProp(monthStuff, "name")]
-<hr>
-[r: returnDate = strPropFromVars("weekDay, theDate, month")]
+[h: monthStuff = listGet(months, thisMonth)]
+[h: month = getStrProp(monthStuff, "name")]
+[h: returnDate = strPropFromVars("weekDay, theDate, month")]
 
 [h: macro.return = returnDate]
