@@ -1,7 +1,7 @@
 [h: yearDate = arg(0)]
 
-[h, if(argCount()==0): yearDate=data.getData("addon:", "com.ecyclops.Greyhawk", "currentYearDate")]
-[h, weekDaysList = data.getData("addon:", "com.ecyclops.Greyhawk", "weekDays")]
+[h, if(argCount()==0): yearDate=data.getData("addon:", "com.ecyclops.greyhawk", "currentYearDate")]
+[h, weekDaysList = data.getData("addon:", "com.ecyclops.greyhawk", "weekDays")]
 
 [h: yearDate = number(yearDate)]
 
@@ -21,7 +21,7 @@
 
 [h: thisMonth = qMonth + (4 * (thisQuarter-1))]
 
-[h: months = data.getData("addon:", "com.ecyclops.Greyhawk", "months")]
+[h: months = data.getData("addon:", "com.ecyclops.greyhawk", "months")]
 
 [h: monthStuff = listGet(months, thisMonth-1)]
 [h: month = getStrProp(monthStuff, "name")]

@@ -1,6 +1,6 @@
 [h: assert(isGM(),"This is a DM command.",0)]
 [h: timeAdvance=arg(0)]
-[h: currentMinute = data.getData("addon:", "com.ecyclops.Greyhawk", "currentMinute")]
+[h: currentMinute = data.getData("addon:", "com.ecyclops.greyhawk", "currentMinute")]
 
 [h, if(listCount(timeAdvance) == 0): timeAdvance = 0]
 

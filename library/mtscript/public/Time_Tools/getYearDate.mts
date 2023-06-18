@@ -1,1 +1,1 @@
-[r:data.getData("addon:", "com.ecyclops.Greyhawk", "currentYearDate")]
+[r:data.getData("addon:", "com.ecyclops.greyhawk", "currentYearDate")]

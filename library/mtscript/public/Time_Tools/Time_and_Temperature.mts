@@ -1,13 +1,13 @@
 [h: yearDate = macro.args]
-[h, if(argCount() == 0): yearDate = data.getData("addon:", "com.ecyclops.Greyhawk", "currentYearDate")]
+[h, if(argCount() == 0): yearDate = data.getData("addon:", "com.ecyclops.greyhawk", "currentYearDate")]
 
-[h: year = data.getData("addon:", "com.ecyclops.Greyhawk", "currentYear")]
+[h: year = data.getData("addon:", "com.ecyclops.greyhawk", "currentYear")]
 [h: todaysDate = getDate(yearDate)]
 
 [h: varsFromStrProp(todaysDate)]
 	[h: 'weekDay, theDate, month']
 
-[h: time = data.getData("addon:", "com.ecyclops.Greyhawk", "currentMinute")]
+[h: time = data.getData("addon:", "com.ecyclops.greyhawk", "currentMinute")]
 
 [h: varsFromStrProp(getTime())]
 
@@ -30,7 +30,7 @@
 	<html>
 		<head>
 			<title>[r: titleTxt]</title>
-			<link rel="stylesheet" type="text/css" href="Greyhawk_CSS@com.ecyclops.Greyhawk">
+			<link rel="stylesheet" type="text/css" href="Greyhawk_CSS@com.ecyclops.greyhawk">
 		</head>
 		<body>
 			<h2 style="text-align: center">
@@ -42,10 +42,10 @@
 				<td style="text-align: center">[r:celenePhase]</td></tr>
 				<tr><td style="text-align: center"><img src='[r:lunaPhasePic]' width=70></td>
 				<td style="text-align: center"><img src='[r:celenePhasePic]' width=50></td></tr>
-				<tr><td colspan=2 style="text-align: center">[r:data.getData("addon:", "com.ecyclops.Greyhawk", "currentWeather")]</td></tr>
+				<tr><td colspan=2 style="text-align: center">[r:data.getData("addon:", "com.ecyclops.greyhawk", "currentWeather")]</td></tr>
 				<tr><td colspan=2 style="text-align: center">[r: birthdays()]
 			</table>
-			[r:macroLink("Refresh", "Time_and_Temperature@com.ecyclops.Greyhawk")]
+			[r:macroLink("Refresh", "Time_and_Temperature@com.ecyclops.greyhawk")]
 		</body>
 	</html>
 }]

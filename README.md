@@ -2,7 +2,7 @@
 MapTool macro framework for working with Oerth/Flanaess/Greyhawk and AD&amp;D
 
 ## Changelog 2023-06-16
-I removed all of the assets, since they were technically "Releases". You can now find them under releases (to the right, on Github, or [https://github.com/eCyclops/Greyhawk/releases](https://github.com/eCyclops/Greyhawk/releases) ).
+I removed all of the assets, since they were technically "Releases". You can now find them under releases (to the right, on Github, or [https://github.com.ecyclops.greyhawk/releases](https://github.com.ecyclops.greyhawk/releases) ).
 
 The next release will be from a new reworking of the Library. It will be an **Addon Library** as supported by MapTool 1.11 and later. As such, it will have version-controlled individual script files, etc. In short, what I've been dreaming of. This is a large undertaking, but my [Facing](https://github.com/eCyclops/Facing) library worked, so I'm encouraged that it can be done.
 

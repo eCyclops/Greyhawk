@@ -14,7 +14,7 @@
 [h, if(myGender == "m"): pronoun = "his"; pronoun = "her"]
 [h: varsFromStrProp(getDate(myBirthday))]
 
-[h: thisDay = data.getData("addon:", "com.ecyclops.Greyhawk", "currentYearDate")]
+[h: thisDay = data.getData("addon:", "com.ecyclops.greyhawk", "currentYearDate")]
 
 [h: myAge = getYear() - myBirthYear]
 [h, if(myBirthday < thisDay): myAge = myAge +1]
