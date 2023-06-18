@@ -1,7 +1,7 @@
 [h: yearDate = arg(0)]
 
-[h, if(argCount()==0): yearDate=getLibProperty("currentYearDate")]
-[h, weekDaysList = getLibProperty("weekDays")]
+[h, if(argCount()==0): yearDate=getLibProperty("lib:com.ecyclops.greyhawk","currentYearDate")]
+[h, weekDaysList = getLibProperty("lib:com.ecyclops.greyhawk","weekDays")]
 
 [h: yearDate = number(yearDate)]
 
