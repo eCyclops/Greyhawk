@@ -21,7 +21,7 @@
 
 [h: thisMonth = qMonth + (4 * (thisQuarter-1))]
 
-[r: "This month is "+thisMonth+"<br><br>"]
+[e: "<br><br>This month is "+thisMonth+"<br><br>"]
 
 [h: months = getLibProperty("months")]
 
