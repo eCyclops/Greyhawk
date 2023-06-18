@@ -5,11 +5,11 @@
 
 [h: yearDate = number(yearDate)]
 
-[h: thisQuarter = ceiling(yearDate/91)]
-[h: qDay = yearDate - (91*(thisQuarter-1))]
-[h: qMonth = ceiling((qDay-35)/28)+1]
+[r: thisQuarter = ceiling(yearDate/91)]
+[r: qDay = yearDate - (91*(thisQuarter-1))]
+[r: qMonth = ceiling((qDay-35)/28)+1]
 
-[h, if(qMonth > 1):
+[e, if(qMonth > 1):
     theDate = (qDay - 7) - (28*(qMonth-2));
     theDate = qDay
 ]
@@ -28,3 +28,4 @@
 [h: returnDate = strPropFromVars("weekDay, theDate, month")]
 
 [h: macro.return = returnDate]
+
