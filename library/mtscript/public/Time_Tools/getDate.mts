@@ -21,7 +21,7 @@
 
 [h: thisMonth = qMonth + (4 * (thisQuarter-1))]
 
-[h: months = getLibProperty("months")]
+[e: months = getLibProperty("months")]
 
 [h: monthStuff = listGet(months, thisMonth-1)]
 [h: month = getStrProp(monthStuff, "name")]
