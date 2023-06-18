@@ -23,7 +23,7 @@
 
 [e: "<br><br>This month is "+thisMonth+"<br><br>"]
 
-[h: months = getLibProperty("months")]
+[h: months = getLibProperty("months", "lib:com.ecyclops.greyhawk")]
 
 [e: monthStuff = listGet(months, thisMonth-1)]
 
