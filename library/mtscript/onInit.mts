@@ -28,4 +28,6 @@
 
 [h: defineFunction("calendar", "Time_Tools/showCalendar@lib:com.ecyclops.greyhawk")]
 
+[h: defineFunction("dbSetup", "dbSetup@lib:com.ecyclops.greyhawk")]
+
 [r: broadcast("Greyhawk campaign macros initialized")]
