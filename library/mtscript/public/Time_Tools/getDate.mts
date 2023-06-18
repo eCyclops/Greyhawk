@@ -30,7 +30,7 @@ The Months are<br><br>
 
 <hr>
 This month is 
-[r: monthStuff = listGet(months, thisMonth-1)]
+[r: monthStuff = listGet(months, thisMonth)]
 
 <hr>
 
