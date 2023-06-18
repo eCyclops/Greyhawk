@@ -1,6 +1,7 @@
 [h: yearDate = arg(0)]
 
 [h, if(argCount()==0): yearDate=data.getData("addon:", "com.ecyclops.Greyhawk", "currentYearDate")]
+[h, weekDaysList = data.getData("addon:", "com.ecyclops.Greyhawk", "weekDays")]
 
 [h: yearDate = number(yearDate)]
 
@@ -16,7 +17,7 @@
 [h: theDate = qDay - (28 * (qMonth -1))]
 
 [h: weekDay = math.mod(yearDate, 7)]
-[h: weekDay = listGet("Freeday, Starday, Sunday, Moonday, Godsday, Waterday, Earthday", weekDay)]
+[h: weekDay = listGet(weekDaysList, weekDay)]
 
 [h: thisMonth = qMonth + (4 * (thisQuarter-1))]
 
