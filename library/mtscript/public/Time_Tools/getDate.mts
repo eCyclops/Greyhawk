@@ -22,9 +22,9 @@
 [h: thisMonth = qMonth + (4 * (thisQuarter-1))]
 
 [r: "<br><br>This month is "+thisMonth+"<br><br>"]
-
+<hr>
 [h: months = getLibProperty("months", "lib:com.ecyclops.greyhawk")]
-
+<hr>
 [r: monthStuff = listGet(months, thisMonth-1)]
 
 <hr>
