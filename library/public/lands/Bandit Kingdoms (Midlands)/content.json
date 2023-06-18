@@ -1,0 +1,258 @@
+{
+  "net.rptools.maptool.model.Token": {
+    "id": {
+      "baGUID": "x7trpQzgSWqOeKdhZZ35/A=="
+    },
+    "beingImpersonated": "false",
+    "exposedAreaGUID": {
+      "baGUID": "Az380juyTyiPFTBmMbBnAg=="
+    },
+    "imageAssetMap": {
+      "entry": {
+        "null": null,
+        "net.rptools.lib.MD5Key": {
+          "id": "1e237ca2c79b3c4bf52ee5309c84755a"
+        }
+      }
+    },
+    "x": "-550",
+    "y": "1150",
+    "z": "29",
+    "anchorX": "0",
+    "anchorY": "0",
+    "sizeScale": "1.0",
+    "lastX": "0",
+    "lastY": "0",
+    "snapToScale": "true",
+    "width": "833",
+    "height": "833",
+    "isoWidth": "833",
+    "isoHeight": "833",
+    "scaleX": "1.0",
+    "scaleY": "1.0",
+    "sizeMap": {
+      "entry": {
+        "string": "net.rptools.maptool.model.SquareGrid",
+        "net.rptools.maptool.model.GUID": {
+          "baGUID": "fwABAdBlFSoGAAAAKgABAA=="
+        }
+      }
+    },
+    "snapToGrid": "true",
+    "isVisible": "false",
+    "visibleOnlyToOwner": "false",
+    "vblColorSensitivity": "-1",
+    "alwaysVisibleTolerance": "2",
+    "isAlwaysVisible": "false",
+    "name": "Bandit Kingdoms (Midlands)",
+    "ownerList": null,
+    "ownerType": "0",
+    "tokenShape": "TOP_DOWN",
+    "tokenType": "NPC",
+    "layer": "TOKEN",
+    "propertyType": "Land",
+    "haloColorValue": "-23296",
+    "tokenOpacity": "1.0",
+    "speechName": null,
+    "terrainModifier": "0.0",
+    "terrainModifierOperation": "NONE",
+    "terrainModifiersIgnored": {
+      "net.rptools.maptool.model.Token_-TerrainModifierOperation": "NONE"
+    },
+    "isFlippedX": "false",
+    "isFlippedY": "false",
+    "isFlippedIso": "false",
+    "lightSourceList": null,
+    "sightType": "Normal",
+    "hasSight": "false",
+    "hasImageTable": "false",
+    "notes": null,
+    "notesType": "text/plain",
+    "gmNotes": null,
+    "gmNotesType": "text/plain",
+    "gmName": null,
+    "state": null,
+    "propertyMapCI": {
+      "store": {
+        "entry": [
+          {
+            "string": "pp",
+            "net.rptools.CaseInsensitiveHashMap_-KeyValue": {
+              "key": "pp",
+              "outer-class": {
+                "@reference": "../../../.."
+              }
+            }
+          },
+          {
+            "string": "capital",
+            "net.rptools.CaseInsensitiveHashMap_-KeyValue": {
+              "key": "capital",
+              "value": {
+                "@class": "string",
+                "#text": "Wheatfield"
+              },
+              "outer-class": {
+                "@reference": "../../../.."
+              }
+            }
+          },
+          {
+            "string": "languages",
+            "net.rptools.CaseInsensitiveHashMap_-KeyValue": {
+              "key": "languages",
+              "outer-class": {
+                "@reference": "../../../.."
+              }
+            }
+          },
+          {
+            "string": "cappop",
+            "net.rptools.CaseInsensitiveHashMap_-KeyValue": {
+              "key": "capPop",
+              "outer-class": {
+                "@reference": "../../../.."
+              }
+            }
+          },
+          {
+            "string": "exports",
+            "net.rptools.CaseInsensitiveHashMap_-KeyValue": {
+              "key": "exports",
+              "outer-class": {
+                "@reference": "../../../.."
+              }
+            }
+          },
+          {
+            "string": "gods",
+            "net.rptools.CaseInsensitiveHashMap_-KeyValue": {
+              "key": "gods",
+              "value": {
+                "@class": "string",
+                "#text": "Hextor"
+              },
+              "outer-class": {
+                "@reference": "../../../.."
+              }
+            }
+          },
+          {
+            "string": "description",
+            "net.rptools.CaseInsensitiveHashMap_-KeyValue": {
+              "key": "description",
+              "outer-class": {
+                "@reference": "../../../.."
+              }
+            }
+          },
+          {
+            "string": "gp",
+            "net.rptools.CaseInsensitiveHashMap_-KeyValue": {
+              "key": "gp",
+              "outer-class": {
+                "@reference": "../../../.."
+              }
+            }
+          },
+          {
+            "string": "ep",
+            "net.rptools.CaseInsensitiveHashMap_-KeyValue": {
+              "key": "ep",
+              "outer-class": {
+                "@reference": "../../../.."
+              }
+            }
+          },
+          {
+            "string": "ruler",
+            "net.rptools.CaseInsensitiveHashMap_-KeyValue": {
+              "key": "ruler",
+              "value": {
+                "@class": "string",
+                "#text": "Graf Venholtee"
+              },
+              "outer-class": {
+                "@reference": "../../../.."
+              }
+            }
+          },
+          {
+            "string": "cp",
+            "net.rptools.CaseInsensitiveHashMap_-KeyValue": {
+              "key": "cp",
+              "outer-class": {
+                "@reference": "../../../.."
+              }
+            }
+          },
+          {
+            "string": "population",
+            "net.rptools.CaseInsensitiveHashMap_-KeyValue": {
+              "key": "population",
+              "outer-class": {
+                "@reference": "../../../.."
+              }
+            }
+          },
+          {
+            "string": "government",
+            "net.rptools.CaseInsensitiveHashMap_-KeyValue": {
+              "key": "government",
+              "outer-class": {
+                "@reference": "../../../.."
+              }
+            }
+          },
+          {
+            "string": "forces",
+            "net.rptools.CaseInsensitiveHashMap_-KeyValue": {
+              "key": "forces",
+              "outer-class": {
+                "@reference": "../../../.."
+              }
+            }
+          },
+          {
+            "string": "fullname",
+            "net.rptools.CaseInsensitiveHashMap_-KeyValue": {
+              "key": "fullName",
+              "value": {
+                "@class": "string",
+                "#text": "The Midlands"
+              },
+              "outer-class": {
+                "@reference": "../../../.."
+              }
+            }
+          },
+          {
+            "string": "sp",
+            "net.rptools.CaseInsensitiveHashMap_-KeyValue": {
+              "key": "sp",
+              "outer-class": {
+                "@reference": "../../../.."
+              }
+            }
+          },
+          {
+            "string": "rulerclass",
+            "net.rptools.CaseInsensitiveHashMap_-KeyValue": {
+              "key": "rulerClass",
+              "value": {
+                "@class": "string",
+                "#text": "cleric+fighter, 3+7"
+              },
+              "outer-class": {
+                "@reference": "../../../.."
+              }
+            }
+          }
+        ]
+      }
+    },
+    "macroPropertiesMap": null,
+    "speechMap": null,
+    "allowURIAccess": "false"
+  }
+}

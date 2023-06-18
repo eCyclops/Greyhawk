@@ -1,0 +1,589 @@
+{
+  "net.rptools.maptool.model.Token": {
+    "id": {
+      "baGUID": "VNnb0vqKSfKzoVvcMKubNA=="
+    },
+    "beingImpersonated": "false",
+    "exposedAreaGUID": {
+      "baGUID": "Ui7eO5YjT4OkPZBM6rQ4iw=="
+    },
+    "imageAssetMap": {
+      "entry": {
+        "null": null,
+        "net.rptools.lib.MD5Key": {
+          "id": "110abe2abe65191b0946883622e87959"
+        }
+      }
+    },
+    "x": "-150",
+    "y": "850",
+    "z": "11",
+    "anchorX": "0",
+    "anchorY": "0",
+    "sizeScale": "1.0",
+    "lastX": "0",
+    "lastY": "0",
+    "snapToScale": "true",
+    "width": "833",
+    "height": "833",
+    "isoWidth": "833",
+    "isoHeight": "833",
+    "scaleX": "1.0",
+    "scaleY": "1.0",
+    "sizeMap": {
+      "entry": {
+        "string": "net.rptools.maptool.model.SquareGrid",
+        "net.rptools.maptool.model.GUID": {
+          "baGUID": "fwABAdBlFSoGAAAAKgABAA=="
+        }
+      }
+    },
+    "snapToGrid": "true",
+    "isVisible": "false",
+    "visibleOnlyToOwner": "false",
+    "vblColorSensitivity": "-1",
+    "alwaysVisibleTolerance": "2",
+    "isAlwaysVisible": "false",
+    "name": "Bissel",
+    "ownerList": null,
+    "ownerType": "0",
+    "tokenShape": "CIRCLE",
+    "tokenType": "NPC",
+    "layer": "TOKEN",
+    "propertyType": "Land",
+    "tokenOpacity": "1.0",
+    "speechName": null,
+    "terrainModifier": "0.0",
+    "terrainModifierOperation": "NONE",
+    "terrainModifiersIgnored": {
+      "net.rptools.maptool.model.Token_-TerrainModifierOperation": "NONE"
+    },
+    "isFlippedX": "false",
+    "isFlippedY": "false",
+    "isFlippedIso": "false",
+    "lightSourceList": null,
+    "sightType": "Normal",
+    "hasSight": "false",
+    "hasImageTable": "false",
+    "notes": null,
+    "notesType": "text/plain",
+    "gmNotes": null,
+    "gmNotesType": "text/plain",
+    "gmName": null,
+    "state": null,
+    "propertyMapCI": {
+      "store": {
+        "entry": [
+          {
+            "string": "pp",
+            "net.rptools.CaseInsensitiveHashMap_-KeyValue": {
+              "key": "pp",
+              "value": {
+                "@class": "string",
+                "#text": "griffon"
+              },
+              "outer-class": {
+                "@reference": "../../../.."
+              }
+            }
+          },
+          {
+            "string": "capital",
+            "net.rptools.CaseInsensitiveHashMap_-KeyValue": {
+              "key": "capital",
+              "value": {
+                "@class": "string",
+                "#text": "Thornward"
+              },
+              "outer-class": {
+                "@reference": "../../../.."
+              }
+            }
+          },
+          {
+            "string": "display details",
+            "net.rptools.CaseInsensitiveHashMap_-KeyValue": {
+              "key": "Display Details",
+              "outer-class": {
+                "@reference": "../../../.."
+              }
+            }
+          },
+          {
+            "string": "strength",
+            "net.rptools.CaseInsensitiveHashMap_-KeyValue": {
+              "key": "Strength",
+              "outer-class": {
+                "@reference": "../../../.."
+              }
+            }
+          },
+          {
+            "string": "hp",
+            "net.rptools.CaseInsensitiveHashMap_-KeyValue": {
+              "key": "HP",
+              "outer-class": {
+                "@reference": "../../../.."
+              }
+            }
+          },
+          {
+            "string": "------------basics-------------",
+            "net.rptools.CaseInsensitiveHashMap_-KeyValue": {
+              "key": "------------Basics-------------",
+              "outer-class": {
+                "@reference": "../../../.."
+              }
+            }
+          },
+          {
+            "string": "ruler",
+            "net.rptools.CaseInsensitiveHashMap_-KeyValue": {
+              "key": "ruler",
+              "value": {
+                "@class": "string",
+                "#text": "Margrave Walgar"
+              },
+              "outer-class": {
+                "@reference": "../../../.."
+              }
+            }
+          },
+          {
+            "string": "charisma",
+            "net.rptools.CaseInsensitiveHashMap_-KeyValue": {
+              "key": "Charisma",
+              "outer-class": {
+                "@reference": "../../../.."
+              }
+            }
+          },
+          {
+            "string": "------------saves-----------",
+            "net.rptools.CaseInsensitiveHashMap_-KeyValue": {
+              "key": "------------Saves-----------",
+              "outer-class": {
+                "@reference": "../../../.."
+              }
+            }
+          },
+          {
+            "string": "xpneeded",
+            "net.rptools.CaseInsensitiveHashMap_-KeyValue": {
+              "key": "XPNeeded",
+              "outer-class": {
+                "@reference": "../../../.."
+              }
+            }
+          },
+          {
+            "string": "spell",
+            "net.rptools.CaseInsensitiveHashMap_-KeyValue": {
+              "key": "Spell",
+              "outer-class": {
+                "@reference": "../../../.."
+              }
+            }
+          },
+          {
+            "string": "ac",
+            "net.rptools.CaseInsensitiveHashMap_-KeyValue": {
+              "key": "AC",
+              "outer-class": {
+                "@reference": "../../../.."
+              }
+            }
+          },
+          {
+            "string": "ep",
+            "net.rptools.CaseInsensitiveHashMap_-KeyValue": {
+              "key": "ep",
+              "value": {
+                "@class": "string",
+                "#text": "eagle"
+              },
+              "outer-class": {
+                "@reference": "../../../.."
+              }
+            }
+          },
+          {
+            "string": "intelligence",
+            "net.rptools.CaseInsensitiveHashMap_-KeyValue": {
+              "key": "Intelligence",
+              "outer-class": {
+                "@reference": "../../../.."
+              }
+            }
+          },
+          {
+            "string": "population",
+            "net.rptools.CaseInsensitiveHashMap_-KeyValue": {
+              "key": "population",
+              "value": {
+                "@class": "string",
+                "#text": "50000"
+              },
+              "outer-class": {
+                "@reference": "../../../.."
+              }
+            }
+          },
+          {
+            "string": "magicresistances",
+            "net.rptools.CaseInsensitiveHashMap_-KeyValue": {
+              "key": "MagicResistances",
+              "outer-class": {
+                "@reference": "../../../.."
+              }
+            }
+          },
+          {
+            "string": "wand",
+            "net.rptools.CaseInsensitiveHashMap_-KeyValue": {
+              "key": "Wand",
+              "outer-class": {
+                "@reference": "../../../.."
+              }
+            }
+          },
+          {
+            "string": "forces",
+            "net.rptools.CaseInsensitiveHashMap_-KeyValue": {
+              "key": "forces",
+              "outer-class": {
+                "@reference": "../../../.."
+              }
+            }
+          },
+          {
+            "string": "rulerclass",
+            "net.rptools.CaseInsensitiveHashMap_-KeyValue": {
+              "key": "rulerClass",
+              "outer-class": {
+                "@reference": "../../../.."
+              }
+            }
+          },
+          {
+            "string": "maxhp",
+            "net.rptools.CaseInsensitiveHashMap_-KeyValue": {
+              "key": "MaxHP",
+              "outer-class": {
+                "@reference": "../../../.."
+              }
+            }
+          },
+          {
+            "string": "constitution",
+            "net.rptools.CaseInsensitiveHashMap_-KeyValue": {
+              "key": "Constitution",
+              "outer-class": {
+                "@reference": "../../../.."
+              }
+            }
+          },
+          {
+            "string": "deathmagic",
+            "net.rptools.CaseInsensitiveHashMap_-KeyValue": {
+              "key": "DeathMagic",
+              "outer-class": {
+                "@reference": "../../../.."
+              }
+            }
+          },
+          {
+            "string": "------------combat-----------",
+            "net.rptools.CaseInsensitiveHashMap_-KeyValue": {
+              "key": "------------Combat-----------",
+              "outer-class": {
+                "@reference": "../../../.."
+              }
+            }
+          },
+          {
+            "string": "critical",
+            "net.rptools.CaseInsensitiveHashMap_-KeyValue": {
+              "key": "Critical",
+              "outer-class": {
+                "@reference": "../../../.."
+              }
+            }
+          },
+          {
+            "string": "cappop",
+            "net.rptools.CaseInsensitiveHashMap_-KeyValue": {
+              "key": "capPop",
+              "value": {
+                "@class": "string",
+                "#text": "3430"
+              },
+              "outer-class": {
+                "@reference": "../../../.."
+              }
+            }
+          },
+          {
+            "string": "rod",
+            "net.rptools.CaseInsensitiveHashMap_-KeyValue": {
+              "key": "Rod",
+              "outer-class": {
+                "@reference": "../../../.."
+              }
+            }
+          },
+          {
+            "string": "exports",
+            "net.rptools.CaseInsensitiveHashMap_-KeyValue": {
+              "key": "exports",
+              "value": {
+                "@class": "string",
+                "#text": "foodstuffs, cloth, gold, gems (I)"
+              },
+              "outer-class": {
+                "@reference": "../../../.."
+              }
+            }
+          },
+          {
+            "string": "gods",
+            "net.rptools.CaseInsensitiveHashMap_-KeyValue": {
+              "key": "gods",
+              "value": {
+                "@class": "string",
+                "#text": "Heironeous, Zilchus, Fharlanghn, Geshtai, Rao, Istus"
+              },
+              "outer-class": {
+                "@reference": "../../../.."
+              }
+            }
+          },
+          {
+            "string": "thac0",
+            "net.rptools.CaseInsensitiveHashMap_-KeyValue": {
+              "key": "THAC0",
+              "outer-class": {
+                "@reference": "../../../.."
+              }
+            }
+          },
+          {
+            "string": "description",
+            "net.rptools.CaseInsensitiveHashMap_-KeyValue": {
+              "key": "description",
+              "value": {
+                "@class": "string",
+                "#text": "The Lirtlemark, or March of Bissel, was the northernmost frontier of the kingdom of Keoland, c. 400 CY. It was wrested from the latter in the Small War (Furyondy vs. Keoland) which ended Keoish influence in Veluna (438 CY). Bissel became a tributary state of Furyondy for a few decades, but when humanoid invasions swept over the latter realm, the Margrave Rollo established the independence of the territory by bravery in service of the King of Furyondy (the Bisselites slaughtered a horde of Jebli (goblins) which lay in ambush for King Hugh III, who was guarded by but a small train.) The King granted the brave Rollo palatinate status for the deeds performed, and Bissel has enjoyed self-rule since. The March now stands as a bulwark between the Ket masses and the rest of the east. It likewise guards Keoland and the south. Because of its strategic position, both Furyondy-Veluna and Keoland now support the principality, and adventurers and mercenaries from all of the Flanaess can be found in the ranks of the \"Border Companies\" which comprise the standing army of the Margrave. There are four regular companies and four reserve companies; each is 1,000 strong and contains contingents of horse, foot and archers. Favored weapons are the lance, crossbow, pike, fauchard-fork, flail, and sword. Bisselite soldiers are very well equipped and well-armored. Each company has a special squad of scouts (numbering 30 to 50) attached when on border duty. Their coinage is modeled after Keoland's."
+              },
+              "outer-class": {
+                "@reference": "../../../.."
+              }
+            }
+          },
+          {
+            "string": "wisdom",
+            "net.rptools.CaseInsensitiveHashMap_-KeyValue": {
+              "key": "Wisdom",
+              "outer-class": {
+                "@reference": "../../../.."
+              }
+            }
+          },
+          {
+            "string": "government",
+            "net.rptools.CaseInsensitiveHashMap_-KeyValue": {
+              "key": "government",
+              "value": {
+                "@class": "string",
+                "#text": "Feudal monarchy owing fealty to Gran March and Veluna, with Margrave chosen by the leadership of the Knights of the Watch"
+              },
+              "outer-class": {
+                "@reference": "../../../.."
+              }
+            }
+          },
+          {
+            "string": "sp",
+            "net.rptools.CaseInsensitiveHashMap_-KeyValue": {
+              "key": "sp",
+              "value": {
+                "@class": "string",
+                "#text": "stag"
+              },
+              "outer-class": {
+                "@reference": "../../../.."
+              }
+            }
+          },
+          {
+            "string": "polymorph",
+            "net.rptools.CaseInsensitiveHashMap_-KeyValue": {
+              "key": "Polymorph",
+              "outer-class": {
+                "@reference": "../../../.."
+              }
+            }
+          },
+          {
+            "string": "breathweapon",
+            "net.rptools.CaseInsensitiveHashMap_-KeyValue": {
+              "key": "BreathWeapon",
+              "outer-class": {
+                "@reference": "../../../.."
+              }
+            }
+          },
+          {
+            "string": "initiative",
+            "net.rptools.CaseInsensitiveHashMap_-KeyValue": {
+              "key": "Initiative",
+              "outer-class": {
+                "@reference": "../../../.."
+              }
+            }
+          },
+          {
+            "string": "languages",
+            "net.rptools.CaseInsensitiveHashMap_-KeyValue": {
+              "key": "languages",
+              "value": {
+                "@class": "string",
+                "#text": "Common, Baklunish, Dwarven"
+              },
+              "outer-class": {
+                "@reference": "../../../.."
+              }
+            }
+          },
+          {
+            "string": "alignments",
+            "net.rptools.CaseInsensitiveHashMap_-KeyValue": {
+              "key": "alignments",
+              "value": {
+                "@class": "string",
+                "#text": "LN, LG, N, NG"
+              },
+              "outer-class": {
+                "@reference": "../../../.."
+              }
+            }
+          },
+          {
+            "string": "poison",
+            "net.rptools.CaseInsensitiveHashMap_-KeyValue": {
+              "key": "Poison",
+              "outer-class": {
+                "@reference": "../../../.."
+              }
+            }
+          },
+          {
+            "string": "paralyzation",
+            "net.rptools.CaseInsensitiveHashMap_-KeyValue": {
+              "key": "Paralyzation",
+              "outer-class": {
+                "@reference": "../../../.."
+              }
+            }
+          },
+          {
+            "string": "gp",
+            "net.rptools.CaseInsensitiveHashMap_-KeyValue": {
+              "key": "gp",
+              "value": {
+                "@class": "string",
+                "#text": "lion"
+              },
+              "outer-class": {
+                "@reference": "../../../.."
+              }
+            }
+          },
+          {
+            "string": "staff",
+            "net.rptools.CaseInsensitiveHashMap_-KeyValue": {
+              "key": "Staff",
+              "outer-class": {
+                "@reference": "../../../.."
+              }
+            }
+          },
+          {
+            "string": "displayhp",
+            "net.rptools.CaseInsensitiveHashMap_-KeyValue": {
+              "key": "DisplayHP",
+              "outer-class": {
+                "@reference": "../../../.."
+              }
+            }
+          },
+          {
+            "string": "cp",
+            "net.rptools.CaseInsensitiveHashMap_-KeyValue": {
+              "key": "cp",
+              "value": {
+                "@class": "string",
+                "#text": "roc"
+              },
+              "outer-class": {
+                "@reference": "../../../.."
+              }
+            }
+          },
+          {
+            "string": "dexterity",
+            "net.rptools.CaseInsensitiveHashMap_-KeyValue": {
+              "key": "Dexterity",
+              "outer-class": {
+                "@reference": "../../../.."
+              }
+            }
+          },
+          {
+            "string": "xp",
+            "net.rptools.CaseInsensitiveHashMap_-KeyValue": {
+              "key": "XP",
+              "outer-class": {
+                "@reference": "../../../.."
+              }
+            }
+          },
+          {
+            "string": "petrification",
+            "net.rptools.CaseInsensitiveHashMap_-KeyValue": {
+              "key": "Petrification",
+              "outer-class": {
+                "@reference": "../../../.."
+              }
+            }
+          },
+          {
+            "string": "fullname",
+            "net.rptools.CaseInsensitiveHashMap_-KeyValue": {
+              "key": "fullName",
+              "value": {
+                "@class": "string",
+                "#text": "March of Bissel"
+              },
+              "outer-class": {
+                "@reference": "../../../.."
+              }
+            }
+          },
+          {
+            "string": "movement",
+            "net.rptools.CaseInsensitiveHashMap_-KeyValue": {
+              "key": "Movement",
+              "outer-class": {
+                "@reference": "../../../.."
+              }
+            }
+          }
+        ]
+      }
+    },
+    "macroPropertiesMap": null,
+    "speechMap": null,
+    "allowURIAccess": "false"
+  }
+}

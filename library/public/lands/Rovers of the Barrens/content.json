@@ -1,0 +1,273 @@
+{
+  "net.rptools.maptool.model.Token": {
+    "id": {
+      "baGUID": "4tjogyorSRO/M9d9tq8qmA=="
+    },
+    "beingImpersonated": "false",
+    "exposedAreaGUID": {
+      "baGUID": "DTU+7eVaRYilkohQC4ZqRg=="
+    },
+    "imageAssetMap": {
+      "entry": {
+        "null": null,
+        "net.rptools.lib.MD5Key": {
+          "id": "e27cf905b9a67acc792ea576048ef6c2"
+        }
+      }
+    },
+    "x": "150",
+    "y": "1050",
+    "z": "62",
+    "anchorX": "0",
+    "anchorY": "0",
+    "sizeScale": "1.0",
+    "lastX": "0",
+    "lastY": "0",
+    "snapToScale": "true",
+    "width": "833",
+    "height": "833",
+    "isoWidth": "833",
+    "isoHeight": "833",
+    "scaleX": "1.0",
+    "scaleY": "1.0",
+    "sizeMap": {
+      "entry": {
+        "string": "net.rptools.maptool.model.SquareGrid",
+        "net.rptools.maptool.model.GUID": {
+          "baGUID": "fwABAdBlFSoGAAAAKgABAA=="
+        }
+      }
+    },
+    "snapToGrid": "true",
+    "isVisible": "false",
+    "visibleOnlyToOwner": "false",
+    "vblColorSensitivity": "-1",
+    "alwaysVisibleTolerance": "2",
+    "isAlwaysVisible": "false",
+    "name": "Rovers of the Barrens",
+    "ownerList": null,
+    "ownerType": "0",
+    "tokenShape": "TOP_DOWN",
+    "tokenType": "NPC",
+    "layer": "TOKEN",
+    "propertyType": "Land",
+    "tokenOpacity": "1.0",
+    "speechName": null,
+    "terrainModifier": "0.0",
+    "terrainModifierOperation": "NONE",
+    "terrainModifiersIgnored": {
+      "net.rptools.maptool.model.Token_-TerrainModifierOperation": "NONE"
+    },
+    "isFlippedX": "false",
+    "isFlippedY": "false",
+    "isFlippedIso": "false",
+    "lightSourceList": null,
+    "sightType": "Normal",
+    "hasSight": "false",
+    "hasImageTable": "false",
+    "notes": null,
+    "notesType": "text/plain",
+    "gmNotes": null,
+    "gmNotesType": "text/plain",
+    "gmName": null,
+    "state": null,
+    "propertyMapCI": {
+      "store": {
+        "entry": [
+          {
+            "string": "pp",
+            "net.rptools.CaseInsensitiveHashMap_-KeyValue": {
+              "key": "pp",
+              "outer-class": {
+                "@reference": "../../../.."
+              }
+            }
+          },
+          {
+            "string": "capital",
+            "net.rptools.CaseInsensitiveHashMap_-KeyValue": {
+              "key": "capital",
+              "outer-class": {
+                "@reference": "../../../.."
+              }
+            }
+          },
+          {
+            "string": "cappop",
+            "net.rptools.CaseInsensitiveHashMap_-KeyValue": {
+              "key": "capPop",
+              "outer-class": {
+                "@reference": "../../../.."
+              }
+            }
+          },
+          {
+            "string": "languages",
+            "net.rptools.CaseInsensitiveHashMap_-KeyValue": {
+              "key": "languages",
+              "value": {
+                "@class": "string",
+                "#text": "Flan, Baklunish, Common"
+              },
+              "outer-class": {
+                "@reference": "../../../.."
+              }
+            }
+          },
+          {
+            "string": "exports",
+            "net.rptools.CaseInsensitiveHashMap_-KeyValue": {
+              "key": "exports",
+              "value": {
+                "@class": "string",
+                "#text": "furs, gold"
+              },
+              "outer-class": {
+                "@reference": "../../../.."
+              }
+            }
+          },
+          {
+            "string": "gods",
+            "net.rptools.CaseInsensitiveHashMap_-KeyValue": {
+              "key": "gods",
+              "value": {
+                "@class": "string",
+                "#text": "Obad-Hai, Beory, Pelor, Red Fox, Telchur, Kurell"
+              },
+              "outer-class": {
+                "@reference": "../../../.."
+              }
+            }
+          },
+          {
+            "string": "description",
+            "net.rptools.CaseInsensitiveHashMap_-KeyValue": {
+              "key": "description",
+              "value": {
+                "@class": "string",
+                "#text": "The tribes of nomadic peoples who dwell between the Wastes below the Icy Sea and the Fellreev Forest called themselves the People of the Plentiful Huntinglands, but their neighbors named them Rovers of the Barrens as they had no permanent settlements and the area they roamed seemed bleak. These tough nomads were content enough with their herds, hunts, and occasional raids upon Furyondy, the bandit Kingdoms, or Tenh. The growth of the bandits’ power and the swelling numbers of humanoids, however, have sharply reduced the territory, numbers, and power of these clans. At the great battle of Opicm River, the might of the Rovers of the Barrens gathered to war upon a combined host from the land of Iuz and the newly formed Horned Society. The wardog soldiers and light cavalry of the Rovers were decimated and scattered, and many of their chieftains were slain. Perhaps three or four clans of but a few tribes each are all that now remain of the force which once sent the tumans of the Wolf Nomads flying back across the Dulsi without their gray-tailed banners. The numerous people that formerly went where they would between the Dulsi and Veng Rivers to White Fanged Bay and the Zumker River are now reduced to a handful of warriors huddling from the Wastes to the Forlorn Forest. The light cavalry of these tribes ply lance and javelin, although many also use bows. Picked men use lariats to pull enemies down. Certain tribes furnish excellent medium horsemen who provide shock power. The wardogs are footmen able to run with cavalry and fight, hamstringing enemy mounts and disrupting their formations."
+              },
+              "outer-class": {
+                "@reference": "../../../.."
+              }
+            }
+          },
+          {
+            "string": "gp",
+            "net.rptools.CaseInsensitiveHashMap_-KeyValue": {
+              "key": "gp",
+              "outer-class": {
+                "@reference": "../../../.."
+              }
+            }
+          },
+          {
+            "string": "ep",
+            "net.rptools.CaseInsensitiveHashMap_-KeyValue": {
+              "key": "ep",
+              "outer-class": {
+                "@reference": "../../../.."
+              }
+            }
+          },
+          {
+            "string": "ruler",
+            "net.rptools.CaseInsensitiveHashMap_-KeyValue": {
+              "key": "ruler",
+              "value": {
+                "@class": "string",
+                "#text": "His Mighty Lordship, the Ataman of the Standards, Kishwa Dogteeth — Chief of the Wardogs"
+              },
+              "outer-class": {
+                "@reference": "../../../.."
+              }
+            }
+          },
+          {
+            "string": "cp",
+            "net.rptools.CaseInsensitiveHashMap_-KeyValue": {
+              "key": "cp",
+              "outer-class": {
+                "@reference": "../../../.."
+              }
+            }
+          },
+          {
+            "string": "population",
+            "net.rptools.CaseInsensitiveHashMap_-KeyValue": {
+              "key": "population",
+              "value": {
+                "@class": "string",
+                "#text": "65000"
+              },
+              "outer-class": {
+                "@reference": "../../../.."
+              }
+            }
+          },
+          {
+            "string": "government",
+            "net.rptools.CaseInsensitiveHashMap_-KeyValue": {
+              "key": "government",
+              "value": {
+                "@class": "string",
+                "#text": "loose tribal organization"
+              },
+              "outer-class": {
+                "@reference": "../../../.."
+              }
+            }
+          },
+          {
+            "string": "forces",
+            "net.rptools.CaseInsensitiveHashMap_-KeyValue": {
+              "key": "forces",
+              "outer-class": {
+                "@reference": "../../../.."
+              }
+            }
+          },
+          {
+            "string": "fullname",
+            "net.rptools.CaseInsensitiveHashMap_-KeyValue": {
+              "key": "fullName",
+              "value": {
+                "@class": "string",
+                "#text": "Arapahi (People of the Plentiful Huntinglands)"
+              },
+              "outer-class": {
+                "@reference": "../../../.."
+              }
+            }
+          },
+          {
+            "string": "sp",
+            "net.rptools.CaseInsensitiveHashMap_-KeyValue": {
+              "key": "sp",
+              "outer-class": {
+                "@reference": "../../../.."
+              }
+            }
+          },
+          {
+            "string": "rulerclass",
+            "net.rptools.CaseInsensitiveHashMap_-KeyValue": {
+              "key": "rulerClass",
+              "value": {
+                "@class": "string",
+                "#text": "fighter, 11"
+              },
+              "outer-class": {
+                "@reference": "../../../.."
+              }
+            }
+          }
+        ]
+      }
+    },
+    "macroPropertiesMap": null,
+    "speechMap": null,
+    "allowURIAccess": "false"
+  }
+}

@@ -1,0 +1,318 @@
+{
+  "net.rptools.maptool.model.Token": {
+    "id": {
+      "baGUID": "Xrx0UK6LSfCCjyjcdWgc2Q=="
+    },
+    "beingImpersonated": "false",
+    "exposedAreaGUID": {
+      "baGUID": "xbBPUVmNSE+y9C0qYPVvHQ=="
+    },
+    "imageAssetMap": {
+      "entry": {
+        "null": null,
+        "net.rptools.lib.MD5Key": {
+          "id": "70a4cef6a1aa2268b87e27c18a650e83"
+        }
+      }
+    },
+    "x": "250",
+    "y": "850",
+    "z": "33",
+    "anchorX": "0",
+    "anchorY": "0",
+    "sizeScale": "1.0",
+    "lastX": "0",
+    "lastY": "0",
+    "snapToScale": "true",
+    "width": "833",
+    "height": "833",
+    "isoWidth": "833",
+    "isoHeight": "833",
+    "scaleX": "1.0",
+    "scaleY": "1.0",
+    "sizeMap": {
+      "entry": {
+        "string": "net.rptools.maptool.model.SquareGrid",
+        "net.rptools.maptool.model.GUID": {
+          "baGUID": "fwABAdBlFSoGAAAAKgABAA=="
+        }
+      }
+    },
+    "snapToGrid": "true",
+    "isVisible": "false",
+    "visibleOnlyToOwner": "false",
+    "vblColorSensitivity": "-1",
+    "alwaysVisibleTolerance": "2",
+    "isAlwaysVisible": "false",
+    "name": "Dyvers",
+    "ownerList": null,
+    "ownerType": "0",
+    "tokenShape": "TOP_DOWN",
+    "tokenType": "NPC",
+    "layer": "TOKEN",
+    "propertyType": "Land",
+    "tokenOpacity": "1.0",
+    "speechName": null,
+    "terrainModifier": "0.0",
+    "terrainModifierOperation": "NONE",
+    "terrainModifiersIgnored": {
+      "net.rptools.maptool.model.Token_-TerrainModifierOperation": "NONE"
+    },
+    "isFlippedX": "false",
+    "isFlippedY": "false",
+    "isFlippedIso": "false",
+    "lightSourceList": null,
+    "sightType": "Normal",
+    "hasSight": "false",
+    "hasImageTable": "false",
+    "notes": null,
+    "notesType": "text/plain",
+    "gmNotes": null,
+    "gmNotesType": "text/plain",
+    "gmName": null,
+    "state": null,
+    "propertyMapCI": {
+      "store": {
+        "entry": [
+          {
+            "string": "pp",
+            "net.rptools.CaseInsensitiveHashMap_-KeyValue": {
+              "key": "pp",
+              "value": {
+                "@class": "string",
+                "#text": "citadel"
+              },
+              "outer-class": {
+                "@reference": "../../../.."
+              }
+            }
+          },
+          {
+            "string": "capital",
+            "net.rptools.CaseInsensitiveHashMap_-KeyValue": {
+              "key": "capital",
+              "value": {
+                "@class": "string",
+                "#text": "Dyvers"
+              },
+              "outer-class": {
+                "@reference": "../../../.."
+              }
+            }
+          },
+          {
+            "string": "cappop",
+            "net.rptools.CaseInsensitiveHashMap_-KeyValue": {
+              "key": "capPop",
+              "value": {
+                "@class": "string",
+                "#text": "42000"
+              },
+              "outer-class": {
+                "@reference": "../../../.."
+              }
+            }
+          },
+          {
+            "string": "languages",
+            "net.rptools.CaseInsensitiveHashMap_-KeyValue": {
+              "key": "languages",
+              "value": {
+                "@class": "string",
+                "#text": "Common, Rhopan, Gnomish, Halfling"
+              },
+              "outer-class": {
+                "@reference": "../../../.."
+              }
+            }
+          },
+          {
+            "string": "alignments",
+            "net.rptools.CaseInsensitiveHashMap_-KeyValue": {
+              "key": "alignments",
+              "value": {
+                "@class": "string",
+                "#text": "N, LG, NG, LN, CN"
+              },
+              "outer-class": {
+                "@reference": "../../../.."
+              }
+            }
+          },
+          {
+            "string": "exports",
+            "net.rptools.CaseInsensitiveHashMap_-KeyValue": {
+              "key": "exports",
+              "value": {
+                "@class": "string",
+                "#text": "shipbuilding supplies"
+              },
+              "outer-class": {
+                "@reference": "../../../.."
+              }
+            }
+          },
+          {
+            "string": "gods",
+            "net.rptools.CaseInsensitiveHashMap_-KeyValue": {
+              "key": "gods",
+              "value": {
+                "@class": "string",
+                "#text": "Zilchus, St. Cuthbert, Pelor, Fharlanghn, Xerbo, Ehlonna, Heironeous, Istus, Olidammara, Rao, Obad-Hai"
+              },
+              "outer-class": {
+                "@reference": "../../../.."
+              }
+            }
+          },
+          {
+            "string": "description",
+            "net.rptools.CaseInsensitiveHashMap_-KeyValue": {
+              "key": "description",
+              "value": {
+                "@class": "string",
+                "#text": "Dyvers’ position at the mouth of the Velverdyva River on the coast of the Lake of Unknown Depths (Nyr Dyv) makes it an important trading center and busy port, with lake and river traffic from as far away as Perrenland, Bissel, Nyrond, Urnst, the Pale, Tenh, and even occasional missions from Iuz. The city was originally a part of the Viceroyalty of Ferrond and contributed heavily in money, goods, and men to the war which saw the institution of the Kingdom of Furyondy. Because of the alliance and close ties with Veluna, whose policies the Gentry of Dyvers see as restrictive, the city declared its independence in 526 CY, King Thrommel II allowing this act to pass unchallenged. Dyvers claims some 2,000 square miles of land, including the islands at the mouth of the Velverdyva, as its sovereign territory – although the Magisters have been careful not to claim any of the land on the north band of the river. The free city boasts a marine force of 1,000 men and an army twice as numerous. These troops are very well armed and equipped."
+              },
+              "outer-class": {
+                "@reference": "../../../.."
+              }
+            }
+          },
+          {
+            "string": "gp",
+            "net.rptools.CaseInsensitiveHashMap_-KeyValue": {
+              "key": "gp",
+              "value": {
+                "@class": "string",
+                "#text": "wheatsheaf"
+              },
+              "outer-class": {
+                "@reference": "../../../.."
+              }
+            }
+          },
+          {
+            "string": "ep",
+            "net.rptools.CaseInsensitiveHashMap_-KeyValue": {
+              "key": "ep",
+              "value": {
+                "@class": "string",
+                "#text": "galley"
+              },
+              "outer-class": {
+                "@reference": "../../../.."
+              }
+            }
+          },
+          {
+            "string": "ruler",
+            "net.rptools.CaseInsensitiveHashMap_-KeyValue": {
+              "key": "ruler",
+              "value": {
+                "@class": "string",
+                "#text": "His Excellency Margus, the Magister of Dyvers"
+              },
+              "outer-class": {
+                "@reference": "../../../.."
+              }
+            }
+          },
+          {
+            "string": "cp",
+            "net.rptools.CaseInsensitiveHashMap_-KeyValue": {
+              "key": "cp",
+              "value": {
+                "@class": "string",
+                "#text": "common"
+              },
+              "outer-class": {
+                "@reference": "../../../.."
+              }
+            }
+          },
+          {
+            "string": "population",
+            "net.rptools.CaseInsensitiveHashMap_-KeyValue": {
+              "key": "population",
+              "value": {
+                "@class": "string",
+                "#text": "53000"
+              },
+              "outer-class": {
+                "@reference": "../../../.."
+              }
+            }
+          },
+          {
+            "string": "government",
+            "net.rptools.CaseInsensitiveHashMap_-KeyValue": {
+              "key": "government",
+              "value": {
+                "@class": "string",
+                "#text": "Democratic meritocracy"
+              },
+              "outer-class": {
+                "@reference": "../../../.."
+              }
+            }
+          },
+          {
+            "string": "forces",
+            "net.rptools.CaseInsensitiveHashMap_-KeyValue": {
+              "key": "forces",
+              "value": {
+                "@class": "string",
+                "#text": "sailors 1000, inf 2000"
+              },
+              "outer-class": {
+                "@reference": "../../../.."
+              }
+            }
+          },
+          {
+            "string": "fullname",
+            "net.rptools.CaseInsensitiveHashMap_-KeyValue": {
+              "key": "fullName",
+              "value": {
+                "@class": "string",
+                "#text": "Free and Independent City of Dyvers"
+              },
+              "outer-class": {
+                "@reference": "../../../.."
+              }
+            }
+          },
+          {
+            "string": "sp",
+            "net.rptools.CaseInsensitiveHashMap_-KeyValue": {
+              "key": "sp",
+              "value": {
+                "@class": "string",
+                "#text": "wagon"
+              },
+              "outer-class": {
+                "@reference": "../../../.."
+              }
+            }
+          },
+          {
+            "string": "rulerclass",
+            "net.rptools.CaseInsensitiveHashMap_-KeyValue": {
+              "key": "rulerClass",
+              "value": {
+                "@class": "string",
+                "#text": "thief, 17"
+              },
+              "outer-class": {
+                "@reference": "../../../.."
+              }
+            }
+          }
+        ]
+      }
+    },
+    "macroPropertiesMap": null,
+    "speechMap": null,
+    "allowURIAccess": "false"
+  }
+}

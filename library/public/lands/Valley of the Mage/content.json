@@ -1,0 +1,273 @@
+{
+  "net.rptools.maptool.model.Token": {
+    "id": {
+      "baGUID": "q2eHF+PWRpKJaCdKqQ/pKA=="
+    },
+    "beingImpersonated": "false",
+    "exposedAreaGUID": {
+      "baGUID": "TcJgE99GS+KqBmskrJYYNg=="
+    },
+    "imageAssetMap": {
+      "entry": {
+        "null": null,
+        "net.rptools.lib.MD5Key": {
+          "id": "6556d4ecb7d8545d45ee1123d1939801"
+        }
+      }
+    },
+    "x": "792",
+    "y": "1185",
+    "z": "89",
+    "anchorX": "0",
+    "anchorY": "0",
+    "sizeScale": "1.0",
+    "lastX": "0",
+    "lastY": "0",
+    "snapToScale": "true",
+    "width": "833",
+    "height": "833",
+    "isoWidth": "833",
+    "isoHeight": "833",
+    "scaleX": "1.0",
+    "scaleY": "1.0",
+    "sizeMap": {
+      "entry": {
+        "string": "net.rptools.maptool.model.SquareGrid",
+        "net.rptools.maptool.model.GUID": {
+          "baGUID": "fwABAdBlFSoGAAAAKgABAA=="
+        }
+      }
+    },
+    "snapToGrid": "true",
+    "isVisible": "false",
+    "visibleOnlyToOwner": "false",
+    "vblColorSensitivity": "-1",
+    "alwaysVisibleTolerance": "2",
+    "isAlwaysVisible": "false",
+    "name": "Valley of the Mage",
+    "ownerList": null,
+    "ownerType": "0",
+    "tokenShape": "TOP_DOWN",
+    "tokenType": "NPC",
+    "layer": "TOKEN",
+    "propertyType": "Land",
+    "tokenOpacity": "1.0",
+    "speechName": null,
+    "terrainModifier": "0.0",
+    "terrainModifierOperation": "NONE",
+    "terrainModifiersIgnored": {
+      "net.rptools.maptool.model.Token_-TerrainModifierOperation": "NONE"
+    },
+    "isFlippedX": "false",
+    "isFlippedY": "false",
+    "isFlippedIso": "false",
+    "lightSourceList": null,
+    "sightType": "Normal",
+    "hasSight": "false",
+    "hasImageTable": "false",
+    "notes": null,
+    "notesType": "text/plain",
+    "gmNotes": null,
+    "gmNotesType": "text/plain",
+    "gmName": null,
+    "state": null,
+    "propertyMapCI": {
+      "store": {
+        "entry": [
+          {
+            "string": "pp",
+            "net.rptools.CaseInsensitiveHashMap_-KeyValue": {
+              "key": "pp",
+              "outer-class": {
+                "@reference": "../../../.."
+              }
+            }
+          },
+          {
+            "string": "capital",
+            "net.rptools.CaseInsensitiveHashMap_-KeyValue": {
+              "key": "capital",
+              "outer-class": {
+                "@reference": "../../../.."
+              }
+            }
+          },
+          {
+            "string": "languages",
+            "net.rptools.CaseInsensitiveHashMap_-KeyValue": {
+              "key": "languages",
+              "value": {
+                "@class": "string",
+                "#text": "Common, Dwarven, Elven, Gnome, Old Oeridian"
+              },
+              "outer-class": {
+                "@reference": "../../../.."
+              }
+            }
+          },
+          {
+            "string": "cappop",
+            "net.rptools.CaseInsensitiveHashMap_-KeyValue": {
+              "key": "capPop",
+              "outer-class": {
+                "@reference": "../../../.."
+              }
+            }
+          },
+          {
+            "string": "exports",
+            "net.rptools.CaseInsensitiveHashMap_-KeyValue": {
+              "key": "exports",
+              "value": {
+                "@class": "string",
+                "#text": "none"
+              },
+              "outer-class": {
+                "@reference": "../../../.."
+              }
+            }
+          },
+          {
+            "string": "gods",
+            "net.rptools.CaseInsensitiveHashMap_-KeyValue": {
+              "key": "gods",
+              "value": {
+                "@class": "string",
+                "#text": "Old Faith, Ehlonna, Oeridian pantheon, Sueloise pantheon"
+              },
+              "outer-class": {
+                "@reference": "../../../.."
+              }
+            }
+          },
+          {
+            "string": "description",
+            "net.rptools.CaseInsensitiveHashMap_-KeyValue": {
+              "key": "description",
+              "value": {
+                "@class": "string",
+                "#text": "Long ago a mighty wizard secluded himself in the lush valley at the headwaters of the Javan River amidst the Barrier Peaks. His servants posted the approaches to the area, warning all alike that entrance to the domain thus established was forbidden except by express invitation from its laird. What has transpired since the valley was claimed many decades ago is simply a matter of conjecture, for no one goes there. (The Grand Duke does not care, and an expedition from Gran March never returned.) There are, of course, tales of bold adventurers returning loaded with platinum and gems which are said to litter stream beds as pebbles do elsewhere, but even these stories are insufficient to cause much interest, as the area is positively known to be inhabited by horrible monsters. What is known for certain is that bodies of troops are sometimes seen near the verges of Dim Forest, and that mysterious groups sometimes journey in the direction of this place."
+              },
+              "outer-class": {
+                "@reference": "../../../.."
+              }
+            }
+          },
+          {
+            "string": "gp",
+            "net.rptools.CaseInsensitiveHashMap_-KeyValue": {
+              "key": "gp",
+              "outer-class": {
+                "@reference": "../../../.."
+              }
+            }
+          },
+          {
+            "string": "ruler",
+            "net.rptools.CaseInsensitiveHashMap_-KeyValue": {
+              "key": "ruler",
+              "value": {
+                "@class": "string",
+                "#text": "His Most Magical Authority, the Exalted Mage of the Valley and Laird of the Domain; Jaran \"The Black One\" Krimeah"
+              },
+              "outer-class": {
+                "@reference": "../../../.."
+              }
+            }
+          },
+          {
+            "string": "ep",
+            "net.rptools.CaseInsensitiveHashMap_-KeyValue": {
+              "key": "ep",
+              "outer-class": {
+                "@reference": "../../../.."
+              }
+            }
+          },
+          {
+            "string": "cp",
+            "net.rptools.CaseInsensitiveHashMap_-KeyValue": {
+              "key": "cp",
+              "outer-class": {
+                "@reference": "../../../.."
+              }
+            }
+          },
+          {
+            "string": "population",
+            "net.rptools.CaseInsensitiveHashMap_-KeyValue": {
+              "key": "population",
+              "value": {
+                "@class": "string",
+                "#text": "10000"
+              },
+              "outer-class": {
+                "@reference": "../../../.."
+              }
+            }
+          },
+          {
+            "string": "government",
+            "net.rptools.CaseInsensitiveHashMap_-KeyValue": {
+              "key": "government",
+              "value": {
+                "@class": "string",
+                "#text": "Magical Despotism"
+              },
+              "outer-class": {
+                "@reference": "../../../.."
+              }
+            }
+          },
+          {
+            "string": "forces",
+            "net.rptools.CaseInsensitiveHashMap_-KeyValue": {
+              "key": "forces",
+              "outer-class": {
+                "@reference": "../../../.."
+              }
+            }
+          },
+          {
+            "string": "fullname",
+            "net.rptools.CaseInsensitiveHashMap_-KeyValue": {
+              "key": "fullName",
+              "value": {
+                "@class": "string",
+                "#text": "Exalted Vale of the Mage"
+              },
+              "outer-class": {
+                "@reference": "../../../.."
+              }
+            }
+          },
+          {
+            "string": "sp",
+            "net.rptools.CaseInsensitiveHashMap_-KeyValue": {
+              "key": "sp",
+              "outer-class": {
+                "@reference": "../../../.."
+              }
+            }
+          },
+          {
+            "string": "rulerclass",
+            "net.rptools.CaseInsensitiveHashMap_-KeyValue": {
+              "key": "rulerClass",
+              "value": {
+                "@class": "string",
+                "#text": "shade/magic-user, /20"
+              },
+              "outer-class": {
+                "@reference": "../../../.."
+              }
+            }
+          }
+        ]
+      }
+    },
+    "macroPropertiesMap": null,
+    "speechMap": null,
+    "allowURIAccess": "false"
+  }
+}

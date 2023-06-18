@@ -1,0 +1,363 @@
+{
+  "net.rptools.maptool.model.Token": {
+    "id": {
+      "baGUID": "ZdANye/8TFe7obWHEHBHOA=="
+    },
+    "beingImpersonated": "false",
+    "exposedAreaGUID": {
+      "baGUID": "u6OTR9NdTXWLvppt9H1Luw=="
+    },
+    "imageAssetMap": {
+      "entry": {
+        "null": null,
+        "net.rptools.lib.MD5Key": {
+          "id": "4f805237e2bd20e509af41a5e20a93b4"
+        }
+      }
+    },
+    "x": "-100",
+    "y": "1450",
+    "z": "103",
+    "anchorX": "0",
+    "anchorY": "0",
+    "sizeScale": "1.0",
+    "lastX": "0",
+    "lastY": "0",
+    "snapToScale": "true",
+    "width": "833",
+    "height": "833",
+    "isoWidth": "833",
+    "isoHeight": "833",
+    "scaleX": "1.0",
+    "scaleY": "1.0",
+    "sizeMap": {
+      "entry": {
+        "string": "net.rptools.maptool.model.SquareGrid",
+        "net.rptools.maptool.model.GUID": {
+          "baGUID": "fwABAdBlFSoGAAAAKgABAA=="
+        }
+      }
+    },
+    "snapToGrid": "true",
+    "isVisible": "false",
+    "visibleOnlyToOwner": "false",
+    "vblColorSensitivity": "-1",
+    "alwaysVisibleTolerance": "2",
+    "isAlwaysVisible": "false",
+    "name": "Knights of the Heart Veluna",
+    "ownerList": null,
+    "ownerType": "0",
+    "tokenShape": "TOP_DOWN",
+    "tokenType": "NPC",
+    "layer": "TOKEN",
+    "propertyType": "Basic",
+    "tokenOpacity": "1.0",
+    "speechName": null,
+    "terrainModifier": "0.0",
+    "terrainModifierOperation": "NONE",
+    "terrainModifiersIgnored": {
+      "net.rptools.maptool.model.Token_-TerrainModifierOperation": "NONE"
+    },
+    "isFlippedX": "false",
+    "isFlippedY": "false",
+    "isFlippedIso": "false",
+    "lightSourceList": null,
+    "sightType": "Normal",
+    "hasSight": "false",
+    "hasImageTable": "false",
+    "notes": "Order of the Hart: Far less militant in its outlook, and divided into three separate branches, the Knights of the Order of the Hart were organized to assure that the central states (Furyondy, Veluna, High Folk) retained their freedom and purpose. Because these nations are quite decentralized and none maintains any sizable standing military force, each is subject to sudden incursions and threats from neighbors. In the east and north are the humanoid hordes and the barbarian nomads. To the west are the Baklunish states and the only slightly less threatening marches and military orders between, as well as Perrenland with its aggressive trade policies and well-organized soldiery to back them up. There is little threat from the south, save for occasional pirates on the Nyr Dyv and some more-or-less bothersome raiding from humanoids. Thus, while each nobleman and lord of these nations has his own guards and men-at-arms, and each sovereign ruler maintains a small body of troops, most of the might of Furyondy, Veluna, and the High Folk takes a considerable time to muster. The Knights of the Hart are therefore sworn to be ready at an instant's notice to serve as a vanguard. They maintain certain strongholds, serve in various capacities in the associated nations, and have roving troops scouting trouble areas and hostile borders as well. The three branches of the Knights of the Order of the Hart are:\nKnights of Fyuryondy: There are 200 knights and many men-at-arms under their command in this branch of the order. Their coat of arms is Azure, a pair of antlers or.\nKnights of Veluna: It is said that there are but 80 knights in this branch of the Order of the Hart, although each is of great repute and commands many sergeants and men-at-arms. Their coat of arms is Sable, a pair of antlers or.\nKnights of the High Forest: This branch of the order is reputed to be only for those of the Olven-folk. There are perhaps only two dozen or so knights within the branch. Their coat of arms is Vert, a pair of antlers or.\nKnighthood in any branch of the Order of the Hart is bestowed only upon freemen and gentlefolk seeking the weal of the states which they are dedicated to uphold and defend. Furthermore, each candidate must be a proven fighter and have performed an act of exceptional honor, bravery, courage, and service. Knights of the Hart are hated and despised by Iuz, the Horned Society, and even by the folk of Dyvers, it is said. There is no love lost between them and the Watchers, the rulers of Perrenland, and certain of the Nyrondel noblesse. Considerable rivalry exists between the orders of the Hart and the Shield.",
+    "notesType": "text/plain",
+    "gmNotes": null,
+    "gmNotesType": "text/plain",
+    "gmName": null,
+    "state": null,
+    "propertyMapCI": {
+      "store": {
+        "entry": [
+          {
+            "string": "maxhp",
+            "net.rptools.CaseInsensitiveHashMap_-KeyValue": {
+              "key": "MaxHP",
+              "outer-class": {
+                "@reference": "../../../.."
+              }
+            }
+          },
+          {
+            "string": "display details",
+            "net.rptools.CaseInsensitiveHashMap_-KeyValue": {
+              "key": "Display Details",
+              "outer-class": {
+                "@reference": "../../../.."
+              }
+            }
+          },
+          {
+            "string": "constitution",
+            "net.rptools.CaseInsensitiveHashMap_-KeyValue": {
+              "key": "Constitution",
+              "outer-class": {
+                "@reference": "../../../.."
+              }
+            }
+          },
+          {
+            "string": "------------combat-----------",
+            "net.rptools.CaseInsensitiveHashMap_-KeyValue": {
+              "key": "------------Combat-----------",
+              "outer-class": {
+                "@reference": "../../../.."
+              }
+            }
+          },
+          {
+            "string": "deathmagic",
+            "net.rptools.CaseInsensitiveHashMap_-KeyValue": {
+              "key": "DeathMagic",
+              "outer-class": {
+                "@reference": "../../../.."
+              }
+            }
+          },
+          {
+            "string": "critical",
+            "net.rptools.CaseInsensitiveHashMap_-KeyValue": {
+              "key": "Critical",
+              "outer-class": {
+                "@reference": "../../../.."
+              }
+            }
+          },
+          {
+            "string": "strength",
+            "net.rptools.CaseInsensitiveHashMap_-KeyValue": {
+              "key": "Strength",
+              "outer-class": {
+                "@reference": "../../../.."
+              }
+            }
+          },
+          {
+            "string": "rod",
+            "net.rptools.CaseInsensitiveHashMap_-KeyValue": {
+              "key": "Rod",
+              "outer-class": {
+                "@reference": "../../../.."
+              }
+            }
+          },
+          {
+            "string": "hp",
+            "net.rptools.CaseInsensitiveHashMap_-KeyValue": {
+              "key": "HP",
+              "outer-class": {
+                "@reference": "../../../.."
+              }
+            }
+          },
+          {
+            "string": "------------basics-------------",
+            "net.rptools.CaseInsensitiveHashMap_-KeyValue": {
+              "key": "------------Basics-------------",
+              "outer-class": {
+                "@reference": "../../../.."
+              }
+            }
+          },
+          {
+            "string": "thac0",
+            "net.rptools.CaseInsensitiveHashMap_-KeyValue": {
+              "key": "THAC0",
+              "outer-class": {
+                "@reference": "../../../.."
+              }
+            }
+          },
+          {
+            "string": "charisma",
+            "net.rptools.CaseInsensitiveHashMap_-KeyValue": {
+              "key": "Charisma",
+              "outer-class": {
+                "@reference": "../../../.."
+              }
+            }
+          },
+          {
+            "string": "wisdom",
+            "net.rptools.CaseInsensitiveHashMap_-KeyValue": {
+              "key": "Wisdom",
+              "outer-class": {
+                "@reference": "../../../.."
+              }
+            }
+          },
+          {
+            "string": "------------saves-----------",
+            "net.rptools.CaseInsensitiveHashMap_-KeyValue": {
+              "key": "------------Saves-----------",
+              "outer-class": {
+                "@reference": "../../../.."
+              }
+            }
+          },
+          {
+            "string": "xpneeded",
+            "net.rptools.CaseInsensitiveHashMap_-KeyValue": {
+              "key": "XPNeeded",
+              "outer-class": {
+                "@reference": "../../../.."
+              }
+            }
+          },
+          {
+            "string": "polymorph",
+            "net.rptools.CaseInsensitiveHashMap_-KeyValue": {
+              "key": "Polymorph",
+              "outer-class": {
+                "@reference": "../../../.."
+              }
+            }
+          },
+          {
+            "string": "spell",
+            "net.rptools.CaseInsensitiveHashMap_-KeyValue": {
+              "key": "Spell",
+              "outer-class": {
+                "@reference": "../../../.."
+              }
+            }
+          },
+          {
+            "string": "ac",
+            "net.rptools.CaseInsensitiveHashMap_-KeyValue": {
+              "key": "AC",
+              "outer-class": {
+                "@reference": "../../../.."
+              }
+            }
+          },
+          {
+            "string": "breathweapon",
+            "net.rptools.CaseInsensitiveHashMap_-KeyValue": {
+              "key": "BreathWeapon",
+              "outer-class": {
+                "@reference": "../../../.."
+              }
+            }
+          },
+          {
+            "string": "initiative",
+            "net.rptools.CaseInsensitiveHashMap_-KeyValue": {
+              "key": "Initiative",
+              "outer-class": {
+                "@reference": "../../../.."
+              }
+            }
+          },
+          {
+            "string": "poison",
+            "net.rptools.CaseInsensitiveHashMap_-KeyValue": {
+              "key": "Poison",
+              "outer-class": {
+                "@reference": "../../../.."
+              }
+            }
+          },
+          {
+            "string": "paralyzation",
+            "net.rptools.CaseInsensitiveHashMap_-KeyValue": {
+              "key": "Paralyzation",
+              "outer-class": {
+                "@reference": "../../../.."
+              }
+            }
+          },
+          {
+            "string": "staff",
+            "net.rptools.CaseInsensitiveHashMap_-KeyValue": {
+              "key": "Staff",
+              "outer-class": {
+                "@reference": "../../../.."
+              }
+            }
+          },
+          {
+            "string": "displayhp",
+            "net.rptools.CaseInsensitiveHashMap_-KeyValue": {
+              "key": "DisplayHP",
+              "outer-class": {
+                "@reference": "../../../.."
+              }
+            }
+          },
+          {
+            "string": "intelligence",
+            "net.rptools.CaseInsensitiveHashMap_-KeyValue": {
+              "key": "Intelligence",
+              "outer-class": {
+                "@reference": "../../../.."
+              }
+            }
+          },
+          {
+            "string": "dexterity",
+            "net.rptools.CaseInsensitiveHashMap_-KeyValue": {
+              "key": "Dexterity",
+              "outer-class": {
+                "@reference": "../../../.."
+              }
+            }
+          },
+          {
+            "string": "magicresistances",
+            "net.rptools.CaseInsensitiveHashMap_-KeyValue": {
+              "key": "MagicResistances",
+              "outer-class": {
+                "@reference": "../../../.."
+              }
+            }
+          },
+          {
+            "string": "wand",
+            "net.rptools.CaseInsensitiveHashMap_-KeyValue": {
+              "key": "Wand",
+              "outer-class": {
+                "@reference": "../../../.."
+              }
+            }
+          },
+          {
+            "string": "xp",
+            "net.rptools.CaseInsensitiveHashMap_-KeyValue": {
+              "key": "XP",
+              "outer-class": {
+                "@reference": "../../../.."
+              }
+            }
+          },
+          {
+            "string": "petrification",
+            "net.rptools.CaseInsensitiveHashMap_-KeyValue": {
+              "key": "Petrification",
+              "outer-class": {
+                "@reference": "../../../.."
+              }
+            }
+          },
+          {
+            "string": "movement",
+            "net.rptools.CaseInsensitiveHashMap_-KeyValue": {
+              "key": "Movement",
+              "outer-class": {
+                "@reference": "../../../.."
+              }
+            }
+          }
+        ]
+      }
+    },
+    "macroPropertiesMap": null,
+    "speechMap": null,
+    "allowURIAccess": "false"
+  }
+}

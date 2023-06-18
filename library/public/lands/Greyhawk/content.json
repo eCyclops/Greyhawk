@@ -1,0 +1,314 @@
+{
+  "net.rptools.maptool.model.Token": {
+    "id": {
+      "baGUID": "w4GePUa6Sm+E5MchevVgRg=="
+    },
+    "beingImpersonated": "false",
+    "exposedAreaGUID": {
+      "baGUID": "1JwITqJASUivaDRBaVGp/w=="
+    },
+    "imageAssetMap": {
+      "entry": {
+        "null": null,
+        "net.rptools.lib.MD5Key": {
+          "id": "e9a81c6f5607df670cc01bc4ca624ae6"
+        }
+      }
+    },
+    "x": "950",
+    "y": "850",
+    "z": "40",
+    "anchorX": "0",
+    "anchorY": "0",
+    "sizeScale": "1.0",
+    "lastX": "0",
+    "lastY": "0",
+    "snapToScale": "true",
+    "width": "833",
+    "height": "833",
+    "isoWidth": "833",
+    "isoHeight": "833",
+    "scaleX": "1.0",
+    "scaleY": "1.0",
+    "sizeMap": {
+      "entry": {
+        "string": "net.rptools.maptool.model.SquareGrid",
+        "net.rptools.maptool.model.GUID": {
+          "baGUID": "fwABAdBlFSoGAAAAKgABAA=="
+        }
+      }
+    },
+    "snapToGrid": "true",
+    "isVisible": "false",
+    "visibleOnlyToOwner": "false",
+    "vblColorSensitivity": "-1",
+    "alwaysVisibleTolerance": "2",
+    "isAlwaysVisible": "false",
+    "name": "Greyhawk",
+    "ownerList": null,
+    "ownerType": "0",
+    "tokenShape": "TOP_DOWN",
+    "tokenType": "NPC",
+    "layer": "TOKEN",
+    "propertyType": "Land",
+    "tokenOpacity": "1.0",
+    "speechName": null,
+    "terrainModifier": "0.0",
+    "terrainModifierOperation": "NONE",
+    "terrainModifiersIgnored": {
+      "net.rptools.maptool.model.Token_-TerrainModifierOperation": "NONE"
+    },
+    "isFlippedX": "false",
+    "isFlippedY": "false",
+    "isFlippedIso": "false",
+    "lightSourceList": null,
+    "sightType": "Normal",
+    "hasSight": "false",
+    "hasImageTable": "false",
+    "notes": "Smaller coins (than copper) include bronze zees, brass bits, and iron drabs",
+    "notesType": "text/plain",
+    "gmNotes": null,
+    "gmNotesType": "text/plain",
+    "gmName": null,
+    "state": null,
+    "propertyMapCI": {
+      "store": {
+        "entry": [
+          {
+            "string": "pp",
+            "net.rptools.CaseInsensitiveHashMap_-KeyValue": {
+              "key": "pp",
+              "value": {
+                "@class": "string",
+                "#text": "plate"
+              },
+              "outer-class": {
+                "@reference": "../../../.."
+              }
+            }
+          },
+          {
+            "string": "capital",
+            "net.rptools.CaseInsensitiveHashMap_-KeyValue": {
+              "key": "capital",
+              "value": {
+                "@class": "string",
+                "#text": "City of Greyhawk"
+              },
+              "outer-class": {
+                "@reference": "../../../.."
+              }
+            }
+          },
+          {
+            "string": "languages",
+            "net.rptools.CaseInsensitiveHashMap_-KeyValue": {
+              "key": "languages",
+              "value": {
+                "@class": "string",
+                "#text": "Common, Rhopan, Gnomish, Halfling"
+              },
+              "outer-class": {
+                "@reference": "../../../.."
+              }
+            }
+          },
+          {
+            "string": "cappop",
+            "net.rptools.CaseInsensitiveHashMap_-KeyValue": {
+              "key": "capPop",
+              "value": {
+                "@class": "string",
+                "#text": "58000"
+              },
+              "outer-class": {
+                "@reference": "../../../.."
+              }
+            }
+          },
+          {
+            "string": "alignments",
+            "net.rptools.CaseInsensitiveHashMap_-KeyValue": {
+              "key": "alignments",
+              "value": {
+                "@class": "string",
+                "#text": "N, LG, LE, LN, NG, NE, CG, CN, CE"
+              },
+              "outer-class": {
+                "@reference": "../../../.."
+              }
+            }
+          },
+          {
+            "string": "exports",
+            "net.rptools.CaseInsensitiveHashMap_-KeyValue": {
+              "key": "exports",
+              "value": {
+                "@class": "string",
+                "#text": "silver, electrum, gold, platinum, gems (I-IV)"
+              },
+              "outer-class": {
+                "@reference": "../../../.."
+              }
+            }
+          },
+          {
+            "string": "gods",
+            "net.rptools.CaseInsensitiveHashMap_-KeyValue": {
+              "key": "gods",
+              "value": {
+                "@class": "string",
+                "#text": "Beory, Boccob, Celestian, Corellon Larethian, Ehlonna, Fharlanghn, Garl Glittergold, Heironeous, Istus, Kord, Kurell, Lirr, Moradin, Norebo, Obad-Hai, Olidammara, Osprem, Pelor, Pholtus, Procan, Ralishaz, Rao, Saint Cuthbert, Trithereon, Ulaa, Wee Jas, Xerbo, Yondalla, Zilchus"
+              },
+              "outer-class": {
+                "@reference": "../../../.."
+              }
+            }
+          },
+          {
+            "string": "description",
+            "net.rptools.CaseInsensitiveHashMap_-KeyValue": {
+              "key": "description",
+              "value": {
+                "@class": "string",
+                "#text": "Greyhawk was established as a trading post on the Selintan River during the period of early migrations. As it flourished, a local warlord built a small keep on the hills above the village called Greyhawk which had sprung up around the trading center, extracting taxes from the trade and occasionally raiding caravans (particularly those coming with silver ingots found in the burial mounds of the Cairn Hills). This petty noble soon became quite rich and powerful and assumed the title of Landgraf of Selintan. Greyhawk and the power of the new Landgraf grew rapidly thereafter, and his son and heir, Ganz, was wed to the daughter of the Gynarch (Despotrix) of Hardby, a sorceress of no small repute. Their descendants ruled a growing domain which rose to considerable heights c. 375 CY under the rule of Zagig Yragerne (the so-called Mad Archmage). It was Zagig who built the sprawling Castle Greyhawk (now a ruin) and poured funds into the City of Greyhawk in order to make it into the “Gem of the Flanaess.” His reign was bizarre in many other ways, and it came as no surprise when it was reported that Zagig Yragerne had mysteriously vanished after years of rule when no change or aging could be detected. The castle was abandoned, supposedly due to a terrible curse upon the place, but the City proper continued to flourish. In 498 CY it was proclaimed a free and independent city, ruling a territory from Hardby on the Woolly bay to the Nyr Dyv, between the eastern folds of the Cairn Hills and the Gnarley forest, including much of what is now the northern section of the Wild Coast region. These holdings have been lost over the intervening decades, and a decline in trade seemed certain to turn the place into a backwater, save for recent events. Several years ago a series of treasure troves was discovered in or near Greyhawk Castle. Immense wealth began flowing into the city, and artisans and mercenaries began flocking to Greyhawk due to this boom. Local lords used this influx of hard money to revitalize the city, and it again rules a considerable portion of the area, claiming all of the land from Nyr Dyv to the Neen River where it Joins the Selintan, including the mines in the Cairn Hills. The Despotrix of Hardby now pays tribute to Greyhawk to avoid being absorbed in the growing city state once again.  Greyhawk is ruled by its Lord Mayor; this individual is chosen by the Directing Oligarchy. The latter body is composed of the Captain-General of the Watch, the Constable, the Guildmaster of Thieves, the Guildmaster of Assassins, and various representatives of the Society of Magi, the Merchants and Traders Union, Artisans League, and Clerical leaders. The total number of the Directors ranges from 12 to 18."
+              },
+              "outer-class": {
+                "@reference": "../../../.."
+              }
+            }
+          },
+          {
+            "string": "gp",
+            "net.rptools.CaseInsensitiveHashMap_-KeyValue": {
+              "key": "gp",
+              "value": {
+                "@class": "string",
+                "#text": "orb"
+              },
+              "outer-class": {
+                "@reference": "../../../.."
+              }
+            }
+          },
+          {
+            "string": "ep",
+            "net.rptools.CaseInsensitiveHashMap_-KeyValue": {
+              "key": "ep",
+              "value": {
+                "@class": "string",
+                "#text": "lucky"
+              },
+              "outer-class": {
+                "@reference": "../../../.."
+              }
+            }
+          },
+          {
+            "string": "ruler",
+            "net.rptools.CaseInsensitiveHashMap_-KeyValue": {
+              "key": "ruler",
+              "value": {
+                "@class": "string",
+                "#text": "His Solemn Authority, the Lord Mayor of Greyhawk — Nerof Gasgol"
+              },
+              "outer-class": {
+                "@reference": "../../../.."
+              }
+            }
+          },
+          {
+            "string": "cp",
+            "net.rptools.CaseInsensitiveHashMap_-KeyValue": {
+              "key": "cp",
+              "value": {
+                "@class": "string",
+                "#text": "common"
+              },
+              "outer-class": {
+                "@reference": "../../../.."
+              }
+            }
+          },
+          {
+            "string": "population",
+            "net.rptools.CaseInsensitiveHashMap_-KeyValue": {
+              "key": "population",
+              "value": {
+                "@class": "string",
+                "#text": "75000"
+              },
+              "outer-class": {
+                "@reference": "../../../.."
+              }
+            }
+          },
+          {
+            "string": "government",
+            "net.rptools.CaseInsensitiveHashMap_-KeyValue": {
+              "key": "government",
+              "value": {
+                "@class": "string",
+                "#text": "Oligarchy"
+              },
+              "outer-class": {
+                "@reference": "../../../.."
+              }
+            }
+          },
+          {
+            "string": "forces",
+            "net.rptools.CaseInsensitiveHashMap_-KeyValue": {
+              "key": "forces",
+              "outer-class": {
+                "@reference": "../../../.."
+              }
+            }
+          },
+          {
+            "string": "fullname",
+            "net.rptools.CaseInsensitiveHashMap_-KeyValue": {
+              "key": "fullName",
+              "value": {
+                "@class": "string",
+                "#text": "Free City of Greyhawk"
+              },
+              "outer-class": {
+                "@reference": "../../../.."
+              }
+            }
+          },
+          {
+            "string": "sp",
+            "net.rptools.CaseInsensitiveHashMap_-KeyValue": {
+              "key": "sp",
+              "value": {
+                "@class": "string",
+                "#text": "noble"
+              },
+              "outer-class": {
+                "@reference": "../../../.."
+              }
+            }
+          },
+          {
+            "string": "rulerclass",
+            "net.rptools.CaseInsensitiveHashMap_-KeyValue": {
+              "key": "rulerClass",
+              "value": {
+                "@class": "string",
+                "#text": "thief, 10"
+              },
+              "outer-class": {
+                "@reference": "../../../.."
+              }
+            }
+          }
+        ]
+      }
+    },
+    "macroPropertiesMap": null,
+    "speechMap": null,
+    "allowURIAccess": "false"
+  }
+}

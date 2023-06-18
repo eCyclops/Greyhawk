@@ -1,0 +1,598 @@
+{
+  "net.rptools.maptool.model.Token": {
+    "id": {
+      "baGUID": "dH5zUMfoT7KKTpJ3yEuZ1g=="
+    },
+    "beingImpersonated": "false",
+    "exposedAreaGUID": {
+      "baGUID": "W9qx+rbUTXSqNlnj3bRQ3Q=="
+    },
+    "imageAssetMap": {
+      "entry": {
+        "null": null,
+        "net.rptools.lib.MD5Key": {
+          "id": "2a3ea95d4071f574973febe2f22d9b89"
+        }
+      }
+    },
+    "x": "-250",
+    "y": "850",
+    "z": "12",
+    "anchorX": "0",
+    "anchorY": "0",
+    "sizeScale": "1.0",
+    "lastX": "0",
+    "lastY": "0",
+    "snapToScale": "true",
+    "width": "833",
+    "height": "833",
+    "isoWidth": "100",
+    "isoHeight": "120",
+    "scaleX": "1.0",
+    "scaleY": "1.0",
+    "sizeMap": {
+      "entry": {
+        "string": "net.rptools.maptool.model.SquareGrid",
+        "net.rptools.maptool.model.GUID": {
+          "baGUID": "fwABAdBlFSoGAAAAKgABAA=="
+        }
+      }
+    },
+    "snapToGrid": "true",
+    "isVisible": "false",
+    "visibleOnlyToOwner": "false",
+    "vblColorSensitivity": "-1",
+    "alwaysVisibleTolerance": "2",
+    "isAlwaysVisible": "false",
+    "name": "Bandit Kingdoms",
+    "ownerList": null,
+    "ownerType": "0",
+    "tokenShape": "CIRCLE",
+    "tokenType": "NPC",
+    "layer": "TOKEN",
+    "propertyType": "Land",
+    "haloColorValue": "-23296",
+    "tokenOpacity": "1.0",
+    "speechName": null,
+    "terrainModifier": "0.0",
+    "terrainModifierOperation": "NONE",
+    "terrainModifiersIgnored": {
+      "net.rptools.maptool.model.Token_-TerrainModifierOperation": "NONE"
+    },
+    "isFlippedX": "false",
+    "isFlippedY": "false",
+    "isFlippedIso": "false",
+    "lightSourceList": null,
+    "sightType": "Normal",
+    "hasSight": "false",
+    "hasImageTable": "false",
+    "notes": null,
+    "notesType": "text/plain",
+    "gmNotes": null,
+    "gmNotesType": "text/plain",
+    "gmName": "Rookroost",
+    "state": null,
+    "propertyMapCI": {
+      "store": {
+        "entry": [
+          {
+            "string": "pp",
+            "net.rptools.CaseInsensitiveHashMap_-KeyValue": {
+              "key": "pp",
+              "value": {
+                "@class": "string",
+                "#text": "various"
+              },
+              "outer-class": {
+                "@reference": "../../../.."
+              }
+            }
+          },
+          {
+            "string": "capital",
+            "net.rptools.CaseInsensitiveHashMap_-KeyValue": {
+              "key": "capital",
+              "value": {
+                "@class": "string",
+                "#text": "Rookroost"
+              },
+              "outer-class": {
+                "@reference": "../../../.."
+              }
+            }
+          },
+          {
+            "string": "display details",
+            "net.rptools.CaseInsensitiveHashMap_-KeyValue": {
+              "key": "Display Details",
+              "outer-class": {
+                "@reference": "../../../.."
+              }
+            }
+          },
+          {
+            "string": "strength",
+            "net.rptools.CaseInsensitiveHashMap_-KeyValue": {
+              "key": "Strength",
+              "outer-class": {
+                "@reference": "../../../.."
+              }
+            }
+          },
+          {
+            "string": "hp",
+            "net.rptools.CaseInsensitiveHashMap_-KeyValue": {
+              "key": "HP",
+              "outer-class": {
+                "@reference": "../../../.."
+              }
+            }
+          },
+          {
+            "string": "------------basics-------------",
+            "net.rptools.CaseInsensitiveHashMap_-KeyValue": {
+              "key": "------------Basics-------------",
+              "outer-class": {
+                "@reference": "../../../.."
+              }
+            }
+          },
+          {
+            "string": "ruler",
+            "net.rptools.CaseInsensitiveHashMap_-KeyValue": {
+              "key": "ruler",
+              "value": {
+                "@class": "string",
+                "#text": "Plar Teuod Fent of Rookroost"
+              },
+              "outer-class": {
+                "@reference": "../../../.."
+              }
+            }
+          },
+          {
+            "string": "charisma",
+            "net.rptools.CaseInsensitiveHashMap_-KeyValue": {
+              "key": "Charisma",
+              "outer-class": {
+                "@reference": "../../../.."
+              }
+            }
+          },
+          {
+            "string": "------------saves-----------",
+            "net.rptools.CaseInsensitiveHashMap_-KeyValue": {
+              "key": "------------Saves-----------",
+              "outer-class": {
+                "@reference": "../../../.."
+              }
+            }
+          },
+          {
+            "string": "xpneeded",
+            "net.rptools.CaseInsensitiveHashMap_-KeyValue": {
+              "key": "XPNeeded",
+              "outer-class": {
+                "@reference": "../../../.."
+              }
+            }
+          },
+          {
+            "string": "spell",
+            "net.rptools.CaseInsensitiveHashMap_-KeyValue": {
+              "key": "Spell",
+              "outer-class": {
+                "@reference": "../../../.."
+              }
+            }
+          },
+          {
+            "string": "ac",
+            "net.rptools.CaseInsensitiveHashMap_-KeyValue": {
+              "key": "AC",
+              "outer-class": {
+                "@reference": "../../../.."
+              }
+            }
+          },
+          {
+            "string": "ep",
+            "net.rptools.CaseInsensitiveHashMap_-KeyValue": {
+              "key": "ep",
+              "value": {
+                "@class": "string",
+                "#text": "various"
+              },
+              "outer-class": {
+                "@reference": "../../../.."
+              }
+            }
+          },
+          {
+            "string": "intelligence",
+            "net.rptools.CaseInsensitiveHashMap_-KeyValue": {
+              "key": "Intelligence",
+              "outer-class": {
+                "@reference": "../../../.."
+              }
+            }
+          },
+          {
+            "string": "population",
+            "net.rptools.CaseInsensitiveHashMap_-KeyValue": {
+              "key": "population",
+              "value": {
+                "@class": "string",
+                "#text": "95000"
+              },
+              "outer-class": {
+                "@reference": "../../../.."
+              }
+            }
+          },
+          {
+            "string": "magicresistances",
+            "net.rptools.CaseInsensitiveHashMap_-KeyValue": {
+              "key": "MagicResistances",
+              "outer-class": {
+                "@reference": "../../../.."
+              }
+            }
+          },
+          {
+            "string": "wand",
+            "net.rptools.CaseInsensitiveHashMap_-KeyValue": {
+              "key": "Wand",
+              "outer-class": {
+                "@reference": "../../../.."
+              }
+            }
+          },
+          {
+            "string": "forces",
+            "net.rptools.CaseInsensitiveHashMap_-KeyValue": {
+              "key": "forces",
+              "value": {
+                "@class": "string",
+                "#text": "cav 250, inf 450"
+              },
+              "outer-class": {
+                "@reference": "../../../.."
+              }
+            }
+          },
+          {
+            "string": "rulerclass",
+            "net.rptools.CaseInsensitiveHashMap_-KeyValue": {
+              "key": "rulerClass",
+              "value": {
+                "@class": "string",
+                "#text": "illusionist, 9"
+              },
+              "outer-class": {
+                "@reference": "../../../.."
+              }
+            }
+          },
+          {
+            "string": "maxhp",
+            "net.rptools.CaseInsensitiveHashMap_-KeyValue": {
+              "key": "MaxHP",
+              "outer-class": {
+                "@reference": "../../../.."
+              }
+            }
+          },
+          {
+            "string": "constitution",
+            "net.rptools.CaseInsensitiveHashMap_-KeyValue": {
+              "key": "Constitution",
+              "outer-class": {
+                "@reference": "../../../.."
+              }
+            }
+          },
+          {
+            "string": "deathmagic",
+            "net.rptools.CaseInsensitiveHashMap_-KeyValue": {
+              "key": "DeathMagic",
+              "outer-class": {
+                "@reference": "../../../.."
+              }
+            }
+          },
+          {
+            "string": "------------combat-----------",
+            "net.rptools.CaseInsensitiveHashMap_-KeyValue": {
+              "key": "------------Combat-----------",
+              "outer-class": {
+                "@reference": "../../../.."
+              }
+            }
+          },
+          {
+            "string": "cappop",
+            "net.rptools.CaseInsensitiveHashMap_-KeyValue": {
+              "key": "capPop",
+              "value": {
+                "@class": "string",
+                "#text": "17310"
+              },
+              "outer-class": {
+                "@reference": "../../../.."
+              }
+            }
+          },
+          {
+            "string": "critical",
+            "net.rptools.CaseInsensitiveHashMap_-KeyValue": {
+              "key": "Critical",
+              "outer-class": {
+                "@reference": "../../../.."
+              }
+            }
+          },
+          {
+            "string": "rod",
+            "net.rptools.CaseInsensitiveHashMap_-KeyValue": {
+              "key": "Rod",
+              "outer-class": {
+                "@reference": "../../../.."
+              }
+            }
+          },
+          {
+            "string": "exports",
+            "net.rptools.CaseInsensitiveHashMap_-KeyValue": {
+              "key": "exports",
+              "value": {
+                "@class": "string",
+                "#text": "silver"
+              },
+              "outer-class": {
+                "@reference": "../../../.."
+              }
+            }
+          },
+          {
+            "string": "gods",
+            "net.rptools.CaseInsensitiveHashMap_-KeyValue": {
+              "key": "gods",
+              "value": {
+                "@class": "string",
+                "#text": "Iuz, Olidammara, Erythnul, Norebo, Hextor, Orcish pantheon, Nerull, Ralishaz, Kurell, Fharlanghn, Pholtus, Trithereon, Rudd, Goblin pantheon"
+              },
+              "outer-class": {
+                "@reference": "../../../.."
+              }
+            }
+          },
+          {
+            "string": "description",
+            "net.rptools.CaseInsensitiveHashMap_-KeyValue": {
+              "key": "description",
+              "value": {
+                "@class": "string",
+                "#text": "The Bandit Kingdoms are a collection of petty holdings which were founded sometime around 300 – 330 CY. This collection of small personal territories stretches from the southern Shield Lands to the Bluff Hills and northern verges of the Fellreev Forest, from the Ritensa River to the Artonsamay River in the east. Each little kingdom is ruled by a robber chieftain claiming a title such as Baron, Boss, Plar, General, Tyrant, Prince, Despot, and even King. The territorial boundaries of the holdings of these kinglets are subject to rapid change due to sudden warfare and defeat or victory. In all, there are 17 states within the confines of the area, ruled by four to six powerful lords, with the rest attempting either to become leading rulers or simply to survive. The relationship persists because no single bandit lord is strong enough to conquer the whole territory, and the combined strength of all is often required to defend against neighboring states’ retributive expeditions. So bandit and brigand band together in self interest, and no kinglet, regardless of ambition, has seriously attempted to rule the whole, for fear that threatened lords would turn to neighboring states in spite even at the risk of destruction by the summoned “ally.” Thus the combined kinglets continue to stand more or less together. The total military strength of all territories is quite considerable due to the fact that each ruler maintains a large force with which to raid and pillage. (There probably are some 10,000 regular troops in total, if recent reconnaissance is to be trusted.)"
+              },
+              "outer-class": {
+                "@reference": "../../../.."
+              }
+            }
+          },
+          {
+            "string": "thac0",
+            "net.rptools.CaseInsensitiveHashMap_-KeyValue": {
+              "key": "THAC0",
+              "outer-class": {
+                "@reference": "../../../.."
+              }
+            }
+          },
+          {
+            "string": "wisdom",
+            "net.rptools.CaseInsensitiveHashMap_-KeyValue": {
+              "key": "Wisdom",
+              "outer-class": {
+                "@reference": "../../../.."
+              }
+            }
+          },
+          {
+            "string": "government",
+            "net.rptools.CaseInsensitiveHashMap_-KeyValue": {
+              "key": "government",
+              "value": {
+                "@class": "string",
+                "#text": "four to six powerful lords in competition"
+              },
+              "outer-class": {
+                "@reference": "../../../.."
+              }
+            }
+          },
+          {
+            "string": "sp",
+            "net.rptools.CaseInsensitiveHashMap_-KeyValue": {
+              "key": "sp",
+              "value": {
+                "@class": "string",
+                "#text": "various"
+              },
+              "outer-class": {
+                "@reference": "../../../.."
+              }
+            }
+          },
+          {
+            "string": "polymorph",
+            "net.rptools.CaseInsensitiveHashMap_-KeyValue": {
+              "key": "Polymorph",
+              "outer-class": {
+                "@reference": "../../../.."
+              }
+            }
+          },
+          {
+            "string": "breathweapon",
+            "net.rptools.CaseInsensitiveHashMap_-KeyValue": {
+              "key": "BreathWeapon",
+              "outer-class": {
+                "@reference": "../../../.."
+              }
+            }
+          },
+          {
+            "string": "initiative",
+            "net.rptools.CaseInsensitiveHashMap_-KeyValue": {
+              "key": "Initiative",
+              "outer-class": {
+                "@reference": "../../../.."
+              }
+            }
+          },
+          {
+            "string": "languages",
+            "net.rptools.CaseInsensitiveHashMap_-KeyValue": {
+              "key": "languages",
+              "value": {
+                "@class": "string",
+                "#text": "Common, Orcish, Halfling"
+              },
+              "outer-class": {
+                "@reference": "../../../.."
+              }
+            }
+          },
+          {
+            "string": "poison",
+            "net.rptools.CaseInsensitiveHashMap_-KeyValue": {
+              "key": "Poison",
+              "outer-class": {
+                "@reference": "../../../.."
+              }
+            }
+          },
+          {
+            "string": "paralyzation",
+            "net.rptools.CaseInsensitiveHashMap_-KeyValue": {
+              "key": "Paralyzation",
+              "outer-class": {
+                "@reference": "../../../.."
+              }
+            }
+          },
+          {
+            "string": "gp",
+            "net.rptools.CaseInsensitiveHashMap_-KeyValue": {
+              "key": "gp",
+              "value": {
+                "@class": "string",
+                "#text": "various"
+              },
+              "outer-class": {
+                "@reference": "../../../.."
+              }
+            }
+          },
+          {
+            "string": "staff",
+            "net.rptools.CaseInsensitiveHashMap_-KeyValue": {
+              "key": "Staff",
+              "outer-class": {
+                "@reference": "../../../.."
+              }
+            }
+          },
+          {
+            "string": "displayhp",
+            "net.rptools.CaseInsensitiveHashMap_-KeyValue": {
+              "key": "DisplayHP",
+              "outer-class": {
+                "@reference": "../../../.."
+              }
+            }
+          },
+          {
+            "string": "cp",
+            "net.rptools.CaseInsensitiveHashMap_-KeyValue": {
+              "key": "cp",
+              "value": {
+                "@class": "string",
+                "#text": "various"
+              },
+              "outer-class": {
+                "@reference": "../../../.."
+              }
+            }
+          },
+          {
+            "string": "dexterity",
+            "net.rptools.CaseInsensitiveHashMap_-KeyValue": {
+              "key": "Dexterity",
+              "outer-class": {
+                "@reference": "../../../.."
+              }
+            }
+          },
+          {
+            "string": "xp",
+            "net.rptools.CaseInsensitiveHashMap_-KeyValue": {
+              "key": "XP",
+              "outer-class": {
+                "@reference": "../../../.."
+              }
+            }
+          },
+          {
+            "string": "petrification",
+            "net.rptools.CaseInsensitiveHashMap_-KeyValue": {
+              "key": "Petrification",
+              "outer-class": {
+                "@reference": "../../../.."
+              }
+            }
+          },
+          {
+            "string": "fullname",
+            "net.rptools.CaseInsensitiveHashMap_-KeyValue": {
+              "key": "fullName",
+              "value": {
+                "@class": "string",
+                "#text": "Free City of Rookroost"
+              },
+              "outer-class": {
+                "@reference": "../../../.."
+              }
+            }
+          },
+          {
+            "string": "movement",
+            "net.rptools.CaseInsensitiveHashMap_-KeyValue": {
+              "key": "Movement",
+              "outer-class": {
+                "@reference": "../../../.."
+              }
+            }
+          },
+          {
+            "string": "subdivisions",
+            "net.rptools.CaseInsensitiveHashMap_-KeyValue": {
+              "key": "subdivisions",
+              "value": {
+                "@class": "string",
+                "#text": "Unified bands of the Warfields, Barony of Wormhall, Mighty Freehold, Abbarra, Earldom of the Tangles, Men of the Rift, Great Lands of Reyhu, Principality of Redhand, Duchy of the Artonsamay, Free City-State of Stoink, Grand Theocracy of Dimre, Kingdom of Johrase, Stronghold of the Midlands, Defenders of the Greenkeep, Free City of Rookroost, Fellands, Grand Clans of Groskopf"
+              },
+              "outer-class": {
+                "@reference": "../../../.."
+              }
+            }
+          }
+        ]
+      }
+    },
+    "macroPropertiesMap": null,
+    "speechMap": null,
+    "allowURIAccess": "false"
+  }
+}

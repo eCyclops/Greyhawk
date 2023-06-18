@@ -1,0 +1,303 @@
+{
+  "net.rptools.maptool.model.Token": {
+    "id": {
+      "baGUID": "zE6/19BoQMaBdfFctlHyKw=="
+    },
+    "beingImpersonated": "false",
+    "exposedAreaGUID": {
+      "baGUID": "l1Z5sVCCRqe8KL1Hti4dmw=="
+    },
+    "imageAssetMap": {
+      "entry": {
+        "null": null,
+        "net.rptools.lib.MD5Key": {
+          "id": "d730867324a8b877c7d2a35d4842f2df"
+        }
+      }
+    },
+    "x": "-50",
+    "y": "950",
+    "z": "81",
+    "anchorX": "0",
+    "anchorY": "0",
+    "sizeScale": "1.0",
+    "lastX": "0",
+    "lastY": "0",
+    "snapToScale": "true",
+    "width": "833",
+    "height": "833",
+    "isoWidth": "833",
+    "isoHeight": "833",
+    "scaleX": "1.0",
+    "scaleY": "1.0",
+    "sizeMap": {
+      "entry": {
+        "string": "net.rptools.maptool.model.SquareGrid",
+        "net.rptools.maptool.model.GUID": {
+          "baGUID": "fwABAdBlFSoGAAAAKgABAA=="
+        }
+      }
+    },
+    "snapToGrid": "true",
+    "isVisible": "false",
+    "visibleOnlyToOwner": "false",
+    "vblColorSensitivity": "-1",
+    "alwaysVisibleTolerance": "2",
+    "isAlwaysVisible": "false",
+    "name": "Irongate",
+    "ownerList": null,
+    "ownerType": "0",
+    "tokenShape": "TOP_DOWN",
+    "tokenType": "NPC",
+    "layer": "TOKEN",
+    "propertyType": "Land",
+    "haloColorValue": "-4144960",
+    "tokenOpacity": "1.0",
+    "speechName": null,
+    "terrainModifier": "0.0",
+    "terrainModifierOperation": "NONE",
+    "terrainModifiersIgnored": {
+      "net.rptools.maptool.model.Token_-TerrainModifierOperation": "NONE"
+    },
+    "isFlippedX": "false",
+    "isFlippedY": "false",
+    "isFlippedIso": "false",
+    "lightSourceList": null,
+    "sightType": "Normal",
+    "hasSight": "false",
+    "hasImageTable": "false",
+    "notes": "For a man, he's unusually short (under 5 feet), but is legendarily wily and wise. No one knows his \"class\", he has never cast spells in public or revealed a religious affiliation.\n\nHe's also lived a great deal of time, having been elected to the mayoralty of Irongate at least 4 successive 10 year terms (and has just started a fifth in 590 CY).\n\nHe has been a member of the inner sanctum of the Iron League for as long as any man in that secret society can remember....only the elves of Sunndi or the Dwarflords of the Iron Hills can remember a time before him....\n\nHere are the prevalent theories, whispered by various circles in the city and its environs:\n\n1) Darg is a human with dwarven heritage (extremely unusual) and that helps explain his appearance and long-livedness. This would also explain his great affinity with the dwarven enclaves bordering Irongate who regard him as a strong ally. His wisdom comes from having lived before the Turmoil Between Crowns, having secretly been a member of the Iron League since its inception, indeed perhaps its founder!\n\n2) Darg is a dragon, one of the last inhabitants of the Dragonshead Peninsula, who lives polymorhped as a man. He cherishes this region so much, that he is willing to engage in this charade to protect its mysteries. Only in secret is his true form ever revealed (which is known only to a handful of people, including perhaps Elayne Mystica, a close confidant.) This would explain why he inhabitants the Lord Mayor's Tower virtually alone, suffering few visitors, even among the lords of the city.\n\n3) Darg is in fact a human, and is either secretly a wizard, scholar, or sage who has learned some great secret. This has afforded him unnaturally long life and the foresight to protect Irongate and defeat its enemies in ways others could not. This would explain his secret forays into the old caverns in the hills near Irongate and his prohibition against exploring the ruins beneath Dwurtown.\n\nOne of these might be the truth, none of them, or some combination. Use whatever works best in your campaign.",
+    "notesType": "text/plain",
+    "gmNotes": null,
+    "gmNotesType": "text/plain",
+    "gmName": null,
+    "state": null,
+    "propertyMapCI": {
+      "store": {
+        "entry": [
+          {
+            "string": "pp",
+            "net.rptools.CaseInsensitiveHashMap_-KeyValue": {
+              "key": "pp",
+              "outer-class": {
+                "@reference": "../../../.."
+              }
+            }
+          },
+          {
+            "string": "capital",
+            "net.rptools.CaseInsensitiveHashMap_-KeyValue": {
+              "key": "capital",
+              "value": {
+                "@class": "string",
+                "#text": "Irongate"
+              },
+              "outer-class": {
+                "@reference": "../../../.."
+              }
+            }
+          },
+          {
+            "string": "cappop",
+            "net.rptools.CaseInsensitiveHashMap_-KeyValue": {
+              "key": "capPop",
+              "value": {
+                "@class": "string",
+                "#text": "44000"
+              },
+              "outer-class": {
+                "@reference": "../../../.."
+              }
+            }
+          },
+          {
+            "string": "languages",
+            "net.rptools.CaseInsensitiveHashMap_-KeyValue": {
+              "key": "languages",
+              "value": {
+                "@class": "string",
+                "#text": "Common, Dwarven, Ferral"
+              },
+              "outer-class": {
+                "@reference": "../../../.."
+              }
+            }
+          },
+          {
+            "string": "alignments",
+            "net.rptools.CaseInsensitiveHashMap_-KeyValue": {
+              "key": "alignments",
+              "value": {
+                "@class": "string",
+                "#text": "LG, LN, NG"
+              },
+              "outer-class": {
+                "@reference": "../../../.."
+              }
+            }
+          },
+          {
+            "string": "exports",
+            "net.rptools.CaseInsensitiveHashMap_-KeyValue": {
+              "key": "exports",
+              "value": {
+                "@class": "string",
+                "#text": "gems (II, III)"
+              },
+              "outer-class": {
+                "@reference": "../../../.."
+              }
+            }
+          },
+          {
+            "string": "gods",
+            "net.rptools.CaseInsensitiveHashMap_-KeyValue": {
+              "key": "gods",
+              "value": {
+                "@class": "string",
+                "#text": "Heironeous, Zilchus, Procan, dwarf pantheon, Osprem, Xerbo, Norebo, Fortubo, Jascar, Lendor"
+              },
+              "outer-class": {
+                "@reference": "../../../.."
+              }
+            }
+          },
+          {
+            "string": "description",
+            "net.rptools.CaseInsensitiveHashMap_-KeyValue": {
+              "key": "description",
+              "value": {
+                "@class": "string",
+                "#text": "This large and thriving city is based on sea commerce and trade between Onnwal and the East. Irongate developed an independent spirit early in its history due to its mingling of peoples and ideas. As the rule of the Overking grew more despotic, the people of the city began to murmur, and the Lord Mayor headed a deputation bearing grievances to the Herzog. These emissaries were thrown into prison, given a mock trial, and executed by ritual torture for the Overking's entertainment (446 CY). The following year the whole of the south was in arms against the realm, and after a brief struggle the Iron League was founded, an alliance of mutual support which aided the rebellious states to throw off the yoke of the Aerdi tyrants. Irongate has a strong naval squadron and a large company of armored crossbowmen in League service. She can also raise 2,000 heavy militia infantry of high morale and excellent training. These troops are spetum or glaive-guisarme equipped and can march in a single day after muster."
+              },
+              "outer-class": {
+                "@reference": "../../../.."
+              }
+            }
+          },
+          {
+            "string": "gp",
+            "net.rptools.CaseInsensitiveHashMap_-KeyValue": {
+              "key": "gp",
+              "value": {
+                "@class": "string",
+                "#text": "dragoneye"
+              },
+              "outer-class": {
+                "@reference": "../../../.."
+              }
+            }
+          },
+          {
+            "string": "ep",
+            "net.rptools.CaseInsensitiveHashMap_-KeyValue": {
+              "key": "ep",
+              "outer-class": {
+                "@reference": "../../../.."
+              }
+            }
+          },
+          {
+            "string": "ruler",
+            "net.rptools.CaseInsensitiveHashMap_-KeyValue": {
+              "key": "ruler",
+              "value": {
+                "@class": "string",
+                "#text": "His Resolute Honor, Cobb Darg, Lord High Mayor of Irongate"
+              },
+              "outer-class": {
+                "@reference": "../../../.."
+              }
+            }
+          },
+          {
+            "string": "cp",
+            "net.rptools.CaseInsensitiveHashMap_-KeyValue": {
+              "key": "cp",
+              "value": {
+                "@class": "string",
+                "#text": "common"
+              },
+              "outer-class": {
+                "@reference": "../../../.."
+              }
+            }
+          },
+          {
+            "string": "population",
+            "net.rptools.CaseInsensitiveHashMap_-KeyValue": {
+              "key": "population",
+              "value": {
+                "@class": "string",
+                "#text": "57000"
+              },
+              "outer-class": {
+                "@reference": "../../../.."
+              }
+            }
+          },
+          {
+            "string": "government",
+            "net.rptools.CaseInsensitiveHashMap_-KeyValue": {
+              "key": "government",
+              "value": {
+                "@class": "string",
+                "#text": "Electoral Oligarchy"
+              },
+              "outer-class": {
+                "@reference": "../../../.."
+              }
+            }
+          },
+          {
+            "string": "forces",
+            "net.rptools.CaseInsensitiveHashMap_-KeyValue": {
+              "key": "forces",
+              "outer-class": {
+                "@reference": "../../../.."
+              }
+            }
+          },
+          {
+            "string": "fullname",
+            "net.rptools.CaseInsensitiveHashMap_-KeyValue": {
+              "key": "fullName",
+              "value": {
+                "@class": "string",
+                "#text": "Free City of Irongate"
+              },
+              "outer-class": {
+                "@reference": "../../../.."
+              }
+            }
+          },
+          {
+            "string": "sp",
+            "net.rptools.CaseInsensitiveHashMap_-KeyValue": {
+              "key": "sp",
+              "value": {
+                "@class": "string",
+                "#text": "starry"
+              },
+              "outer-class": {
+                "@reference": "../../../.."
+              }
+            }
+          },
+          {
+            "string": "rulerclass",
+            "net.rptools.CaseInsensitiveHashMap_-KeyValue": {
+              "key": "rulerClass",
+              "outer-class": {
+                "@reference": "../../../.."
+              }
+            }
+          }
+        ]
+      }
+    },
+    "macroPropertiesMap": null,
+    "speechMap": null,
+    "allowURIAccess": "false"
+  }
+}

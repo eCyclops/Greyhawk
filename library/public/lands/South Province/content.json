@@ -1,0 +1,574 @@
+{
+  "net.rptools.maptool.model.Token": {
+    "id": {
+      "baGUID": "NVwgOtx7RlKwvnaLr5VONg=="
+    },
+    "beingImpersonated": "false",
+    "exposedAreaGUID": {
+      "baGUID": "9+BJSywvSiiWqmxJSZm9GQ=="
+    },
+    "imageAssetMap": {
+      "entry": {
+        "null": null,
+        "net.rptools.lib.MD5Key": {
+          "id": "422446f45fc20cf49bb4850b477a37f1"
+        }
+      }
+    },
+    "x": "650",
+    "y": "1050",
+    "z": "83",
+    "anchorX": "0",
+    "anchorY": "0",
+    "sizeScale": "1.0",
+    "lastX": "0",
+    "lastY": "0",
+    "snapToScale": "true",
+    "width": "865",
+    "height": "866",
+    "isoWidth": "865",
+    "isoHeight": "866",
+    "scaleX": "1.0",
+    "scaleY": "1.0",
+    "sizeMap": {
+      "entry": {
+        "string": "net.rptools.maptool.model.SquareGrid",
+        "net.rptools.maptool.model.GUID": {
+          "baGUID": "fwABAdBlFSoGAAAAKgABAA=="
+        }
+      }
+    },
+    "snapToGrid": "true",
+    "isVisible": "false",
+    "visibleOnlyToOwner": "false",
+    "vblColorSensitivity": "-1",
+    "alwaysVisibleTolerance": "2",
+    "isAlwaysVisible": "false",
+    "name": "South Province",
+    "ownerList": null,
+    "ownerType": "0",
+    "tokenShape": "TOP_DOWN",
+    "tokenType": "NPC",
+    "layer": "TOKEN",
+    "propertyType": "Land",
+    "haloColorValue": "-8388480",
+    "tokenOpacity": "1.0",
+    "speechName": null,
+    "terrainModifier": "0.0",
+    "terrainModifierOperation": "NONE",
+    "terrainModifiersIgnored": {
+      "net.rptools.maptool.model.Token_-TerrainModifierOperation": "NONE"
+    },
+    "isFlippedX": "false",
+    "isFlippedY": "false",
+    "isFlippedIso": "false",
+    "lightSourceList": null,
+    "sightType": "Normal",
+    "hasSight": "false",
+    "hasImageTable": "false",
+    "notes": null,
+    "notesType": "text/plain",
+    "gmNotes": null,
+    "gmNotesType": "text/plain",
+    "gmName": null,
+    "state": null,
+    "propertyMapCI": {
+      "store": {
+        "entry": [
+          {
+            "string": "pp",
+            "net.rptools.CaseInsensitiveHashMap_-KeyValue": {
+              "key": "pp",
+              "outer-class": {
+                "@reference": "../../../.."
+              }
+            }
+          },
+          {
+            "string": "capital",
+            "net.rptools.CaseInsensitiveHashMap_-KeyValue": {
+              "key": "capital",
+              "value": {
+                "@class": "string",
+                "#text": "Zelradton"
+              },
+              "outer-class": {
+                "@reference": "../../../.."
+              }
+            }
+          },
+          {
+            "string": "display details",
+            "net.rptools.CaseInsensitiveHashMap_-KeyValue": {
+              "key": "Display Details",
+              "outer-class": {
+                "@reference": "../../../.."
+              }
+            }
+          },
+          {
+            "string": "strength",
+            "net.rptools.CaseInsensitiveHashMap_-KeyValue": {
+              "key": "Strength",
+              "outer-class": {
+                "@reference": "../../../.."
+              }
+            }
+          },
+          {
+            "string": "hp",
+            "net.rptools.CaseInsensitiveHashMap_-KeyValue": {
+              "key": "HP",
+              "outer-class": {
+                "@reference": "../../../.."
+              }
+            }
+          },
+          {
+            "string": "------------basics-------------",
+            "net.rptools.CaseInsensitiveHashMap_-KeyValue": {
+              "key": "------------Basics-------------",
+              "outer-class": {
+                "@reference": "../../../.."
+              }
+            }
+          },
+          {
+            "string": "ruler",
+            "net.rptools.CaseInsensitiveHashMap_-KeyValue": {
+              "key": "ruler",
+              "value": {
+                "@class": "string",
+                "#text": "His High and Radiant Grace, the Herzog of the South Province; Chelor, Fasstal of Ahlissa, Idee and Sunndi, Overlord of Onnwal"
+              },
+              "outer-class": {
+                "@reference": "../../../.."
+              }
+            }
+          },
+          {
+            "string": "charisma",
+            "net.rptools.CaseInsensitiveHashMap_-KeyValue": {
+              "key": "Charisma",
+              "outer-class": {
+                "@reference": "../../../.."
+              }
+            }
+          },
+          {
+            "string": "------------saves-----------",
+            "net.rptools.CaseInsensitiveHashMap_-KeyValue": {
+              "key": "------------Saves-----------",
+              "outer-class": {
+                "@reference": "../../../.."
+              }
+            }
+          },
+          {
+            "string": "xpneeded",
+            "net.rptools.CaseInsensitiveHashMap_-KeyValue": {
+              "key": "XPNeeded",
+              "outer-class": {
+                "@reference": "../../../.."
+              }
+            }
+          },
+          {
+            "string": "spell",
+            "net.rptools.CaseInsensitiveHashMap_-KeyValue": {
+              "key": "Spell",
+              "outer-class": {
+                "@reference": "../../../.."
+              }
+            }
+          },
+          {
+            "string": "ac",
+            "net.rptools.CaseInsensitiveHashMap_-KeyValue": {
+              "key": "AC",
+              "outer-class": {
+                "@reference": "../../../.."
+              }
+            }
+          },
+          {
+            "string": "ep",
+            "net.rptools.CaseInsensitiveHashMap_-KeyValue": {
+              "key": "ep",
+              "outer-class": {
+                "@reference": "../../../.."
+              }
+            }
+          },
+          {
+            "string": "intelligence",
+            "net.rptools.CaseInsensitiveHashMap_-KeyValue": {
+              "key": "Intelligence",
+              "outer-class": {
+                "@reference": "../../../.."
+              }
+            }
+          },
+          {
+            "string": "population",
+            "net.rptools.CaseInsensitiveHashMap_-KeyValue": {
+              "key": "population",
+              "value": {
+                "@class": "string",
+                "#text": "400000"
+              },
+              "outer-class": {
+                "@reference": "../../../.."
+              }
+            }
+          },
+          {
+            "string": "magicresistances",
+            "net.rptools.CaseInsensitiveHashMap_-KeyValue": {
+              "key": "MagicResistances",
+              "outer-class": {
+                "@reference": "../../../.."
+              }
+            }
+          },
+          {
+            "string": "wand",
+            "net.rptools.CaseInsensitiveHashMap_-KeyValue": {
+              "key": "Wand",
+              "outer-class": {
+                "@reference": "../../../.."
+              }
+            }
+          },
+          {
+            "string": "forces",
+            "net.rptools.CaseInsensitiveHashMap_-KeyValue": {
+              "key": "forces",
+              "outer-class": {
+                "@reference": "../../../.."
+              }
+            }
+          },
+          {
+            "string": "rulerclass",
+            "net.rptools.CaseInsensitiveHashMap_-KeyValue": {
+              "key": "rulerClass",
+              "value": {
+                "@class": "string",
+                "#text": "thief+fighter, 5+11"
+              },
+              "outer-class": {
+                "@reference": "../../../.."
+              }
+            }
+          },
+          {
+            "string": "maxhp",
+            "net.rptools.CaseInsensitiveHashMap_-KeyValue": {
+              "key": "MaxHP",
+              "outer-class": {
+                "@reference": "../../../.."
+              }
+            }
+          },
+          {
+            "string": "constitution",
+            "net.rptools.CaseInsensitiveHashMap_-KeyValue": {
+              "key": "Constitution",
+              "outer-class": {
+                "@reference": "../../../.."
+              }
+            }
+          },
+          {
+            "string": "deathmagic",
+            "net.rptools.CaseInsensitiveHashMap_-KeyValue": {
+              "key": "DeathMagic",
+              "outer-class": {
+                "@reference": "../../../.."
+              }
+            }
+          },
+          {
+            "string": "------------combat-----------",
+            "net.rptools.CaseInsensitiveHashMap_-KeyValue": {
+              "key": "------------Combat-----------",
+              "outer-class": {
+                "@reference": "../../../.."
+              }
+            }
+          },
+          {
+            "string": "critical",
+            "net.rptools.CaseInsensitiveHashMap_-KeyValue": {
+              "key": "Critical",
+              "outer-class": {
+                "@reference": "../../../.."
+              }
+            }
+          },
+          {
+            "string": "cappop",
+            "net.rptools.CaseInsensitiveHashMap_-KeyValue": {
+              "key": "capPop",
+              "value": {
+                "@class": "string",
+                "#text": "7000"
+              },
+              "outer-class": {
+                "@reference": "../../../.."
+              }
+            }
+          },
+          {
+            "string": "rod",
+            "net.rptools.CaseInsensitiveHashMap_-KeyValue": {
+              "key": "Rod",
+              "outer-class": {
+                "@reference": "../../../.."
+              }
+            }
+          },
+          {
+            "string": "exports",
+            "net.rptools.CaseInsensitiveHashMap_-KeyValue": {
+              "key": "exports",
+              "value": {
+                "@class": "string",
+                "#text": "foodstuffs, silver"
+              },
+              "outer-class": {
+                "@reference": "../../../.."
+              }
+            }
+          },
+          {
+            "string": "gods",
+            "net.rptools.CaseInsensitiveHashMap_-KeyValue": {
+              "key": "gods",
+              "value": {
+                "@class": "string",
+                "#text": "Zilchus, Hextor, Oeridian agricultural gods, Xerbo, Fharlanghn, Olidammara, Kord, Norebo, Ralishaz, Procan, Kurell, Orc pantheon, Halfling pantheon, Boccob, Wee Jas, Delleb, Syrul, Goblin pantheon, Rudd, Elven pantheon"
+              },
+              "outer-class": {
+                "@reference": "../../../.."
+              }
+            }
+          },
+          {
+            "string": "thac0",
+            "net.rptools.CaseInsensitiveHashMap_-KeyValue": {
+              "key": "THAC0",
+              "outer-class": {
+                "@reference": "../../../.."
+              }
+            }
+          },
+          {
+            "string": "description",
+            "net.rptools.CaseInsensitiveHashMap_-KeyValue": {
+              "key": "description",
+              "value": {
+                "@class": "string",
+                "#text": "The ruler of South Province, a cousin of the Overking in Rauxes, is in disfavor. All previous attempts to regain the lost portions of the fief have been turned back in defeat, and the revenues coming to the Malachite Throne have diminished considerably, for the lost territories were rich indeed. Thus the Herzog has stated the intent to stake his entire personal fortune on a last attempt to break the Iron League. Success, of course, would make most of his title something more than hot air, regain favor for him in Rauxes, swell his coffers to bursting with wealth, and lastly give much wicked satisfaction to him. At the present time the holding extends only to the fief of Ahlissa and the central lands always retained by the Herzog, the territory around Hexpools and the Thelly River (and portions of this are even claimed by the Censor of Medegia who seeks to take advantage of the Herzog's disgrace). While native troops, except for those of the petty nobles and gentry serving the Herzog, are unreliable at best, the heavy cavalry is considered to be highly effective, and mercenary men-at-arms, exceptionally well armed and equipped, make the Army of the South formidable. If the viceroy carries through with his vow, a major war can be anticipated soon. If it does erupt, it is certain that Nyrond and Almor will move to support the Iron League — comprised of Idee, Irongate, Onnwal, and Sunndi."
+              },
+              "outer-class": {
+                "@reference": "../../../.."
+              }
+            }
+          },
+          {
+            "string": "wisdom",
+            "net.rptools.CaseInsensitiveHashMap_-KeyValue": {
+              "key": "Wisdom",
+              "outer-class": {
+                "@reference": "../../../.."
+              }
+            }
+          },
+          {
+            "string": "government",
+            "net.rptools.CaseInsensitiveHashMap_-KeyValue": {
+              "key": "government",
+              "value": {
+                "@class": "string",
+                "#text": "Hereditary Feudal Monarchy"
+              },
+              "outer-class": {
+                "@reference": "../../../.."
+              }
+            }
+          },
+          {
+            "string": "sp",
+            "net.rptools.CaseInsensitiveHashMap_-KeyValue": {
+              "key": "sp",
+              "outer-class": {
+                "@reference": "../../../.."
+              }
+            }
+          },
+          {
+            "string": "polymorph",
+            "net.rptools.CaseInsensitiveHashMap_-KeyValue": {
+              "key": "Polymorph",
+              "outer-class": {
+                "@reference": "../../../.."
+              }
+            }
+          },
+          {
+            "string": "breathweapon",
+            "net.rptools.CaseInsensitiveHashMap_-KeyValue": {
+              "key": "BreathWeapon",
+              "outer-class": {
+                "@reference": "../../../.."
+              }
+            }
+          },
+          {
+            "string": "initiative",
+            "net.rptools.CaseInsensitiveHashMap_-KeyValue": {
+              "key": "Initiative",
+              "outer-class": {
+                "@reference": "../../../.."
+              }
+            }
+          },
+          {
+            "string": "languages",
+            "net.rptools.CaseInsensitiveHashMap_-KeyValue": {
+              "key": "languages",
+              "value": {
+                "@class": "string",
+                "#text": "Common"
+              },
+              "outer-class": {
+                "@reference": "../../../.."
+              }
+            }
+          },
+          {
+            "string": "alignments",
+            "net.rptools.CaseInsensitiveHashMap_-KeyValue": {
+              "key": "alignments",
+              "value": {
+                "@class": "string",
+                "#text": "LE, N, NE, LN, CE, CN, LG"
+              },
+              "outer-class": {
+                "@reference": "../../../.."
+              }
+            }
+          },
+          {
+            "string": "poison",
+            "net.rptools.CaseInsensitiveHashMap_-KeyValue": {
+              "key": "Poison",
+              "outer-class": {
+                "@reference": "../../../.."
+              }
+            }
+          },
+          {
+            "string": "paralyzation",
+            "net.rptools.CaseInsensitiveHashMap_-KeyValue": {
+              "key": "Paralyzation",
+              "outer-class": {
+                "@reference": "../../../.."
+              }
+            }
+          },
+          {
+            "string": "gp",
+            "net.rptools.CaseInsensitiveHashMap_-KeyValue": {
+              "key": "gp",
+              "outer-class": {
+                "@reference": "../../../.."
+              }
+            }
+          },
+          {
+            "string": "staff",
+            "net.rptools.CaseInsensitiveHashMap_-KeyValue": {
+              "key": "Staff",
+              "outer-class": {
+                "@reference": "../../../.."
+              }
+            }
+          },
+          {
+            "string": "displayhp",
+            "net.rptools.CaseInsensitiveHashMap_-KeyValue": {
+              "key": "DisplayHP",
+              "outer-class": {
+                "@reference": "../../../.."
+              }
+            }
+          },
+          {
+            "string": "cp",
+            "net.rptools.CaseInsensitiveHashMap_-KeyValue": {
+              "key": "cp",
+              "outer-class": {
+                "@reference": "../../../.."
+              }
+            }
+          },
+          {
+            "string": "dexterity",
+            "net.rptools.CaseInsensitiveHashMap_-KeyValue": {
+              "key": "Dexterity",
+              "outer-class": {
+                "@reference": "../../../.."
+              }
+            }
+          },
+          {
+            "string": "xp",
+            "net.rptools.CaseInsensitiveHashMap_-KeyValue": {
+              "key": "XP",
+              "outer-class": {
+                "@reference": "../../../.."
+              }
+            }
+          },
+          {
+            "string": "petrification",
+            "net.rptools.CaseInsensitiveHashMap_-KeyValue": {
+              "key": "Petrification",
+              "outer-class": {
+                "@reference": "../../../.."
+              }
+            }
+          },
+          {
+            "string": "fullname",
+            "net.rptools.CaseInsensitiveHashMap_-KeyValue": {
+              "key": "fullName",
+              "value": {
+                "@class": "string",
+                "#text": "South Province"
+              },
+              "outer-class": {
+                "@reference": "../../../.."
+              }
+            }
+          },
+          {
+            "string": "movement",
+            "net.rptools.CaseInsensitiveHashMap_-KeyValue": {
+              "key": "Movement",
+              "outer-class": {
+                "@reference": "../../../.."
+              }
+            }
+          }
+        ]
+      }
+    },
+    "macroPropertiesMap": null,
+    "speechMap": null,
+    "allowURIAccess": "false"
+  }
+}

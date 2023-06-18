@@ -3,4 +3,4 @@
 
 [h: varsFromStrProp(returnData)]
 
-Today is [r: weekDay], [r:theDate] [r: month] [r: thisYear]
+[r:"Today is " + weekDay + ", " + theDate + " " + month + " " + thisYear ]

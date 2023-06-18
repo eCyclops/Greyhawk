@@ -6,13 +6,11 @@
 
 [h: thisQuarter = ceiling(yearDate/91)]
 [h: qDay = yearDate - (91*(thisQuarter-1))]
-[h: qMonth = ceiling((qDay-28)/28)+1]
-
 [h: qMonth = ceiling((qDay-35)/28)+1]
 
 [h, if(qMonth > 1):
     theDate = (qDay - 7) - (28*(qMonth-2));
-    theDate = ceiling((qDay-7)/7)+1
+    theDate = qDay
 ]
 
 [h: theDate = qDay - (28 * (qMonth -1))]
