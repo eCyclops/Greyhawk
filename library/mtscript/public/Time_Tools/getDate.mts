@@ -21,15 +21,15 @@
 
 [h: thisMonth = qMonth + (4 * (thisQuarter-1))]
 
-[e: "<br><br>This month is "+thisMonth+"<br><br>"]
+[r: "<br><br>This month is "+thisMonth+"<br><br>"]
 
 [h: months = getLibProperty("months", "lib:com.ecyclops.greyhawk")]
 
-[e: monthStuff = listGet(months, thisMonth-1)]
+[r: monthStuff = listGet(months, thisMonth-1)]
 
 <hr>
 
-[e: month = getStrProp(monthStuff, "name")]
+[r: month = getStrProp(monthStuff, "name")]
 
 [h: returnDate = strPropFromVars("weekDay, theDate, month")]
 
