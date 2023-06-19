@@ -1,0 +1,172 @@
+{
+    "dropNamespace": false,
+    "definedFunctions": [
+        {
+            "name": "incrementSegment",
+            "path": "Time_Tools/incrementSegment.mts",
+            "description": "Increment time by one segment",
+            "summary": "",
+            "ignoreOutput": false,
+            "sameScope": false
+        },
+        {
+            "name": "incrementMinute",
+            "path": "Time_Tools/incrementMinute.mts",
+            "description": "This macro has most of the code for changing the time. All of the others eventually come here.",
+            "summary": "Increment time by one minute",
+            "ignoreOutput": false,
+            "sameScope": false
+        },
+        {
+            "name": "incrementRound",
+            "path": "Time_Tools/incrementRound",
+            "description": "Calls incrementMinute to actually change the time",
+            "summary": "Increment time by one round",
+            "ignoreOutput": false,
+            "sameScope": false
+        },
+        {
+            "name": "incrementTurn",
+            "path": "Time_Tools/incrementTurn",
+            "description": "Uses incrementMinute to advance time by ten minutes",
+            "summary": "Increment time by one turn",
+            "ignoreOutput": false,
+            "sameScope": false
+        },
+        {
+            "name": "incrementYearDate",
+            "path": "Time_Tools/incrementYearDate",
+            "description": "Takes care of beginning/end of year, etc.",
+            "summary": "Changes the yearDate",
+            "ignoreOutput": false,
+            "sameScope": false
+        },
+        {
+            "name": "incrementYear",
+            "path": "Time_Tools/incrementYear",
+            "description": "Changes the Year",
+            "summary": "Changes the Year number",
+            "ignoreOutput": false,
+            "sameScope": false
+        },
+
+        {
+            "name": "moons",
+            "path": "Time_Tools/moons",
+            "description": "Calculates phase for the moons",
+            "summary": "Moon calculations",
+            "ignoreOutput": false,
+            "sameScope": false
+        },
+
+        {
+            "name": "weather",
+            "path": "weather/weather",
+            "description": "Generates weather from a table",
+            "summary": "Generates weather",
+            "ignoreOutput": false,
+            "sameScope": false
+        },
+
+        {
+            "name": "getDate",
+            "path": "Time_Tools/getDate",
+            "description": "Calculates the date, month, and year from various data",
+            "summary": "Returns the exact date",
+            "ignoreOutput": false,
+            "sameScope": false
+        },
+        {
+            "name": "getTime",
+            "path": "Time_Tools/getTime",
+            "description": "Calculates the time from a string number",
+            "summary": "Returns the current time",
+            "ignoreOutput": false,
+            "sameScope": false
+        },
+        {
+            "name": "getYear",
+            "path": "Time_Tools/getYear",
+            "description": "Pulls the current year from the data store",
+            "summary": "Returns the current year",
+            "ignoreOutput": false,
+            "sameScope": false
+        },
+        {
+            "name": "getYearDate",
+            "path": "Time_Tools/getYearDate",
+            "description": "Pulls the current yearDate from the data store",
+            "summary": "Returns the current yearDate",
+            "ignoreOutput": false,
+            "sameScope": false
+        },
+        {
+            "name": "stardate",
+            "path": "Time_Tools/yearDateFromDate",
+            "description": "Calculates a yearDate from day month year.",
+            "summary": "Returns a date in yearDate format",
+            "ignoreOutput": false,
+            "sameScope": false
+        },
+        {
+            "name": "today",
+            "path": "Time_Tools/today",
+            "description": "Most of the work is done by getDate",
+            "summary": "Returns today's date, nicely formatted.",
+            "ignoreOutput": false,
+            "sameScope": false
+        },
+
+        {
+            "name": "timeandtemp",
+            "path": "Time_Tools/Time_and_Temperature",
+            "description": "Opens a panel showing the current date, time, and weather conditions. Also, whether anyone has a birthday.",
+            "summary": "Time and Temperature frame",
+            "ignoreOutput": false,
+            "sameScope": false
+        },
+
+        {
+            "name": "birthdays",
+            "path": "Time_Tools/Birthdays",
+            "description": "Scrolls through tokens present and looks for birthdays that match the date.",
+            "summary": "List today's birthdays",
+            "ignoreOutput": false,
+            "sameScope": false
+        },
+        {
+            "name": "age",
+            "path": "character_details/age",
+            "description": "Show a character's age, and time to/from birthday.",
+            "summary": "Show a character's age, and time to/from birthday.",
+            "ignoreOutput": false,
+            "sameScope": false
+        },
+        {
+            "name": "setAge",
+            "path": "character_details/set_age",
+            "description": "",
+            "summary": "Set a token's age.",
+            "ignoreOutput": false,
+            "sameScope": false
+        },
+
+        {
+            "name": "pob",
+            "path": "place_of_birth",
+            "description": "",
+            "summary": "",
+            "ignoreOutput": false,
+            "sameScope": false
+        },
+
+        {
+            "name": "calendar",
+            "path": "Time_Tools/showCalendar",
+            "description": "",
+            "summary": "",
+            "ignoreOutput": false,
+            "sameScope": false
+        }
+    ]
+}
