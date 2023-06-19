@@ -2,7 +2,7 @@
 [h: timeAdvance=arg(0)]
 [h, if(argCount() == 0): timeAdvance = 0]
 
-[h: currentDate = data.getData("addon:", "com.ecyclops.greyhawk", "currentYearDate")]
+[h: currentDate = getLibProperty("currentYearDate")]
 [h: maxDays = 364]
 
 [h: newDate = currentDate + timeAdvance]
@@ -22,7 +22,7 @@
 	[incrementYear(1)]
 }]
 [h, if(currentDate != newDate), code: {
-	[setLibProperty("currentYearDate",newDate, "Lib:Calendar")]
+	[setLibProperty("currentYearDate",newDate)]
 	[moons(newDate)]
 	[weather(1)]
 }]

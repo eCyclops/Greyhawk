@@ -1,1 +1,1 @@
-[h:macro.return = data.getData("addon:", "com.ecyclops.greyhawk", "currentYear")]
+[h:macro.return = getLibProperty("currentYear")]

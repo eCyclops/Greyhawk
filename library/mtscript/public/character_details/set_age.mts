@@ -25,7 +25,7 @@
 		"<h4>Each of the months has 28 days, and the festivals have 7 each.</h4></html>|<html>&nbsp;</html>|LABEL"]
 	[h: newBirthday = input(
 		header,
-		"newBirthdate|1|New Birth Date",	"newBirthmonth|Fireseek,Readying,Coldeven,Growfest,Planting,Flocktime,Wealsun,Richfest,Reaping,Goodmonth,Harvester,Brewfest,Patchwall,Ready'reat,Sunsebb,Needfest|New Birth Month|LIST|SELECT=0 VALUE=STRING",
+		"newBirthdate|1|New Birth Date",	"newBirthmonth|Needfest,Fireseek,Readying,Coldeven,Growfest,Planting,Flocktime,Wealsun,Richfest,Reaping,Goodmonth,Harvester,Brewfest,Patchwall,Ready'reat,Sunsebb|New Birth Month|LIST|SELECT=0 VALUE=STRING",
 	"newBirthyear|556|New Birth Year")]
 
 	[h: abort(newBirthday)]
